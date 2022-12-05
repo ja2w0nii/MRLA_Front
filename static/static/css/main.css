@@ -1,0 +1,309 @@
+/* 전체 설정 */
+* {
+    text-align: center;
+    margin:  auto;
+
+}
+
+
+/* 헤더============================================= 221205 이태은 */
+header {
+    background-color: rgb(190, 190, 190);
+    width: 100;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header>h2 {
+    margin-left: 20px;
+}
+
+
+header ul {
+    border: 2px solid red;
+
+    margin: 0px 40px 0px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+
+
+
+header ul>li {
+    font-size: 20px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+/* 네비게이션============================================= 221205 이태은*/
+ul {
+    list-style: none;
+    padding-left: 0px;
+}
+nav {
+    /* border: 2px solid blue; */
+    margin: 10px 10px;
+    background-color: orange;
+    height: 100%;
+
+
+}
+
+nav ul {
+    border: 2px solid red;
+    width: 40%;
+    margin: 0px auto;
+    height: 100%;
+    display: flex;
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+nav ul>li {
+    font-size: 20px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+section {
+    border: 2px solid green;
+    height: 100%;
+}
+
+
+
+/* 내용 섹션 윗칸 ============================================= 221205 이태은 */
+.recommend_food_img_section {
+    background-color: rgb(255, 174, 251);
+    height: 450px;
+}
+
+/* 추천 맛집 라운드 슬라이드==========================================221205 이태은 */
+
+body {  
+    background: #eee;
+    
+  }
+  
+  /*BOX1*/
+  .recommend_center{
+    border: 2px solid blue;
+    display:flex;
+    justify-content: center;
+  }
+  .recommend_container1 {
+    position: fixed;
+    top:170px;
+    transition: transform 0.6s;
+    transform: translateY(-100px);
+  }
+  /* 가운데로 오게되는 박스 */
+  .recommend_container1 div {
+    width: 100px;
+    height: 100px;
+    background: red;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: transform 0.5s;
+  }
+  
+  /*BOX2 가운데 박스 기준 왼쪽에 오게되는 박스*/
+  .recommend_container2 {
+    position: fixed;
+    top:170px;
+    transition: transform 0.5s;
+    transform: translateX(-275px);
+  }
+  .recommend_container2 div {
+    width: 70px;
+    height: 70px;
+    transition: transform 0.6s;
+    transform: translateY(-40px);
+    background: red;
+    border-radius: 2px;
+    cursor: pointer;
+    
+  }
+  
+  /*BOX3*/
+  .recommend_container3 {
+    position: fixed;
+    top:170px;
+    transition: transform 0.6s;
+    transform: translateY(580px);
+  }
+  .recommend_container3 div {
+    width: 70px;
+    height: 70px;
+    transition: transform 0.5s;
+    background: red;
+    border-radius: 2px;
+    cursor: pointer;
+    transform: translateX(-390px);
+  }
+  
+  /*BOX4*/
+  .recommend_container4 {
+    position: fixed;
+    top:170px;
+    transition: transform 0.6s;
+    transform: translateY(580px);
+  }
+  .recommend_container4 div {
+    width: 70px;
+    height: 70px;
+    transition: transform 0.5s;
+    transform: translateX(390px);
+    background: red;
+    border-radius: 2px;
+    cursor: pointer;
+  }
+  
+  /*BOX5*/
+  .recommend_container5 {
+    position: fixed;
+    top:170px;
+    transition: transform 0.5s;
+    transform: translateX(275px);
+  }
+  .recommend_container5 div {
+    width: 70px;
+    height: 70px;
+    transition: transform 0.6s;
+    transform: translateY(-40px);
+    background: red;
+    border-radius: 2px;
+    cursor: pointer;
+  }
+/* 내용 섹션 아래칸 ============================================= 221205 이태은 */
+
+.sns_famous_restaurant_section {
+    background-color: rgb(255, 174, 205);
+    height:250px;
+}
+
+
+
+/* 유명 맛집 스크롤 css ================================ 221205 이태은*/
+#sns_famous_restaurant_container {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background: teal;
+    display: grid ;
+    place-items: center
+  }  
+  #sns_slider-container {
+    height: 150px;
+    width: 60%;
+    max-width: 1400px;
+    background: #54d5e4;
+    /* box-shadow: 5px 5px 8px gray inset; */
+    position: relative;
+    overflow: hidden;
+    padding: 20px;
+  }
+  
+  #sns_slider-container .btn {
+    position: absolute;
+    top: calc(50% - 30px);
+    height: 30px;
+    width: 30px;
+    border-left: 8px solid pink;
+    border-top: 8px solid pink;
+  }
+  
+  #sns_slider-container .btn:hover {
+    transform: scale(1.2);
+  }
+  
+  #sns_slider-container .btn.inactive {
+    border-color: rgb(153, 121, 126)
+  }
+  
+  #sns_slider-container .btn:first-of-type {
+    transform: rotate(-45deg);
+    left: 10px
+  }
+  
+  #sns_slider-container .btn:last-of-type {
+    transform: rotate(135deg);
+    right: 10px;
+  }
+  
+  #sns_slider-container #slider {
+    display: flex;
+    width: 1000%;
+    height: 100%; 
+    transition: all .5s;
+  }
+  
+  #sns_slider-container #slider .slide {
+    height: 90%;
+    margin: auto 10px;
+    background-color: #a847a4;
+    box-shadow: 2px 2px 4px 2px white, -2px -2px 4px 2px white;
+    display: grid;
+    place-items: center;
+  }
+  
+  #sns_slider-container #slider .slide span {
+    color: white;
+    font-size: 50px;
+  }
+  
+  @media only screen and (min-width: 1100px) {
+  
+    #sns_slider-container #slider .slide {
+      width: calc(2.5% - 20px);
+    }
+  
+  }
+  
+  @media only screen and (max-width: 1100px) {
+  
+    #sns_slider-container #slider .slide {
+      width: calc(3.3333333% - 20px);
+    }
+  
+  }
+  
+  @media only screen and (max-width: 900px) {
+  
+    #sns_slider-container #slider .slide {
+      width: calc(5% - 20px);
+    }
+  
+  }
+  
+  @media only screen and (max-width: 550px) {
+  
+    #sns_slider-container #slider .slide {
+      width: calc(10% - 20px);
+    }
+  
+  }
+
+/* 바닥글 윗칸 ============================================= 221205 이태은 */
+
+footer {
+
+    height: 55px;
+    line-height: 55px;
+    background-color: gray;
+    width: 100%;
+
+}
+
+
+
