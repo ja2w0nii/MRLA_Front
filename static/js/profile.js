@@ -19,6 +19,18 @@ window.onload = async function MyProfile() {
 
     nickname.innerText = "닉네임 : " + profile.nickname;
     email.innerText = profile.email;
-    age.innerText = "나이 : " + profile.age;
-    gender.innerText = "성별 : " + profile.gender;
-};
+
+    if (profile.age) {
+        age.innerText = "나이 : " + profile.age;
+    } else {
+        age.innerText = "나이 : 사용 안 함"
+    }
+
+    if (profile.gender == true) {
+        gender.innerText = "성별 : 남"
+    } else if (profile.gender == false) {
+        gender.innerText = "성별 : 여"
+    } else {
+        gender.innerText = "성별 : 사용 안 함"
+    }
+}

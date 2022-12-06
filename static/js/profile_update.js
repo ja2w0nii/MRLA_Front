@@ -19,8 +19,20 @@ async function MyProfileUpdate() {
     profile_img.appendChild(image);
 
     nickname.setAttribute("placeholder", profile.nickname)
-    age.setAttribute("placeholder", profile.age)
-    gender.setAttribute("placeholder", profile.gender)
+
+    if (profile.age) {
+        age.setAttribute("placeholder", profile.age)
+    } else {
+        age.setAttribute("placeholder", "사용 안 함")
+    }
+
+    if (profile.gender == true) {
+        gender.setAttribute("placeholder", "남")
+    } else if (profile.gender == false) {
+        gender.setAttribute("placeholder", "여")
+    } else {
+        gender.setAttribute("placeholder", "사용 안 함")
+    }
 
     email.innerText = profile.email;
 }
@@ -28,21 +40,38 @@ MyProfileUpdate()
 
 
 // 프로필 수정
-async function MyProfileUpdateForm(){
-    const profile_img = document.getElementById("profile_img_file").files[0];
-    console.log(profile_img)
-    const nickname = document.getElementById("nickname").value;
-    const age = document.getElementById("age").value;
-    const gender = document.getElementById("gender").value;
+async function MyProfileUpdateForm() {
+    let profile_img = document.getElementById("profile_img_file").files[0];
+    let nickname = document.getElementById("nickname").value;
+    let age = document.getElementById("age").value;
+    let gender = document.getElementById("gender").value;
     
     const formdata = new FormData();
+
+    if (profile_img) {
+        formdata.append("profile_img", profile_img);
+    }
     
-    formdata.append("profile_img", profile_img);
     formdata.append("nickname", nickname);
-    formdata.append("age", age);
-    formdata.append("gender", gender);
+
+    if (age) {
+        formdata.append("age", age);
+    }
+    
+    if (gender == "남") {
+        formdata.append("gender", true);
+    } else if (gender == "여") {
+        formdata.append("gender", false);
+    }
     
     updateMyProfile(formdata);
+}
+
+
+// 드롭다운 선택 시 성별 값 변경
+async function ChangeGender(id) {
+    const gender = document.getElementById("gender");
+    gender.setAttribute("value", id)
 }
 
 
