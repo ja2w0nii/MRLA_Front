@@ -1,0 +1,115 @@
+/* 전체 설정 */
+* {
+  text-align: center;
+  margin: auto;
+}
+
+body {
+  background: rgb(231, 220, 184);
+  display: grid;
+  height: 100vh;
+}
+
+/* 헤더 */
+header {
+  background-color: rgb(190, 190, 190);
+  width: 100%;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0;
+}
+
+header > h2 {
+  margin-left: 20px;
+}
+
+header ul {
+  border: 2px solid red;
+  margin: 0px 40px 0px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header ul > li {
+  font-size: 20px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+/* 네비 */
+ul {
+  list-style: none;
+  padding-left: 0px;
+}
+nav {
+  border: 2px solid blue;
+  margin: 10px 10px;
+  background-color: orange;
+  display: grid;
+  place-items: center;
+}
+
+nav ul {
+  border: 2px solid red;
+  width: 40%;
+  margin: 0px auto;
+  display: flex;
+  flex-direction: row;
+}
+
+nav ul > li {
+  font-size: 20px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+/* 바디 */
+section {
+  border: 2px solid green;
+}
+
+section.main_section {
+  background-color: rgb(255, 174, 251);
+  margin: 0 10px;
+  height: 500px;
+  display: grid;
+  place-items: center;
+}
+
+div.service_list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 1200px;
+}
+
+p {
+    margin: 0 10px;
+}
+
+p.service_id{
+    width: 50px;
+}
+
+p.service_title{
+    width: 750px;
+}
+
+p.service_created_at{
+    width: 300px;
+}
+
+/* 푸터 */
+footer {
+  line-height: 55px;
+  background-color: gray;
+  display: grid;
+  place-items: center;
+  margin: 10px 10px;
+}
