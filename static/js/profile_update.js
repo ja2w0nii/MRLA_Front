@@ -62,6 +62,8 @@ async function MyProfileUpdateForm() {
         formdata.append("gender", true);
     } else if (gender == "여") {
         formdata.append("gender", false);
+    } else {
+        formdata.append("gender", "");
     }
     
     updateMyProfile(formdata);
