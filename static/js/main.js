@@ -1,9 +1,3 @@
-
-
-
-
-
-
 // 유명 맛집 슬라이더 ================================================================================
 var container = document.getElementById('sns_famous_restaurant_container')
 var slider = document.getElementById('slider');
@@ -86,8 +80,6 @@ function slideLeft() {
         buttons[0].classList.remove('inactive');
     }
 };
-
-
 
 
 // 음식 추천 슬라이더 ========================================================================

@@ -20,7 +20,6 @@ header>h2 {
     margin-left: 20px;
 }
 
-
 header ul {
     border: 2px solid red;
 
@@ -32,9 +31,6 @@ header ul {
     justify-content: space-between;
 }
 
-
-
-
 header ul>li {
     font-size: 20px;
     height: 100%;
@@ -42,11 +38,13 @@ header ul>li {
     align-items: center;
 }
 
+
 /* 네비게이션============================================= 221205 이태은*/
 ul {
     list-style: none;
     padding-left: 0px;
 }
+
 nav {
     /* border: 2px solid blue; */
     margin: 10px 10px;
@@ -78,7 +76,6 @@ section {
     border: 2px solid green;
     height: 100%;
 }
-
 
 
 /* 내용 섹션 윗칸 ============================================= 221205 이태은 */

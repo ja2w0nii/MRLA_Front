@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/profile.css">
+
+    <title>메추리알 | 프로필</title>
+</head>
+
+<body>
+    <header>
+        <h2 a href="#">메추리알</h2>
+        <ul>
+            <li><a href="">로그인</a></li>
+        </ul>
+    </header>
+
+    <form>
+        <div class="main">
+            <p class="profile_img" id="profile_img"></p>
+            <div class="main_profile">
+                <div>
+                    <p class="h3" id="email"></p>
+                    <p class="h3" id="nickname"></p>
+                    <p id="age"></p>
+                    <p id="gender"></p>
+                </div>
+                <div>
+                    <button type="button" class="btn btn-primary profile"
+                        onclick="location.href='profile_update.html'">프로필 수정</button>
+                </div>
+                <div>
+                    <button type="button" class="btn btn-primary profile" onclick="location.href='#'">추천 메뉴</button>
+                    <button type="button" class="btn btn-primary profile" onclick="location.href='#'">커뮤니티</button>
+                </div>
+            </div>
+        </div>
+    </form>
+
+    <script src="../static/js/api.js"></script>
+    <script src="../static/js/profile.js"></script>
+</body>
+
+</html>
