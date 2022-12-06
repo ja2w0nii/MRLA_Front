@@ -26,3 +26,21 @@ async function getMyProfile() {
     return response_json;
 }
 
+// 프로필 수정하기
+async function updateMyProfile(formdata) {
+    const response = await fetch(`${backend_base_url}/users/profile/`, {
+      headers: {
+        Authorization: "Bearer " + localStorage.getItem("access"),
+      },
+      method: "PUT",
+      body: formdata,
+    });
+  
+    if (response.status == 200) {
+      alert("프로필 변경 완료!");
+      window.location.replace(`${frontend_base_url}/profile.html`);
+    } else {
+      alert("잘못된 입력입니다!");
+    }
+  }
+

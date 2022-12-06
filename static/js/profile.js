@@ -16,10 +16,9 @@ window.onload = async function MyProfile() {
     image.setAttribute("class", "profile_image");
     image.src = `${backend_base_url}${profile.profile_img}`;
     profile_img.appendChild(image);
-    console.log(image)
 
-    nickname.innerText = profile.nickname;
+    nickname.innerText = "닉네임 : " + profile.nickname;
     email.innerText = profile.email;
-    age.innerText = profile.age;
-    gender.innerText = profile.gender;
+    age.innerText = "나이 : " + profile.age;
+    gender.innerText = "성별 : " + profile.gender;
 };
