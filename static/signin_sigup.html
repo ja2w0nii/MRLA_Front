@@ -8,10 +8,9 @@
 	<div class="form-container sign-up-container">
 		<form action="#">
 			<h1>회원가입 </h1>
-			<input type="id" 	 	name="id" 		placeholder="ID"		 id="id" />
+			<input type="email" 	name="email" placeholder="Email"	id="email" />
 			<input type="password" 	name="password" placeholder="Password"	 id="password" />
-			<input type="username"	name="username" placeholder="Username"	 id="username"/>
-			<input type="email"		name="email"	placeholder="Email"		 id="email" />
+			<input type="nickname"	name="nickname"	placeholder="Nickname"	id="nickname" />
 			<input type="text" name = "whatdoyoulike" placeholder="좋아하는 메뉴를 입력하신 후 &#13;&#10; 엔터를 누르세요"  id="whatdoyoulike"/>
 			<br>
 			<button  onclick="handleSignUp()">가입하기</button>
@@ -31,7 +30,7 @@
 		<form action="#">
 			<h1>로그인</h1>
 			<br>
-			<input type="id" name="id" placeholder="ID" id="id">
+			<input type="email" name="email" placeholder="Email" id="email">
 			<input type="password" name="password" placeholder="Password" id="password">
 			<a href="#">비밀번호를 잊으셨습니까?</a>
 			<button  onclick="handleSignIn()">로그인</button>
