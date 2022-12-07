@@ -70,12 +70,28 @@ nav ul > li {
 }
 
 /* 모달 */
+h1 {
+  color: red;
+}
+
 input.service_title {
   text-align: left;
 }
 
 textarea.service_content {
   text-align: left;
+}
+
+div.modal-content {
+  width: 850px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
 
 /* 바디 */
@@ -94,6 +110,8 @@ div.service_list {
   flex-direction: row;
   flex-wrap: wrap;
   width: 1500px;
+  height: 360px;
+  overflow: auto;
 }
 
 p {
@@ -106,7 +124,7 @@ p.service_id {
 }
 
 p.service_title {
-  width: 920px;
+  width: 850px;
   cursor: pointer;
 }
 

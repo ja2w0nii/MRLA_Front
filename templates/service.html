@@ -28,6 +28,9 @@
       crossorigin="anonymous"
     ></script>
 
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
     <title>웹 페이지 레이아웃</title>
 
     <link rel="stylesheet" href="../static/css/service.css" />
@@ -39,17 +42,19 @@
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <h1 class="modal-title fs-5" id="exampleModalLabel">문의하기</h1>
+            <h1 class="modal-title fs-4" id="exampleModalLabel">
+              수정/삭제가 불가능하오니 신중히 작성 바랍니다.
+            </h1>
           </div>
           <div class="modal-body">
             <div>
               <h6>제목</h6>
-              <input type="text" class="service_title" id="service_title" />
+              <input type="text" class="service_title" id="service_title" size="105" />
             </div>
-            <br>
+            <br />
             <div>
               <h6>내용</h6>
-              <textarea class="service_content" id="service_content" cols="30" rows="10"></textarea>
+              <textarea class="service_content" id="service_content" cols="106" rows="10"></textarea>
             </div>
           </div>
           <div class="modal-footer">
