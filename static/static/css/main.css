@@ -6,7 +6,7 @@
     font-family: 'Jua', sans-serif; */
     /* font-family: 'Gowun Batang', serif;
     font-family: 'Jua', sans-serif; */
-    /* font-family: 'Do Hyeon', sans-serif; */
+    font-family: 'Do Hyeon', sans-serif;
 }
 /* 폰트 */
  /* @import url('https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@700&family=Jua&display=swap'); */
@@ -64,6 +64,7 @@ header ul>li {
   justify-content: flex-end;
   padding: 0 4px 0 32px;
   align-items: center;
+  
 /* float: right; */
 }
 .service1{
@@ -76,12 +77,15 @@ header ul>li {
   width:30%;
   box-sizing: border-box;
   text-decoration-line: none;
+  font-size: 20px;
+  font-weight: 500;
 }
 .near_restaurant:hover {
   letter-spacing: 3px;
   color: #000000;
   font-weight: bold;
   text-decoration-line: none;
+  transition: all 0.7s;
 }
 
 .who  {
@@ -90,12 +94,16 @@ header ul>li {
   margin-left: 5%;
   width:30%;
   box-sizing: border-box;
+  font-size: 20px;
+  font-weight: 500;
 }
 
 .who:hover {
   letter-spacing: 3px;
   color: #000000;
   font-weight: 900;
+  transition: all 0.7s;
+
 }
 
 .community{
@@ -103,11 +111,15 @@ header ul>li {
   float: right;
   width:30%;
   box-sizing: border-box;
+  font-size: 20px;
+  font-weight: 500;
 }
 .community:hover {
   letter-spacing: 3px;
   color: #000000;
   font-weight: 900;
+  transition: all 0.7s;
+
 }
 
 
