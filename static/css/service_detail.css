@@ -69,17 +69,7 @@ nav ul > li {
   align-items: center;
 }
 
-/* 모달 */
-input.service_title {
-  text-align: left;
-}
-
-textarea.service_content {
-  text-align: left;
-}
-
 /* 바디 */
-
 section.main_section {
   border: 2px solid green;
   background-color: rgb(255, 174, 251);
@@ -89,33 +79,28 @@ section.main_section {
   place-items: center;
 }
 
-div.service_list {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+div.service_detail {
+  border: 1px solid rgb(0, 0, 0);
   width: 1500px;
 }
 
-p {
+div.comment_list {
   border: 1px solid rgb(0, 0, 0);
-  margin: 5px 10px;
+  width: 1500px;
 }
 
-p.service_id {
-  width: 100px;
+div.comment_box {
+  display: flex;
+  align-items: center;
 }
 
-p.service_title {
-  width: 920px;
-  cursor: pointer;
+textarea {
+  text-align: left;
 }
 
-p.service_user {
-  width: 250px;
-}
-
-p.service_created_at {
-  width: 150px;
+button.btn {
+  margin: 0 10px;
+  height: 40px;
 }
 
 /* 푸터 */

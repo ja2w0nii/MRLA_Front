@@ -33,6 +33,19 @@ async function handleUnregister() {
   return response_json;
 }
 
+// 로그인한 유저 가져오기 //
+async function getName() {
+  const response = await fetch(`${backend_base_url}/users/profile`, {
+    headers: {
+      Authorization: "Bearer " + localStorage.getItem("access"),
+    },
+    method: "GET",
+  });
+
+  response_json = await response.json();
+  return response_json;
+}
+
 // 고객센터 게시글 조회
 async function getService() {
   const response = await fetch(`${backend_base_url}/posts/service/`, {
@@ -56,34 +69,56 @@ async function postService(formdata) {
     body: formdata,
   });
 
-  //   if (title.value == "") {
-  //     alert("제목을 입력해 주세요!");
-  //     return false;
-  //   } else if (content.value == "") {
-  //     alert("내용을 입력해 주세요!");
-  //     return false;
-  //   }
   if (response.status == 200) {
     alert("작성 완료!");
-    window.location.replace(`${frontend_base_url}/service.html`);
+    window.location.reload();
+  } else {
+    alert(response.status);
   }
 }
 
-// 고객센터 게시글 댓글 조회
-async function getServiceComment() {
+// 고객센터 게시글 디테일 페이지 연결
+function ServiceDetail(service_id) {
+  const url = `${frontend_base_url}/service_detail.html?id=${service_id}`;
+  location.href = url;
+}
+
+// 고객센터 게시글 디테일 조회
+async function getServiceDetail(service_id) {
   const response = await fetch(`${backend_base_url}/posts/service/${service_id}/`, {
     headers: {
       Authorization: "Bearer " + localStorage.getItem("access"),
     },
     method: "GET",
   });
+
+  if (response.status == 200) {
+    response_json = await response.json();
+    return response_json;
+  } else if (response.status == 401) {
+    alert("권한이 없습니다!");
+    window.location.replace(`${frontend_base_url}/service.html`);
+  } else {
+    alert(response.status);
+  }
+}
+
+// 고객센터 게시글 디테일 댓글 조회
+async function getServiceComment(service_id) {
+  const response = await fetch(`${backend_base_url}/posts/service/${service_id}/comment/`, {
+    headers: {
+      Authorization: "Bearer " + localStorage.getItem("access"),
+    },
+    method: "GET",
+  });
+
   response_json = await response.json();
   return response_json;
 }
 
-// 고객센터 게시글 댓글 등록
+// 고객센터 게시글 디테일 댓글 등록
 async function postServiceComment(formdata) {
-  const response = await fetch(`${backend_base_url}/posts/service/${service_id}/`, {
+  const response = await fetch(`${backend_base_url}/posts/service/${service_id}/comment/`, {
     headers: {
       Authorization: "Bearer " + localStorage.getItem("access"),
     },
@@ -91,11 +126,13 @@ async function postServiceComment(formdata) {
     body: formdata,
   });
 
-  if (comment.value == "") {
-    alert("내용을 입력해 주세요!");
-    return false;
-  } else if (response.status == 200) {
+  if (response.status == 200) {
     alert("작성 완료!");
-    window.location.replace(`${frontend_base_url}/service.html`);
+    window.location.reload();
+  } else if (response.status == 401) {
+    alert("권한이 없습니다!");
+    window.location.reload();
+  } else {
+    alert(response.status);
   }
 }

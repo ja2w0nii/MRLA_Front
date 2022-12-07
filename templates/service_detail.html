@@ -30,36 +30,10 @@
 
     <title>웹 페이지 레이아웃</title>
 
-    <link rel="stylesheet" href="../static/css/service.css" />
+    <link rel="stylesheet" href="../static/css/service_detail.css" />
   </head>
 
   <body>
-    <!-- Modal -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h1 class="modal-title fs-5" id="exampleModalLabel">문의하기</h1>
-          </div>
-          <div class="modal-body">
-            <div>
-              <h6>제목</h6>
-              <input type="text" class="service_title" id="service_title" />
-            </div>
-            <br>
-            <div>
-              <h6>내용</h6>
-              <textarea class="service_content" id="service_content" cols="30" rows="10"></textarea>
-            </div>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-primary" onclick="loadpostService()">확인</button>
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">취소</button>
-          </div>
-        </div>
-      </div>
-    </div>
-
     <header>
       <h2 a href="#">메추리알</h2>
       <ul>
@@ -76,13 +50,22 @@
     </nav>
 
     <section class="main_section">
-      <div id="service_list" class="service_list"></div>
-      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">등록</button>
+      <div class="service_detail">
+        <p id="user"></p>
+        <p id="title"></p>
+        <p id="content"></p>
+        <p id="created_at"></p>
+      </div>
+      <div id="comment_list" class="comment_list"></div>
+      <div class="comment_box">
+        <textarea id="comment" cols="80" rows="2"></textarea>
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="loadpostServiceComment()">등록</button>
+      </div>
     </section>
 
     <footer>Footer 영역</footer>
 
     <script type="text/javascript" src="../static/js/api.js"></script>
-    <script type="text/javascript" src="../static/js/service.js"></script>
+    <script type="text/javascript" src="../static/js/service_detail.js"></script>
   </body>
 </html>
