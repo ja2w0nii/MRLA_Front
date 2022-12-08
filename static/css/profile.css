@@ -48,7 +48,7 @@ header ul>li {
 }
 
 form {
-    margin-top: 150px;
+    margin-top: 100px;
 }
 
 .main_small {
@@ -60,6 +60,7 @@ form {
     width: 200px;
     height: 200px;
     border-radius: 50%;
+    border: solid rgb(220, 220, 158);
 }
 
 .profile_img {
