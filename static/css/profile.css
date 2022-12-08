@@ -78,6 +78,11 @@ form {
     align-items: center;
 }
 
+.profile_detail_box {
+    display: flex;
+    flex-direction: row;
+}
+
 .profile_detail {
     margin: 20px auto;
     text-align: left;

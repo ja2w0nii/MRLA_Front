@@ -34,3 +34,26 @@ window.onload = async function MyProfile() {
         gender.innerText = "성별 : 사용 안 함"
     }
 }
+
+// 팔로잉/팔로워 리스트 가져오기
+async function FollowList() {
+    follows = await getFollowList();
+
+    follows.following.forEach((following) => {
+        const following_list = document.getElementById("following-modal-body");
+
+        const newFollowing = document.createElement("li");
+        newFollowing.innerText = following;
+        following_list.appendChild(newFollowing);
+    });
+
+    follows.follower.forEach((follower) => {
+        const follower_list = document.getElementById("follower-modal-body");
+
+        const newFollower = document.createElement("li");
+        newFollower.setAttribute("id", follower);
+        newFollower.innerText = follower;
+        follower_list.appendChild(newFollower);
+    });
+}
+FollowList()

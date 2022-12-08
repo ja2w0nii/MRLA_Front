@@ -56,3 +56,15 @@ async function getFoodList() {
   return response_json;
 }
 
+// 팔로잉/팔로워 리스트 가져오기
+async function getFollowList() {
+  const response = await fetch(`${backend_base_url}/users/follow/`, {
+    headers: {
+      Authorization: "Bearer " + localStorage.getItem("access"),
+    },
+    method: "GET",
+  });
+  response_json = await response.json();
+  return response_json;
+}
+
