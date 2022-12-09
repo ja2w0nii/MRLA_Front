@@ -14,6 +14,23 @@ function handleLogout() {
   window.location.replace(`${frontend_base_url}/login.html`);
 }
 
+// 로그인한 유저 정보 조회
+async function getName() {
+  const response = await fetch(`${backend_base_url}/users/myprofile`, {
+    headers: {
+      Authorization: "Bearer " + localStorage.getItem("access"),
+    },
+    method: "GET",
+  });
+
+  if (response.status == 200) {
+    response_json = await response.json();
+    return response_json;
+  } else {
+    return null;
+  }
+}
+
 // 프로필 페이지 연결
 function getProfilePage(user_id) {
   const url = `${frontend_base_url}/profile.html?id=${user_id}`;

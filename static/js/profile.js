@@ -8,6 +8,7 @@ const user_id = urlParams.get("id");
 
 async function Profile(user_id) {
     profile = await getProfile(user_id);
+    login_user = await getName();
 
     const profile_img = document.getElementById("profile_img");
     const nickname = document.getElementById("nickname");
@@ -40,11 +41,22 @@ async function Profile(user_id) {
     const do_follow = document.getElementById("do_follow");
     
     const do_follow_button = document.createElement("button");
-    do_follow_button.innerText = "팔로우";
     do_follow_button.setAttribute("id", user_id);
-    do_follow_button.setAttribute("class", "btn btn-warning");
-    do_follow_button.setAttribute("onclick", "DoFollow(this.id)");
-    do_follow.appendChild(do_follow_button);
+
+    for (i in profile.follower) {
+        if (login_user.email == profile.follower[i]) {
+            do_follow_button.setAttribute("class", "btn btn-outline-warning");
+            do_follow_button.innerText = "언팔로우";
+            do_follow_button.setAttribute("onclick", "DoFollow(this.id)");
+            do_follow.appendChild(do_follow_button);
+            break;
+        } else {
+            do_follow_button.setAttribute("class", "btn btn-warning");
+            do_follow_button.innerText = "팔로우";
+            do_follow_button.setAttribute("onclick", "DoFollow(this.id)");
+            do_follow.appendChild(do_follow_button);
+        }
+    }
 
     const like_community = document.getElementById("recommend_community");
     
@@ -74,6 +86,15 @@ async function Profile(user_id) {
     like_community_button.appendChild(like_community_icon);
 
     like_community.appendChild(like_community_button);
+
+
+    const profile_update = document.getElementById("profile_update_button")
+    
+    if (login_user.email != profile.email) {
+        profile_update.style.visibility = "hidden";
+    } else {
+        do_follow_button.style.visibility = "hidden";
+    }
 }
 Profile(user_id)
     
