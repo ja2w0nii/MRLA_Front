@@ -100,6 +100,7 @@ section.main_section {
 span {
   display: flex;
   flex-direction: row;
+  align-items: center;
 }
 
 p {
@@ -115,11 +116,12 @@ p.service_id {
 
 p.service_title {
   width: 100%;
-  text-overflow: ellipsis;
   padding: 0 5px;
-  overflow: hidden;
-  white-space: nowrap;
   cursor: pointer;
+  display: inline-block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 p.service_user {
