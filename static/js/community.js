@@ -32,6 +32,48 @@ function lazyLoad() {
 }
 
 
+// 커뮤니티 게시글 목록 가져오기
+async function CommunityList() {
+    communities = await getCommunityList();
+
+    const card_list = document.getElementById("card-list");
+
+    communities.forEach((community) => {
+        const newCard = document.createElement("li");
+        newCard.setAttribute("class", "card");
+        newCard.setAttribute("id", "card");
+
+        const newImg = document.createElement("a");
+        newImg.setAttribute("class", "card-image");
+        newImg.src = `https://storage.googleapis.com/jjalbot/2018/12/IPJVU9tjx/zzal.jpg`;
+        newImg.setAttribute("style", newImg.src)
+        newImg.setAttribute("data-image-full", newImg.src)
+
+        const image = document.createElement("img");
+        image.src = `https://storage.googleapis.com/jjalbot/2018/12/IPJVU9tjx/zzal.jpg`;
+        image.setAttribute("alt", "Psychopomp")
+        image.setAttribute("id", community.id)
+        image.setAttribute("onclick", "getCommunityDetailPage(this.id)")
+        newImg.appendChild(image)
+        newCard.appendChild(newImg)
+
+        const newDescription = document.createElement("a");
+        newDescription.setAttribute("class", "card-description");
+        newCard.appendChild(newDescription)
+
+        const newTitle = document.createElement("h2");
+        const newContent = document.createElement("p");
+        newTitle.innerText = community.title;
+        newContent.innerText = community.content;
+        newDescription.appendChild(newTitle)
+        newDescription.appendChild(newContent)
+
+        card_list.appendChild(newCard)
+    });
+}
+CommunityList()
+
+
 
 // 모달창 관련=============================================================== 221208 이태은
 

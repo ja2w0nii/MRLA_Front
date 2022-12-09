@@ -3,8 +3,11 @@ if (!token) {
 }
 
 // 프로필 보여주기
-window.onload = async function MyProfile() {
-    profile = await getMyProfile();
+const urlParams = new URLSearchParams(window.location.search);
+const user_id = urlParams.get("id");
+
+async function Profile(user_id) {
+    profile = await getProfile(user_id);
 
     const profile_img = document.getElementById("profile_img");
     const nickname = document.getElementById("nickname");
@@ -34,6 +37,7 @@ window.onload = async function MyProfile() {
         gender.innerText = "성별 : 사용 안 함"
     }
 }
+Profile(user_id)
 
 // 팔로잉/팔로워 리스트 가져오기
 async function FollowList() {

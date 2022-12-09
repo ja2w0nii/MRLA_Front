@@ -14,14 +14,21 @@ function handleLogout() {
   window.location.replace(`${frontend_base_url}/login.html`);
 }
 
+// 프로필 페이지 연결
+function getProfilePage(user_id) {
+  const url = `${frontend_base_url}/profile.html?id=${user_id}`;
+  location.href = url;
+}
+
 // 프로필 가져오기
-async function getMyProfile() {
-  const response = await fetch(`${backend_base_url}/users/profile/`, {
+async function getProfile(user_id) {
+  const response = await fetch(`${backend_base_url}/users/profile/${user_id}`, {
     headers: {
       Authorization: "Bearer " + localStorage.getItem("access"),
     },
     method: "GET",
   });
+  
   response_json = await response.json();
   return response_json;
 }
@@ -92,3 +99,32 @@ async function getMyCommunityList() {
   return response_json;
 }
 
+// 커뮤니티 게시글 목록 가져오기
+async function getCommunityList() {
+  const response = await fetch(`${backend_base_url}/posts/community/`, {
+    headers: {
+      Authorization: "Bearer " + localStorage.getItem("access"),
+    },
+    method: "GET",
+  });
+  response_json = await response.json();
+  return response_json;
+}
+
+// 커뮤니티 게시글 상세 페이지 연결
+function getCommunityDetailPage(community_id) {
+  const url = `${frontend_base_url}/community_detail.html?id=${community_id}`;
+  location.href = url;
+}
+
+// 커뮤니티 게시글 상세 가져오기
+async function getCommunityDetail(community_id) {
+  const response = await fetch(`${backend_base_url}/posts/community/${community_id}/`, {
+    headers: {
+      Authorization: "Bearer " + localStorage.getItem("access"),
+    },
+    method: "GET",
+  });
+  response_json = await response.json();
+  return response_json;
+}
