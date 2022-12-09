@@ -1,5 +1,5 @@
 if (token) {
-  window.location.replace(`${frontend_base_url}/index.html`);
+  window.location.replace(`${frontend_base_url}/main.html`);
 }
 
 async function handleLogin() {

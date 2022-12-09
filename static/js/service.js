@@ -8,33 +8,36 @@ if (!token) {
 window.onload = async function loadgetService() {
   const services = await getService();
 
+  const main_section = document.getElementById("main_section");
   services.forEach((service) => {
-    const service_list = document.getElementById("service_list");
+    const newSpan = document.createElement("span");
 
     const newId = document.createElement("p");
     newId.setAttribute("id", service.id);
     newId.setAttribute("class", "service_id");
     newId.innerText = service.id;
-    service_list.appendChild(newId);
+    newSpan.appendChild(newId);
 
     const newTitle = document.createElement("p");
     newTitle.setAttribute("id", service.id);
     newTitle.setAttribute("class", "service_title");
     newTitle.setAttribute("onclick", "ServiceDetail(this.id)");
     newTitle.innerText = service.title;
-    service_list.appendChild(newTitle);
+    newSpan.appendChild(newTitle);
 
     const newUser = document.createElement("p");
     newUser.setAttribute("id", service.id);
     newUser.setAttribute("class", "service_user");
     newUser.innerText = service.user;
-    service_list.appendChild(newUser);
+    newSpan.appendChild(newUser);
 
     const newCreatedAt = document.createElement("p");
     newCreatedAt.setAttribute("id", service.id);
     newCreatedAt.setAttribute("class", "service_created_at");
     newCreatedAt.innerText = service.created_at.replace("T", " ").substr(0, 16);
-    service_list.appendChild(newCreatedAt);
+    newSpan.appendChild(newCreatedAt);
+
+    main_section.appendChild(newSpan);
   });
 };
 

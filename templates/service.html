@@ -42,20 +42,14 @@
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <h1 class="modal-title fs-4" id="exampleModalLabel">
-              수정/삭제가 불가능하오니 신중히 작성 바랍니다.
-            </h1>
+            <h1 class="modal-title fs-4" id="exampleModalLabel">수정/삭제가 불가능하오니 신중히 작성 바랍니다.</h1>
           </div>
           <div class="modal-body">
-            <div>
-              <h6>제목</h6>
-              <input type="text" class="service_title" id="service_title" size="105" />
-            </div>
+            <h6>제목</h6>
+            <input type="text" class="service_title" id="service_title" size="105" />
             <br />
-            <div>
-              <h6>내용</h6>
-              <textarea class="service_content" id="service_content" cols="106" rows="10"></textarea>
-            </div>
+            <h6>내용</h6>
+            <textarea class="service_content" id="service_content" cols="105" rows="10"></textarea>
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-primary" onclick="loadpostService()">확인</button>
@@ -79,9 +73,8 @@
         <li>커뮤니티</li>
       </ul>
     </nav>
-
-    <section class="main_section">
-      <div id="service_list" class="service_list"></div>
+    <section class="main">
+      <div id="main_section" class="main_section"></div>
       <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">등록</button>
     </section>
 

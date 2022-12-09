@@ -94,29 +94,41 @@ div.modal-content {
   transform: translate(-50%, -50%);
 }
 
+div.modal-body {
+  display: flex;
+  flex-direction: column;
+}
+
 /* 바디 */
 
-section.main_section {
+section.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+div.main_section {
   border: 2px solid green;
   background-color: rgb(255, 174, 251);
   margin: 0 10px;
-  height: 500px;
-  display: grid;
-  place-items: center;
+  height: 450px;
+  width: 1510px;
+  overflow: auto;
 }
 
-div.service_list {
+span {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
-  width: 1500px;
-  height: 360px;
-  overflow: auto;
+}
+
+button.btn {
+  width: 80px;
+  margin-top: 10px;
 }
 
 p {
   border: 1px solid rgb(0, 0, 0);
-  margin: 5px 10px;
+  margin: 7px 10px;
 }
 
 p.service_id {
@@ -124,7 +136,7 @@ p.service_id {
 }
 
 p.service_title {
-  width: 850px;
+  width: 880px;
   cursor: pointer;
 }
 
@@ -133,7 +145,7 @@ p.service_user {
 }
 
 p.service_created_at {
-  width: 150px;
+  width: 170px;
 }
 
 /* 푸터 */
