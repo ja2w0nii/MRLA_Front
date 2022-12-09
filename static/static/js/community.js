@@ -38,11 +38,11 @@ function lazyLoad() {
 //  업로드 영역 모달창 시작====================================
 
 
-var modals = document.getElementsByClassName("post-modal");// 모달창 띄우는 자바스크립트 시작
+var modals = document.getElementsByClassName("post-modal-container");// 모달창 띄우는 자바스크립트 시작
  
 var btns = document.getElementsByClassName("post-upload-button"); // Modal을 띄우는 클래스 이름을 가져옵니다.
 
-var spanes = document.getElementsByClassName("modal-close");  // Modal을 닫는 close 클래스를 가져옵니다.
+var spanes = document.getElementsByClassName("post-modal-close");  // Modal을 닫는 close 클래스를 가져옵니다.
 var funcs = [];
 
 
@@ -73,7 +73,7 @@ for (var j = 0; j < btns.length; j++) {
 
 // Modal 영역 밖을 클릭하면 Modal을 닫습니다.
 window.onclick = function (event) {
-    if (event.target.className == "post-modal") {
+    if (event.target.className == "post-modal-container") {
         event.target.style.display = "none";
     }
 };
@@ -81,4 +81,15 @@ window.onclick = function (event) {
 
 
 
+// 게시물 작성 모달창에서의 이미지 미리보기 스크립트 221208 이태은
+const fileDOM = document.querySelector('#file');
+const previews = document.querySelectorAll('.image-box');
 
+fileDOM.addEventListener('change', () => {
+  const reader = new FileReader();
+  reader.onload = ({ target }) => {
+    // 이미지 미리보기 출력
+    previews[0].src = target.result;
+  };
+  reader.readAsDataURL(fileDOM.files[0]);
+});

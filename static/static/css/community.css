@@ -1,17 +1,18 @@
 /* 전체 설정 */
 * {
     text-align: center;
-    margin:  auto;
+    margin: auto;
     /* font-family: 'Gowun Batang', serif;
     font-family: 'Jua', sans-serif; */
     /* font-family: 'Gowun Batang', serif;
     font-family: 'Jua', sans-serif; */
     font-family: 'Do Hyeon', sans-serif;
 }
+
 /* 폰트 */
- /* @import url('https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@700&family=Jua&display=swap'); */
+/* @import url('https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@700&family=Jua&display=swap'); */
 /* @import url('https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@700&family=Jua&display=swap');  */
- /* @import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap'); */
+/* @import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap'); */
 
 /* 헤더============================================= 221205 이태은 */
 header {
@@ -26,9 +27,10 @@ header {
 header>h2 {
     margin-left: 20px;
 }
+
 header>h2:hover {
-  color: #000000;
-  cursor: pointer;
+    color: #000000;
+    cursor: pointer;
 }
 
 
@@ -56,70 +58,73 @@ header ul>li {
 
 /* 네비게이션============================================= 221205 이태은*/
 .navContainer {
-  border: 1px solid red;
-  align-items: center;
-  box-sizing: border-box;
-  display: flex;
-  height: 100%;
-  justify-content: flex-end;
-  padding: 0 4px 0 32px;
-  align-items: center;
-  
-/* float: right; */
+    border: 1px solid red;
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    height: 100%;
+    justify-content: flex-end;
+    padding: 0 4px 0 32px;
+    align-items: center;
+
+    /* float: right; */
 }
-.service1{
-  width: 60%;
+
+.service1 {
+    width: 60%;
 }
 
 .near_restaurant {
-  border: 1px solid red;
-  float: left;
-  width:30%;
-  box-sizing: border-box;
-  text-decoration-line: none;
-  font-size: 20px;
-  font-weight: 500;
-}
-.near_restaurant:hover {
-  letter-spacing: 3px;
-  color: #000000;
-  font-weight: bold;
-  text-decoration-line: none;
-  transition: all 0.7s;
+    border: 1px solid red;
+    float: left;
+    width: 30%;
+    box-sizing: border-box;
+    text-decoration-line: none;
+    font-size: 20px;
+    font-weight: 500;
 }
 
-.who  {
-  border: 1px solid green;
-  float: left;
-  margin-left: 5%;
-  width:30%;
-  box-sizing: border-box;
-  font-size: 20px;
-  font-weight: 500;
+.near_restaurant:hover {
+    letter-spacing: 3px;
+    color: #000000;
+    font-weight: bold;
+    text-decoration-line: none;
+    transition: all 0.7s;
+}
+
+.who {
+    border: 1px solid green;
+    float: left;
+    margin-left: 5%;
+    width: 30%;
+    box-sizing: border-box;
+    font-size: 20px;
+    font-weight: 500;
 }
 
 .who:hover {
-  letter-spacing: 3px;
-  color: #000000;
-  font-weight: 900;
-  transition: all 0.7s;
+    letter-spacing: 3px;
+    color: #000000;
+    font-weight: 900;
+    transition: all 0.7s;
 
 }
 
-.community{
-  border: 1px solid blue;
-  float: right;
-  width:30%;
-  box-sizing: border-box;
-  font-size: 20px;
-  font-weight: 900;
-  
+.community {
+    border: 1px solid blue;
+    float: right;
+    width: 30%;
+    box-sizing: border-box;
+    font-size: 20px;
+    font-weight: 900;
+
 }
+
 .community:hover {
-  letter-spacing: 3px;
-  color: #000000;
-  font-weight: 900;
-  transition: all 0.7s;
+    letter-spacing: 3px;
+    color: #000000;
+    font-weight: 900;
+    transition: all 0.7s;
 
 }
 
@@ -130,6 +135,7 @@ ul {
     list-style: none;
     padding-left: 0px;
 }
+
 nav {
     /* border: 2px solid blue; */
     margin: 10px 10px;
@@ -149,8 +155,9 @@ nav ul {
 
     justify-content: space-between;
 }
-nav  a{
-  text-decoration-line: none;
+
+nav a {
+    text-decoration-line: none;
 }
 
 nav ul>li {
@@ -167,11 +174,11 @@ section {
 
 /* 위치 */
 .material-symbols-outlined {
-  font-variation-settings:
-  'FILL' 0,
-  'wght' 400,
-  'GRAD' 200,
-  'opsz' 48
+    font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 200,
+        'opsz' 48
 }
 
 
@@ -196,9 +203,9 @@ nav ul li a span :hover {
 
 
 a.active {
-  color: #FF5752;
-  font-weight: bolder ;
-  font-weight: 900;
+    color: #FF5752;
+    font-weight: bolder;
+    font-weight: 900;
 }
 
 
@@ -208,13 +215,15 @@ a.active {
     height: 80vh;
     z-index: -100;
 }
+
 /* 부화한 메추리알들의 커뮤니티 */
-.community_for_metury{
+.community_for_metury {
     margin: 20px auto;
     font-size: 40px;
     color: rgb(107, 57, 0);
 }
-.community-div{
+
+.community-div {
     border: 1px rgb(59, 30, 30) solid;
     width: 90%;
     height: 600px;
@@ -224,33 +233,35 @@ a.active {
 /* 커뮤니티 작성용 모달창===================================================== */
 
 /* 모달창 */
-  /* 모달창 버튼 */
-  .post-upload-button-div{
+/* 모달창 버튼 */
+.post-upload-button-div {
     border: 1px solid red;
-  margin: 0px auto;
+    margin: 0px auto;
     /* float: right; */
     width: 90%;
-  }
-  .post-upload-button {
+}
+
+.post-upload-button {
     background-color: #e74b24;
     border-radius: 7px;
     font-size: 16px;
     border: 0px solid #e74b24;
     color: rgb(255, 255, 255);
     cursor: pointer;
-  }
-  
-  
-  .post-upload-button:hover {
+}
+
+
+.post-upload-button:hover {
     font-weight: 500;
     letter-spacing: 3px;
-  background-color: #e74b24;
-  transition: 1s;
-  
-  }
-  
-  /* 배경 */
-  .post-modal {
+    background-color: #e74b24;
+    transition: 1s;
+
+}
+
+/* 배경 */
+.post-modal-container {
+    border: 2px red solid;
     display: none;
     position: fixed;
     z-index: 1;
@@ -260,128 +271,209 @@ a.active {
     height: 100%;
     /* 배경 어둡게 */
     background-color: rgba(0, 0, 0, 0.7);
-  
-  }
-  
-  
-  
-  
-  /* 게시물 업로드 모달창 */
-  .modal-content {
+
+}
+
+
+
+
+/* 게시물 업로드 모달창 */
+.post-modal-box {
     background-color: #fefefe;
     margin: 100px auto;
     padding: 20px 10px;
-    border: 1px solid #888;
-    width: 600px;
+    border: 1px solid rgb(153, 153, 153);
+    width: 800px;
     height: 600px;
     top: 50px;
     border-radius: 10px;
-  }
-  
-  
-  /*모달창 닫는 버튼*/
-  .modal-close:hover,
-  .modal-close:focus {
+}
+
+.post-modal-top {
+    border: 2px solid rgb(255, 153, 0);
+    width: 90%;
+    font-size: 20px;
+}
+
+.post-modal-title {
+    border: 1px solid red;
+}
+
+.post-modal-close {
+    border: solid 1px red;
+    float: right;
+    margin: 0 10px;
+}
+
+/*모달창 닫는 버튼*/
+.post-modal-close:hover,
+.post-modal-close:focus {
     color: rgb(255, 187, 0);
     text-decoration: none;
     cursor: pointer;
-  } 
-  
-  .modal-content .image_container {
-    border: solid red 3px;
-    width: 80%;
-    height: 80%;
-  }
-  
-  
-  .upload-box {
-    /* border: 3px solid red; */
-    height: 80%
-  }
-  
-  .preview {
-    max-width: auto;
-    height: 100%;
-  }
-  
-  .preview-container {
+}
+
+.post-modal-content {
+    border: 2px solid purple;
+    height: 90%;
+    width: 90%;
+    display: flex;
+}
+
+.post-modal-content-img {
+    border: 2px solid purple;
+    height: 90%;
+    width: 40%;
+    background-color: #a37d002f;
+}
+
+.post-modal-content-text {
+    border: 2px solid purple;
+    height: 90%;
+    width: 50%;
+}
+
+/* 이미지 업로드 박스 */
+.flex-container {
+    margin: 100px 10px;
+    display: flex;
+    border: 1px solid red;
+    padding: 20px 20px;
+    background-color: #252222;
+}
+
+.wrapper {
+    text-align: center;
+    flex-grow: 1;
+    border: 1px solid rgb(255, 174, 0);
+    margin: auto;
+
+
+}
+
+.image-box {
     width: 200px;
     height: 200px;
+    object-fit: cover;
+    display: block;
+    margin: 20px auto;
+    padding: 10px 10px;
+    background-color: #ffffff;
+
+}
+
+.img-upload-btn {
+    width: 200px;
+    border: 1px solid #ddd;
+    padding: 6px 12px;
+    display: inline-block;
+    cursor: pointer;
+    background-color: #ffffff;
+
+}
+
+.post_title {
+    width: 98.5%;
+    height: 32px;
+    font-size: 15px;
+    border: 0;
+    border-radius: 10px;
+    outline: none;
+    padding-left: 10px;
+    background-color: rgb(233, 233, 233);
+    margin-bottom: 10px;
   }
   
+  .post_content {
+    width: 98.5%;
+    height: 100px;
+    font-size: 15px;
+    border: 0;
+    border-radius: 10px;
+    outline: none;
+    padding-left: 10px;
+    background-color: rgb(233, 233, 233);
+  }
   
+
 /* 카드=============================================================== */
 /* Lazy Load Styles */
 .card-image {
-	display: block;
-	min-height: 20rem; /* layout hack */
-	background: #fff center center no-repeat;
-	background-size: cover;
-	filter: blur(3px); /* blur the lowres image */
+    display: block;
+    min-height: 20rem;
+    /* layout hack */
+    background: #fff center center no-repeat;
+    background-size: cover;
+    filter: blur(3px);
+    /* blur the lowres image */
 }
 
-.card-image > img {
-	display: block;
-	width: 100%;
-	opacity: 0; /* visually hide the img element */
+.card-image>img {
+    display: block;
+    width: 100%;
+    opacity: 0;
+    /* visually hide the img element */
 }
 
 .card-image.is-loaded {
-	filter: none; /* remove the blur on fullres image */
-	transition: filter 1s;
+    filter: none;
+    /* remove the blur on fullres image */
+    transition: filter 1s;
 }
 
 
 
 
 /* Layout Styles */
-
-
 .card-list {
-	display: block;
-	margin: 1rem auto;
-	padding: 0;
-	font-size: 0;
-	text-align: center;
-	list-style: none;
+    display: block;
+    margin: 1rem auto;
+    padding: 0;
+    font-size: 0;
+    text-align: center;
+    list-style: none;
 }
 
+/* 각각의 카드에 대해 */
 .card {
-	display: inline-block;
-	width: 90%;
-	max-width: 20rem;
-	margin: 1rem;
-	font-size: 1rem;
-	text-decoration: none;
-	overflow: hidden;
-	box-shadow: 0 0 3rem -1rem rgba(0,0,0,0.5);
-	transition: transform 0.1s ease-in-out, box-shadow 0.1s;
+    display: inline-block;
+    width: 90%;
+    max-width: 20rem;
+    margin: 1rem;
+    font-size: 1rem;
+    text-decoration: none;
+    overflow: hidden;
+    box-shadow: 0 0 3rem -1rem rgba(0, 0, 0, 0.5);
+    transition: transform 0.1s ease-in-out, box-shadow 0.1s;
 }
 
+/* 각각의 카드에 마우스를 올리면 */
 .card:hover {
-	transform: translateY(-0.5rem) scale(1.0125);
-	box-shadow: 0 0.5em 3rem -1rem rgba(0,0,0,0.5);
+    transform: translateY(-0.5rem) scale(1.0125);
+    box-shadow: 0 0.5em 3rem -1rem rgba(0, 0, 0, 0.5);
 }
 
+/* 각각의 카드의 설명란 */
 .card-description {
-	display: block;
-	padding: 1em 0.5em;
-	color: #515151;
-	text-decoration: none;
+    display: block;
+    padding: 1em 0.5em;
+    color: #515151;
+    text-decoration: none;
 }
 
-.card-description > h2 {
-	margin: 0 0 0.5em;
+/* 각각의 카드의 제목 */
+.card-description>h2 {
+    margin: 0 0 0.5em;
 }
 
-.card-description > p {
-	margin: 0;
+/* 각각의 카드의 내용 글 */
+.card-description>p {
+    margin: 0;
 }
+
 /* 바닥글 윗칸 ============================================= 221205 이태은 */
-
 footer {
-
-    height:100%;
+    height: 100%;
     /* line-height: 55px; */
     background-color: gray;
     width: 100%;
@@ -389,6 +481,3 @@ footer {
     bottom: 0;
 
 }
-
-
-
