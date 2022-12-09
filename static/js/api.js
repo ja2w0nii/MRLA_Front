@@ -1,8 +1,7 @@
-console.log("api 로딩 완료");
-
 // 전역 변수
 // const backend_base_url = "http://13.209.72.148";  // EC2 인스턴스 연결 시
 const backend_base_url = "http://127.0.0.1:8000"; // 백엔드 서버 연결 시
+// const frontend_base_url = "http://13.209.72.148";  // EC2 인스턴스 연결 시
 const frontend_base_url = "http://127.0.0.1:5500/templates";
 
 const token = localStorage.getItem("access");
@@ -135,6 +134,7 @@ async function postServiceComment(formdata) {
     alert("권한이 없습니다!");
     window.location.reload();
   } else {
-    alert(response.status);
+    alert("내용을 입력해 주세요.");
+    window.location.reload();
   }
 }

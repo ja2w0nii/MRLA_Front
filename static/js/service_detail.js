@@ -1,5 +1,3 @@
-console.log("서비스 디테일 로딩 완료");
-
 if (!token) {
   window.location.replace(`${frontend_base_url}/login.html`);
 }
@@ -58,13 +56,7 @@ loadgetServiceComment(service_id);
 async function loadpostServiceComment() {
   const comment = document.getElementById("comment").value;
 
-  if (comment == "") {
-    alert("내용을 입력해 주세요!");
-    return false;
-  }
-
   const formdata = new FormData();
-  console.log(formdata);
   formdata.append("comment", comment);
 
   postServiceComment(formdata);
