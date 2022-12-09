@@ -58,13 +58,13 @@ async function FollowList() {
 }
 FollowList()
 
-// 해당 프로필 유저가 좋아요한 메뉴 리스트 가져오기
-async function MyFoodList() {
-    foods = await getMyFoodList();
+// 해당 프로필 유저가 좋아요한 커뮤니티 게시글 리스트 가져오기
+async function MyCommunityList() {
+    communities = await getMyCommunityList();
 
     const card_list = document.getElementById("card-list");
 
-    foods.forEach((food) => {
+    communities.forEach((community) => {
         const newCard = document.createElement("li");
         newCard.setAttribute("class", "card");
         newCard.setAttribute("id", "card");
@@ -85,14 +85,16 @@ async function MyFoodList() {
         newDescription.setAttribute("class", "card-description");
         newCard.appendChild(newDescription)
 
-        const newMenu = document.createElement("h2");
-        const newCategory = document.createElement("p");
-        newMenu.innerText = food.menu;
-        newCategory.innerText = food.major_category;
-        newDescription.appendChild(newMenu)
-        newDescription.appendChild(newCategory)
+        console.log(community)
+
+        const newTitle = document.createElement("h2");
+        const newContent = document.createElement("p");
+        newTitle.innerText = community.title;
+        newContent.innerText = community.content;
+        newDescription.appendChild(newTitle)
+        newDescription.appendChild(newContent)
 
         card_list.appendChild(newCard)
     });
 }
-MyFoodList()
+MyCommunityList()
