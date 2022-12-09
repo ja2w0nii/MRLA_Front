@@ -36,9 +36,7 @@
   <body>
     <header>
       <h2 a href="#">메추리알</h2>
-      <ul>
-        <li><a href="#">로그인</a></li>
-      </ul>
+      <a href="#">로그인</a>
     </header>
 
     <nav>
@@ -51,17 +49,22 @@
 
     <section class="main_section">
       <div class="service_detail">
-        <span class="user" id="user"></span>
-        <span class="created_at" id="created_at"></span>
+        <div class="span_box">
+          <span class="user" id="user"></span>
+          <span class="created_at" id="created_at"></span>
+        </div>
         <div class="p_box">
           <p class="title" id="title"></p>
           <p class="content" id="content"></p>
         </div>
       </div>
       <div id="comment_list" class="comment_list"></div>
+    </section>
+
+    <section>
       <div class="comment_box">
         <textarea class="comment" id="comment" cols="85" rows="3"></textarea>
-        <button type="button" class="btn btn-primary" onclick="loadpostServiceComment()">등록</button>
+        <button type="button" class="btn btn-primary" onclick="loadpostServiceComment()">확인</button>
         <button type="button" class="btn btn-secondary" onclick="location.href='service.html'">취소</button>
       </div>
     </section>
