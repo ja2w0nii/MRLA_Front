@@ -20,6 +20,12 @@ function getProfilePage(user_id) {
   location.href = url;
 }
 
+// 프로필 페이지 커뮤니티 탭 연결
+function getProfileCommunityPage(user_id) {
+  const url = `${frontend_base_url}/profile_community.html?id=${user_id}`;
+  location.href = url;
+}
+
 // 프로필 가져오기
 async function getProfile(user_id) {
   const response = await fetch(`${backend_base_url}/users/profile/${user_id}`, {
@@ -95,8 +101,8 @@ async function getFollowList(user_id) {
 }
 
 // 해당 프로필 유저가 좋아요한 메뉴 리스트 가져오기
-async function getMyFoodList() {
-  const response = await fetch(`${backend_base_url}/foods/main/myfood/`, {
+async function getLikeFoodList(user_id) {
+  const response = await fetch(`${backend_base_url}/foods/main/profile/${user_id}/likefood/`, {
     headers: {
       Authorization: "Bearer " + localStorage.getItem("access"),
     },
@@ -107,8 +113,8 @@ async function getMyFoodList() {
 }
 
 // 해당 프로필 유저가 좋아요한 커뮤니티 게시글 리스트 가져오기
-async function getMyCommunityList() {
-  const response = await fetch(`${backend_base_url}/posts/community/mycommunity/`, {
+async function getLikeCommunityList(user_id) {
+  const response = await fetch(`${backend_base_url}/posts/community/profile/${user_id}/likecommunity/`, {
     headers: {
       Authorization: "Bearer " + localStorage.getItem("access"),
     },

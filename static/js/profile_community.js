@@ -3,8 +3,11 @@ if (!token) {
 }
 
 // 프로필 보여주기
-window.onload = async function MyProfile() {
-    profile = await getMyProfile();
+const urlParams = new URLSearchParams(window.location.search);
+const user_id = urlParams.get("id");
+
+async function Profile(user_id) {
+    profile = await getProfile(user_id);
 
     const profile_img = document.getElementById("profile_img");
     const nickname = document.getElementById("nickname");
@@ -33,11 +36,50 @@ window.onload = async function MyProfile() {
     } else {
         gender.innerText = "성별 : 사용 안 함"
     }
-}
 
-// 팔로잉/팔로워 리스트 가져오기
-async function FollowList() {
-    follows = await getFollowList();
+    const do_follow = document.getElementById("do_follow");
+    
+    const do_follow_button = document.createElement("button");
+    do_follow_button.innerText = "팔로우";
+    do_follow_button.setAttribute("id", user_id);
+    do_follow_button.setAttribute("class", "btn btn-warning");
+    do_follow_button.setAttribute("onclick", "DoFollow(this.id)");
+    do_follow.appendChild(do_follow_button);
+
+    const like_community = document.getElementById("recommend_community");
+    
+    const like_food_button = document.createElement("button");
+    
+    like_food_button.setAttribute("id", user_id);
+    like_food_button.innerText = "추천 메뉴";
+    like_food_button.setAttribute("type", "button");
+    like_food_button.setAttribute("class", "btn btn-outline-dark profile");
+    like_food_button.setAttribute("onclick", "getProfilePage(this.id)");
+    
+    const like_food_icon = document.createElement("i");
+    like_food_icon.setAttribute("class", "bi bi-hand-thumbs-up");
+    like_food_button.appendChild(like_food_icon);
+
+    like_community.appendChild(like_food_button);
+
+    const like_community_button = document.createElement("button");
+    like_community_button.innerText = "커뮤니티";
+    like_community_button.setAttribute("id", user_id);
+    like_community_button.setAttribute("type", "button");
+    like_community_button.setAttribute("class", "btn btn-outline-dark profile");
+    like_community_button.setAttribute("onclick", "getProfileCommunityPage(this.id)");
+
+    const like_community_icon = document.createElement("i");
+    like_community_icon.setAttribute("class", "bi bi-people-fill");
+    like_community_button.appendChild(like_community_icon);
+
+    like_community.appendChild(like_community_button);
+}
+Profile(user_id)
+    
+// 프로필 유저의 팔로잉/팔로워 리스트 가져오기
+async function FollowList(user_id) {
+    follows = await getFollowList(user_id);
 
     follows.following.forEach((following) => {
         const following_list = document.getElementById("following-modal-body");
@@ -56,11 +98,11 @@ async function FollowList() {
         follower_list.appendChild(newFollower);
     });
 }
-FollowList()
+FollowList(user_id)
 
 // 해당 프로필 유저가 좋아요한 커뮤니티 게시글 리스트 가져오기
-async function MyCommunityList() {
-    communities = await getMyCommunityList();
+async function LikeCommunityList(user_id) {
+    communities = await getLikeCommunityList(user_id);
 
     const card_list = document.getElementById("card-list");
 
@@ -85,8 +127,6 @@ async function MyCommunityList() {
         newDescription.setAttribute("class", "card-description");
         newCard.appendChild(newDescription)
 
-        console.log(community)
-
         const newTitle = document.createElement("h2");
         const newContent = document.createElement("p");
         newTitle.innerText = community.title;
@@ -97,4 +137,4 @@ async function MyCommunityList() {
         card_list.appendChild(newCard)
     });
 }
-MyCommunityList()
+LikeCommunityList(user_id)
