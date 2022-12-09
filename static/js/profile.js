@@ -57,3 +57,44 @@ async function FollowList() {
     });
 }
 FollowList()
+
+// 좋아요한 게시글 리스트 가져오기
+async function MyFoodList() {
+    foods = await getMyFoodList();
+
+    const card_list = document.getElementById("card-list");
+
+    foods.forEach((food) => {
+        const newCard = document.createElement("li");
+        newCard.setAttribute("class", "card");
+        newCard.setAttribute("id", "card");
+
+        const newImg = document.createElement("a");
+        newImg.setAttribute("class", "card-image");
+        newImg.src = `https://storage.googleapis.com/jjalbot/2018/12/IPJVU9tjx/zzal.jpg`;
+        newImg.setAttribute("style", newImg.src)
+        newImg.setAttribute("data-image-full", newImg.src)
+
+        const image = document.createElement("img");
+        image.src = `https://storage.googleapis.com/jjalbot/2018/12/IPJVU9tjx/zzal.jpg`;
+        image.setAttribute("alt", "Psychopomp")
+        newImg.appendChild(image)
+        newCard.appendChild(newImg)
+
+        const newDescription = document.createElement("a");
+        newDescription.setAttribute("class", "card-description");
+        newCard.appendChild(newDescription)
+
+        const newMenu = document.createElement("h2");
+        const newCategory = document.createElement("p");
+        newMenu.innerText = food.menu;
+        newCategory.innerText = food.major_category;
+        newDescription.appendChild(newMenu)
+        newDescription.appendChild(newCategory)
+
+        console.log(newCard)
+
+        card_list.appendChild(newCard)
+    });
+}
+MyFoodList()

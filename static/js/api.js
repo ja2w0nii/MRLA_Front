@@ -68,3 +68,15 @@ async function getFollowList() {
   return response_json;
 }
 
+// 로그인한 유저가 좋아요한 메뉴 리스트 가져오기
+async function getMyFoodList() {
+  const response = await fetch(`${backend_base_url}/foods/main/myfood/`, {
+    headers: {
+      Authorization: "Bearer " + localStorage.getItem("access"),
+    },
+    method: "GET",
+  });
+  response_json = await response.json();
+  return response_json;
+}
+
