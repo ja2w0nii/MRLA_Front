@@ -74,6 +74,18 @@ async function updateMyProfile(formdata) {
   }
 }
 
+// 누구랑 먹지? _ 전체 메뉴 리스트 가져오기
+async function getAllFoodList() {
+  const response = await fetch(`${backend_base_url}/foods/main/`, {
+    headers: {
+      Authorization: "Bearer " + localStorage.getItem("access"),
+    },
+    method: "GET",
+  });
+  response_json = await response.json();
+  return response_json;
+}
+
 // 추천 메뉴 리스트 가져오기
 async function getFoodList() {
   const response = await fetch(`${backend_base_url}/foods/main/filtering/`, {
