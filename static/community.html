@@ -177,7 +177,6 @@
         <!-- 모달창 하얀색 부분 -->
         <div class="post-modal-box">
             <div class="post-modal-top">
-                <a class="post-modal-title">&nbsp&nbsp&nbsp이미지 업로드</a>
                 <a class="post-modal-close">x</a>
             </div>
             <div class="post-modal-content">
@@ -185,7 +184,7 @@
                     <!-- 이미지업로드 박스 -->
                     <div class="flex-container">
                         <div class="wrapper">
-                           
+
                             <img src="https://i0.wp.com/adventure.co.kr/wp-content/uploads/2020/09/no-image.jpg"
                                 class="image-box" />
                             <label for="file" class="img-upload-btn">
@@ -196,25 +195,37 @@
 
 
                     </div>
-                    
+
                 </div>
 
                 <div class="post-modal-content-text">
-                    
-                    <input type="text" id="title" placeholder="title" style="display:none;" class="post_title">
-                    <input type="text" id="content" placeholder="content" style="display:none;" class="post_content">
-                    <div class="img_modal_button">
-                        <button type="button" onclick="submit()" class="ml_start" style="background-color: #636363;">게시글
-                            작성</button>
-                        <button type="button" onclick="post()" class="ml_start" style="background-color: #636363;">게시글
-                            업로드</button>
+                    <div class="post-modal-input-text">
+                        <div class="post-modal-input-text-top">
+                            <input type="text" id="title" placeholder="제목" class="post-title">
+                        </div>
+                        
+                        <div class="post-modal-input-text-middle">
+                            <input type="text" id="location" placeholder="위치" class="post-location">
+
+                            <input type="text" id="tag" placeholder="태그" class="post-tag">
+                        </div>
+                        <div class="post-modal-input-text-bottom">
+                            <!-- <textarea   style="resize: none;" type="text" id="content" placeholder="내용" class="post-content"></textarea> -->
+                            <div class="text_box">
+                                <textarea></textarea>
+                                <div class="count"><span>0</span>/200</div>
+                              </div>
+                        </div>
                     </div>
+                    
                 </div>
-               
 
 
+                
             </div>
-
+            <div class="post-modal-upload-button">
+                <button type="button" onclick="post()" class="community-upload-btn" >게시글 업로드</button>
+            </div>
         </div>
 
         <footer>
