@@ -26,33 +26,12 @@ header {
 header>h2 {
     margin-left: 20px;
 }
+
 header>h2:hover {
   color: #000000;
   cursor: pointer;
 }
 
-
-
-header ul {
-    border: 2px solid red;
-
-    margin: 0px 40px 0px;
-    height: 100%;
-    display: flex;
-    align-items: center;
-
-    justify-content: space-between;
-}
-
-
-
-
-header ul>li {
-    font-size: 20px;
-    height: 100%;
-    display: flex;
-    align-items: center;
-}
 
 /* 네비게이션============================================= 221205 이태은*/
 .navContainer {

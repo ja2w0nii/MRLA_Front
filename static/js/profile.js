@@ -147,12 +147,12 @@ async function LikeFoodList(user_id) {
 
         const newImg = document.createElement("a");
         newImg.setAttribute("class", "card-image");
-        newImg.src = `https://storage.googleapis.com/jjalbot/2018/12/IPJVU9tjx/zzal.jpg`;
+        newImg.src = food.image;
         newImg.setAttribute("style", newImg.src)
         newImg.setAttribute("data-image-full", newImg.src)
 
         const image = document.createElement("img");
-        image.src = `https://storage.googleapis.com/jjalbot/2018/12/IPJVU9tjx/zzal.jpg`;
+        image.src = food.image;
         image.setAttribute("alt", "Psychopomp")
         newImg.appendChild(image)
         newCard.appendChild(newImg)

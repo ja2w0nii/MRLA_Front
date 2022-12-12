@@ -56,7 +56,9 @@ async function MyProfileUpdateForm() {
         formdata.append("profile_img", profile_img);
     }
     
-    formdata.append("nickname", nickname);
+    if (nickname) {
+        formdata.append("nickname", nickname);
+    }
 
     if (age) {
         formdata.append("age", age);
