@@ -457,6 +457,81 @@ border-radius: 20px;
     outline: none;
 
 }
+.tag-plus{
+border: 1px rgba(46, 9, 9, 0.281) solid;
+text-align: left;
+padding: 20px;
+/* display: flex; */
+width: 80%;
+height: 22px;
+font-size: 15px;
+border-radius: 10px;
+margin-top: 15px;
+margin-bottom: 10px;
+overflow: auto;
+
+}
+
+/* 아래의 모든 코드는 영역::코드로 사용 */
+.tag-plus::-webkit-scrollbar {
+    width: 10px;  /* 스크롤바의 너비 */
+}
+
+.tag-plus::-webkit-scrollbar-thumb {
+    height: 30%; /* 스크롤바의 길이 */
+    background: #8a5300; /* 스크롤바의 색상 */
+    
+    border-radius: 20px;
+}
+
+.tag-plus::-webkit-scrollbar-track {
+    background: rgba(33, 122, 244, .1);  /*스크롤바 뒷 배경 색상*/
+}
+/* 태그 관련 css============================================================ 2221211 이태은*/ 
+
+  .tag-box ul li {
+    display: inline-block;
+    margin: 0 5px 5px;
+    font-size: 14px;
+    letter-spacing: -.5px;
+  }
+  
+  .tag-box form {
+    padding-top: 16px;
+  }
+  .tag-wright{
+      text-align: left;
+      padding: 10px;
+      width: 41%;
+      height: 32px;
+      font-size: 15px;
+      border: 0;
+      border-radius: 20px;
+      outline: none;
+      background-color: antiquewhite;
+  
+  }
+  ul li.tag-item {
+    padding: 4px 8px;
+    background-color: orange;
+    color: #000;
+    border-radius: 10px;
+  }
+  
+  .tag-item:hover {
+    background-color: #262626;
+    color: #fff;
+  }
+  
+  .del-btn {
+    font-size: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-left: 8px;
+  
+  }
+  
+  /* =============태그 관련 끝 */
 /* 
 .post-content {
     text-align: left;
@@ -527,7 +602,6 @@ font-size: 20px;
 .community-upload-btn:hover{
     background-color: #ff8ef9;
     }
-
 
 
 /* 카드=============================================================== */

@@ -15,6 +15,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet">
     <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <!-- <link rel="stylesheet" type="text/css" href="/tag_create.css">
+    <script type="module" src="/tag_create.js"></script> -->
+
+
 
     <title>웹 페이지 레이아웃</title>
 
@@ -208,6 +213,14 @@
                             <input type="text" id="location" placeholder="위치" class="post-location">
 
                             <input type="text" id="tag" placeholder="태그" class="post-tag">
+                            
+                        </div>
+                        <div class="tag-box" >
+                            <!-- <input type="text" class="tag-wright" id="tag" size="20" placeholder="태그입력" /> -->
+                            <!-- 입력한 태그가 붙은 부분 -->
+                    
+                            <ul id="tag-list" class="tag-plus"></ul>
+                    
                         </div>
                         <div class="post-modal-input-text-bottom">
                             <!-- <textarea   style="resize: none;" type="text" id="content" placeholder="내용" class="post-content"></textarea> -->
@@ -227,6 +240,8 @@
                 <button type="button" onclick="post()" class="community-upload-btn" >게시글 업로드</button>
             </div>
         </div>
+    </div>
+    
 
         <footer>
             Footer 영역
