@@ -33,6 +33,7 @@ header>h2:hover {
 }
 
 
+
 /* 네비게이션============================================= 221205 이태은*/
 .profile_info_box {
   display: flex;
@@ -130,6 +131,7 @@ header>h2:hover {
 
 }
 
+
 ul {
     list-style: none;
     padding-left: 0px;
@@ -156,6 +158,7 @@ nav ul {
 }
 
 nav a{
+
   text-decoration-line: none;
 }
 
@@ -207,6 +210,7 @@ a.active {
   font-weight: 900;
 }
 
+
 /* 내용 섹션 윗칸 ============================================= 221205 이태은 */
 .recommend_food_img_section {
     background-color: rgb(255, 251, 236);
@@ -215,6 +219,7 @@ a.active {
 }
 
 /* 추천 맛집 라운드 슬라이드==========================================221205 이태은 */
+
 img {
   width: 200px;
   height: 200px;
@@ -240,11 +245,13 @@ img {
 .recommend_container1 div {
   width: 200px;
   height: 200px;
+
   border-radius: 2px;
   cursor: pointer;
   transition: transform 0.5s;
   z-index: -45;
   font-size: 30px;
+
 }
 
 /*BOX2 가운데 박스 기준 왼쪽에 오게되는 박스*/
@@ -276,6 +283,7 @@ img {
   transform: translateY(150px);
   /* z-index: 1; */
 }
+
 
 .recommend_container3 div {
   width: 200px; 
@@ -319,7 +327,6 @@ img {
   transform: translateX(500px);
   /* z-index: -45; */
 }
-
 .recommend_container5 div {
   width: 200px;
   height: 200px;
@@ -341,7 +348,6 @@ img {
   /* z-index: -45; */
   font-size: 20px;
 }
-
 .recommend_container6 div {
   width: 200px;
   height: 200px;
@@ -362,7 +368,6 @@ img {
   transform: translateX(250px);
   /* z-index: -45; */
 }
-
 .recommend_container7 div {
   width: 200px;
   height: 200px;

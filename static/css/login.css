@@ -1,37 +1,38 @@
 body {
-    height: 100vh;
-    display: grid;
-    align-items: center;
-    background-color: whitesmoke;
-    font-family: "Jua", sans-serif;
+  height: 100vh;
+  display: grid;
+  align-items: center;
+  background-color: whitesmoke;
+  font-family: "Jua", sans-serif;
 }
 
 form {
-    margin: auto;
-    text-align: center;
+  margin: auto;
+  text-align: center;
 }
 
 input.form-control {
-    margin: 0 auto;
-    width: 360px;
+  margin: 0 auto;
+  width: 360px;
 }
 
 div.login-box {
-    background-color: bisque;
-    border: 3px solid black;
-    border-radius: 15px;
-    width: 500px;
-    height: 500px;
-    display: grid;
-    flex-direction: column;
-    text-align: center;
-    place-items: center;
+  background-color: bisque;
+  border: 3px solid black;
+  border-radius: 15px;
+  width: 500px;
+  height: 500px;
+  display: grid;
+  flex-direction: column;
+  text-align: center;
+  place-items: center;
 }
 
 button {
-    font-size: 15px;
-    font-weight: bold;
-    width: 180px;
-    height: 40px;
-    margin: auto;
+  font-size: 15px;
+  font-weight: bold;
+  width: 180px;
+  height: 40px;
+  margin: auto;
 }
+
