@@ -22,11 +22,18 @@ header {
     justify-content: space-between;
     position: fixed;
     top: 0;
-    width: 100%
+    width: 100%;
+
+    font-size: 25px;
 }
 
 header>h2 {
     margin-left: 20px;
+}
+
+header>h2:hover {
+    color: #000000;
+    cursor: pointer;
 }
 
 header ul {

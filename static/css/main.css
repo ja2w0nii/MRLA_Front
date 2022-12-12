@@ -26,11 +26,11 @@ header {
 header>h2 {
     margin-left: 20px;
 }
+
 header>h2:hover {
   color: #000000;
   cursor: pointer;
 }
-
 
 header ul {
     border: 2px solid red;
