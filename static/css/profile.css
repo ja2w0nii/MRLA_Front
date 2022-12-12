@@ -132,3 +132,9 @@ form {
 .card-description>p {
     margin: 0;
 }
+
+img {
+    margin: 10px;
+    width: 300px;
+    height: 200px;
+}
