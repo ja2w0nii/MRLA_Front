@@ -38,8 +38,19 @@ async function Profile(user_id) {
         gender.innerText = "성별 : 사용 안 함"
     }
 
+    const profile_update = document.getElementById("profile_update");
+
+    const profile_update_button = document.createElement("button");
+    profile_update_button.setAttribute("type", "button")
+    profile_update_button.setAttribute("class", "btn btn-outline-secondary profile_update_button")
+    profile_update_button.setAttribute("id", user_id)
+    profile_update_button.setAttribute("onclick", "getProfileUpdatePage(this.id)")
+    profile_update_button.innerText = "⚙️프로필 수정"
+
+    profile_update.appendChild(profile_update_button)
+
     const do_follow = document.getElementById("do_follow");
-    
+
     const do_follow_button = document.createElement("button");
     do_follow_button.setAttribute("id", user_id);
 
@@ -47,27 +58,31 @@ async function Profile(user_id) {
         if (login_user.email == profile.follower[i]) {
             do_follow_button.setAttribute("class", "btn btn-outline-warning");
             do_follow_button.innerText = "언팔로우";
-            do_follow_button.setAttribute("onclick", "DoFollow(this.id)");
-            do_follow.appendChild(do_follow_button);
             break;
         } else {
             do_follow_button.setAttribute("class", "btn btn-warning");
             do_follow_button.innerText = "팔로우";
-            do_follow_button.setAttribute("onclick", "DoFollow(this.id)");
-            do_follow.appendChild(do_follow_button);
         }
     }
 
+    if (profile.follower.length == 0) {
+        do_follow_button.setAttribute("class", "btn btn-warning");
+        do_follow_button.innerText = "팔로우";
+    }
+
+    do_follow_button.setAttribute("onclick", "DoFollow(this.id)");
+    do_follow.appendChild(do_follow_button);
+
     const like_community = document.getElementById("recommend_community");
-    
+
     const like_food_button = document.createElement("button");
-    
+
     like_food_button.setAttribute("id", user_id);
     like_food_button.innerText = "추천 메뉴";
     like_food_button.setAttribute("type", "button");
     like_food_button.setAttribute("class", "btn btn-outline-dark profile");
     like_food_button.setAttribute("onclick", "getProfilePage(this.id)");
-    
+
     const like_food_icon = document.createElement("i");
     like_food_icon.setAttribute("class", "bi bi-hand-thumbs-up");
     like_food_button.appendChild(like_food_icon);
@@ -88,16 +103,14 @@ async function Profile(user_id) {
     like_community.appendChild(like_community_button);
 
 
-    const profile_update = document.getElementById("profile_update_button")
-    
     if (login_user.email != profile.email) {
         profile_update.style.visibility = "hidden";
     } else {
-        do_follow_button.style.visibility = "hidden";
+        do_follow.style.visibility = "hidden";
     }
 }
 Profile(user_id)
-    
+
 // 프로필 유저의 팔로잉/팔로워 리스트 가져오기
 async function FollowList(user_id) {
     follows = await getFollowList(user_id);
