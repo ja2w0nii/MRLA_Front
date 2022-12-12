@@ -37,6 +37,12 @@ function getProfilePage(user_id) {
   location.href = url;
 }
 
+// 프로필 수정 페이지 연결
+function getProfileUpdatePage(user_id) {
+  const url = `${frontend_base_url}/profile_update.html?id=${user_id}`;
+  location.href = url;
+}
+
 // 프로필 페이지 커뮤니티 탭 연결
 function getProfileCommunityPage(user_id) {
   const url = `${frontend_base_url}/profile_community.html?id=${user_id}`;
@@ -58,7 +64,7 @@ async function getProfile(user_id) {
 
 // 프로필 수정하기
 async function updateMyProfile(formdata) {
-  const response = await fetch(`${backend_base_url}/users/profile/`, {
+  const response = await fetch(`${backend_base_url}/users/profile/${user_id}/`, {
     headers: {
       Authorization: "Bearer " + localStorage.getItem("access"),
     },
@@ -68,7 +74,7 @@ async function updateMyProfile(formdata) {
 
   if (response.status == 200) {
     alert("프로필 변경 완료!");
-    window.location.replace(`${frontend_base_url}/profile.html`);
+    window.location.replace(`${frontend_base_url}/profile.html?id=${user_id}`);
   } else {
     alert("잘못된 입력입니다!");
   }

@@ -2,10 +2,14 @@ if (!token) {
     window.location.replace(`${frontend_base_url}/login.html`);
 }
 
+// 프로필 보여주기
+const urlParams = new URLSearchParams(window.location.search);
+const user_id = urlParams.get("id");
+
 
 // 프로필 수정 전 기존 프로필 정보 조회
-async function MyProfileUpdate() {
-    profile = await getMyProfile();
+async function MyProfileUpdate(user_id) {
+    profile = await getProfile(user_id);
 
     const profile_img = document.getElementById("profile_img");
     const nickname = document.getElementById("nickname");
@@ -36,7 +40,7 @@ async function MyProfileUpdate() {
 
     email.innerText = profile.email;
 }
-MyProfileUpdate()
+MyProfileUpdate(user_id)
 
 
 // 프로필 수정

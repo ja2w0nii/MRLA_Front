@@ -38,6 +38,17 @@ async function Profile(user_id) {
         gender.innerText = "성별 : 사용 안 함"
     }
 
+    const profile_update = document.getElementById("profile_update");
+
+    const profile_update_button = document.createElement("button");
+    profile_update_button.setAttribute("type", "button")
+    profile_update_button.setAttribute("class", "btn btn-outline-secondary profile_update_button")
+    profile_update_button.setAttribute("id", user_id)
+    profile_update_button.setAttribute("onclick", "getProfileUpdatePage(this.id)")
+    profile_update_button.innerText = "⚙️프로필 수정"
+
+    profile_update.appendChild(profile_update_button)
+
     const do_follow = document.getElementById("do_follow");
     
     const do_follow_button = document.createElement("button");
@@ -47,15 +58,13 @@ async function Profile(user_id) {
         if (login_user.email == profile.follower[i]) {
             do_follow_button.setAttribute("class", "btn btn-outline-warning");
             do_follow_button.innerText = "언팔로우";
-            do_follow_button.setAttribute("onclick", "DoFollow(this.id)");
-            do_follow.appendChild(do_follow_button);
             break;
         } else {
             do_follow_button.setAttribute("class", "btn btn-warning");
             do_follow_button.innerText = "팔로우";
-            do_follow_button.setAttribute("onclick", "DoFollow(this.id)");
-            do_follow.appendChild(do_follow_button);
         }
+        do_follow_button.setAttribute("onclick", "DoFollow(this.id)");
+        do_follow.appendChild(do_follow_button);
     }
 
     const like_community = document.getElementById("recommend_community");
@@ -87,13 +96,11 @@ async function Profile(user_id) {
 
     like_community.appendChild(like_community_button);
 
-
-    const profile_update = document.getElementById("profile_update_button")
     
     if (login_user.email != profile.email) {
         profile_update.style.visibility = "hidden";
     } else {
-        do_follow_button.style.visibility = "hidden";
+        do_follow.style.visibility = "hidden";
     }
 }
 Profile(user_id)
