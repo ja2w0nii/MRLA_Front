@@ -164,7 +164,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="post-modal-content-text">
+                <div class="post-upload-modal-content-text">
                     <div class="post-modal-input-text">
                         <div class="post-modal-input-text-top">
                             <input type="text" id="title" placeholder="제목" class="post-title">
@@ -197,58 +197,59 @@
         </div>
     </div>
 
-
-    <!-- 게시물 상세보기 창==================================================================================================== -->
-    <!-- 게시물 작성 Modal의 내용 -->
-    <div class="post-modal-container">
-        <!-- 모달창 하얀색 부분 -->
-        <div class="post-modal-box">
-            <div class="post-modal-top">
-                <a class="post-modal-close">x</a>
-            </div>
-            <div class="post-modal-content">
-                <div class="post-modal-content-img">
-                    <!-- 이미지업로드 박스 -->
-                    <div class="flex-container">
-                        <div class="wrapper">
-                            <img src="https://i0.wp.com/adventure.co.kr/wp-content/uploads/2020/09/no-image.jpg"
-                                class="image-box" />
-                            <label for="file" class="img-upload-btn">
-                                <input id="file" type="file" accept="image/*" />
-                                <span>이미지 업로드하기</span>
-                            </label>
-                        </div>
-                    </div>
-                </div>
-                <div class="post-modal-content-text">
-                    <div class="post-modal-input-text">
-                        <div class="post-modal-input-text-top">
-                            <input type="text" id="title" placeholder="제목" class="post-title">
-                        </div>
-                        <div class="post-modal-input-text-middle">
-                            <input type="text" id="location" placeholder="위치" class="post-location">
-                            <input type="text" id="tag" placeholder="태그 검색" class="post-tag">
-                        </div>
-                        <div class="tag-box">
-                            <!-- 입력한 태그가 붙은 부분 -->
-                            <ul id="tag-list" class="tag-plus"></ul>
-                        </div>
-                        <div class="post-modal-input-text-bottom" style="border: 1px solid red;">
-                            <!-- <textarea   style="resize: none;" type="text" id="content" placeholder="내용" class="post-content"></textarea> -->
-                            <div class="text_box">
-                                <textarea></textarea>
-                                <div class="count"><span>0</span>/200</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="post-modal-button">
-                <button type="button" onclick="post()" class="community-upload-btn" >게시글 업로드</button>
-            </div>
+ <!-- 게시물 상세보기 Modal의 내용 ==============================================================-->
+ <div class="post-detail-modal-container">
+    <!-- 모달창 하얀색 부분 -->
+    <div class="post-detail-modal-box">
+        <div class="post-detail-modal-top">
+            <a class="post-detail-modal-close">x</a>
         </div>
+        <div class="post-detail-modal-content">
+            <div class="post-detail-modal-content-img">
+                <!-- 이미지업로드 박스 -->
+                <div class="flex-container">
+                    <div class="wrapper">
+                        <img src="https://i0.wp.com/adventure.co.kr/wp-content/uploads/2020/09/no-image.jpg"
+                            class="image-box" />
+                        <!-- <label for="file" class="img-detail-btn">
+                            <input id="file" type="file" accept="image/*" />
+                            <span>이미지 업로드하기</span>
+                        </label> -->
+                    </div>
+                </div>
+            </div>
+            <div class="post-detail-modal-content-text">
+                <div class="post-modal-input-text">
+                    <div class="post-modal-input-text-top">
+                        <input type="text" id="title" placeholder="제목" class="post-title">
+                    </div>
+                    <div class="post-modal-input-text-middle">
+                        <input type="text" id="location" placeholder="위치" class="post-location">
+                        <input type="text" id="tag" placeholder="태그 검색" class="post-tag">
+                    </div>
+                    <div class="tag-box">
+                        <!-- 입력한 태그가 붙은 부분 -->
+                        <ul id="tag-list" class="tag-plus"></ul>
+                    </div>
+                    <div class="post-modal-input-text-bottom" style="border: 1px solid red;">
+                        <!-- <textarea   style="resize: none;" type="text" id="content" placeholder="내용" class="post-content"></textarea> -->
+                        <div class="text_box">
+                            <textarea></textarea>
+                            <div class="count"><span>0</span>/200</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+
+        </div>
+        <!-- <div class="post-modal-detail-button">
+            <button type="button" onclick="post()" class="community-detail-btn">게시글 업로드</button>
+        </div> -->
     </div>
-    <!-- =========================================================================================================================================== -->
+</div>
 
     <footer>
         Footer 영역
