@@ -1,0 +1,146 @@
+/* 전체 설정 */
+* {
+  text-align: center;
+  margin: auto;
+}
+
+body {
+  background: rgb(231, 220, 184);
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  align-content: space-between;
+}
+
+/* 헤더 */
+header {
+  background-color: rgb(190, 190, 190);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header > a {
+  margin: 0 20px;
+  text-decoration: none;
+}
+
+header > a > h2 {
+  color: black;
+}
+
+button.logout {
+  margin: 0 20px;
+}
+
+/* 네비 */
+ul {
+  list-style: none;
+  padding-left: 0px;
+}
+nav {
+  border: 2px solid blue;
+  background-color: orange;
+  display: grid;
+  place-items: center;
+  height: 40px;
+  width: 98%;
+}
+
+nav ul {
+  border: 2px solid red;
+  width: 40%;
+  margin: 0px auto;
+  display: flex;
+  flex-direction: row;
+}
+
+nav ul > li {
+  font-size: 20px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+/* 모달 */
+h1 {
+  color: red;
+}
+
+input.service_title {
+  text-align: left;
+}
+
+textarea.service_content {
+  text-align: left;
+}
+
+div.modal-content {
+  width: 850px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+div.modal-body {
+  display: flex;
+  flex-direction: column;
+}
+
+/* 바디 */
+section.main_section {
+  border: 2px solid green;
+  background-color: rgb(255, 174, 251);
+  height: 65vh;
+  width: 98%;
+  overflow-y: auto;
+}
+
+span {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+p {
+  border: 1px solid rgb(0, 0, 0);
+  margin: 7px 10px;
+  display: grid;
+  align-items: center;
+}
+
+p.service_id {
+  width: 100px;
+}
+
+p.service_title {
+  width: 100%;
+  padding: 0 5px;
+  cursor: pointer;
+  display: inline-block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+p.service_user {
+  width: 500px;
+}
+
+p.service_created_at {
+  width: 300px;
+}
+
+/* 푸터 */
+footer {
+  width: 100%;
+  background-color: gray;
+  display: grid;
+  place-items: center;
+}
