@@ -21,11 +21,16 @@ header {
   align-items: center;
 }
 
-header > h2 {
+header > a {
   margin: 0 20px;
+  text-decoration: none;
 }
 
-header > a {
+header > a > h2 {
+  color: black;
+}
+
+button.logout {
   margin: 0 20px;
 }
 
