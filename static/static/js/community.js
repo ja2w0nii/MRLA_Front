@@ -38,11 +38,11 @@ function lazyLoad() {
 //  업로드 영역 모달창 시작====================================
 
 
-var modals = document.getElementsByClassName("post-modal-container");// 모달창 띄우는 자바스크립트 시작
+var modals = document.getElementsByClassName("post-upload-modal-container");// 모달창 띄우는 자바스크립트 시작
  
 var btns = document.getElementsByClassName("post-upload-button"); // Modal을 띄우는 클래스 이름을 가져옵니다.
 
-var spanes = document.getElementsByClassName("post-modal-close");  // Modal을 닫는 close 클래스를 가져옵니다.
+var spanes = document.getElementsByClassName("post-upload-modal-close");  // Modal을 닫는 close 클래스를 가져옵니다.
 var funcs = [];
 
 
@@ -73,7 +73,7 @@ for (var j = 0; j < btns.length; j++) {
 
 // Modal 영역 밖을 클릭하면 Modal을 닫습니다.
 window.onclick = function (event) {
-    if (event.target.className == "post-modal-container") {
+    if (event.target.className == "post-upload-modal-container") {
         event.target.style.display = "none";
     }
 };
@@ -172,3 +172,47 @@ $(document)
         .remove();
     });
 })
+// 업로드 모달창 끝==========================================================================================================================
+
+//  게시물 영역 모달창 시작====================================
+
+
+var modals = document.getElementsByClassName("post-modal-container");// 모달창 띄우는 자바스크립트 시작
+ 
+var btns = document.getElementsByClassName("card"); // Modal을 띄우는 클래스 이름을 가져옵니다.
+
+var spanes = document.getElementsByClassName("post-modal-close");  // Modal을 닫는 close 클래스를 가져옵니다.
+var funcs = [];
+
+
+function Modal(num) {  // Modal을 띄우고 닫는 클릭 이벤트를 정의한 함수
+    return function () {
+        // 해당 클래스의 내용을 클릭하면 Modal을 띄웁니다.
+        btns[num].onclick = function () {
+            modals[num].style.display = "block";
+            console.log(num);
+        };
+
+        // <span> 태그(X 버튼)를 클릭하면 Modal이 닫습니다.
+        spanes[num].onclick = function () {
+            modals[num].style.display = "none";
+        };
+    };
+}
+
+// 원하는 Modal 수만큼 Modal 함수를 호출해서 funcs 함수에 정의합니다.
+for (var i = 0; i < btns.length; i++) {
+    funcs[i] = Modal(i);
+}
+
+// 원하는 Modal 수만큼 funcs 함수를 호출합니다.
+for (var j = 0; j < btns.length; j++) {
+    funcs[j]();
+}
+
+// Modal 영역 밖을 클릭하면 Modal을 닫습니다.
+window.onclick = function (event) {
+    if (event.target.className == "post-upload-modal-container") {
+        event.target.style.display = "none";
+    }
+};
