@@ -26,6 +26,7 @@ header {
 header>h2 {
     margin-left: 20px;
 }
+
 header>h2:hover {
   color: #000000;
   cursor: pointer;
@@ -33,28 +34,33 @@ header>h2:hover {
 
 
 
-header ul {
-    border: 2px solid red;
-
-    margin: 0px 40px 0px;
-    height: 100%;
-    display: flex;
-    align-items: center;
-
-    justify-content: space-between;
-}
-
-
-
-
-header ul>li {
-    font-size: 20px;
-    height: 100%;
-    display: flex;
-    align-items: center;
-}
-
 /* 네비게이션============================================= 221205 이태은*/
+.profile_info_box {
+  display: flex;
+  flex-direction: row;
+  margin: 30px;
+}
+
+.profile_img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin: 10px;
+}
+
+.dropdown-menu-dark {
+  height: 100px;
+}
+
+.dropdown-item-box {
+  height: 43px;
+}
+
+.dropdown-item {
+  margin: 0px;
+  cursor: pointer;
+}
+
 .navContainer {
   border: 1px solid red;
   align-items: center;
@@ -67,6 +73,7 @@ header ul>li {
   
 /* float: right; */
 }
+
 .service1{
   width: 60%;
 }
@@ -80,6 +87,7 @@ header ul>li {
   font-size: 20px;
   font-weight: 500;
 }
+
 .near_restaurant:hover {
   letter-spacing: 3px;
   color: #000000;
@@ -114,6 +122,7 @@ header ul>li {
   font-size: 20px;
   font-weight: 500;
 }
+
 .community:hover {
   letter-spacing: 3px;
   color: #000000;
@@ -123,12 +132,11 @@ header ul>li {
 }
 
 
-
-
 ul {
     list-style: none;
     padding-left: 0px;
 }
+
 nav {
     /* border: 2px solid blue; */
     margin: 10px 10px;
@@ -148,7 +156,9 @@ nav ul {
 
     justify-content: space-between;
 }
-nav  a{
+
+nav a{
+
   text-decoration-line: none;
 }
 
@@ -209,6 +219,13 @@ a.active {
 }
 
 /* 추천 맛집 라운드 슬라이드==========================================221205 이태은 */
+
+img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
+
 /*BOX1*/
 .recommend_center{
   border: 2px solid blue;
@@ -216,21 +233,24 @@ a.active {
   justify-content: center;
   /* z-index: 100; */
 }
+
 .recommend_container1 {
   position: fixed;
   top:250px;
   transition: transform 0.6s;
 /*   transform: translateY(-100px); */
 }
+
 /* 가운데로 오게되는 박스 */
 .recommend_container1 div {
   width: 200px;
   height: 200px;
-  background: red;
+
   border-radius: 2px;
   cursor: pointer;
   transition: transform 0.5s;
   z-index: -45;
+  font-size: 30px;
 
 }
 
@@ -241,19 +261,18 @@ a.active {
   transition: transform 0.5s;
   transform: translateX(-250px);
   /* z-index: -45; */
-
 }
+
 .recommend_container2 div {
   width: 200px;
   height: 200px;
   transition: transform 0.5s;
   transform: translateY(20px);
-  background: rgb(255, 123, 0);
   border-radius: 2px;
   cursor: pointer;
   /* z-index: -45; */
-
-  
+  font-size: 20px;
+  color: rgb(63, 62, 62)
 }
 
 /*BOX3*/
@@ -263,18 +282,19 @@ a.active {
   transition: transform 0.5s;
   transform: translateY(150px);
   /* z-index: 1; */
-
-
 }
+
+
 .recommend_container3 div {
   width: 200px; 
   height: 200px;
   transition: transform 0.5s;
-  background: rgb(255, 208, 0);
   border-radius: 2px;
   cursor: pointer;
   transform: translateX(-500px);
   /* z-index: -45; */
+  font-size: 20px;
+  color: rgb(124, 123, 123);
 }
 
 /*BOX4*/
@@ -292,11 +312,11 @@ a.active {
   height: 200px;
   transition: transform 0.5s;
   transform: translateX(-500px);
-  background: rgb(21, 255, 0);
   border-radius: 2px;
   cursor: pointer;
   /* z-index: -45; */
-
+  font-size: 20px;
+  color: rgb(186, 184, 184);
 }
 
 /*BOX5*/
@@ -312,11 +332,11 @@ a.active {
   height: 200px;
   transition: transform 0.5s;
   transform: translateY(350px);
-  background: rgb(0, 174, 243);
   border-radius: 2px;
   cursor: pointer;
   /* z-index: -45; */
-
+  font-size: 20px;
+  color: rgb(186, 184, 184);
 }
 
 /*BOX6*/
@@ -326,18 +346,18 @@ a.active {
   transition: transform 0.5s;
   transform: translateX(500px);
   /* z-index: -45; */
-
+  font-size: 20px;
 }
 .recommend_container6 div {
   width: 200px;
   height: 200px;
   transition: transform 0.5s;
   transform: translateY(60px);
-  background: rgb(3, 0, 151);
   border-radius: 2px;
   cursor: pointer;
   /* z-index: -45; */
-
+  font-size: 20px;
+  color: rgb(124, 123, 123);
 }
 
 /*BOX7*/
@@ -347,22 +367,19 @@ a.active {
   transition: transform 0.5s;
   transform: translateX(250px);
   /* z-index: -45; */
-
 }
 .recommend_container7 div {
   width: 200px;
   height: 200px;
   transition: transform 0.5;
   transform: translateY(20px);
-  background: rgb(84, 0, 105);
   border-radius: 2px;
   cursor: pointer;
   /* z-index: -45; */
-
+  font-size: 20px;
+  color: rgb(63, 62, 62);
 }
-  .slide_change_button{
 
-  }
 /* 내용 섹션 아래칸 ============================================= 221205 이태은 */
 
 .sns_famous_restaurant_section {

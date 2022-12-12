@@ -9,10 +9,12 @@
     font-family: 'Do Hyeon', sans-serif;
 }
 
+
 /* 폰트 */
 /* @import url('https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@700&family=Jua&display=swap'); */
 /* @import url('https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@700&family=Jua&display=swap');  */
 /* @import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap'); */
+
 
 /* 헤더============================================= 221205 이태은 */
 header {
@@ -29,6 +31,7 @@ header>h2 {
 }
 
 header>h2:hover {
+
     color: #000000;
     cursor: pointer;
 }
@@ -126,6 +129,7 @@ header ul>li {
     font-weight: 900;
     transition: all 0.7s;
 
+
 }
 
 
@@ -156,8 +160,10 @@ nav ul {
     justify-content: space-between;
 }
 
+
 nav a {
     text-decoration-line: none;
+
 }
 
 nav ul>li {
@@ -179,6 +185,7 @@ section {
         'wght' 400,
         'GRAD' 200,
         'opsz' 48
+
 }
 
 
@@ -206,6 +213,7 @@ a.active {
     color: #FF5752;
     font-weight: bolder;
     font-weight: 900;
+
 }
 
 
@@ -223,6 +231,7 @@ a.active {
     font-size: 40px;
     color: rgb(107, 57, 0);
 }
+
 
 .community-div {
     border: 1px rgb(59, 30, 30) solid;
@@ -251,7 +260,6 @@ margin-bottom: 10px;
     border: 0px solid #e74b24;
     color: rgb(255, 255, 255);
     cursor: pointer;
-
 }
 
 
@@ -275,6 +283,7 @@ margin-bottom: 10px;
     height: 100%;
     /* 배경 어둡게 */
     background-color: rgba(0, 0, 0, 0.7);
+
 }
 
 /* 게시물 업로드 모달창 */
@@ -994,12 +1003,14 @@ font-size: 20px;
     filter: none;
     /* remove the blur on fullres image */
     transition: filter 1s;
+
 }
 
 
 
 
 /* Layout Styles */
+
 .card-list {
     display: block;
     margin: 1rem auto;

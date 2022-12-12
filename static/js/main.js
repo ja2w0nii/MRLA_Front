@@ -14,8 +14,6 @@ $(document).ready(function() {
       $('#recommend_box5').removeClass($('#recommend_box5').attr('class')).addClass('recommend_container'+i[4]);
       $('#recommend_box6').removeClass($('#recommend_box6').attr('class')).addClass('recommend_container'+i[5]);
       $('#recommend_box7').removeClass($('#recommend_box7').attr('class')).addClass('recommend_container'+i[6]);
-
-    
     });
 //   Click Right
     $('#ClickLeft').click(function() {
@@ -30,12 +28,80 @@ $(document).ready(function() {
       $('#recommend_box5').removeClass($('#recommend_box5').attr('class')).addClass('recommend_container'+i[4]);
       $('#recommend_box6').removeClass($('#recommend_box6').attr('class')).addClass('recommend_container'+i[5]);
       $('#recommend_box7').removeClass($('#recommend_box7').attr('class')).addClass('recommend_container'+i[6]);
-
-    
     });
- 
 })
 
+// 프로필 드롭다운 가져오기
+async function ProfileInfo() {
+    login_user = await getName();
+
+    const profile_img_box = document.getElementById("profile_img_box");
+    let newImage = document.createElement("img");
+    newImage.setAttribute("id", login_user.id)
+    newImage.setAttribute("class", "profile_img")
+    newImage.src = `${backend_base_url}${login_user.profile_img}`;
+    profile_img_box.appendChild(newImage);
+
+    const profile_name_box = document.getElementById("profile_name_box");
+    const newNickname = document.createElement("a")
+    newNickname.setAttribute("id", login_user.id)
+    newNickname.setAttribute("class", "nav-link dropdown-toggle")
+    newNickname.setAttribute("href", "#")
+    newNickname.setAttribute("role", "button")
+    newNickname.setAttribute("data-bs-toggle", "dropdown")
+    newNickname.setAttribute("aria-expanded", "false")
+    newNickname.innerText = login_user.nickname
+    profile_name_box.appendChild(newNickname)
+
+    const profile_dropdown = document.getElementById("profile_dropdown")
+    const newItem = document.createElement("li")
+    newItem.setAttribute("class", "dropdown-item-box")
+    profile_dropdown.appendChild(newItem)
+
+    const newItem_a = document.createElement("a")
+    newItem_a.setAttribute("id", login_user.id)
+    newItem_a.setAttribute("class", "dropdown-item")
+    newItem_a.setAttribute("onclick", "getProfilePage(this.id)")
+    newItem_a.innerText = "My 프로필"
+    newItem.appendChild(newItem_a)
+
+    const newItem2 = document.createElement("li")
+    newItem2.setAttribute("class", "dropdown-item-box")
+    profile_dropdown.appendChild(newItem2)
+
+    const newItem_a2 = document.createElement("a")
+    newItem_a2.setAttribute("id", login_user.id)
+    newItem_a2.setAttribute("class", "dropdown-item")
+    // newItem_a2.setAttribute("onclick", "getProfilePage(this.id)")
+    newItem_a2.innerText = "로그아웃"
+    newItem2.appendChild(newItem_a2)
+}
+ProfileInfo()
+
+// 추천 메뉴 리스트 가져오기
+async function FoodList() {
+    foods = await getFoodList();
+
+    let i = 1;
+    foods.forEach((food) => {
+        const food_list = document.getElementById("recommend_box"+i);
+
+        const newFood = document.createElement("div");
+        newFood.setAttribute("id", food.food_id);
+        // newFood.setAttribute("onclick", );
+        newFood.innerText = food.menu;
+        food_list.appendChild(newFood);
+
+        const newImage = document.createElement("img");
+        newImage.setAttribute("id", food.food_id);
+        // newImage.setAttribute("onclick", );
+        newImage.src = food.image;
+        newFood.appendChild(newImage);
+
+        i += 1;
+    });
+}
+FoodList()
 
 
 

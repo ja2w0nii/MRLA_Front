@@ -32,10 +32,10 @@ function lazyLoad() {
 }
 
 
-
 // 모달창 관련=============================================================== 221208 이태은
 
 //  업로드 영역 모달창 시작====================================
+
 
 
 var upload_modals = document.getElementsByClassName("post-upload-modal-container");// 모달창 띄우는 자바스크립트 시작
@@ -44,6 +44,7 @@ var upload_btns = document.getElementsByClassName("post-upload-button"); // Moda
 
 var upload_spanes = document.getElementsByClassName("post-upload-modal-close");  // Modal을 닫는 close 클래스를 가져옵니다.
 var upload_funcs = [];
+
 
 
 function Modal(num) {  // Modal을 띄우고 닫는 클릭 이벤트를 정의한 함수
@@ -77,6 +78,7 @@ window.onclick = function (event) {
         event.target.style.display = "none";
     }
 };
+
 
 
 
@@ -216,3 +218,4 @@ window.onclick = function (event) {
         event.target.style.display = "none";
     }
 };
+
