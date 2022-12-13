@@ -68,6 +68,10 @@
       </div>
       <div>
         <div class="post-upload-button-div">
+          <span class="space">
+            <input class="form-control" type="search" placeholder="이름 or 제목 or 내용" aria-label="Search" id="inputSearch" />
+            <button class="btn btn-outline-success my-2 my-sm-0" type="button" onclick="CommunitySearch()">검색</button>
+          </span>
           <!-- 이미지 업로드  Modal을 여는 클래스 -->
           <button class="post-upload-button">게시글 작성</button>
         </div>
@@ -84,64 +88,6 @@
               <a class="card-description">
                 <h2>조랭이</h2>
                 <p>개졸귀탱임</p>
-              </a>
-            </li>
-
-            <li class="card">
-              <a
-                class="card-image"
-                style="background-image: url(https://velog.velcdn.com/images/taeeuno_o/post/0f8954fc-3d47-4d9e-abbb-ec6ea78fb41c/image.png)"
-                data-image-full="https://velog.velcdn.com/images/taeeuno_o/post/0f8954fc-3d47-4d9e-abbb-ec6ea78fb41c/image.png"
-              >
-                <img src="" alt="" />
-              </a>
-              <a class="card-description">
-                <h2>조랭이</h2>
-                <p>졸귀탱임</p>
-              </a>
-            </li>
-            <li class="card">
-              <a
-                class="card-image"
-                href=""
-                style="background-image: url(https://velog.velcdn.com/images/taeeuno_o/post/84775efe-50a4-4901-9603-aeed8ae6f684/image.png)"
-                data-image-full="https://velog.velcdn.com/images/taeeuno_o/post/84775efe-50a4-4901-9603-aeed8ae6f684/image.png"
-              >
-                <img src="" alt="" />
-              </a>
-              <a class="card-description" href="">
-                <h2>조랭이</h2>
-                <p>졸귀탱임</p>
-              </a>
-            </li>
-
-            <li class="card">
-              <a
-                class="card-image"
-                href=""
-                style="background-image: url(https://velog.velcdn.com/images/taeeuno_o/post/0f8954fc-3d47-4d9e-abbb-ec6ea78fb41c/image.png)"
-                data-image-full="https://velog.velcdn.com/images/taeeuno_o/post/0f8954fc-3d47-4d9e-abbb-ec6ea78fb41c/image.png"
-              >
-                <img src="" alt="" />
-              </a>
-              <a class="card-description" href="">
-                <h2>쪼랭구</h2>
-                <p>개귀여움</p>
-              </a>
-            </li>
-
-            <li class="card">
-              <a
-                class="card-image"
-                href=""
-                style="background-image: url(https://velog.velcdn.com/images/taeeuno_o/post/84775efe-50a4-4901-9603-aeed8ae6f684/image.png)"
-                data-image-full="https://velog.velcdn.com/images/taeeuno_o/post/84775efe-50a4-4901-9603-aeed8ae6f684/image.png"
-              >
-                <img src="" alt="" />
-              </a>
-              <a class="card-description" href="">
-                <h2>이쪼랭구</h2>
-                <p>졸라기여움</p>
               </a>
             </li>
           </ul>
@@ -248,5 +194,6 @@
     </div>
     <footer>Footer 영역</footer>
   </body>
+  <script type="text/javascript" src="../static/js/api.js"></script>
   <script type="text/javascript" src="../static/js/community.js"></script>
 </html>

@@ -51,6 +51,10 @@ header ul > li {
   align-items: center;
 }
 
+span.space {
+  float: left;
+}
+
 /* 네비게이션============================================= 221205 이태은*/
 .navContainer {
   border: 1px solid red;
