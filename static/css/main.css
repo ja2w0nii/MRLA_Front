@@ -1,30 +1,25 @@
 /* 전체 설정 */
 * {
+  font-family: 'Jua', sans-serif;
   text-align: center;
   margin: auto;
-  /* font-family: 'Gowun Batang', serif;
-    font-family: 'Jua', sans-serif; */
-  /* font-family: 'Gowun Batang', serif;
-    font-family: 'Jua', sans-serif; */
-  font-family: "Do Hyeon", sans-serif;
 }
-/* 폰트 */
-/* @import url('https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@700&family=Jua&display=swap'); */
-/* @import url('https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@700&family=Jua&display=swap');  */
-/* @import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap'); */
 
-/* 헤더============================================= 221205 이태은 */
+/* 헤더=============================================*/
 header {
-  background-color: rgb(190, 190, 190);
-  width: 100;
+  background-color: rgb(239, 207, 184);
+  width: 100%;
   height: 80px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: fixed;
+  top: 0;
 }
 
-header > h2 {
-  margin-left: 20px;
+header>h2 {
+  margin: 0px 30px;
+  width: 120px;
 }
 
 header > h2:hover {
@@ -32,11 +27,10 @@ header > h2:hover {
   cursor: pointer;
 }
 
-/* 네비게이션============================================= 221205 이태은*/
 .profile_info_box {
   display: flex;
   flex-direction: row;
-  margin: 30px;
+  margin: 0px 30px;
 }
 
 .profile_img {
@@ -59,6 +53,8 @@ header > h2:hover {
   cursor: pointer;
 }
 
+
+/* 네비게이션============================================= */
 .navContainer {
   border: 1px solid red;
   align-items: center;
@@ -68,7 +64,7 @@ header > h2:hover {
   justify-content: flex-end;
   padding: 0 4px 0 32px;
   align-items: center;
-  /* float: right; */
+  margin-top: 80px;
 }
 
 .service1 {
@@ -219,20 +215,20 @@ a.active {
   z-index: -100;
 }
 
-/* 추천 맛집 라운드 슬라이드==========================================221205 이태은 */
 
+/* 추천 맛집 라운드 슬라이드==========================================221205 이태은 */
 img {
   width: 200px;
   height: 200px;
   border-radius: 50%;
 }
 
+
 /*BOX1*/
 .recommend_center {
   border: 2px solid blue;
   display: flex;
   justify-content: center;
-  /* z-index: 100; */
 }
 
 .recommend_container1 {
@@ -260,7 +256,6 @@ img {
   top: 250px;
   transition: transform 0.5s;
   transform: translateX(-250px);
-  /* z-index: -45; */
 }
 
 .recommend_container2 div {
@@ -270,7 +265,6 @@ img {
   transform: translateY(20px);
   border-radius: 2px;
   cursor: pointer;
-  /* z-index: -45; */
   font-size: 20px;
   color: rgb(63, 62, 62);
 }
@@ -281,7 +275,6 @@ img {
   top: 170px;
   transition: transform 0.5s;
   transform: translateY(150px);
-  /* z-index: 1; */
 }
 
 .recommend_container3 div {
@@ -291,7 +284,6 @@ img {
   border-radius: 2px;
   cursor: pointer;
   transform: translateX(-500px);
-  /* z-index: -45; */
   font-size: 20px;
   color: rgb(124, 123, 123);
 }
@@ -304,6 +296,7 @@ img {
   transform: translateY(350px);
   /* z-index: -45; */
 }
+
 .recommend_container4 div {
   width: 200px;
   height: 200px;
@@ -311,7 +304,6 @@ img {
   transform: translateX(-500px);
   border-radius: 2px;
   cursor: pointer;
-  /* z-index: -45; */
   font-size: 20px;
   color: rgb(186, 184, 184);
 }
@@ -322,8 +314,8 @@ img {
   top: 250px;
   transition: transform 0.5s;
   transform: translateX(500px);
-  /* z-index: -45; */
 }
+
 .recommend_container5 div {
   width: 200px;
   height: 200px;
@@ -331,7 +323,6 @@ img {
   transform: translateY(350px);
   border-radius: 2px;
   cursor: pointer;
-  /* z-index: -45; */
   font-size: 20px;
   color: rgb(186, 184, 184);
 }
@@ -342,9 +333,9 @@ img {
   top: 250px;
   transition: transform 0.5s;
   transform: translateX(500px);
-  /* z-index: -45; */
   font-size: 20px;
 }
+
 .recommend_container6 div {
   width: 200px;
   height: 200px;
@@ -352,7 +343,6 @@ img {
   transform: translateY(60px);
   border-radius: 2px;
   cursor: pointer;
-  /* z-index: -45; */
   font-size: 20px;
   color: rgb(124, 123, 123);
 }
@@ -363,8 +353,8 @@ img {
   top: 250px;
   transition: transform 0.5s;
   transform: translateX(250px);
-  /* z-index: -45; */
 }
+
 .recommend_container7 div {
   width: 200px;
   height: 200px;
@@ -372,13 +362,12 @@ img {
   transform: translateY(20px);
   border-radius: 2px;
   cursor: pointer;
-  /* z-index: -45; */
   font-size: 20px;
   color: rgb(63, 62, 62);
 }
 
-/* 내용 섹션 아래칸 ============================================= 221205 이태은 */
 
+/* 내용 섹션 아래칸 ============================================= 221205 이태은 */
 .sns_famous_restaurant_section {
   background-color: rgb(255, 174, 205);
   height: 250px;
@@ -390,9 +379,7 @@ img {
   width: 100%;
   margin: 0;
   padding: 0;
-  /* background: teal; */
   background-color: rgb(255, 235, 168);
-  /* background-color: rgb(255, 174, 205); */
 
   display: grid;
   place-items: center;
@@ -405,6 +392,7 @@ img {
   place-items: center;
   z-index: 100;
 } */
+
 #sns_slider-container {
   height: 150px;
   width: 60%;
@@ -488,8 +476,8 @@ img {
   }
 }
 
-/* 바닥글 윗칸 ============================================= 221205 이태은 */
 
+/* 바닥글 윗칸 ============================================= 221205 이태은 */
 footer {
   height: 100%;
   /* line-height: 55px; */

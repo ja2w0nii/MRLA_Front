@@ -1,5 +1,5 @@
 if (!token) {
-  window.location.replace(`${frontend_base_url}/login.html`);
+    window.location.replace(`${frontend_base_url}/login.html`);
 }
 
 // 음식 추천 슬라이더 ========================================================================
@@ -105,12 +105,11 @@ async function ProfileInfo() {
   newItem2.setAttribute("class", "dropdown-item-box");
   profile_dropdown.appendChild(newItem2);
 
-  const newItem_a2 = document.createElement("a");
-  newItem_a2.setAttribute("id", login_user.id);
-  newItem_a2.setAttribute("class", "dropdown-item");
-  // newItem_a2.setAttribute("onclick", "getProfilePage(this.id)")
-  newItem_a2.innerText = "로그아웃";
-  newItem2.appendChild(newItem_a2);
+    const newItem_a2 = document.createElement("a")
+    newItem_a2.setAttribute("id", login_user.id)
+    newItem_a2.setAttribute("class", "dropdown-item")
+    newItem_a2.innerText = "로그아웃"
+    newItem2.appendChild(newItem_a2)
 }
 ProfileInfo();
 
@@ -118,9 +117,9 @@ ProfileInfo();
 async function FoodList() {
   foods = await getFoodList();
 
-  let i = 1;
-  foods.forEach((food) => {
-    const food_list = document.getElementById("recommend_box" + i);
+    let i = 1;
+    foods.forEach((food) => {
+        const food_list = document.getElementById("recommend_box" + i);
 
     const newFood = document.createElement("div");
     newFood.setAttribute("id", food.food_id);
