@@ -22,7 +22,7 @@ header>h2 {
   width: 120px;
 }
 
-header>h2:hover {
+header > h2:hover {
   color: #000000;
   cursor: pointer;
 }
@@ -74,7 +74,7 @@ header>h2:hover {
 .near_restaurant {
   border: 1px solid red;
   float: left;
-  width: 30%;
+  width: 20%;
   box-sizing: border-box;
   text-decoration-line: none;
   font-size: 20px;
@@ -93,7 +93,7 @@ header>h2:hover {
   border: 1px solid green;
   float: left;
   margin-left: 5%;
-  width: 30%;
+  width: 20%;
   box-sizing: border-box;
   font-size: 20px;
   font-weight: 500;
@@ -104,13 +104,13 @@ header>h2:hover {
   color: #000000;
   font-weight: 900;
   transition: all 0.7s;
-
 }
 
 .community {
   border: 1px solid blue;
-  float: right;
-  width: 30%;
+  float: left;
+  margin-left: 5%;
+  width: 20%;
   box-sizing: border-box;
   font-size: 20px;
   font-weight: 500;
@@ -121,7 +121,23 @@ header>h2:hover {
   color: #000000;
   font-weight: 900;
   transition: all 0.7s;
+}
 
+.service {
+  border: 1px solid orange;
+  float: left;
+  margin-left: 5%;
+  width: 20%;
+  box-sizing: border-box;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.service:hover {
+  letter-spacing: 3px;
+  color: #000000;
+  font-weight: 900;
+  transition: all 0.7s;
 }
 
 ul {
@@ -134,8 +150,6 @@ nav {
   margin: 10px 10px;
   /* background-color: orange; */
   height: 100%;
-
-
 }
 
 nav ul {
@@ -150,11 +164,10 @@ nav ul {
 }
 
 nav a {
-
   text-decoration-line: none;
 }
 
-nav ul>li {
+nav ul > li {
   font-size: 20px;
   height: 100%;
   display: flex;
@@ -168,19 +181,32 @@ section {
 
 /* 위치 */
 .material-symbols-outlined {
-  font-variation-settings:
-    'FILL' 0,
-    'wght' 400,
-    'GRAD' 200,
-    'opsz' 48
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 200, "opsz" 48;
 }
 
-a.active {
-  color: #FF5752;
-  font-weight: bolder;
+/* nav ul li a:hover {
+  font-weight: 500;
+  letter-spacing: 3px;
+  color: #000000;
   font-weight: 900;
 }
 
+nav ul li a span :hover {
+
+  font-variation-settings:
+  'FILL' 1,
+  'wght' 400,
+  'GRAD' 200,
+  'opsz' 48
+
+}
+ */
+
+a.active {
+  color: #ff5752;
+  font-weight: bolder;
+  font-weight: 900;
+}
 
 /* 내용 섹션 윗칸 ============================================= 221205 이태은 */
 .recommend_food_img_section {
@@ -209,6 +235,7 @@ img {
   position: fixed;
   top: 250px;
   transition: transform 0.6s;
+  /*   transform: translateY(-100px); */
 }
 
 /* 가운데로 오게되는 박스 */
@@ -239,7 +266,7 @@ img {
   border-radius: 2px;
   cursor: pointer;
   font-size: 20px;
-  color: rgb(63, 62, 62)
+  color: rgb(63, 62, 62);
 }
 
 /*BOX3*/
@@ -267,6 +294,7 @@ img {
   top: 250px;
   transition: transform 0.5s;
   transform: translateY(350px);
+  /* z-index: -45; */
 }
 
 .recommend_container4 div {
@@ -345,7 +373,6 @@ img {
   height: 250px;
 }
 
-
 /* 유명 맛집 스크롤 css ================================ 221205 이태은*/
 #sns_famous_restaurant_container {
   height: 100%;
@@ -359,7 +386,6 @@ img {
   z-index: 1000;
   position: relative;
 }
-
 /* .sns_famous_restaurant_container{
   background: rgb(65, 252, 252);
   display: grid ;
@@ -392,12 +418,12 @@ img {
 }
 
 #sns_slider-container .btn.inactive {
-  border-color: rgb(153, 121, 126)
+  border-color: rgb(153, 121, 126);
 }
 
 #sns_slider-container .btn:first-of-type {
   transform: rotate(-45deg);
-  left: 10px
+  left: 10px;
 }
 
 #sns_slider-container .btn:last-of-type {
@@ -409,7 +435,7 @@ img {
   display: flex;
   width: 1000%;
   height: 100%;
-  transition: all .5s;
+  transition: all 0.5s;
 }
 
 #sns_slider-container #slider .slide {
@@ -427,41 +453,34 @@ img {
 }
 
 @media only screen and (min-width: 1100px) {
-
   #sns_slider-container #slider .slide {
     width: calc(2.5% - 20px);
   }
-
 }
 
 @media only screen and (max-width: 1100px) {
-
   #sns_slider-container #slider .slide {
     width: calc(3.3333333% - 20px);
   }
-
 }
 
 @media only screen and (max-width: 900px) {
-
   #sns_slider-container #slider .slide {
     width: calc(5% - 20px);
   }
-
 }
 
 @media only screen and (max-width: 550px) {
-
   #sns_slider-container #slider .slide {
     width: calc(10% - 20px);
   }
-
 }
 
 
 /* 바닥글 윗칸 ============================================= 221205 이태은 */
 footer {
   height: 100%;
+  /* line-height: 55px; */
   background-color: gray;
   width: 100%;
   position: relative;

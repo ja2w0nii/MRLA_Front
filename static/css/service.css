@@ -6,7 +6,6 @@
 }
 
 body {
-  background: rgb(231, 220, 184);
   height: 100vh;
   display: grid;
   place-items: center;
@@ -62,26 +61,117 @@ header>h2:hover {
 }
 
 /* 네비 */
+.navContainer {
+  border: 1px solid red;
+  align-items: center;
+  box-sizing: border-box;
+  display: flex;
+  width: 98vw;
+  justify-content: flex-end;
+  padding: 0 4px 0 32px;
+  align-items: center;
+  margin-top: 80px;
+}
+
+.service1 {
+  width: 60%;
+}
+
+.near_restaurant {
+  border: 1px solid red;
+  float: left;
+  width: 20%;
+  box-sizing: border-box;
+  text-decoration-line: none;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.near_restaurant:hover {
+  letter-spacing: 3px;
+  color: #000000;
+  font-weight: bold;
+  text-decoration-line: none;
+  transition: all 0.7s;
+}
+
+.who {
+  border: 1px solid green;
+  float: left;
+  margin-left: 5%;
+  width: 20%;
+  box-sizing: border-box;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.who:hover {
+  letter-spacing: 3px;
+  color: #000000;
+  font-weight: 900;
+  transition: all 0.7s;
+}
+
+.community {
+  border: 1px solid blue;
+  float: left;
+  margin-left: 5%;
+  width: 20%;
+  box-sizing: border-box;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.community:hover {
+  letter-spacing: 3px;
+  color: #000000;
+  font-weight: 900;
+  transition: all 0.7s;
+}
+
+.service {
+  border: 1px solid orange;
+  float: left;
+  margin-left: 5%;
+  width: 20%;
+  box-sizing: border-box;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.service:hover {
+  letter-spacing: 3px;
+  color: #000000;
+  font-weight: 900;
+  transition: all 0.7s;
+}
+
 ul {
   list-style: none;
   padding-left: 0px;
 }
 
 nav {
-  border: 2px solid blue;
-  background-color: orange;
-  display: grid;
-  place-items: center;
-  height: 40px;
-  width: 98%;
+  /* border: 2px solid blue; */
+  margin: 10px 10px;
+  /* background-color: orange; */
+  height: 100%;
 }
 
 nav ul {
   border: 2px solid red;
   width: 40%;
   margin: 0px auto;
+  height: 100%;
   display: flex;
-  flex-direction: row;
+  align-items: center;
+
+  justify-content: space-between;
+}
+
+nav a {
+  text-decoration-line: none;
+  color: #551A8B;
 }
 
 nav ul>li {
@@ -90,6 +180,12 @@ nav ul>li {
   display: flex;
   align-items: center;
 }
+
+/* 위치 */
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 200, "opsz" 48;
+}
+
 
 /* 모달 */
 h1 {
@@ -124,7 +220,7 @@ div.modal-body {
 /* 바디 */
 section.main_section {
   border: 2px solid green;
-  background-color: rgb(255, 174, 251);
+  background-color: rgb(253, 255, 222);
   height: 65vh;
   width: 98%;
   overflow-y: auto;

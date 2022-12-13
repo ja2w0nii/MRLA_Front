@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- jquery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -15,21 +14,27 @@
     <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet" />
 
     <!-- CSS only -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css" />
 
     <!-- JavaScript Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
-        crossorigin="anonymous"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+      crossorigin="anonymous"
+    ></script>
 
-    <link rel="stylesheet" href="../static/css/profile.css">
+    <link rel="stylesheet" href="../static/css/profile.css" />
 
     <title>메추리알 | 프로필</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <header>
         <h2 href="main.html" onclick="location.href='main.html'">메추리알</h2>
         <div id="profile_info_box" class="profile_info_box">
@@ -42,90 +47,85 @@
 
     <!-- Modal -->
     <div class="modal fade" id="followingModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="exampleModalLabel">팔로잉 리스트</h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div id="following-modal-body" class="modal-body">
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                </div>
-            </div>
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">팔로잉 리스트</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div id="following-modal-body" class="modal-body"></div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          </div>
         </div>
+      </div>
     </div>
 
     <div class="modal fade" id="followerModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="exampleModalLabel">팔로워 리스트</h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div id="follower-modal-body" class="modal-body">
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                </div>
-            </div>
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">팔로워 리스트</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div id="follower-modal-body" class="modal-body"></div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          </div>
         </div>
+      </div>
     </div>
 
     <form>
-        <h1>✨ My Profile ✨</h1>
-        <hr>
-        <div class="main">
-            <div class="main_small">
-                <p class="profile_img" id="profile_img"></p>
-                <div class="main_profile">
-                    <div class="email_profile_update">
-                        <h2 id="email"></h2>
-                        <div id="profile_update"></div>
-                    </div>
-                    <div class="profile_detail_box">
-                        <div>
-                            <p class="profile_detail" id="nickname"></p>
-                            <p class="profile_detail" id="age"></p>
-                            <p class="profile_detail" id="gender"></p>
-                        </div>
-                        <div id="do_follow"></div>
-                        <div>
-                            <button type="button" class="btn btn-success" data-bs-toggle="modal"
-                                data-bs-target="#followingModal">팔로잉</button>
-                            <button type="button" class="btn btn-success" data-bs-toggle="modal"
-                                data-bs-target="#followerModal">팔로워</button>
-                        </div>
-                    </div>
-                </div>
+      <h1>✨ My Profile ✨</h1>
+      <hr />
+      <div class="main">
+        <div class="main_small">
+          <p class="profile_img" id="profile_img"></p>
+          <div class="main_profile">
+            <div class="email_profile_update">
+              <h2 id="email"></h2>
+              <div id="profile_update"></div>
             </div>
-            <hr>
-            <div id="recommend_community"></div>
-            <hr>
+            <div class="profile_detail_box">
+              <div>
+                <p class="profile_detail" id="nickname"></p>
+                <p class="profile_detail" id="age"></p>
+                <p class="profile_detail" id="gender"></p>
+              </div>
+              <div id="do_follow"></div>
+              <div>
+                <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#followingModal">팔로잉</button>
+                <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#followerModal">팔로워</button>
+              </div>
+            </div>
+          </div>
         </div>
+        <hr />
+        <div id="recommend_community"></div>
+        <hr />
+      </div>
     </form>
     <div class="cards-box">
-        <ul id="card-list" class="card-list"></ul>
+      <ul id="card-list" class="card-list"></ul>
     </div>
 
     <script>
-        var i = 0;
-        $('.btn-warning').on('click', function () {
-            if (i == 0) {
-                $(this).removeClass('btn-warning');
-                $(this).addClass('btn-outline-warning');
-                i++;
-            } else if (i == 1) {
-                $(this).removeClass('btn-outline-warning');
-                $(this).addClass('btn-warning');
-                i--;
-            }
-        });
+      var i = 0;
+      $(".btn-warning").on("click", function () {
+        if (i == 0) {
+          $(this).removeClass("btn-warning");
+          $(this).addClass("btn-outline-warning");
+          i++;
+        } else if (i == 1) {
+          $(this).removeClass("btn-outline-warning");
+          $(this).addClass("btn-warning");
+          i--;
+        }
+      });
     </script>
 
     <script src="../static/js/api.js"></script>
     <script src="../static/js/profile.js"></script>
-</body>
-
+  </body>
 </html>

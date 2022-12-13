@@ -1,72 +1,73 @@
+<link rel="stylesheet" href="static/css/sigin_sigup.css" /> <link rel="preconnect" href="https://fonts.googleapis.com" /><link
+  rel="preconnect"
+  href="https://fonts.gstatic.com"
+  crossorigin
+/><link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet" />
+<script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
 
-<link rel="stylesheet" href="static/css/sigin_sigup.css">  
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet">  <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
-
-<h1  href="main.html" onclick="location.href='main.html'" style="cursor: pointer;">메추리알</h1>
+<h1 href="main.html" onclick="location.href='main.html'" style="cursor: pointer">메추리알</h1>
 <div class="container" id="container">
+  <!-- 회원가입 컨테이너 -->
+  <div class="form-container sign-up-container">
+    <form action="#">
+      <h1>회원가입</h1>
+      <input type="email" name="email" placeholder="Email" id="email" />
+      <input type="password" name="password" placeholder="Password" id="password" />
+      <input type="nickname" name="nickname" placeholder="Nickname" id="nickname" />
+      <input type="text" name="whatdoyoulike" placeholder="좋아하는 메뉴를 입력하신 후 &#13;&#10; 엔터를 누르세요" id="whatdoyoulike" />
+      <br />
+      <button onclick="handleSignUp()">가입하기</button>
+      <br />
+      <span>--------------------------&nbsp;&nbsp;&nbsp;OR&nbsp;&nbsp;&nbsp;--------------------------</span>
+      <br />
+      <span>SNS 계정으로 가입하기</span>
 
-	<!-- 회원가입 컨테이너 -->
-	<div class="form-container sign-up-container">
-		<form action="#">
-			<h1>회원가입 </h1>
-			<input type="email" 	name="email" placeholder="Email"	id="email" />
-			<input type="password" 	name="password" placeholder="Password"	 id="password" />
-			<input type="nickname"	name="nickname"	placeholder="Nickname"	id="nickname" />
-			<input type="text" name = "whatdoyoulike" placeholder="좋아하는 메뉴를 입력하신 후 &#13;&#10; 엔터를 누르세요"  id="whatdoyoulike"/>
-			<br>
-			<button  onclick="handleSignUp()">가입하기</button>
-			<br>
-			<span>--------------------------&nbsp;&nbsp;&nbsp;OR&nbsp;&nbsp;&nbsp;--------------------------</span>
-			<br>
-			<span>SNS 계정으로 가입하기</span>
-
-			<div class="social-container">
-				<a href="http://127.0.0.1:8000/users/github/login/" class="social" onclick="handleSocial()"><i class="fa fa-github"></i></a>
-				<a href="http://127.0.0.1:8000/users/google/login/" class="social" onclick="handleSocial()"><i class="fa fa-google"></i></a>
-			</div>
-		</form>
-	</div>
-	<!-- 로그인 컨테이너 -->
-	<div class="form-container sign-in-container">
-		<form action="#">
-			<h1>로그인</h1>
-			<br>
-			<input type="email" name="email" placeholder="Email" id="email">
-			<input type="password" name="password" placeholder="Password" id="password">
-			<a href="#">비밀번호를 잊으셨습니까?</a>
-			<button  onclick="handleSignIn()">로그인</button>
-			<br>
-			<span>--------------------------&nbsp;&nbsp;&nbsp;OR&nbsp;&nbsp;&nbsp;--------------------------</span>
-			<br>
-			<!-- 소셜 로그인 -->
-			<span>SNS 계정으로 로그인 하기</span>
-			<div class="social-container">
-				<a href="http://127.0.0.1:8000/users/github/login/" class="social" onclick="handleSocial()"><i class="fa fa-github"></i></a>
-				<a href="http://127.0.0.1:8000/users/google/login/" class="social" onclick="handleSocial()"><i class="fa fa-google"></i></a>
-			</div>
-		</form>
-	</div>
-	<div class="overlay-container">
-		<div class="overlay">
-			<div class="overlay-panel overlay-left">
-				<h1>환영합니다!</h1>
-				<p>계속 사용 하시려면 로그인을 해주세요</p>
-				<button class="ghost" id="signIn">로그인 하러가기</button>
-			</div>
-			<div class="overlay-panel overlay-right">
-				<h1>환영합니다!</h1>
-				<p> 일치하는 정보가 없으신가요?<br><br>회원가입을 하시면 더 많은 메추리를<br> 볼 수 있습니다. </p>
-				<button class="ghost" id="signUp">회원가입 하러가기</button>
-			</div>
-		</div>
-	</div>
+      <div class="social-container">
+        <a href="http://127.0.0.1:8000/users/github/login/" class="social" onclick="handleSocial()"><i class="fa fa-github"></i></a>
+        <a href="http://127.0.0.1:8000/users/google/login/" class="social" onclick="handleSocial()"><i class="fa fa-google"></i></a>
+      </div>
+    </form>
+  </div>
+  <!-- 로그인 컨테이너 -->
+  <div class="form-container sign-in-container">
+    <form action="#">
+      <h1>로그인</h1>
+      <br />
+      <input type="email" name="email" placeholder="Email" id="email" />
+      <input type="password" name="password" placeholder="Password" id="password" />
+      <a href="#">비밀번호를 잊으셨습니까?</a>
+      <button onclick="handleSignIn()">로그인</button>
+      <br />
+      <span>--------------------------&nbsp;&nbsp;&nbsp;OR&nbsp;&nbsp;&nbsp;--------------------------</span>
+      <br />
+      <!-- 소셜 로그인 -->
+      <span>SNS 계정으로 로그인 하기</span>
+      <div class="social-container">
+        <a href="http://127.0.0.1:8000/users/github/login/" class="social" onclick="handleSocial()"><i class="fa fa-github"></i></a>
+        <a href="http://127.0.0.1:8000/users/google/login/" class="social" onclick="handleSocial()"><i class="fa fa-google"></i></a>
+      </div>
+    </form>
+  </div>
+  <div class="overlay-container">
+    <div class="overlay">
+      <div class="overlay-panel overlay-left">
+        <h1>환영합니다!</h1>
+        <p>계속 사용 하시려면 로그인을 해주세요</p>
+        <button class="ghost" id="signIn">로그인 하러가기</button>
+      </div>
+      <div class="overlay-panel overlay-right">
+        <h1>환영합니다!</h1>
+        <p>
+          일치하는 정보가 없으신가요?<br /><br />회원가입을 하시면 더 많은 메추리를<br />
+          볼 수 있습니다.
+        </p>
+        <button class="ghost" id="signUp">회원가입 하러가기</button>
+      </div>
+    </div>
+  </div>
 </div>
 
-<footer>
-
-
-</footer>
+<footer></footer>
 
 <script src="../static/js/api.js"></script>
 <script type="text/javascript" src="../static/js/sigin_sigup.js"></script>
-

@@ -2,15 +2,14 @@
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css");
 
 * {
-    text-align: center;
-    margin: auto;
+  text-align: center;
+  margin: auto;
 }
 
 body {
-    background-color: whitesmoke;
-    font-family: "Jua", sans-serif;
+  background-color: whitesmoke;
+  font-family: "Jua", sans-serif;
 }
-
 
 /* 헤더============================================= 221205 이태은 */
 header {
@@ -29,9 +28,9 @@ header>h2 {
     width: 120px;
 }
 
-header>h2:hover {
-    color: #000000;
-    cursor: pointer;
+header > h2:hover {
+  color: #000000;
+  cursor: pointer;
 }
 
 .profile_info_box {
@@ -61,59 +60,62 @@ header>h2:hover {
 }
 
 form {
-    margin-top: 20px;
+  margin-top: 100px;
 }
 
 .main_small {
-    display: flex;
-    flex-direction: row;
+  display: flex;
+  flex-direction: row;
 }
 
 .img-box {
-    margin-right: 0px;
+  margin-right: 0px;
 }
 
 .profile_img_file {
-    width: 250px;
-    margin-right: 50px;
+  width: 250px;
+  margin-right: 50px;
 }
 
 .profile_image {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    border: solid rgb(220, 220, 158);
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: solid rgb(220, 220, 158);
 }
 
 .profile_img {
-    margin-right: 50px;
+  margin-right: 50px;
 }
 
 .main_profile {
-    margin-left: 0px;
+  margin-left: 0px;
 }
 
 .email_profile_update {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 
 .profile_detail {
-    margin: 20px auto;
-    text-align: left;
+  margin: 20px auto;
+  text-align: left;
 }
 
-.gender-box, .age-box, .nickname-box {
-    display: flex;
-    flex-direction: row;
+.gender-box,
+.age-box,
+.nickname-box {
+  display: flex;
+  flex-direction: row;
 }
 
 .choose {
-    margin: 17px 10px;
+  margin: 17px 10px;
 }
 
-.age, .nickname {
-    width: 70px;
+.age,
+.nickname {
+  width: 70px;
 }

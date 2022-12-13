@@ -1,5 +1,5 @@
 if (!token) {
-    window.location.replace(`${frontend_base_url}/login.html`);
+  window.location.replace(`${frontend_base_url}/login.html`);
 }
 
 // 프로필 드롭다운 가져오기
@@ -53,17 +53,17 @@ const urlParams = new URLSearchParams(window.location.search);
 const community_id = urlParams.get("id");
 
 async function CommunityDetail(community_id) {
-    const community = await getCommunityDetail(community_id);
+  const community = await getCommunityDetail(community_id);
 
-    const user = document.getElementById("user");
-    const title = document.getElementById("title");
-    const content = document.getElementById("content");
+  const user = document.getElementById("user");
+  const title = document.getElementById("title");
+  const content = document.getElementById("content");
 
-    user.setAttribute("id", community.user);
-    user.setAttribute("onclick", "getProfilePage(this.id)");
+  user.setAttribute("id", community.user);
+  user.setAttribute("onclick", "getProfilePage(this.id)");
 
-    user.innerText = community.user;
-    title.innerText = community.title;
-    content.innerText = community.content;
+  user.innerText = community.user;
+  title.innerText = community.title;
+  content.innerText = community.content;
 }
 CommunityDetail(community_id);
