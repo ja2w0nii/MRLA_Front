@@ -69,10 +69,25 @@ header ul > li {
   width: 60%;
 }
 
+.navContainer {
+  border: 1px solid red;
+  align-items: center;
+  box-sizing: border-box;
+  display: flex;
+  height: 100%;
+  justify-content: flex-end;
+  padding: 0 4px 0 32px;
+  align-items: center;
+}
+
+.service1 {
+  width: 60%;
+}
+
 .near_restaurant {
   border: 1px solid red;
   float: left;
-  width: 30%;
+  width: 20%;
   box-sizing: border-box;
   text-decoration-line: none;
   font-size: 20px;
@@ -91,7 +106,7 @@ header ul > li {
   border: 1px solid green;
   float: left;
   margin-left: 5%;
-  width: 30%;
+  width: 20%;
   box-sizing: border-box;
   font-size: 20px;
   font-weight: 500;
@@ -106,14 +121,32 @@ header ul > li {
 
 .community {
   border: 1px solid blue;
-  float: right;
-  width: 30%;
+  float: left;
+  margin-left: 5%;
+  width: 20%;
   box-sizing: border-box;
   font-size: 20px;
-  font-weight: 900;
+  font-weight: 500;
 }
 
 .community:hover {
+  letter-spacing: 3px;
+  color: #000000;
+  font-weight: 900;
+  transition: all 0.7s;
+}
+
+.service {
+  border: 1px solid orange;
+  float: left;
+  margin-left: 5%;
+  width: 20%;
+  box-sizing: border-box;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.service:hover {
   letter-spacing: 3px;
   color: #000000;
   font-weight: 900;
