@@ -263,3 +263,25 @@ async function postServiceComment(formdata) {
     window.location.reload();
   }
 }
+
+// 커뮤니티 게시글 검색 페이지 연결 //
+function CommunitySearch() {
+  const word = document.getElementById("inputSearch").value;
+  const url = `${frontend_base_url}/community_search.html?search=${word}`;
+
+  if (word == "") {
+    alert("검색어를 입력하세요!");
+  } else {
+    location.href = url;
+  }
+}
+
+// 커뮤니티 게시글 검색 //
+async function getCommunitySearch() {
+  const response = await fetch(`${backend_base_url}/posts/community/search?` + new URLSearchParams(window.location.search), {
+    method: "GET",
+  });
+
+  response_json = await response.json();
+  return response_json;
+}
