@@ -69,7 +69,8 @@ nav {
   margin: auto;
   height: 40px;
   width: 98%;
-  margin: 80px;
+  margin-top: 80px;
+  margin-bottom: 20px;
 }
 
 ul {
