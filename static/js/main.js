@@ -1,33 +1,37 @@
+if (!token) {
+    window.location.replace(`${frontend_base_url}/login.html`);
+}
+
 // 음식 추천 슬라이더 ========================================================================
-$(document).ready(function() {
-    var i = [1,2,3,4,5,6,7];
-//   Click Left
-    $('#ClickRight').click(function() {
-      $("#ClickRight").prop("disabled", true);
-      setTimeout(function(){$("#ClickRight").prop("disabled", false)}, 500);
-      var getShift = i.shift(); 
-      i.push(getShift);
-      $('#recommend_box1').removeClass($('#recommend_box1').attr('class')).addClass('recommend_container'+i[0]);
-      $('#recommend_box2').removeClass($('#recommend_box2').attr('class')).addClass('recommend_container'+i[1]);
-      $('#recommend_box3').removeClass($('#recommend_box3').attr('class')).addClass('recommend_container'+i[2]);
-      $('#recommend_box4').removeClass($('#recommend_box4').attr('class')).addClass('recommend_container'+i[3]);
-      $('#recommend_box5').removeClass($('#recommend_box5').attr('class')).addClass('recommend_container'+i[4]);
-      $('#recommend_box6').removeClass($('#recommend_box6').attr('class')).addClass('recommend_container'+i[5]);
-      $('#recommend_box7').removeClass($('#recommend_box7').attr('class')).addClass('recommend_container'+i[6]);
+$(document).ready(function () {
+    var i = [1, 2, 3, 4, 5, 6, 7];
+    //   Click Left
+    $('#ClickRight').click(function () {
+        $("#ClickRight").prop("disabled", true);
+        setTimeout(function () { $("#ClickRight").prop("disabled", false) }, 500);
+        var getShift = i.shift();
+        i.push(getShift);
+        $('#recommend_box1').removeClass($('#recommend_box1').attr('class')).addClass('recommend_container' + i[0]);
+        $('#recommend_box2').removeClass($('#recommend_box2').attr('class')).addClass('recommend_container' + i[1]);
+        $('#recommend_box3').removeClass($('#recommend_box3').attr('class')).addClass('recommend_container' + i[2]);
+        $('#recommend_box4').removeClass($('#recommend_box4').attr('class')).addClass('recommend_container' + i[3]);
+        $('#recommend_box5').removeClass($('#recommend_box5').attr('class')).addClass('recommend_container' + i[4]);
+        $('#recommend_box6').removeClass($('#recommend_box6').attr('class')).addClass('recommend_container' + i[5]);
+        $('#recommend_box7').removeClass($('#recommend_box7').attr('class')).addClass('recommend_container' + i[6]);
     });
-//   Click Right
-    $('#ClickLeft').click(function() {
-      $("#ClickLeft").prop("disabled", true);
-      setTimeout(function(){$("#ClickLeft").prop("disabled", false)}, 400);
-      var getPop = i.pop(); 
-      i.unshift(getPop);
-      $('#recommend_box1').removeClass($('#recommend_box1').attr('class')).addClass('recommend_container'+i[0]);
-      $('#recommend_box2').removeClass($('#recommend_box2').attr('class')).addClass('recommend_container'+i[1]);
-      $('#recommend_box3').removeClass($('#recommend_box3').attr('class')).addClass('recommend_container'+i[2]);
-      $('#recommend_box4').removeClass($('#recommend_box4').attr('class')).addClass('recommend_container'+i[3]);
-      $('#recommend_box5').removeClass($('#recommend_box5').attr('class')).addClass('recommend_container'+i[4]);
-      $('#recommend_box6').removeClass($('#recommend_box6').attr('class')).addClass('recommend_container'+i[5]);
-      $('#recommend_box7').removeClass($('#recommend_box7').attr('class')).addClass('recommend_container'+i[6]);
+    //   Click Right
+    $('#ClickLeft').click(function () {
+        $("#ClickLeft").prop("disabled", true);
+        setTimeout(function () { $("#ClickLeft").prop("disabled", false) }, 400);
+        var getPop = i.pop();
+        i.unshift(getPop);
+        $('#recommend_box1').removeClass($('#recommend_box1').attr('class')).addClass('recommend_container' + i[0]);
+        $('#recommend_box2').removeClass($('#recommend_box2').attr('class')).addClass('recommend_container' + i[1]);
+        $('#recommend_box3').removeClass($('#recommend_box3').attr('class')).addClass('recommend_container' + i[2]);
+        $('#recommend_box4').removeClass($('#recommend_box4').attr('class')).addClass('recommend_container' + i[3]);
+        $('#recommend_box5').removeClass($('#recommend_box5').attr('class')).addClass('recommend_container' + i[4]);
+        $('#recommend_box6').removeClass($('#recommend_box6').attr('class')).addClass('recommend_container' + i[5]);
+        $('#recommend_box7').removeClass($('#recommend_box7').attr('class')).addClass('recommend_container' + i[6]);
     });
 })
 
@@ -72,7 +76,6 @@ async function ProfileInfo() {
     const newItem_a2 = document.createElement("a")
     newItem_a2.setAttribute("id", login_user.id)
     newItem_a2.setAttribute("class", "dropdown-item")
-    // newItem_a2.setAttribute("onclick", "getProfilePage(this.id)")
     newItem_a2.innerText = "로그아웃"
     newItem2.appendChild(newItem_a2)
 }
@@ -84,7 +87,7 @@ async function FoodList() {
 
     let i = 1;
     foods.forEach((food) => {
-        const food_list = document.getElementById("recommend_box"+i);
+        const food_list = document.getElementById("recommend_box" + i);
 
         const newFood = document.createElement("div");
         newFood.setAttribute("id", food.food_id);

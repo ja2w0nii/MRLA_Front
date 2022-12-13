@@ -2,62 +2,58 @@
 * {
     text-align: center;
     margin: auto;
-    /* font-family: 'Gowun Batang', serif;
-    font-family: 'Jua', sans-serif; */
-    /* font-family: 'Gowun Batang', serif;
-    font-family: 'Jua', sans-serif; */
-    font-family: 'Do Hyeon', sans-serif;
+    font-family: 'Jua', sans-serif;
 }
-
-
-/* 폰트 */
-/* @import url('https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@700&family=Jua&display=swap'); */
-/* @import url('https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@700&family=Jua&display=swap');  */
-/* @import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap'); */
 
 
 /* 헤더============================================= 221205 이태은 */
 header {
-    background-color: rgb(190, 190, 190);
-    width: 100;
+    background-color: rgb(239, 207, 184);
+    width: 100%;
     height: 80px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: fixed;
+    top: 0;
 }
 
 header>h2 {
-    margin-left: 20px;
+    margin: 0px 30px;
+    width: 120px;
 }
 
 header>h2:hover {
-
     color: #000000;
     cursor: pointer;
 }
 
-
-
-header ul {
-    border: 2px solid red;
-
-    margin: 0px 40px 0px;
-    height: 100%;
+.profile_info_box {
     display: flex;
-    align-items: center;
-
-    justify-content: space-between;
+    flex-direction: row;
+    margin: 0px 30px;
 }
 
-
-
-
-header ul>li {
-    font-size: 20px;
-    height: 100%;
-    display: flex;
-    align-items: center;
+.profile_img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin: 10px;
 }
+
+.dropdown-menu-dark {
+    height: 100px;
+}
+
+.dropdown-item-box {
+    height: 43px;
+}
+
+.dropdown-item {
+    margin: 0px;
+    cursor: pointer;
+}
+
 
 /* 네비게이션============================================= 221205 이태은*/
 .navContainer {
@@ -69,8 +65,7 @@ header ul>li {
     justify-content: flex-end;
     padding: 0 4px 0 32px;
     align-items: center;
-
-    /* float: right; */
+    margin: 80px;
 }
 
 .service1 {
@@ -185,7 +180,6 @@ section {
         'wght' 400,
         'GRAD' 200,
         'opsz' 48
-
 }
 
 
@@ -250,7 +244,7 @@ a.active {
     /* float: right; */
     width: 90%;
     text-align: right;
-margin-bottom: 10px;
+    margin-bottom: 10px;
 }
 
 .post-upload-button {
@@ -377,7 +371,7 @@ margin-bottom: 10px;
     cursor: pointer;
     background-color: #ffffff;
     margin: 10px;
-border-radius: 10px
+    border-radius: 10px
 }
 
 .img-upload-btn>input[type=file] {
@@ -387,7 +381,7 @@ border-radius: 10px
 
 /* 텍스트 입력 하는 구역 */
 .post-upload-modal-content-text {
-border-radius: 20px;
+    border-radius: 20px;
     /* border: 2px solid purple; */
     height: 100%;
     width: 65%;
@@ -407,14 +401,14 @@ border-radius: 20px;
 .post-modal-input-text-top {
     width: 100%;
     height: 15%;
-    margin-bottom: 20px ;
+    margin-bottom: 20px;
 
 }
 
 .post-modal-input-text-middle {
     width: 100%;
     height: 15%;
-    margin-bottom: 10px ;
+    margin-bottom: 10px;
 
 }
 
@@ -462,81 +456,89 @@ border-radius: 20px;
     outline: none;
 
 }
-.tag-plus{
-border: 1px rgba(46, 9, 9, 0.281) solid;
-text-align: left;
-padding: 10px;
-/* display: flex; */
-width: 90%;
-height: 45px;
-font-size: 15px;
-border-radius: 10px;
-margin-top: 15px;
-margin-bottom: 10px;
-overflow: auto;
+
+.tag-plus {
+    border: 1px rgba(46, 9, 9, 0.281) solid;
+    text-align: left;
+    padding: 10px;
+    /* display: flex; */
+    width: 90%;
+    height: 45px;
+    font-size: 15px;
+    border-radius: 10px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    overflow: auto;
 
 }
 
 /* 아래의 모든 코드는 영역::코드로 사용 */
 .tag-plus::-webkit-scrollbar {
-    width: 10px;  /* 스크롤바의 너비 */
+    width: 10px;
+    /* 스크롤바의 너비 */
 }
 
 .tag-plus::-webkit-scrollbar-thumb {
-    height: 30%; /* 스크롤바의 길이 */
-    background: #8a5300; /* 스크롤바의 색상 */
-    
+    height: 30%;
+    /* 스크롤바의 길이 */
+    background: #8a5300;
+    /* 스크롤바의 색상 */
+
     border-radius: 10px;
 }
 
 .tag-plus::-webkit-scrollbar-track {
-    background: rgba(33, 122, 244, .1);  /*스크롤바 뒷 배경 색상*/
+    background: rgba(33, 122, 244, .1);
+    /*스크롤바 뒷 배경 색상*/
 }
-/* 태그 관련 css============================================================ 2221211 이태은*/ 
 
-  .tag-box ul li {
+/* 태그 관련 css============================================================ 2221211 이태은*/
+
+.tag-box ul li {
     display: inline-block;
     margin: 0 5px 5px;
     font-size: 14px;
     letter-spacing: -.5px;
-  }
-  
-  .tag-box form {
+}
+
+.tag-box form {
     padding-top: 16px;
-  }
-  .tag-wright{
-      text-align: left;
-      padding: 10px;
-      width: 41%;
-      height: 32px;
-      font-size: 15px;
-      border: 0;
-      border-radius: 20px;
-      outline: none;
-      background-color: antiquewhite;
-  
-  }
-  ul li.tag-item {
+}
+
+.tag-wright {
+    text-align: left;
+    padding: 10px;
+    width: 41%;
+    height: 32px;
+    font-size: 15px;
+    border: 0;
+    border-radius: 20px;
+    outline: none;
+    background-color: antiquewhite;
+
+}
+
+ul li.tag-item {
     padding: 4px 8px;
     background-color: orange;
     color: #000;
     border-radius: 10px;
-  }
-  
-  .tag-item:hover {
+}
+
+.tag-item:hover {
     background-color: #262626;
     color: #fff;
-  }
-  
-  .del-btn {
+}
+
+.del-btn {
     font-size: 12px;
     font-weight: bold;
     cursor: pointer;
     margin-left: 8px;
-  
-  }
-  
-  /* =============태그 관련 끝 */
+
+}
+
+/* =============태그 관련 끝 */
 /* 
 .post-content {
     text-align: left;
@@ -592,21 +594,21 @@ overflow: auto;
 }
 
 /* 커뮤니티 업로드 버튼 */
-.community-upload-btn{
-width: 150px;
-border: 1px solid #ddd;
-padding: 6px 12px;
-display: inline-block;
-cursor: pointer;
-background-color: #ffd1fd;
-border-radius: 10px;
-text-align: center;
-font-size: 20px;
+.community-upload-btn {
+    width: 150px;
+    border: 1px solid #ddd;
+    padding: 6px 12px;
+    display: inline-block;
+    cursor: pointer;
+    background-color: #ffd1fd;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 20px;
 }
 
-.community-upload-btn:hover{
+.community-upload-btn:hover {
     background-color: #ff8ef9;
-    }
+}
 
 
 /* 게시물 상세보기 모달창 시작================================================= */
@@ -619,7 +621,7 @@ font-size: 20px;
     /* float: right; */
     width: 90%;
     text-align: right;
-margin-bottom: 10px;
+    margin-bottom: 10px;
 }
 
 .post-detail-button {
@@ -746,7 +748,7 @@ margin-bottom: 10px;
     cursor: pointer;
     background-color: #ffffff;
     margin: 10px;
-border-radius: 10px
+    border-radius: 10px
 }
 
 .img-detail-btn>input[type=file] {
@@ -756,7 +758,7 @@ border-radius: 10px
 
 /* 텍스트 입력 하는 구역 */
 .post-detail-modal-content-text {
-border-radius: 20px;
+    border-radius: 20px;
     /* border: 2px solid purple; */
     height: 100%;
     width: 65%;
@@ -776,14 +778,14 @@ border-radius: 20px;
 .post-modal-input-text-top {
     width: 100%;
     height: 15%;
-    margin-bottom: 20px ;
+    margin-bottom: 20px;
 
 }
 
 .post-modal-input-text-middle {
     width: 100%;
     height: 15%;
-    margin-bottom: 10px ;
+    margin-bottom: 10px;
 
 }
 
@@ -831,81 +833,89 @@ border-radius: 20px;
     outline: none;
 
 }
-.tag-plus{
-border: 1px rgba(46, 9, 9, 0.281) solid;
-text-align: left;
-padding: 10px;
-/* display: flex; */
-width: 90%;
-height: 45px;
-font-size: 15px;
-border-radius: 10px;
-margin-top: 15px;
-margin-bottom: 10px;
-overflow: auto;
+
+.tag-plus {
+    border: 1px rgba(46, 9, 9, 0.281) solid;
+    text-align: left;
+    padding: 10px;
+    /* display: flex; */
+    width: 90%;
+    height: 45px;
+    font-size: 15px;
+    border-radius: 10px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    overflow: auto;
 
 }
 
 /* 아래의 모든 코드는 영역::코드로 사용 */
 .tag-plus::-webkit-scrollbar {
-    width: 10px;  /* 스크롤바의 너비 */
+    width: 10px;
+    /* 스크롤바의 너비 */
 }
 
 .tag-plus::-webkit-scrollbar-thumb {
-    height: 30%; /* 스크롤바의 길이 */
-    background: #8a5300; /* 스크롤바의 색상 */
-    
+    height: 30%;
+    /* 스크롤바의 길이 */
+    background: #8a5300;
+    /* 스크롤바의 색상 */
+
     border-radius: 10px;
 }
 
 .tag-plus::-webkit-scrollbar-track {
-    background: rgba(33, 122, 244, .1);  /*스크롤바 뒷 배경 색상*/
+    background: rgba(33, 122, 244, .1);
+    /*스크롤바 뒷 배경 색상*/
 }
-/* 태그 관련 css============================================================ 2221211 이태은*/ 
 
-  .tag-box ul li {
+/* 태그 관련 css============================================================ 2221211 이태은*/
+
+.tag-box ul li {
     display: inline-block;
     margin: 0 5px 5px;
     font-size: 14px;
     letter-spacing: -.5px;
-  }
-  
-  .tag-box form {
+}
+
+.tag-box form {
     padding-top: 16px;
-  }
-  .tag-wright{
-      text-align: left;
-      padding: 10px;
-      width: 41%;
-      height: 32px;
-      font-size: 15px;
-      border: 0;
-      border-radius: 20px;
-      outline: none;
-      background-color: antiquewhite;
-  
-  }
-  ul li.tag-item {
+}
+
+.tag-wright {
+    text-align: left;
+    padding: 10px;
+    width: 41%;
+    height: 32px;
+    font-size: 15px;
+    border: 0;
+    border-radius: 20px;
+    outline: none;
+    background-color: antiquewhite;
+
+}
+
+ul li.tag-item {
     padding: 4px 8px;
     background-color: orange;
     color: #000;
     border-radius: 10px;
-  }
-  
-  .tag-item:hover {
+}
+
+.tag-item:hover {
     background-color: #262626;
     color: #fff;
-  }
-  
-  .del-btn {
+}
+
+.del-btn {
     font-size: 12px;
     font-weight: bold;
     cursor: pointer;
     margin-left: 8px;
-  
-  }
-  
-  /* =============태그 관련 끝 */
+
+}
+
+/* =============태그 관련 끝 */
 /* 
 .post-content {
     text-align: left;
@@ -961,21 +971,21 @@ overflow: auto;
 }
 
 /* 커뮤니티 업로드 버튼 */
-.community-detail-btn{
-width: 150px;
-border: 1px solid #ddd;
-padding: 6px 12px;
-display: inline-block;
-cursor: pointer;
-background-color: #ffd1fd;
-border-radius: 10px;
-text-align: center;
-font-size: 20px;
+.community-detail-btn {
+    width: 150px;
+    border: 1px solid #ddd;
+    padding: 6px 12px;
+    display: inline-block;
+    cursor: pointer;
+    background-color: #ffd1fd;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 20px;
 }
 
-.community-detail-btn:hover{
+.community-detail-btn:hover {
     background-color: #ff8ef9;
-    }
+}
 
 
 
@@ -1059,7 +1069,7 @@ font-size: 20px;
 
 /* 바닥글 윗칸 ============================================= 221205 이태은 */
 footer {
-    height:100%;
+    height: 100%;
     /* line-height: 55px; */
     background-color: gray;
     width: 100%;
