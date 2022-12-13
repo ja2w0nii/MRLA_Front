@@ -105,3 +105,19 @@ async function loadpostService() {
 
   postService(formdata);
 }
+
+
+// 문의하기 텍스트박스 글자수 제한===========================================221213 이태은
+
+//  키보다가 눌릴때 { } 안의 함수 실행
+$('.text_box textarea').keyup(function(){
+  
+  // 함수	content는 이 함수 이다.
+  var content = $(this).val();
+  $('.text_box .count span').html(content.length);
+  if (content.length > 200){
+    alert("최대 200자까지 입력 가능합니다.");
+    $(this).val(content.substring(0, 200));
+    $('.text_box .count span').html(200);
+  }
+});

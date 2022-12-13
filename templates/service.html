@@ -45,10 +45,14 @@
         </div>
         <div class="modal-body">
           <h6>제목</h6>
-          <input type="text" class="service_title" id="service_title" size="105" />
+          <input type="text" class="service_title" id="service_title" size="105" placeholder="50자 미만으로 작성하여 주십시오" />
           <br />
           <h6>내용</h6>
-          <textarea class="service_content" id="service_content" cols="105" rows="10"></textarea>
+          <div class="text_box">
+            <textarea class="service_content" id="service_content" cols="105" rows="10"></textarea>
+            <div class="count"><span>0</span>/200</div>
+          </div>
+          
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-primary" onclick="loadpostService()">확인</button>
