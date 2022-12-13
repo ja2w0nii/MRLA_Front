@@ -3,7 +3,6 @@ const backend_base_url = "http://127.0.0.1:8000";
 const frontend_base_url = "http://127.0.0.1:5500/templates";
 const token = localStorage.getItem("access");
 
-
 // 로그아웃
 function handleLogout() {
   localStorage.removeItem("access");
@@ -102,7 +101,7 @@ async function getAllFoodList() {
       Authorization: "Bearer " + localStorage.getItem("access"),
     },
     method: "GET",
-  })
+  });
   response_json = await response.json();
   return response_json;
 }
@@ -135,7 +134,6 @@ async function DoFollow(user_id) {
     window.location.replace(`${frontend_base_url}/profile.html?id=${user_id}`);
   }
 }
-
 
 // 팔로잉/팔로워 리스트 가져오기
 async function getFollowList(user_id) {
@@ -265,4 +263,3 @@ async function postServiceComment(formdata) {
     window.location.reload();
   }
 }
-

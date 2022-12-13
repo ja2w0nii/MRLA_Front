@@ -2,7 +2,7 @@
 * {
   text-align: center;
   margin: auto;
-  font-family: 'Do Hyeon', sans-serif;
+  font-family: "Do Hyeon", sans-serif;
 }
 
 button {
@@ -15,7 +15,6 @@ button:hover {
   transform: scale(1.2);
 }
 
-
 /* 헤더============================================= 221205 이태은 */
 header {
   background-color: rgb(190, 190, 190);
@@ -26,15 +25,14 @@ header {
   justify-content: space-between;
 }
 
-header>h2 {
+header > h2 {
   margin-left: 20px;
 }
 
-header>h2:hover {
+header > h2:hover {
   color: #000000;
   cursor: pointer;
 }
-
 
 /* 네비게이션============================================= 221205 이태은*/
 .navContainer {
@@ -55,12 +53,11 @@ header>h2:hover {
 .near_restaurant {
   border: 1px solid red;
   float: left;
-  width: 30%;
+  width: 20%;
   box-sizing: border-box;
   text-decoration-line: none;
   font-size: 20px;
   font-weight: 500;
-
 }
 
 .near_restaurant:hover {
@@ -75,10 +72,10 @@ header>h2:hover {
   border: 1px solid green;
   float: left;
   margin-left: 5%;
-  width: 30%;
+  width: 20%;
   box-sizing: border-box;
   font-size: 20px;
-  font-weight: 900;
+  font-weight: 500;
 }
 
 .who:hover {
@@ -86,13 +83,13 @@ header>h2:hover {
   color: #000000;
   font-weight: 900;
   transition: all 0.7s;
-
 }
 
 .community {
   border: 1px solid blue;
-  float: right;
-  width: 30%;
+  float: left;
+  margin-left: 5%;
+  width: 20%;
   box-sizing: border-box;
   font-size: 20px;
   font-weight: 500;
@@ -103,7 +100,23 @@ header>h2:hover {
   color: #000000;
   font-weight: 900;
   transition: all 0.7s;
+}
 
+.service {
+  border: 1px solid orange;
+  float: left;
+  margin-left: 5%;
+  width: 20%;
+  box-sizing: border-box;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.service:hover {
+  letter-spacing: 3px;
+  color: #000000;
+  font-weight: 900;
+  transition: all 0.7s;
 }
 
 ul {
@@ -130,7 +143,7 @@ nav a {
   text-decoration-line: none;
 }
 
-nav ul>li {
+nav ul > li {
   font-size: 20px;
   height: 100%;
   display: flex;
@@ -140,23 +153,6 @@ nav ul>li {
 section {
   height: 100%;
 }
-
-
-/* 위치 */
-.material-symbols-outlined {
-  font-variation-settings:
-    'FILL' 0,
-    'wght' 400,
-    'GRAD' 200,
-    'opsz' 48
-}
-
-a.active {
-  color: #FF5752;
-  font-weight: bolder;
-  font-weight: 900;
-}
-
 
 /* 내용 섹션 윗칸 ============================================= 221205 이태은 */
 .target_box {
@@ -229,7 +225,6 @@ img {
   height: 100px;
   border-radius: 50%;
 }
-
 
 /* 바닥글 윗칸 ============================================= 221205 이태은 */
 footer {
