@@ -196,6 +196,7 @@ section.main_section {
   display: grid;
   align-items: flex-start;
   overflow: auto;
+  border-radius: 20px;
 }
 
 span.user {
@@ -209,8 +210,22 @@ span.created_at {
 }
 
 div.p_box {
+  border: 1px red solid;
+  padding: 10px 10px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+background-color: #ffffff;
   border-top: 1px solid;
-  margin: 25px 0 0 0;
+  /* margin: 25px 0 0 0; */
+}
+.title{
+  border: 1px solid orange;
+  border-radius: 10px;
+
+}
+.content{
+  border: 1px solid orange;
+border-radius: 10px;
 }
 
 p.content {
@@ -229,36 +244,66 @@ span.servicecomment_created_at {
 
 p.servicecomment_comment {
   border-top: 1px solid;
-  margin: 25px 0 0 0;
+  margin: 38px 0 0 0;
+  color: #000000;
+  border-bottom-left-radius: 20px ;
+  border-bottom-right-radius: 20px;
+  background-color: #ffffff;
+
 }
 
 div.service_detail {
   border: 1px solid rgb(0, 0, 0);
-  width: 95vw;
-  margin: 5px auto;
+  width: 90%;
+  margin: 30px auto;
+  border-radius: 20px;
+  background-color: #FFF0F5;
+}
+.span_box{
+  border-radius: 20px;
+  padding: 5px 5px;
+  margin: 5px ;
+  border: 1px solid red;
+  height: 30px;
 }
 
+/* 작성한 댓글이 달리는 div ====================*/
+.comment_list_box{
+  border: 3px solid purple;
+  width: 90%;
+  height: 200px;
+  overflow: auto;
+
+}
 div.comment_list {
   border: 1px solid rgb(0, 0, 0);
-  width: 95vw;
-  margin: 5px auto;
-}
+width: 100%;
 
+  border-radius: 20px;
+  background-color: #E6E6FA;
+}
+/* 작성한 댓글의 작성자 및 작성시간 표시 바*/
+.comment_list span {
+  border: 1px solid yellow;
+padding: 5px 5px;
+}
+/* 댓글 작성하는 칸 div========================= */
 div.comment_box {
   display: flex;
   align-items: center;
 }
-
+/* 댓글 텍스트 작성 칸  */
 textarea {
+  resize: none;
   text-align: left;
 }
-
+/* 댓글 등록 및 취소 버튼 */
 button.btn {
   margin: 0 10px;
   height: 40px;
 }
 
-/* 푸터 */
+/* 푸터 ========================================*/
 footer {
   width: 100%;
   height: 100%;
