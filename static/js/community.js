@@ -49,6 +49,7 @@ async function ProfileInfo() {
   const newItem_a2 = document.createElement("a")
   newItem_a2.setAttribute("id", login_user.id)
   newItem_a2.setAttribute("class", "dropdown-item")
+  newItem_a2.setAttribute("onclick", "handleLogout()")
   newItem_a2.innerText = "로그아웃"
   newItem2.appendChild(newItem_a2)
 }
