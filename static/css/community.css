@@ -165,7 +165,6 @@ nav {
 }
 
 nav ul {
-  border: 2px solid red;
   width: 40%;
   margin: 0px auto;
   height: 100%;
@@ -231,25 +230,36 @@ a.active {
 
 /* 부화한 메추리알들의 커뮤니티 */
 .community_for_metury {
-  border: 1px red solid;
   margin: 20px auto;
   font-size: 40px;
   color: rgb(107, 57, 0);
 }
 
 .community-div {
-  border: 1px rgb(59, 30, 30) solid;
+  border: 5px solid #FED049;
   width: 90%;
   height: 550px;
   overflow: overlay;
 }
+
+.space {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-control {
+  width: 500px;
+  margin: 5px 10px;
+}
+
 
 /* 커뮤니티 작성용 모달창===================================================== */
 
 /* 모달창 */
 /* 모달창 버튼 */
 .post-upload-button-div {
-  border: 1px solid red;
+  border: 5px solid #FED049;
   margin: 0px auto;
   /* float: right; */
   width: 90%;
@@ -560,6 +570,7 @@ ul li.tag-item {
   outline: 0;
   resize: none;
   border-radius: 20px;
+  overflow: auto;
 }
 
 .post-modal-upload-button {
