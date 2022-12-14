@@ -72,36 +72,6 @@ header>h2:hover {
   width: 60%;
 }
 
-.navContainer {
-  border: 1px solid red;
-  align-items: center;
-  box-sizing: border-box;
-  display: flex;
-  height: 100%;
-  justify-content: flex-end;
-  padding: 0 4px 0 32px;
-  align-items: center;
-
-  /* float: right; */
-}
-.navContainer {
-  border: 1px solid red;
-  align-items: center;
-  box-sizing: border-box;
-  display: flex;
-  height: 100%;
-  justify-content: flex-end;
-  padding: 0 4px 0 32px;
-  align-items: center;
-
-  /* float: right; */
-
-}
-
-.service1 {
-  width: 60%;
-}
-
 .near_restaurant {
   border: 1px solid red;
   float: left;
