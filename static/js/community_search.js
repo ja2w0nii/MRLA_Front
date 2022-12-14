@@ -1,5 +1,5 @@
 if (!token) {
-  window.location.replace(`${frontend_base_url}/login.html`);
+  window.location.replace(`${frontend_base_url}/signin_signup.html`);
 }
 
 // 검색 페이지 보여주기 //

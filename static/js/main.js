@@ -1,5 +1,5 @@
 if (!token) {
-    window.location.replace(`${frontend_base_url}/login.html`);
+    window.location.replace(`${frontend_base_url}/signin_signup.html`);
 }
 
 // url id 값 받아오기
@@ -128,13 +128,13 @@ async function FoodList(category_id) {
 
     const newFood = document.createElement("div");
     newFood.setAttribute("id", food.food_id);
-    // newFood.setAttribute("onclick", );
+    newFood.setAttribute("onclick", "FoodDetail(this.id);");
     newFood.innerText = food.menu;
     food_list.appendChild(newFood);
 
     const newImage = document.createElement("img");
     newImage.setAttribute("id", food.food_id);
-    // newImage.setAttribute("onclick", );
+    newImage.setAttribute("onclick", "FoodDetail(this.id);");
     newImage.src = food.image;
     newFood.appendChild(newImage);
 
