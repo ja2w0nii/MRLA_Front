@@ -65,11 +65,12 @@ async function AllFoodList(id) {
 
         const newFood = document.createElement("p");
         newFood.setAttribute("id", food.food_id);
+        newFood.setAttribute("onclick", "FoodDetail(this.id)");
         newFood.innerText = food.menu;
 
         const newImage = document.createElement("img");
         newImage.setAttribute("id", food.food_id);
-        // newImage.setAttribute("onclick", );
+        newImage.setAttribute("onclick", "FoodDetail(this.id)");
         newImage.src = food.image;
 
         menu_image.appendChild(newFood);

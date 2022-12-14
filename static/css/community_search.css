@@ -13,7 +13,7 @@ body {
 }
 
 
-/* 헤더============================================= */
+/* 헤더============================================ */
 header {
   background-color: #FED049;
   width: 100%;
@@ -183,6 +183,7 @@ nav ul {
 
 nav a {
   text-decoration-line: none;
+  color: grey;
 }
 
 nav ul>li {

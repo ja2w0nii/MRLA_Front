@@ -183,6 +183,7 @@ nav ul {
 
 nav a {
   text-decoration-line: none;
+  color: grey;
 }
 
 nav ul > li {

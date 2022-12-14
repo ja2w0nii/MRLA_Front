@@ -180,8 +180,10 @@ nav ul {
 
   justify-content: space-between;
 }
+
 nav a {
   text-decoration-line: none;
+  color: grey;
 }
 
 nav ul > li {
