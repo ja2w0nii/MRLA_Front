@@ -8,9 +8,6 @@ window.addEventListener("load", function () {
   setTimeout(lazyLoad, 1000);
 });
 
-function lazyLoad() {
-  var card_images = document.querySelectorAll(".card-image");
-
 // 프로필 드롭다운 가져오기
 async function ProfileInfo() {
   login_user = await getName();
@@ -57,6 +54,8 @@ async function ProfileInfo() {
 }
 ProfileInfo()
 
+function lazyLoad() {
+  var card_images = document.querySelectorAll(".card-image");
   // 각 카드 이미지를 반복
   card_images.forEach(function (card_image) {
     var image_url = card_image.getAttribute("data-image-full");

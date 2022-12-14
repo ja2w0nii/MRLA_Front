@@ -2,6 +2,10 @@ if (!token) {
     window.location.replace(`${frontend_base_url}/signin_signup.html`);
 }
 
+// url id 값 받아오기
+const urlParams = new URLSearchParams(window.location.search);
+const category_id = urlParams.get("id");
+
 // 음식 추천 슬라이더 ========================================================================
 $(document).ready(function () {
   var i = [1, 2, 3, 4, 5, 6, 7];
@@ -108,14 +112,15 @@ async function ProfileInfo() {
     const newItem_a2 = document.createElement("a")
     newItem_a2.setAttribute("id", login_user.id)
     newItem_a2.setAttribute("class", "dropdown-item")
+    newItem_a2.setAttribute("onclick", "handleLogout()")
     newItem_a2.innerText = "로그아웃"
     newItem2.appendChild(newItem_a2)
 }
 ProfileInfo();
 
 // 추천 메뉴 리스트 가져오기
-async function FoodList() {
-  foods = await getFoodList();
+async function FoodList(category_id) {
+  foods = await getFoodList(category_id);
 
     let i = 1;
     foods.forEach((food) => {
@@ -136,86 +141,86 @@ async function FoodList() {
     i += 1;
   });
 }
-FoodList();
+FoodList(category_id);
 
 // 유명 맛집 슬라이더 ================================================================================
-var container = document.getElementById("sns_famous_restaurant_container");
-var slider = document.getElementById("slider");
-var slides = document.getElementsByClassName("slide").length;
-var buttons = document.getElementsByClassName("btn");
+// var container = document.getElementById("sns_famous_restaurant_container");
+// var slider = document.getElementById("slider");
+// var slides = document.getElementsByClassName("slide").length;
+// var buttons = document.getElementsByClassName("btn");
 
-var currentPosition = 0;
-var currentMargin = 0;
-var slidesPerPage = 0;
-var slidesCount = slides - slidesPerPage;
-var containerWidth = container.offsetWidth;
-var prevKeyActive = false;
-var nextKeyActive = true;
+// var currentPosition = 0;
+// var currentMargin = 0;
+// var slidesPerPage = 0;
+// var slidesCount = slides - slidesPerPage;
+// var containerWidth = container.offsetWidth;
+// var prevKeyActive = false;
+// var nextKeyActive = true;
 
-window.addEventListener("resize", checkWidth);
+// window.addEventListener("resize", checkWidth);
 
-function checkWidth() {
-  containerWidth = container.offsetWidth;
-  setParams(containerWidth);
-}
+// function checkWidth() {
+//   containerWidth = container.offsetWidth;
+//   setParams(containerWidth);
+// }
 
-function setParams(w) {
-  if (w < 551) {
-    slidesPerPage = 1;
-  } else {
-    if (w < 901) {
-      slidesPerPage = 2;
-    } else {
-      if (w < 1101) {
-        slidesPerPage = 3;
-      } else {
-        slidesPerPage = 4;
-      }
-    }
-  }
-  slidesCount = slides - slidesPerPage;
-  if (currentPosition > slidesCount) {
-    currentPosition -= slidesPerPage;
-  }
-  currentMargin = -currentPosition * (100 / slidesPerPage);
-  slider.style.marginLeft = currentMargin + "%";
-  if (currentPosition > 0) {
-    buttons[0].classList.remove("inactive");
-  }
-  if (currentPosition < slidesCount) {
-    buttons[1].classList.remove("inactive");
-  }
-  if (currentPosition >= slidesCount) {
-    buttons[1].classList.add("inactive");
-  }
-}
+// function setParams(w) {
+//   if (w < 551) {
+//     slidesPerPage = 1;
+//   } else {
+//     if (w < 901) {
+//       slidesPerPage = 2;
+//     } else {
+//       if (w < 1101) {
+//         slidesPerPage = 3;
+//       } else {
+//         slidesPerPage = 4;
+//       }
+//     }
+//   }
+//   slidesCount = slides - slidesPerPage;
+//   if (currentPosition > slidesCount) {
+//     currentPosition -= slidesPerPage;
+//   }
+//   currentMargin = -currentPosition * (100 / slidesPerPage);
+//   slider.style.marginLeft = currentMargin + "%";
+//   if (currentPosition > 0) {
+//     buttons[0].classList.remove("inactive");
+//   }
+//   if (currentPosition < slidesCount) {
+//     buttons[1].classList.remove("inactive");
+//   }
+//   if (currentPosition >= slidesCount) {
+//     buttons[1].classList.add("inactive");
+//   }
+// }
 
-setParams();
+// setParams();
 
-function slideRight() {
-  if (currentPosition != 0) {
-    slider.style.marginLeft = currentMargin + 100 / slidesPerPage + "%";
-    currentMargin += 100 / slidesPerPage;
-    currentPosition--;
-  }
-  if (currentPosition === 0) {
-    buttons[0].classList.add("inactive");
-  }
-  if (currentPosition < slidesCount) {
-    buttons[1].classList.remove("inactive");
-  }
-}
+// function slideRight() {
+//   if (currentPosition != 0) {
+//     slider.style.marginLeft = currentMargin + 100 / slidesPerPage + "%";
+//     currentMargin += 100 / slidesPerPage;
+//     currentPosition--;
+//   }
+//   if (currentPosition === 0) {
+//     buttons[0].classList.add("inactive");
+//   }
+//   if (currentPosition < slidesCount) {
+//     buttons[1].classList.remove("inactive");
+//   }
+// }
 
-function slideLeft() {
-  if (currentPosition != slidesCount) {
-    slider.style.marginLeft = currentMargin - 100 / slidesPerPage + "%";
-    currentMargin -= 100 / slidesPerPage;
-    currentPosition++;
-  }
-  if (currentPosition == slidesCount) {
-    buttons[1].classList.add("inactive");
-  }
-  if (currentPosition > 0) {
-    buttons[0].classList.remove("inactive");
-  }
-}
+// function slideLeft() {
+//   if (currentPosition != slidesCount) {
+//     slider.style.marginLeft = currentMargin - 100 / slidesPerPage + "%";
+//     currentMargin -= 100 / slidesPerPage;
+//     currentPosition++;
+//   }
+//   if (currentPosition == slidesCount) {
+//     buttons[1].classList.add("inactive");
+//   }
+//   if (currentPosition > 0) {
+//     buttons[0].classList.remove("inactive");
+//   }
+// }
