@@ -234,7 +234,7 @@ a.active {
 }
 
 .community-div {
-  border: 5px solid #FED049;
+  border: 5px solid #fed049;
   width: 90%;
   height: 550px;
   overflow: overlay;
@@ -251,13 +251,12 @@ a.active {
   margin: 5px 10px;
 }
 
-
 /* 커뮤니티 작성용 모달창===================================================== */
 
 /* 모달창 */
 /* 모달창 버튼 */
 .post-upload-button-div {
-  border: 5px solid #FED049;
+  border: 5px solid #fed049;
   margin: 0px auto;
   /* float: right; */
   width: 90%;
@@ -944,10 +943,8 @@ ul li.tag-item {
 /* 카드=============================================================== */
 /* Lazy Load Styles */
 .cards-box {
-  border: 1px solid #ddd;
   width: 90%;
   height: 60vh;
-  overflow: auto;
 }
 
 .card-image {

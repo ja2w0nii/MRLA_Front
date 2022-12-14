@@ -2,20 +2,12 @@
 * {
   text-align: center;
   margin: auto;
-  font-family: 'Jua', sans-serif;
+  font-family: "Jua", sans-serif;
 }
-
-body {
-  background-color: whitesmoke;
-  height: 100vh;
-  display: grid;
-  justify-content: center;
-}
-
 
 /* 헤더============================================ */
 header {
-  background-color: #FED049;
+  background-color: #fed049;
   width: 100%;
   height: 70px;
   display: flex;
@@ -24,12 +16,12 @@ header {
   position: fixed;
 }
 
-header>h2 {
+header > h2 {
   margin: 0px 30px;
   width: 120px;
 }
 
-header>h2:hover {
+header > h2:hover {
   color: #000000;
   cursor: pointer;
 }
@@ -60,19 +52,15 @@ header>h2:hover {
   cursor: pointer;
 }
 
-
 /* 네비게이션=============================================*/
 .nav_box {
-  margin: 60px auto;
   width: 100%;
   height: 60px;
-  position: fixed;
-  z-index: -1;
 }
 
 .navContainer {
   background-color: white;
-  border: 10px solid #FED049;
+  border: 10px solid #fed049;
   align-items: center;
   box-sizing: border-box;
   display: flex;
@@ -186,7 +174,7 @@ nav a {
   color: grey;
 }
 
-nav ul>li {
+nav ul > li {
   font-size: 20px;
   height: 100%;
   display: flex;
@@ -212,8 +200,6 @@ a.active {
 /* 내용 섹션 윗칸 */
 .community_section {
   background-color: rgb(255, 251, 236);
-  height: 100vh;
-  margin-top: 140;
 }
 
 /* 부화한 메추리알들의 커뮤니티 */
