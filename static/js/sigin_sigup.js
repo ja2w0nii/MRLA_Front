@@ -212,9 +212,7 @@ async function handleSignUp() {
     });
 
 }
-
-
-signInButton.addEventListener("click", () => {
-  container.classList.remove("right-panel-active");
-});
+window.onload  = function(){
+    handleSignUp()
+}
 
