@@ -37,7 +37,6 @@ window.addEventListener('load', () => {
 async function handleSignIn() {
     const email = document.getElementById("email2").value
     const password = document.getElementById("password2").value
-        // const response = await fetch('http://127.0.0.1:8000/users/api/token/', {
     const response = await fetch('http://127.0.0.1:8000/users/api/token/', {
         headers: {
             'content-type': 'application/json',
@@ -205,17 +204,15 @@ async function handleSignUp() {
         method: 'POST',
         body: JSON.stringify({
             "email" : email,
-            "password_check" : password_check,
             "password" : password,
+            "password_check" : password_check,
             "nickname" : nickname
 
         })
     });
 
 }
-
-
-signInButton.addEventListener("click", () => {
-  container.classList.remove("right-panel-active");
-});
+window.onload  = function(){
+    handleSignUp()
+}
 
