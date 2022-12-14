@@ -240,3 +240,44 @@ window.onclick = function (event) {
     event.target.style.display = "none";
   }
 };
+
+
+
+
+// 커뮤니티 게시글 목록 조회
+async function Community() {
+  communities = await getCommunity();
+
+  const card_list = document.getElementById("card-list");
+
+  communities.forEach((community) => {
+    const newCard = document.createElement("li");
+    newCard.setAttribute("class", "card");
+
+    const newImg = document.createElement("a");
+    newImg.setAttribute("class", "card-image");
+    newImg.src = `${backend_base_url}${community.image}`;
+    newImg.setAttribute("style", newImg.src);
+    newImg.setAttribute("data-image-full", newImg.src);
+
+    const image = document.createElement("img");
+    image.src = `${backend_base_url}${community.image}`;
+    newImg.appendChild(image);
+    newCard.appendChild(newImg);
+
+    const newDescription = document.createElement("a");
+    newDescription.setAttribute("class", "card-description");
+    newCard.appendChild(newDescription);
+
+    const newTitle = document.createElement("h2");
+    const newContent = document.createElement("p");
+    newTitle.innerText = community.title;
+    newContent.innerText = community.content;
+    newDescription.appendChild(newTitle);
+    newDescription.appendChild(newContent);
+
+    newCard.setAttribute("id", community.id)
+    card_list.appendChild(newCard);
+  });
+}
+Community();

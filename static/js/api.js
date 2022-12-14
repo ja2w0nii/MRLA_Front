@@ -315,6 +315,18 @@ async function loadcreateComment(comment) {
   });
 }
 
+// 커뮤니티 게시글 목록 조회 //
+async function getCommunity() {
+  const response = await fetch(`${backend_base_url}/posts/community/`, {
+    headers: {
+      Authorization: "Bearer " + localStorage.getItem("access"),
+    },
+    method: "GET",
+  });
+  response_json = await response.json();
+  return response_json;
+}
+
 // 커뮤니티 게시글 검색 페이지 연결 //
 function CommunitySearch() {
   const word = document.getElementById("inputSearch").value;
