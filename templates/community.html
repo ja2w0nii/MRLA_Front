@@ -78,26 +78,26 @@
     </div>
   </nav>
 
-  <section class="community_section">
-    <div class="community_for_metury">
-      <a>부화한 메추리알들의 커뮤니티 </a>
-    </div>
-    <div>
-      <div class="post-upload-button-div">
-        <span class="space">
-          <input class="form-control" type="search" placeholder="이름 or 제목 or 내용" aria-label="Search" id="inputSearch" />
-          <button class="btn btn-outline-success my-2 my-sm-0" type="button" onclick="CommunitySearch()">검색</button>
-        </span>
-        <!-- 이미지 업로드  Modal을 여는 클래스 -->
-        <button class="post-upload-button">게시글 작성</button>
-      </div>
-      <div class="community-div">
-        <div class="cards-box">
-          <ul id="card-list" class="card-list"></ul>
+      <section class="community_section">
+        <div class="community_for_metury">
+          <a>부화한 메추리알들의 커뮤니티 </a>
         </div>
-      </div>
-    </div>
-  </section>
+        <div>
+          <div class="post-upload-button-div">
+            <span class="space">
+              <input class="form-control" type="search" placeholder="이름 or 제목 or 내용" aria-label="Search" id="inputSearch" />
+              <button class="btn btn-outline-success my-2 my-sm-0" type="button" onclick="CommunitySearch()">검색</button>
+            </span>
+            <!-- 이미지 업로드  Modal을 여는 클래스 -->
+            <button class="post-upload-button">게시글 작성</button>
+          </div>
+          <div class="community-div">
+            <div class="cards-box">
+              <ul id="card-list" class="card-list"></ul>
+            </div>
+          </div>
+        </div>
+      </section>
 
   <!-- 게시물 작성 Modal의 내용 ==============================================================-->
   <div class="post-upload-modal-container">
@@ -148,31 +148,32 @@
     </div>
   </div>
 
-  <!-- 게시물 상세보기 Modal의 내용 ==============================================================-->
-  <div class="post-detail-modal-container">
-    <!-- 모달창 하얀색 부분 -->
-    <div class="post-detail-modal-box">
-      <div class="post-detail-modal-top">
-        <a class="post-detail-modal-close">x</a>
-      </div>
-      <div class="post-detail-modal-content">
-        <div class="post-detail-modal-content-img">
-          <!-- 이미지업로드 박스 -->
-          <div class="flex-container">
-            <div id="wrapper" class="wrapper">
-            </div>
+      <!-- 게시물 상세보기 Modal의 내용 ==============================================================-->
+      <div class="post-detail-modal-container">
+        <!-- 모달창 하얀색 부분 -->
+        <div class="post-detail-modal-box">
+          <div class="post-detail-modal-top">
+            <a class="post-detail-modal-close">x</a>
           </div>
-        </div>
-        <div class="post-detail-modal-content-text">
-          <div class="post-modal-input-text">
-            <div id="detail_user_title" class="post-modal-input-text-top"></div>
-            <div class="post-modal-input-text-bottom">
-              <div id="detail_content" class="text_box"></div>
+          <div class="post-detail-modal-content">
+            <div class="post-detail-modal-content-img">
+              <!-- 이미지업로드 박스 -->
+              <div class="flex-container">
+                <div id="wrapper" class="wrapper"></div>
+              </div>
             </div>
-          </div>
-          <!-- <div class="post-modal-detail-button">
+            <div class="post-detail-modal-content-text">
+              <div class="post-modal-input-text">
+                <div id="detail_user_title" class="post-modal-input-text-top"></div>
+                <div class="post-modal-input-text-bottom">
+                  <div id="detail_content" class="text_box"></div>
+                </div>
+              </div>
+              <!-- <div class="post-modal-detail-button">
             <button type="button" onclick="post()" class="community-detail-btn">게시글 업로드</button>
         </div> -->
+            </div>
+          </div>
         </div>
       </div>
     </div>
