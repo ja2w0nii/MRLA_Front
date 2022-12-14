@@ -232,8 +232,15 @@ async function getServiceDetail(service_id) {
     method: "GET",
   });
 
-  response_json = await response.json();
-  return response_json;
+  if (response.status == 200) {
+    response_json = await response.json();
+    return response_json;
+  } else if (response.status == 401) {
+    alert("권한이 없습니다!");
+    window.location.replace(`${frontend_base_url}/service.html`);
+  } else {
+    alert(response.status);
+  }
 }
 
 // 고객센터 게시글 디테일 댓글 조회
