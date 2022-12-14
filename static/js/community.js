@@ -200,7 +200,7 @@ $(document).ready(function () {
 // 업로드 모달창 끝==========================================================================================================================
 
 // 게시물 상세보기 모달창 관련====================================================================================================================221212이태은
-async function CommunityDetail(community_id){
+async function CommunityDetail(community_id) {
   const community = await getCommunityDetail(community_id);
 
   var detail_modals = document.getElementsByClassName("post-detail-modal-container"); // 모달창 띄우는 자바스크립트 시작
@@ -245,7 +245,7 @@ async function CommunityDetail(community_id){
 
   const image_box = document.getElementById("wrapper");
   const image = document.createElement("img");
-  image.setAttribute("class", "image_box")
+  image.setAttribute("class", "image_box");
   image.src = `${backend_base_url}${community.image}`;
   image_box.appendChild(image);
 
@@ -267,7 +267,7 @@ async function CommunityDetail(community_id){
   const detail_content = document.getElementById("detail_content");
   const content = document.createElement("div");
   content.setAttribute("class", "detail_content_box");
-  content.innerText = community.content
+  content.innerText = community.content;
   detail_content.appendChild(content);
 }
 
@@ -302,9 +302,9 @@ async function Community() {
     newContent.innerText = community.content;
     newDescription.appendChild(newTitle);
     newDescription.appendChild(newContent);
-    
-    newCard.setAttribute("id", community.id)
-    newCard.setAttribute("onclick", "CommunityDetail(this.id)")
+
+    newCard.setAttribute("id", community.id);
+    newCard.setAttribute("onclick", "CommunityDetail(this.id)");
 
     card_list.appendChild(newCard);
   });
@@ -314,7 +314,6 @@ Community();
 // 고객센터 게시글 등록
 async function loadpostCommunity() {
   const title = document.getElementById("community_title").value;
-
   const content = document.getElementById("community_content").value;
   const image = document.getElementById("community_image").files[0];
 
