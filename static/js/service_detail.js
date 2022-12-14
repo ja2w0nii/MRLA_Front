@@ -60,10 +60,12 @@ async function loadgetServiceDetail(service_id) {
   user.innerText = service.user;
 
   const title = document.getElementById("title");
-  title.innerText = "[ 제목 ]\n" + service.title;
-
+  // title.innerText = "[ 제목 ]\n" + service.title;
+title.innerText =  service.title;
   const content = document.getElementById("content");
-  content.innerText = "[ 내용 ]\n" + service.content;
+  // content.innerText = "[ 내용 ]\n" + service.content;
+  content.innerText =  service.content;
+
 
   const created_at = document.getElementById("created_at");
   created_at.innerText = service.created_at.replace("T", " ").substr(0, 16);
@@ -77,6 +79,7 @@ async function loadgetServiceComment(service_id) {
   comments.forEach((servicecomment) => {
     const comment_list = document.getElementById("comment_list");
 
+    // const newService = document.createElement("div");
     const newService = document.createElement("span");
     newService.setAttribute("id", servicecomment.service);
     newService.setAttribute("class", "servicecomment_user");
@@ -92,7 +95,9 @@ async function loadgetServiceComment(service_id) {
     const newComment = document.createElement("p");
     newComment.setAttribute("id", servicecomment.service);
     newComment.setAttribute("class", "servicecomment_comment");
-    newComment.innerText = "[ 답변 ]\n" + servicecomment.comment;
+    // newComment.innerText = "[ 답변 ]\n" + servicecomment.comment;
+    newComment.innerText =  servicecomment.comment;
+
     comment_list.appendChild(newComment);
   });
 }

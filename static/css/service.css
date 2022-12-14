@@ -10,11 +10,12 @@ body {
   display: grid;
   place-items: center;
   align-content: space-between;
+  background-color: #CFFDE1;
 }
 
 /* 헤더 */
 header {
-  background-color: rgb(239, 207, 184);
+  background-color: #3D5656;
   width: 100%;
   height: 80px;
   display: flex;
@@ -62,15 +63,16 @@ header>h2:hover {
 
 /* 네비 */
 .navContainer {
-  border: 1px solid red;
+  /* border: 1px solid red; */
   align-items: center;
   box-sizing: border-box;
   display: flex;
-  width: 98vw;
+  width: 100vw;
   justify-content: flex-end;
-  padding: 0 4px 0 32px;
+  padding: 5px 0px;
   align-items: center;
   margin-top: 80px;
+  background-color: #ffffff;
 }
 
 .service1 {
@@ -78,7 +80,7 @@ header>h2:hover {
 }
 
 .near_restaurant {
-  border: 1px solid red;
+  /* border: 1px solid red; */
   float: left;
   width: 20%;
   box-sizing: border-box;
@@ -96,10 +98,10 @@ header>h2:hover {
 }
 
 .who {
-  border: 1px solid green;
+  /* border: 1px solid green; */
   float: left;
   margin-left: 5%;
-  width: 20%;
+  width: 25%;
   box-sizing: border-box;
   font-size: 20px;
   font-weight: 500;
@@ -113,7 +115,7 @@ header>h2:hover {
 }
 
 .community {
-  border: 1px solid blue;
+  /* border: 1px solid blue; */
   float: left;
   margin-left: 5%;
   width: 20%;
@@ -130,7 +132,7 @@ header>h2:hover {
 }
 
 .service {
-  border: 1px solid orange;
+  /* border: 1px solid orange; */
   float: left;
   margin-left: 5%;
   width: 20%;
@@ -153,7 +155,7 @@ ul {
 
 nav {
   /* border: 2px solid blue; */
-  margin: 10px 10px;
+  /* margin: 10px 10px; */
   /* background-color: orange; */
   height: 100%;
 }
@@ -186,55 +188,42 @@ nav ul>li {
   font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 200, "opsz" 48;
 }
 
-
-/* 모달 */
-h1 {
-  color: red;
+/* 바디 */
+section.main_section {
+  border: 2px solid #68B984;
+  border-top: none;
+  background-color: rgb(255, 255, 255);
+  height: 65vh;
+  width: 95%;
+  overflow-y: auto;
+  box-sizing: content-box;
+  /* padding: 10px 0px; */
 }
 
-input.service_title {
-  text-align: left;
-  border: 1px solid rgb(88, 88, 88);
-  padding: 5px 20px;
+
+/* 스크롤바 설정==================================*/
+.main_section::-webkit-scrollbar {
+  width: 6px;
+}
+
+/* 스크롤바 막대 설정*/
+.main_section::-webkit-scrollbar-thumb {
+  height: 17%;
+  background-color: #a1a1fc;
   border-radius: 10px;
 }
 
-textarea.service_content {
-  text-align: left;
+/* 스크롤바 뒷 배경 설정*/
+.main_section::-webkit-scrollbar-track {
+  background-color: #E6E6FA;
 }
 
-div.modal-content {
-  border-radius: 20px;
-  width: 850px;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  -o-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-}
-
-div.modal-body {
-  display: flex;
-  flex-direction: column;
-  width: 80%;
-}
-
-/* 바디 */
-section.main_section {
-  border: 2px solid rgb(0, 0, 0);
-  background-color: rgb(255, 255, 255);
-  height: 65vh;
-  width: 98%;
-  overflow-y: auto;
-  /* padding: 10px 0px; */
-}
-.main_section span{
+/* 스크롤바 설정==================================*/
+.main_section span {
   border-bottom: 1px solid black;
   /* margin: 15px 0px; */
 }
+
 span {
   display: flex;
   flex-direction: row;
@@ -251,10 +240,11 @@ span p {
 
 
 /* 말머리 / 내용 / 작성자 / 작성 시간 */
-.service_nav{
-background-color: #fffbc4;
-padding: 10px 0;
+.service_nav {
+  background-color: #68B984;
+  padding: 10px 0;
 }
+
 p.service_id {
   width: 100px;
 }
@@ -281,42 +271,116 @@ p.service_created_at {
 
 /* 텍스트박스 */
 .text_box {
-  position:relative; 
-  display:inline-block; 
-  width:100%;
-  }
- .text_box textarea {
- width:100%; 
- height:152px; 
- color:#666; 
- font-family:"ht_r"; 
- font-size:18px; 
- line-height:28px; 
- padding:20px; 
- border:1px solid #e4dcd3; 
- outline:0; 
- resize:none;
- border-radius: 10px;
- }
- .text_box .count {
- position:absolute; 
- right:20px; 
- bottom:20px; 
- color:#666; 
- font-family:"ht_r"; 
- font-size:12px;
-display: flex;
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
 
- }
- /* 모달 푸터 */
- .modal-footer{
-  margin: 10px auto;
- }
+.text_box textarea {
+  width: 100%;
+  height: 152px;
+  color: #666;
+  font-family: "ht_r";
+  font-size: 18px;
+  line-height: 28px;
+  padding: 20px;
+  border: 1px solid #e4dcd3;
+  outline: 0;
+  resize: none;
+  border-radius: 10px;
+}
+
+.text_box .count {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  color: #666;
+  font-family: "ht_r";
+  font-size: 12px;
+  display: flex;
+
+}
+
+/* 문의하기 모달창 시작 ===================================   */
+/* 모달창 흰색 div */
+div.modal-content {
+  border-radius: 20px;
+  width: 850px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+/* 모달 창 안내문*/
+h1 {
+  color: red;
+}
+
+/* 입력 창 전체 */
+div.modal-body {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+}
+
+/* 제목 작성칸 */
+input.service_title {
+  text-align: left;
+  border: 1px solid rgb(88, 88, 88);
+  padding: 5px 20px;
+  border-radius: 10px;
+}
+
+/* 내용 작성 칸 */
+textarea.service_content {
+  text-align: left;
+}
+
+/* 모달 푸터 ==============*/
+.modal-footer {
+  margin: 15px auto;
+}
+
+/* 확인 버튼 */
+.btn-primary {
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #68B984;
+  border: none;
+}
+
+.btn-primary:hover {
+  color: #ffffff;
+  background-color: #519167;
+  cursor: pointer;
+}
+
+/* 취소 버튼 */
+.btn-secondary {
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #46534b;
+  border: none;
+}
+
+.btn-secondary:hover {
+  color: #ffffff;
+  background-color: #313a34;
+  cursor: pointer;
+}
+
+/* 문의하기 모달창 끝 ===================================   */
+
 
 /* 푸터 */
 footer {
   width: 100%;
-  background-color: gray;
+  background-color: #3D5656;
   display: grid;
   place-items: center;
 }
