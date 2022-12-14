@@ -249,13 +249,20 @@ async function CommunityDetail(community_id){
   image.src = `${backend_base_url}${community.image}`;
   image_box.appendChild(image);
 
-  const detail_title = document.getElementById("detail_title");
+  const detail_user_title = document.getElementById("detail_user_title");
+  const user = document.createElement("input");
+  user.setAttribute("type", "text");
+  user.setAttribute("id", "title");
+  user.setAttribute("class", "post-title");
+  user.setAttribute("placeholder", "작성자 : " + community.user);
+  detail_user_title.appendChild(user);
+
   const title = document.createElement("input");
   title.setAttribute("type", "text");
   title.setAttribute("id", "title");
   title.setAttribute("class", "post-title");
-  title.setAttribute("placeholder", community.title);
-  detail_title.appendChild(title);
+  title.setAttribute("placeholder", "제목 : " + community.title);
+  detail_user_title.appendChild(title);
 
   const detail_content = document.getElementById("detail_content");
   const content = document.createElement("div");
