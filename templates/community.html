@@ -70,7 +70,7 @@
           </a>
         </div>
         <div class="service">
-          <a href="service.html" onclick="location.href='community.html'">
+          <a href="service.html" onclick="location.href='service.html'">
             <span class="material-symbols-outlined">support_agent</span>
             고객센터
           </a>
@@ -78,7 +78,7 @@
       </div>
     </div>
   </nav>
-  
+
   <section class="community_section">
     <div class="community_for_metury">
       <a>부화한 메추리알들의 커뮤니티 </a>
@@ -93,19 +93,9 @@
         <button class="post-upload-button">게시글 작성</button>
       </div>
       <div class="community-div">
-        <ul class="card-list">
-          <li class="card">
-            <a class="card-image"
-              style="background-image: url(https://velog.velcdn.com/images/taeeuno_o/post/acd424da-33fd-422d-8e57-002176798eb2/image.png)"
-              data-image-full="https://velog.velcdn.com/images/taeeuno_o/post/acd424da-33fd-422d-8e57-002176798eb2/image.png">
-              <img src="" alt="" />
-            </a>
-            <a class="card-description">
-              <h2>조랭이</h2>
-              <p>개졸귀탱임</p>
-            </a>
-          </li>
-        </ul>
+        <div class="cards-box">
+          <ul id="card-list" class="card-list"></ul>
+        </div>
       </div>
     </div>
   </section>
@@ -170,34 +160,15 @@
         <div class="post-detail-modal-content-img">
           <!-- 이미지업로드 박스 -->
           <div class="flex-container">
-            <div class="wrapper">
-              <img src="https://i0.wp.com/adventure.co.kr/wp-content/uploads/2020/09/no-image.jpg" class="image-box" />
-              <!-- <label for="file" class="img-detail-btn">
-                            <input id="file" type="file" accept="image/*" />
-                            <span>이미지 업로드하기</span>
-                        </label> -->
+            <div id="wrapper" class="wrapper">
             </div>
           </div>
         </div>
         <div class="post-detail-modal-content-text">
           <div class="post-modal-input-text">
-            <div class="post-modal-input-text-top">
-              <input type="text" id="title" placeholder="제목" class="post-title" />
-            </div>
-            <div class="post-modal-input-text-middle">
-              <input type="text" id="location" placeholder="위치" class="post-location" />
-              <input type="text" id="tag" placeholder="태그 검색" class="post-tag" />
-            </div>
-            <div class="tag-box">
-              <!-- 입력한 태그가 붙은 부분 -->
-              <ul id="tag-list" class="tag-plus"></ul>
-            </div>
-            <div class="post-modal-input-text-bottom" style="border: 1px solid red">
-              <!-- <textarea   style="resize: none;" type="text" id="content" placeholder="내용" class="post-content"></textarea> -->
-              <div class="text_box">
-                <textarea></textarea>
-                <div class="count"><span>0</span>/200</div>
-              </div>
+            <div id="detail_user_title" class="post-modal-input-text-top"></div>
+            <div class="post-modal-input-text-bottom">
+              <div id="detail_content" class="text_box"></div>
             </div>
           </div>
         </div>

@@ -165,7 +165,6 @@ nav {
 }
 
 nav ul {
-  border: 2px solid red;
   width: 40%;
   margin: 0px auto;
   height: 100%;
@@ -231,25 +230,36 @@ a.active {
 
 /* 부화한 메추리알들의 커뮤니티 */
 .community_for_metury {
-  border: 1px red solid;
   margin: 20px auto;
   font-size: 40px;
   color: rgb(107, 57, 0);
 }
 
 .community-div {
-  border: 1px rgb(59, 30, 30) solid;
+  border: 5px solid #FED049;
   width: 90%;
   height: 550px;
   overflow: overlay;
 }
+
+.space {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-control {
+  width: 500px;
+  margin: 5px 10px;
+}
+
 
 /* 커뮤니티 작성용 모달창===================================================== */
 
 /* 모달창 */
 /* 모달창 버튼 */
 .post-upload-button-div {
-  border: 1px solid red;
+  border: 5px solid #FED049;
   margin: 0px auto;
   /* float: right; */
   width: 90%;
@@ -403,6 +413,7 @@ a.active {
   width: 100%;
   height: 15%;
   margin-bottom: 20px;
+  margin-left: 20px;
 }
 
 .post-modal-input-text-middle {
@@ -544,28 +555,22 @@ ul li.tag-item {
   width: 100%;
 }
 
-.text_box textarea {
+.detail_content_box {
+  background-color: white;
   width: 90%;
   height: 173px;
-  text-align: left;
+  display: flex;
+  text-align: center;
+  justify-content: center;
   color: #666;
   font-family: "ht_r";
   font-size: 18px;
   line-height: 28px;
   padding: 10px;
-  border: 1px solid #e4dcd3;
   outline: 0;
   resize: none;
   border-radius: 20px;
-}
-
-.text_box .count {
-  position: absolute;
-  right: 20px;
-  bottom: 20px;
-  color: #666;
-  font-family: "ht_r";
-  font-size: 15px;
+  overflow: auto;
 }
 
 .post-modal-upload-button {
@@ -1009,6 +1014,11 @@ ul li.tag-item {
 /* 각각의 카드의 내용 글 */
 .card-description > p {
   margin: 0;
+}
+
+.image_box {
+  width: 300px;
+  height: 300px;
 }
 
 /* 바닥글 윗칸 ============================================= 221205 이태은 */
