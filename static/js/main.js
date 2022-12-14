@@ -2,6 +2,10 @@ if (!token) {
     window.location.replace(`${frontend_base_url}/login.html`);
 }
 
+// url id 값 받아오기
+const urlParams = new URLSearchParams(window.location.search);
+const category_id = urlParams.get("id");
+
 // 음식 추천 슬라이더 ========================================================================
 $(document).ready(function () {
   var i = [1, 2, 3, 4, 5, 6, 7];
@@ -114,8 +118,8 @@ async function ProfileInfo() {
 ProfileInfo();
 
 // 추천 메뉴 리스트 가져오기
-async function FoodList() {
-  foods = await getFoodList();
+async function FoodList(category_id) {
+  foods = await getFoodList(category_id);
 
     let i = 1;
     foods.forEach((food) => {
@@ -136,7 +140,7 @@ async function FoodList() {
     i += 1;
   });
 }
-FoodList();
+FoodList(category_id);
 
 // 유명 맛집 슬라이더 ================================================================================
 // var container = document.getElementById("sns_famous_restaurant_container");

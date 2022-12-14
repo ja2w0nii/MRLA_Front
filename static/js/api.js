@@ -29,6 +29,12 @@ async function getName() {
   }
 }
 
+// 메인 페이지 연결
+function getMainPage(category_id) {
+  const url = `${frontend_base_url}/main.html?id=${category_id}`;
+  location.href = url;
+}
+
 // 프로필 페이지 연결
 function getProfilePage(user_id) {
   const url = `${frontend_base_url}/profile.html?id=${user_id}`;
@@ -107,8 +113,8 @@ async function getAllFoodList() {
 }
 
 // 추천 메뉴 리스트 가져오기
-async function getFoodList() {
-  const response = await fetch(`${backend_base_url}/foods/main/filtering/`, {
+async function getFoodList(category_id) {
+  const response = await fetch(`${backend_base_url}/foods/main/filtering/${category_id}/`, {
     headers: {
       Authorization: "Bearer " + localStorage.getItem("access"),
     },
