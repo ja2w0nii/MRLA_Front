@@ -87,7 +87,7 @@
 
         <div class="container">
           <div class="content">
-            <a href="intro_1.html">
+            <a href="#" onclick="alert('환영합니다!')">
               <div class="content-overlay"></div>
               <img class="content-image" src="../templates/mascot.jpeg" />
               <div class="content-details">
@@ -150,15 +150,15 @@
 
         <div class="container">
           <div class="content">
-            <a href="intro_2.html">
+            <a href="#" onclick="alert('오픈 준비 중..')">
               <div class="content-overlay"></div>
               <img
                 class="content-image"
                 src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMjA0MDdfOTAg%2FMDAxNjQ5MzE3NzUyNzI3.VFxbiynqpXAQqeYMCPvSmax2ogGYlGsuQen1Tt9HbQgg.oPZPD0754ubEM2p_fM2n7G03dQ_fAQhig1Rs7cnZBekg.JPEG.tta81%2F1649317751205.jpg&type=a340"
               />
               <div class="content-details fadeIn-bottom fadeIn-right">
-                <h3>건강식(미구현)</h3>
-                <p>오픈 준비 중..</p>
+                <h3>웰빙</h3>
+                <p>-</p>
               </div>
             </a>
           </div>
@@ -168,4 +168,9 @@
   </body>
 
   <script src="../static/js/api.js"></script>
+  <script>
+    if (!token) {
+      window.location.replace(`${frontend_base_url}/login.html`);
+    }
+  </script>
 </html>

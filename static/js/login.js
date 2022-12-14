@@ -36,7 +36,7 @@ async function handleLogin() {
     );
 
     localStorage.setItem("payload", jsonPayload);
-    window.location.replace(`${frontend_base_url}/main.html`);
+    window.location.replace(`${frontend_base_url}/intro_2.html`);
   } else {
     alert("아이디와 비밀번호를 확인해주세요!");
     window.location.reload();
