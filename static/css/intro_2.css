@@ -16,24 +16,29 @@ body {
   background-size: cover;
   background-attachment: fixed;
   font-size: 16px;
-  font-family: "Raleway", sans-serif;
+  font-family: "Sunflower", sans-serif;
   height: 100vh;
+}
+
+.articles {
   display: grid;
   justify-content: center;
   align-items: center;
+  height: 100%;
 }
 
-.main-title {
+h1.main-title {
   color: #000000;
   text-align: center;
-  margin: 20px auto;
+  margin: 20px 0;
   font-size: 40px;
 }
 
-.main-subtitle {
-  color: #ff6868;
+h2.main-subtitle {
+  color: #fe4d4d;
   text-align: center;
-  margin: 20px auto;
+  margin: 0 0 15px 0;
+  font-size: 27px;
 }
 
 section.main_box1 {
@@ -115,11 +120,12 @@ section.main_box3 {
   letter-spacing: 0.15em;
   margin-bottom: 0.5em;
   text-transform: uppercase;
+  font-size: 35px;
 }
 
 .content-details p {
   color: #fff;
-  font-size: 0.8em;
+  font-size: 15px;
 }
 
 .fadeIn-bottom {
