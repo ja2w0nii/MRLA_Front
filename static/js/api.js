@@ -274,7 +274,7 @@ function FoodDetail(food_id) {
 async function getFooddetail(food_id) {
   const response = await fetch(`${backend_base_url}/foods/main/${food_id}/`, {
       headers: {
-          "Authorization": "Bearer" + localStorage.getItem("access")
+          Authorization: "Bearer " + localStorage.getItem("access")
       },
       method: 'GET',
   })
@@ -286,7 +286,7 @@ async function getFooddetail(food_id) {
 async function getFoodComment(food_id) {
   const response = await fetch(`${backend_base_url}/foods/main/${food_id}/comment/`, {
       headers: {
-          "Authorization": "Bearer" + localStorage.getItem("access")
+          Authorization: "Bearer " + localStorage.getItem("access")
       },
       method: 'GET',
   })
