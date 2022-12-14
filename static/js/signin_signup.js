@@ -1,3 +1,7 @@
+if (token) {
+    window.location.replace(`${frontend_base_url}/main.html`);
+  }
+
 const signUpButton = document.getElementById("signUp");
 const signInButton = document.getElementById("signIn");
 const container = document.getElementById("container");
@@ -61,7 +65,7 @@ async function handleSignIn() {
     }).join(''));
 
     localStorage.setItem("payload", jsonPayload);
-    window.location.href = 'main.html'
+    window.location.href = 'intro_2.html'
 }
 
 
