@@ -40,10 +40,12 @@ section.main_box1 {
   display: flex;
   justify-content: center;
 }
+
 section.main_box2 {
   display: flex;
   justify-content: center;
 }
+
 section.main_box3 {
   display: flex;
   justify-content: center;
