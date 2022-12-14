@@ -367,3 +367,23 @@ async function getCommunitySearch() {
   response_json = await response.json();
   return response_json;
 }
+
+// 커뮤니티 게시글 등록
+async function postCommunity(formdata) {
+  const response = await fetch(`${backend_base_url}/posts/community/`, {
+    headers: {
+      Authorization: "Bearer " + localStorage.getItem("access"),
+    },
+    method: "POST",
+    body: formdata,
+  });
+
+  if (response.status == 200) {
+    alert("작성 완료!");
+    window.location.reload();
+  } else if (response.status == 400) {
+    alert("제목은 50 글자를 넘을 수 없습니다!");
+  } else {
+    alert(response.status);
+  }
+}
