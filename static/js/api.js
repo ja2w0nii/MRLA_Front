@@ -327,6 +327,18 @@ async function getCommunity() {
   return response_json;
 }
 
+// 커뮤니티 게시글 상세 정보 조회 (모달) //
+async function getCommunityDetail(community_id) {
+  const response = await fetch(`${backend_base_url}/posts/community/${community_id}`, {
+    headers: {
+      Authorization: "Bearer " + localStorage.getItem("access"),
+    },
+    method: "GET",
+  });
+  response_json = await response.json();
+  return response_json;
+}
+
 // 커뮤니티 게시글 검색 페이지 연결 //
 function CommunitySearch() {
   const word = document.getElementById("inputSearch").value;
