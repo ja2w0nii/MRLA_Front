@@ -3,7 +3,6 @@ const backend_base_url = "http://127.0.0.1:8000";
 const frontend_base_url = "http://127.0.0.1:5500/templates";
 const token = localStorage.getItem("access");
 
-
 // 로그아웃
 function handleLogout() {
   localStorage.removeItem("access");
@@ -102,7 +101,7 @@ async function getAllFoodList() {
       Authorization: "Bearer " + localStorage.getItem("access"),
     },
     method: "GET",
-  })
+  });
   response_json = await response.json();
   return response_json;
 }
@@ -135,7 +134,6 @@ async function DoFollow(user_id) {
     window.location.replace(`${frontend_base_url}/profile.html?id=${user_id}`);
   }
 }
-
 
 // 팔로잉/팔로워 리스트 가져오기
 async function getFollowList(user_id) {
@@ -266,3 +264,24 @@ async function postServiceComment(formdata) {
   }
 }
 
+// 커뮤니티 게시글 검색 페이지 연결 //
+function CommunitySearch() {
+  const word = document.getElementById("inputSearch").value;
+  const url = `${frontend_base_url}/community_search.html?search=${word}`;
+
+  if (word == "") {
+    alert("검색어를 입력하세요!");
+  } else {
+    location.href = url;
+  }
+}
+
+// 커뮤니티 게시글 검색 //
+async function getCommunitySearch() {
+  const response = await fetch(`${backend_base_url}/posts/community/search?` + new URLSearchParams(window.location.search), {
+    method: "GET",
+  });
+
+  response_json = await response.json();
+  return response_json;
+}
