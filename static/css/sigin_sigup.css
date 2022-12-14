@@ -70,16 +70,17 @@ button.ghost {
   border-color: #ffffff;
 }
 
-form {
-  background-color: #ffffff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  padding: 0 40px;
-  height: 100%;
-  text-align: center;
-}
+
+.form {
+	background-color: #FFFFFF;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	padding: 0 40px;
+	height: 100%;
+	text-align: center;
+
 
 input {
   background-color: #eee;
