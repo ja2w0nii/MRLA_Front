@@ -123,13 +123,13 @@ async function FoodList() {
 
     const newFood = document.createElement("div");
     newFood.setAttribute("id", food.food_id);
-    // newFood.setAttribute("onclick", );
+    newFood.setAttribute("onclick", "FoodDetail(this.id);");
     newFood.innerText = food.menu;
     food_list.appendChild(newFood);
 
     const newImage = document.createElement("img");
     newImage.setAttribute("id", food.food_id);
-    // newImage.setAttribute("onclick", );
+    newImage.setAttribute("onclick", "FoodDetail(this.id);");
     newImage.src = food.image;
     newFood.appendChild(newImage);
 

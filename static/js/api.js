@@ -264,6 +264,53 @@ async function postServiceComment(formdata) {
   }
 }
 
+// 메뉴 디테일 페이지 연결
+function FoodDetail(food_id) {
+  const url = `${frontend_base_url}/food_detail.html?id=${food_id}`;
+  location.href = url;
+}
+
+// 메뉴 디테일 가져오기
+async function getFooddetail(food_id) {
+  const response = await fetch(`${backend_base_url}/foods/main/${food_id}/`, {
+      headers: {
+          "Authorization": "Bearer" + localStorage.getItem("access")
+      },
+      method: 'GET',
+  })
+  response_json = await response.json();
+  return response_json;  
+}
+
+// 메뉴 코멘트 가져오기
+async function getFoodComment(food_id) {
+  const response = await fetch(`${backend_base_url}/foods/main/${food_id}/comment/`, {
+      headers: {
+          "Authorization": "Bearer" + localStorage.getItem("access")
+      },
+      method: 'GET',
+  })
+  response_json = await response.json();
+  return response_json;  
+}
+
+// 코멘트 등록
+async function loadcreateComment(comment) {
+  const response = await fetch(`${backend_base_url}/foods/main/${food_id}/comment/`, {
+    headers: {
+      "content-type": "applications/json",
+      Authorization: "Bearer " + localStorage.getItem("access"),
+    },
+    method: "POST",
+    body: JSON.stringify({
+      food: food_id,
+      comment: comment,
+    }),
+  });
+
+
+}
+
 // 커뮤니티 게시글 검색 페이지 연결 //
 function CommunitySearch() {
   const word = document.getElementById("inputSearch").value;
