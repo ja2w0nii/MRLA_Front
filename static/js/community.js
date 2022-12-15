@@ -244,7 +244,7 @@ async function CommunityDetail(community_id) {
 
   const image_box = document.getElementById("wrapper");
   const image = document.createElement("img");
-  image.setAttribute("class", "image_box")
+  image.setAttribute("class", "image_box");
   image.src = `${backend_base_url}${community.image}`;
   image_box.appendChild(image);
 
@@ -266,7 +266,7 @@ async function CommunityDetail(community_id) {
   const detail_content = document.getElementById("detail_content");
   const content = document.createElement("div");
   content.setAttribute("class", "detail_content_box");
-  content.innerText = community.content
+  content.innerText = community.content;
   detail_content.appendChild(content);
 }
 
@@ -313,7 +313,6 @@ Community();
 // 고객센터 게시글 등록
 async function loadpostCommunity() {
   const title = document.getElementById("community_title").value;
-
   const content = document.getElementById("community_content").value;
   const image = document.getElementById("community_image").files[0];
 

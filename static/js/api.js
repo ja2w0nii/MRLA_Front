@@ -382,7 +382,7 @@ async function postCommunity(formdata) {
     alert("작성 완료!");
     window.location.reload();
   } else if (response.status == 400) {
-    alert("제목은 50 글자를 넘을 수 없습니다!");
+    alert("이미지를 등록해 주세요!");
   } else {
     alert(response.status);
   }
