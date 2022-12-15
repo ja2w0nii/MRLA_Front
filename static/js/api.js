@@ -9,7 +9,7 @@ function handleLogout() {
   localStorage.removeItem("refresh");
   localStorage.removeItem("payload");
 
-  window.location.replace(`${frontend_base_url}/login.html`);
+  window.location.replace(`${frontend_base_url}/signin_signup.html`);
 }
 
 // 로그인한 유저 정보 조회
@@ -27,6 +27,12 @@ async function getName() {
   } else {
     return null;
   }
+}
+
+// 메인 페이지 연결
+function getMainPage(category_id) {
+  const url = `${frontend_base_url}/main.html?id=${category_id}`;
+  location.href = url;
 }
 
 // 프로필 페이지 연결
@@ -107,8 +113,8 @@ async function getAllFoodList() {
 }
 
 // 추천 메뉴 리스트 가져오기
-async function getFoodList() {
-  const response = await fetch(`${backend_base_url}/foods/main/filtering/`, {
+async function getFoodList(category_id) {
+  const response = await fetch(`${backend_base_url}/foods/main/filtering/${category_id}/`, {
     headers: {
       Authorization: "Bearer " + localStorage.getItem("access"),
     },
@@ -226,8 +232,15 @@ async function getServiceDetail(service_id) {
     method: "GET",
   });
 
-  response_json = await response.json();
-  return response_json;
+  if (response.status == 200) {
+    response_json = await response.json();
+    return response_json;
+  } else if (response.status == 401) {
+    alert("권한이 없습니다!");
+    window.location.replace(`${frontend_base_url}/service.html`);
+  } else {
+    alert(response.status);
+  }
 }
 
 // 고객센터 게시글 디테일 댓글 조회
@@ -273,25 +286,25 @@ function FoodDetail(food_id) {
 // 메뉴 디테일 가져오기
 async function getFooddetail(food_id) {
   const response = await fetch(`${backend_base_url}/foods/main/${food_id}/`, {
-      headers: {
-          Authorization: "Bearer " + localStorage.getItem("access")
-      },
-      method: 'GET',
-  })
+    headers: {
+      Authorization: "Bearer " + localStorage.getItem("access"),
+    },
+    method: "GET",
+  });
   response_json = await response.json();
-  return response_json;  
+  return response_json;
 }
 
 // 메뉴 코멘트 가져오기
 async function getFoodComment(food_id) {
   const response = await fetch(`${backend_base_url}/foods/main/${food_id}/comment/`, {
-      headers: {
-          Authorization: "Bearer " + localStorage.getItem("access")
-      },
-      method: 'GET',
-  })
+    headers: {
+      Authorization: "Bearer " + localStorage.getItem("access"),
+    },
+    method: "GET",
+  });
   response_json = await response.json();
-  return response_json;  
+  return response_json;
 }
 
 // 코멘트 등록
@@ -307,8 +320,30 @@ async function loadcreateComment(comment) {
       comment: comment,
     }),
   });
+}
 
+// 커뮤니티 게시글 목록 조회 //
+async function getCommunity() {
+  const response = await fetch(`${backend_base_url}/posts/community/`, {
+    headers: {
+      Authorization: "Bearer " + localStorage.getItem("access"),
+    },
+    method: "GET",
+  });
+  response_json = await response.json();
+  return response_json;
+}
 
+// 커뮤니티 게시글 상세 정보 조회 (모달) //
+async function getCommunityDetail(community_id) {
+  const response = await fetch(`${backend_base_url}/posts/community/${community_id}`, {
+    headers: {
+      Authorization: "Bearer " + localStorage.getItem("access"),
+    },
+    method: "GET",
+  });
+  response_json = await response.json();
+  return response_json;
 }
 
 // 커뮤니티 게시글 검색 페이지 연결 //
@@ -331,4 +366,24 @@ async function getCommunitySearch() {
 
   response_json = await response.json();
   return response_json;
+}
+
+// 커뮤니티 게시글 등록
+async function postCommunity(formdata) {
+  const response = await fetch(`${backend_base_url}/posts/community/`, {
+    headers: {
+      Authorization: "Bearer " + localStorage.getItem("access"),
+    },
+    method: "POST",
+    body: formdata,
+  });
+
+  if (response.status == 200) {
+    alert("작성 완료!");
+    window.location.reload();
+  } else if (response.status == 400) {
+    alert("이미지를 등록해 주세요!");
+  } else {
+    alert(response.status);
+  }
 }

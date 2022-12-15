@@ -1,6 +1,10 @@
 if (!token) {
-    window.location.replace(`${frontend_base_url}/login.html`);
+  window.location.replace(`${frontend_base_url}/signinsignup.html`);
 }
+
+// url id 값 받아오기
+const urlParams = new URLSearchParams(window.location.search);
+const category_id = urlParams.get("id");
 
 // 음식 추천 슬라이더 ========================================================================
 $(document).ready(function () {
@@ -105,38 +109,39 @@ async function ProfileInfo() {
   newItem2.setAttribute("class", "dropdown-item-box");
   profile_dropdown.appendChild(newItem2);
 
-    const newItem_a2 = document.createElement("a")
-    newItem_a2.setAttribute("id", login_user.id)
-    newItem_a2.setAttribute("class", "dropdown-item")
-    newItem_a2.innerText = "로그아웃"
-    newItem2.appendChild(newItem_a2)
+  const newItem_a2 = document.createElement("a")
+  newItem_a2.setAttribute("id", login_user.id)
+  newItem_a2.setAttribute("class", "dropdown-item")
+  newItem_a2.setAttribute("onclick", "handleLogout()")
+  newItem_a2.innerText = "로그아웃"
+  newItem2.appendChild(newItem_a2)
 }
 ProfileInfo();
 
 // 추천 메뉴 리스트 가져오기
-async function FoodList() {
-  foods = await getFoodList();
+async function FoodList(category_id) {
+  foods = await getFoodList(category_id);
 
-    let i = 1;
-    foods.forEach((food) => {
-        const food_list = document.getElementById("recommend_box" + i);
+  let i = 1;
+  foods.forEach((food) => {
+    const food_list = document.getElementById("recommend_box" + i);
 
     const newFood = document.createElement("div");
     newFood.setAttribute("id", food.food_id);
-    newFood.setAttribute("onclick", "FoodDetail(this.id);");
+    newFood.setAttribute("onclick", "FoodDetail(this.id)");
     newFood.innerText = food.menu;
     food_list.appendChild(newFood);
 
     const newImage = document.createElement("img");
     newImage.setAttribute("id", food.food_id);
-    newImage.setAttribute("onclick", "FoodDetail(this.id);");
+    newImage.setAttribute("onclick", "FoodDetail(this.id)");
     newImage.src = food.image;
     newFood.appendChild(newImage);
 
     i += 1;
   });
 }
-FoodList();
+FoodList(category_id);
 
 // 유명 맛집 슬라이더 ================================================================================
 var container = document.getElementById("sns_famous_restaurant_container");

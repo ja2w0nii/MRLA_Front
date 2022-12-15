@@ -52,7 +52,7 @@
             <textarea class="service_content" id="service_content" cols="105" rows="10"></textarea>
             <div class="count"><span>0</span>/200</div>
           </div>
-          
+
         </div>
         <div class="modal-footer">
           <button type="button" class="btn-primary" onclick="loadpostService()">확인</button>
@@ -71,42 +71,41 @@
       </div>
     </div>
   </header>
-
-    <nav>
-      <div class="navContainer">
-        <div class="service1">
-          <div class="near_restaurant">
-            <a href="restaurants_nearby.html" onclick="location.href='restaurants_nearby.html'">
-              <span class="material-symbols-outlined"> location_on </span>
-              근처 맛집
-            </a>
-          </div>
-          <div class="who">
-            <a href="with_who.html" onclick="location.href='with_who.html'">
-              <span class="material-symbols-outlined"> groups </span>
-              누구랑 먹나요
-            </a>
-          </div>
-          <div class="community">
-            <a href="community.html" onclick="location.href='community.html'">
-              <span class="material-symbols-outlined">chat_bubble</span>
-              커뮤니티
-            </a>
-          </div>
-          <div class="service">
-            <a href="service.html" onclick="location.href='community.html'">
-              <span class="material-symbols-outlined">support_agent</span>
-              고객센터
-            </a>
-          </div>
+  <nav class="nav_box">
+    <div class="navContainer">
+      <div class="service1">
+        <div class="near_restaurant">
+          <a href="restaurants_nearby.html" onclick="location.href='restaurants_nearby.html'">
+            <span class="material-symbols-outlined"> location_on </span>
+            근처 맛집
+          </a>
+        </div>
+        <div class="who">
+          <a href="with_who.html" onclick="location.href='with_who.html'">
+            <span class="material-symbols-outlined"> groups </span>
+            누구랑 먹나요
+          </a>
+        </div>
+        <div class="community">
+          <a href="community.html" onclick="location.href='community.html'">
+            <span class="material-symbols-outlined">chat_bubble</span>
+            커뮤니티
+          </a>
+        </div>
+        <div class="service">
+          <a href="service.html" onclick="location.href='service.html'">
+            <span class="material-symbols-outlined">support_agent</span>
+            고객센터
+          </a>
         </div>
       </div>
-    </nav>
+    </div>
+  </nav>
 
   <section id="main_section" class="main_section">
     <span class="service_nav">
       <p id="" class="service_id">No.</p>
-      <p id="" class="service_title" onclick="ServiceDetail(this.id)">제목</p>
+      <p id="" class="service_title">제목</p>
       <p id="" class="service_user">작성자</p>
       <p id="" class="service_created_at">작성 시간</p>
     </span>

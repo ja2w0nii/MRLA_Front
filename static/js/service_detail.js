@@ -1,5 +1,5 @@
 if (!token) {
-  window.location.replace(`${frontend_base_url}/login.html`);
+  window.location.replace(`${frontend_base_url}/signin_signup.html`);
 }
 
 // url id 값 받아오기
@@ -47,6 +47,7 @@ async function ProfileInfo() {
   const newItem_a2 = document.createElement("a")
   newItem_a2.setAttribute("id", login_user.id)
   newItem_a2.setAttribute("class", "dropdown-item")
+  newItem_a2.setAttribute("onclick", "handleLogout()")
   newItem_a2.innerText = "로그아웃"
   newItem2.appendChild(newItem_a2)
 }
@@ -61,10 +62,10 @@ async function loadgetServiceDetail(service_id) {
 
   const title = document.getElementById("title");
   // title.innerText = "[ 제목 ]\n" + service.title;
-title.innerText =  service.title;
+  title.innerText = service.title;
   const content = document.getElementById("content");
   // content.innerText = "[ 내용 ]\n" + service.content;
-  content.innerText =  service.content;
+  content.innerText = service.content;
 
 
   const created_at = document.getElementById("created_at");
@@ -96,7 +97,7 @@ async function loadgetServiceComment(service_id) {
     newComment.setAttribute("id", servicecomment.service);
     newComment.setAttribute("class", "servicecomment_comment");
     // newComment.innerText = "[ 답변 ]\n" + servicecomment.comment;
-    newComment.innerText =  servicecomment.comment;
+    newComment.innerText = servicecomment.comment;
 
     comment_list.appendChild(newComment);
   });

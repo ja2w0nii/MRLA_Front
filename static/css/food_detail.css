@@ -1,184 +1,217 @@
+/* 전체 설정 */
 * {
     margin: auto;
-    /* font-family: 'Gowun Batang', serif;
-      font-family: 'Jua', sans-serif; */
-    /* font-family: 'Gowun Batang', serif;
-      font-family: 'Jua', sans-serif; */
-    font-family: "Do Hyeon", sans-serif;
-  }
+    font-family: 'Jua', sans-serif;
+}
 
-  header {
-    background-color: rgb(190, 190, 190);
-    width: 100;
-    height: 80px;
+body {
+    background-color: whitesmoke;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+
+/* 헤더============================================= */
+header {
+    background-color: #FED049;
+    width: 100%;
+    height: 70px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-  }
-  
-  header > h2 {
-    margin-left: 20px;
-  }
-  
-  header > h2:hover {
+    position: fixed;
+    top: 0;
+}
+
+header>h2 {
+    margin: 0px 30px;
+    width: 120px;
+}
+
+header>h2:hover {
     color: #000000;
     cursor: pointer;
-  }
-  
-  .profile_info_box {
+}
+
+.profile_info_box {
     display: flex;
     flex-direction: row;
-    margin: 30px;
-  }
-  
-  .profile_img {
+    margin: 0px 30px;
+}
+
+.profile_img {
     width: 50px;
     height: 50px;
     border-radius: 50%;
     margin: 10px;
-  }
-  
-  .dropdown-menu-dark {
+}
+
+.dropdown-menu-dark {
     height: 100px;
-  }
-  
-  .dropdown-item-box {
+}
+
+.dropdown-item-box {
     height: 43px;
-  }
-  
-  .dropdown-item {
+}
+
+.dropdown-item {
     margin: 0px;
     cursor: pointer;
-  }
-  
-  .navContainer {
+}
+
+
+/* 네비게이션=============================================*/
+.nav_box {
+    margin-top: 60px;
+    width: 100%;
+    height: 60px;
+}
+
+.navContainer {
+    background-color: white;
+    border: 10px solid #FED049;
     align-items: center;
     box-sizing: border-box;
     display: flex;
-    height: 100%;
+    width: 100%;
     justify-content: flex-end;
-    padding: 0 4px 0 32px;
     align-items: center;
-    /* float: right; */
-  }
-  
-  .service1 {
+}
+
+.service1 {
     width: 60%;
-  }
-  
-  .near_restaurant {
-    border: 1px solid red;
+}
+
+.near_restaurant {
+    border: solid 3px grey;
+    border-radius: 100px;
     float: left;
     width: 20%;
     box-sizing: border-box;
     text-decoration-line: none;
     font-size: 20px;
     font-weight: 500;
-  }
-  
-  .near_restaurant:hover {
+}
+
+.near_restaurant:hover {
     letter-spacing: 3px;
     color: #000000;
     font-weight: bold;
     text-decoration-line: none;
     transition: all 0.7s;
-  }
-  
-  .who {
-    border: 1px solid green;
+}
+
+.who {
+    border: 3px solid grey;
+    border-radius: 100px;
     float: left;
     margin-left: 5%;
     width: 20%;
     box-sizing: border-box;
     font-size: 20px;
     font-weight: 500;
-  }
-  
-  .who:hover {
-    letter-spacing: 3px;
+}
+
+.who:hover {
+    letter-spacing: 2px;
     color: #000000;
     font-weight: 900;
     transition: all 0.7s;
-  }
-  
-  .community {
-    border: 1px solid blue;
+}
+
+.community {
+    border: 3px solid grey;
+    border-radius: 100px;
     float: left;
     margin-left: 5%;
     width: 20%;
     box-sizing: border-box;
     font-size: 20px;
     font-weight: 500;
-  }
-  
-  .community:hover {
+}
+
+.community:hover {
     letter-spacing: 3px;
     color: #000000;
     font-weight: 900;
     transition: all 0.7s;
-  }
-  
-  .service {
-    border: 1px solid blue;
+}
+
+.service {
+    border: 3px solid grey;
+    border-radius: 100px;
     float: left;
     margin-left: 5%;
     width: 20%;
     box-sizing: border-box;
     font-size: 20px;
     font-weight: 500;
-  }
-  
-  .service:hover {
+}
+
+.service:hover {
     letter-spacing: 3px;
     color: #000000;
     font-weight: 900;
     transition: all 0.7s;
-  }
-  
-  ul {
+}
+
+ul {
     list-style: none;
     padding-left: 0px;
-  }
-  
-  nav {
+}
+
+nav {
     /* border: 2px solid blue; */
     margin: 10px 10px;
     /* background-color: orange; */
     height: 100%;
-  }
-  
-  nav ul {
+}
+
+nav ul {
     border: 2px solid red;
     width: 40%;
     margin: 0px auto;
     height: 100%;
     display: flex;
     align-items: center;
-  
+
     justify-content: space-between;
-  }
-  
-  nav a {
+}
+
+nav a {
     text-decoration-line: none;
-  }
-  
-  nav ul > li {
+    color: grey;
+}
+
+nav ul>li {
     font-size: 20px;
     height: 100%;
     display: flex;
     align-items: center;
-  }
-  
-  section {
+}
+
+section {
     /* border: 2px solid green; */
     height: 100%;
-  }
+}
 
+/* 위치 */
+.material-symbols-outlined {
+    font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 200, "opsz" 48;
+}
 
-html,
-body {
-    margin: 0;
-    background-color: #EFEFEF;
+a.active {
+    color: #ff5752;
+    font-weight: bolder;
+    font-weight: 900;
+}
+
+/* 내용 섹션 윗칸 ============================================= 221205 이태은 */
+.community_section {
+    background-color: rgb(255, 251, 236);
+    height: 80vh;
+    z-index: -100;
 }
 
 button {
@@ -263,6 +296,7 @@ img {
     padding: 10px 12px;
     color: aliceblue;
     background-color: black;
+    border-radius: 10px;
 }
 
 .btn-reply-detail:hover {

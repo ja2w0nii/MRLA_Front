@@ -43,8 +43,7 @@
       </div>
     </div>
   </header>
-
-  <nav>
+  <nav class="nav_box">
     <div class="navContainer">
       <div class="service1">
         <div class="near_restaurant">
@@ -66,7 +65,7 @@
           </a>
         </div>
         <div class="service">
-          <a href="service.html" onclick="location.href='community.html'">
+          <a href="service.html" onclick="location.href='service.html'">
             <span class="material-symbols-outlined">support_agent</span>
             고객센터
           </a>
@@ -75,11 +74,8 @@
     </div>
   </nav>
 
- 
-
   <section class="main_section">
     <div class="service_detail">
-      
       <div class="p_box">
         <p class="title" id="title"></p>
         <div class="span_box">
@@ -89,28 +85,26 @@
       </div>
       <p class="content" id="content"></p>
     </div>
- 
-    <div  class="comment_list_box">
+    <div class="comment_list_box">
       <div id="comment_list" class="comment_list"></div>
     </div>
-
-
   </section>
 
   <div class="comment_box_all">
     <div class="comment_box">
-      <textarea class="comment" id="comment" cols="85" rows="3" placeholder="타인의 권리를 침해하거나 명예를 훼손하는 댓글은 운영 원칙 및 관련 법률에 제제를 받을 수 있습니다."></textarea>
+      <textarea class="comment" id="comment" cols="85" rows="3"
+        placeholder="타인의 권리를 침해하거나 명예를 훼손하는 댓글은 운영 원칙 및 관련 법률에 제제를 받을 수 있습니다."></textarea>
       <div class="comment_box_btn">
         <button type="button" class="btn-primary" onclick="loadpostServiceComment()">확인</button>
         <button type="button" class="btn-secondary" onclick="location.href='service.html'">취소</button>
       </div>
     </div>
- <div>
+    <div>
 
-  <footer>Footer 영역</footer>
+      <footer>Footer 영역</footer>
 
-  <script type="text/javascript" src="../static/js/api.js"></script>
-  <script type="text/javascript" src="../static/js/service_detail.js"></script>
+      <script type="text/javascript" src="../static/js/api.js"></script>
+      <script type="text/javascript" src="../static/js/service_detail.js"></script>
 </body>
 
 </html>

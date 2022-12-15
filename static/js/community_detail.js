@@ -1,5 +1,5 @@
 if (!token) {
-  window.location.replace(`${frontend_base_url}/login.html`);
+  window.location.replace(`${frontend_base_url}/signin_signup.html`);
 }
 
 // 프로필 드롭다운 가져오기
@@ -43,6 +43,7 @@ async function ProfileInfo() {
     const newItem_a2 = document.createElement("a")
     newItem_a2.setAttribute("id", login_user.id)
     newItem_a2.setAttribute("class", "dropdown-item")
+    newItem_a2.setAttribute("onclick", "handleLogout()")
     newItem_a2.innerText = "로그아웃"
     newItem2.appendChild(newItem_a2)
 }
