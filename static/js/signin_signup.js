@@ -54,12 +54,6 @@ async function handleSignIn() {
 
     const response_json = await response.json()
 
-    for(var key in response_json) {
-        console.log("key: ", key)
-        console.log("value: ", response_json[key])
-        console.log("----------------")
-        alert(response_json[key])
-      }
 
     localStorage.setItem("access", response_json.access);
     localStorage.setItem("refresh", response_json.refresh);
