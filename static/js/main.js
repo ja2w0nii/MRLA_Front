@@ -1,5 +1,6 @@
 if (!token) {
   window.location.replace(`${frontend_base_url}/signin_signup.html`);
+
 }
 
 // url id 값 받아오기

@@ -200,9 +200,7 @@ section {
 /* 내용 섹션 윗칸 ============================================= 221205 이태은 */
 .target_box {
   height: 80vh;
-  z-index: -100;
-  padding: 20px;
-  margin: 140px;
+  margin: 140px 0 0 0;
 }
 
 .target_small_box {

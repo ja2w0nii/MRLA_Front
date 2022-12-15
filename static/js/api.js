@@ -232,8 +232,15 @@ async function getServiceDetail(service_id) {
     method: "GET",
   });
 
-  response_json = await response.json();
-  return response_json;
+  if (response.status == 200) {
+    response_json = await response.json();
+    return response_json;
+  } else if (response.status == 401) {
+    alert("권한이 없습니다!");
+    window.location.replace(`${frontend_base_url}/service.html`);
+  } else {
+    alert(response.status);
+  }
 }
 
 // 고객센터 게시글 디테일 댓글 조회
@@ -327,6 +334,18 @@ async function getCommunity() {
   return response_json;
 }
 
+// 커뮤니티 게시글 상세 정보 조회 (모달) //
+async function getCommunityDetail(community_id) {
+  const response = await fetch(`${backend_base_url}/posts/community/${community_id}`, {
+    headers: {
+      Authorization: "Bearer " + localStorage.getItem("access"),
+    },
+    method: "GET",
+  });
+  response_json = await response.json();
+  return response_json;
+}
+
 // 커뮤니티 게시글 검색 페이지 연결 //
 function CommunitySearch() {
   const word = document.getElementById("inputSearch").value;
@@ -347,4 +366,24 @@ async function getCommunitySearch() {
 
   response_json = await response.json();
   return response_json;
+}
+
+// 커뮤니티 게시글 등록
+async function postCommunity(formdata) {
+  const response = await fetch(`${backend_base_url}/posts/community/`, {
+    headers: {
+      Authorization: "Bearer " + localStorage.getItem("access"),
+    },
+    method: "POST",
+    body: formdata,
+  });
+
+  if (response.status == 200) {
+    alert("작성 완료!");
+    window.location.reload();
+  } else if (response.status == 400) {
+    alert("이미지를 등록해 주세요!");
+  } else {
+    alert(response.status);
+  }
 }
