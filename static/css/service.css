@@ -1,0 +1,395 @@
+/* 전체 설정 */
+* {
+  text-align: center;
+  margin: auto;
+  font-family: "Jua", sans-serif;
+}
+
+body {
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  align-content: space-between;
+  background-color: #CFFDE1;
+}
+
+/* 헤더 */
+header {
+  background-color: #3D5656;
+  width: 100%;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+}
+
+header>h2 {
+  margin: 0px 30px;
+  width: 120px;
+}
+
+header>h2:hover {
+  color: #000000;
+  cursor: pointer;
+}
+
+.profile_info_box {
+  display: flex;
+  flex-direction: row;
+  margin: 0px 30px;
+}
+
+.profile_img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin: 10px;
+}
+
+.dropdown-menu-dark {
+  height: 100px;
+}
+
+.dropdown-item-box {
+  height: 43px;
+}
+
+.dropdown-item {
+  margin: 0px;
+  cursor: pointer;
+}
+
+
+/* 네비게이션=============================================*/
+.nav_box {
+  margin-top: 60px;
+  width: 100%;
+  height: 60px;
+}
+
+.navContainer {
+  background-color: white;
+  border: 10px solid #3D5656;
+  align-items: center;
+  box-sizing: border-box;
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.service1 {
+  width: 60%;
+}
+
+.near_restaurant {
+  border: solid 3px grey;
+  border-radius: 100px;
+  float: left;
+  width: 20%;
+  box-sizing: border-box;
+  text-decoration-line: none;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.near_restaurant:hover {
+  letter-spacing: 3px;
+  color: #000000;
+  font-weight: bold;
+  text-decoration-line: none;
+  transition: all 0.7s;
+}
+
+.who {
+  border: 3px solid grey;
+  border-radius: 100px;
+  float: left;
+  margin-left: 5%;
+  width: 20%;
+  box-sizing: border-box;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.who:hover {
+  letter-spacing: 2px;
+  color: #000000;
+  font-weight: 900;
+  transition: all 0.7s;
+}
+
+.community {
+  border: 3px solid grey;
+  border-radius: 100px;
+  float: left;
+  margin-left: 5%;
+  width: 20%;
+  box-sizing: border-box;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.community:hover {
+  letter-spacing: 3px;
+  color: #000000;
+  font-weight: 900;
+  transition: all 0.7s;
+}
+
+.service {
+  border: 3px solid grey;
+  border-radius: 100px;
+  float: left;
+  margin-left: 5%;
+  width: 20%;
+  box-sizing: border-box;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.service:hover {
+  letter-spacing: 3px;
+  color: #000000;
+  font-weight: 900;
+  transition: all 0.7s;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0px;
+}
+
+nav {
+  /* border: 2px solid blue; */
+  /* margin: 10px 10px; */
+  /* background-color: orange; */
+  height: 100%;
+}
+
+nav ul {
+  border: 2px solid red;
+  width: 40%;
+  margin: 0px auto;
+  height: 100%;
+  display: flex;
+  align-items: center;
+
+  justify-content: space-between;
+}
+
+nav a {
+  text-decoration-line: none;
+  color: grey;
+}
+
+nav ul>li {
+  font-size: 20px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+/* 위치 */
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 200, "opsz" 48;
+}
+
+/* 바디 */
+section.main_section {
+  border: 2px solid #68B984;
+  border-top: none;
+  background-color: rgb(255, 255, 255);
+  height: 65vh;
+  width: 95%;
+  overflow-y: auto;
+  box-sizing: content-box;
+  /* padding: 10px 0px; */
+}
+
+
+/* 스크롤바 설정==================================*/
+.main_section::-webkit-scrollbar {
+  width: 6px;
+}
+
+/* 스크롤바 막대 설정*/
+.main_section::-webkit-scrollbar-thumb {
+  height: 17%;
+  background-color: #a1a1fc;
+  border-radius: 10px;
+}
+
+/* 스크롤바 뒷 배경 설정*/
+.main_section::-webkit-scrollbar-track {
+  background-color: #E6E6FA;
+}
+
+/* 스크롤바 설정==================================*/
+.main_section span {
+  border-bottom: 1px solid black;
+  /* margin: 15px 0px; */
+}
+
+span {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+span p {
+  /* border: 1px solid rgb(0, 0, 0); */
+  margin: 7px 5px;
+  display: grid;
+  align-items: center;
+
+}
+
+
+/* 말머리 / 내용 / 작성자 / 작성 시간 */
+.service_nav {
+  background-color: #68B984;
+  padding: 10px 0;
+}
+
+p.service_id {
+  width: 100px;
+}
+
+p.service_title {
+  width: 100%;
+  padding: 0 5px;
+  cursor: pointer;
+  display: inline-block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  /* text-align: left; */
+
+}
+
+p.service_user {
+  width: 500px;
+}
+
+p.service_created_at {
+  width: 300px;
+}
+
+/* 텍스트박스 */
+.text_box {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+.text_box textarea {
+  width: 100%;
+  height: 152px;
+  color: #666;
+  font-family: "ht_r";
+  font-size: 18px;
+  line-height: 28px;
+  padding: 20px;
+  border: 1px solid #e4dcd3;
+  outline: 0;
+  resize: none;
+  border-radius: 10px;
+}
+
+.text_box .count {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  color: #666;
+  font-family: "ht_r";
+  font-size: 12px;
+  display: flex;
+
+}
+
+/* 문의하기 모달창 시작 ===================================   */
+/* 모달창 흰색 div */
+div.modal-content {
+  border-radius: 20px;
+  width: 850px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+/* 모달 창 안내문*/
+h1 {
+  color: red;
+}
+
+/* 입력 창 전체 */
+div.modal-body {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+}
+
+/* 제목 작성칸 */
+input.service_title {
+  text-align: left;
+  border: 1px solid rgb(88, 88, 88);
+  padding: 5px 20px;
+  border-radius: 10px;
+}
+
+/* 내용 작성 칸 */
+textarea.service_content {
+  text-align: left;
+}
+
+/* 모달 푸터 ==============*/
+.modal-footer {
+  margin: 15px auto;
+}
+
+/* 확인 버튼 */
+.btn-primary {
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #68B984;
+  border: none;
+}
+
+.btn-primary:hover {
+  color: #ffffff;
+  background-color: #519167;
+  cursor: pointer;
+}
+
+/* 취소 버튼 */
+.btn-secondary {
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #46534b;
+  border: none;
+}
+
+.btn-secondary:hover {
+  color: #ffffff;
+  background-color: #313a34;
+  cursor: pointer;
+}
+
+/* 문의하기 모달창 끝 ===================================   */
+
+
+/* 푸터 */
+footer {
+  width: 100%;
+  background-color: #3D5656;
+  display: grid;
+  place-items: center;
+}

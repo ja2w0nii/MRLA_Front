@@ -1,0 +1,249 @@
+/* 전체 설정 */
+* {
+  text-align: center;
+  margin: auto;
+  font-family: "Jua", sans-serif;
+}
+
+/* 헤더============================================ */
+header {
+  background-color: #fed049;
+  width: 100%;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+}
+
+header > h2 {
+  margin: 0px 30px;
+  width: 120px;
+}
+
+header > h2:hover {
+  color: #000000;
+  cursor: pointer;
+}
+
+.profile_info_box {
+  display: flex;
+  flex-direction: row;
+  margin: 0px 30px;
+}
+
+.profile_img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin: 10px;
+}
+
+.dropdown-menu-dark {
+  height: 100px;
+}
+
+.dropdown-item-box {
+  height: 43px;
+}
+
+.dropdown-item {
+  margin: 0px;
+  cursor: pointer;
+}
+
+/* 네비게이션=============================================*/
+.nav_box {
+  width: 100%;
+  height: 60px;
+}
+
+.navContainer {
+  background-color: white;
+  border: 10px solid #fed049;
+  align-items: center;
+  box-sizing: border-box;
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.service1 {
+  width: 60%;
+}
+
+.near_restaurant {
+  border: solid 3px grey;
+  border-radius: 100px;
+  float: left;
+  width: 20%;
+  box-sizing: border-box;
+  text-decoration-line: none;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.near_restaurant:hover {
+  letter-spacing: 3px;
+  color: #000000;
+  font-weight: bold;
+  text-decoration-line: none;
+  transition: all 0.7s;
+}
+
+.who {
+  border: 3px solid grey;
+  border-radius: 100px;
+  float: left;
+  margin-left: 5%;
+  width: 20%;
+  box-sizing: border-box;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.who:hover {
+  letter-spacing: 2px;
+  color: #000000;
+  font-weight: 900;
+  transition: all 0.7s;
+}
+
+.community {
+  border: 3px solid grey;
+  border-radius: 100px;
+  float: left;
+  margin-left: 5%;
+  width: 20%;
+  box-sizing: border-box;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.community:hover {
+  letter-spacing: 3px;
+  color: #000000;
+  font-weight: 900;
+  transition: all 0.7s;
+}
+
+.service {
+  border: 3px solid grey;
+  border-radius: 100px;
+  float: left;
+  margin-left: 5%;
+  width: 20%;
+  box-sizing: border-box;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.service:hover {
+  letter-spacing: 3px;
+  color: #000000;
+  font-weight: 900;
+  transition: all 0.7s;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0px;
+}
+
+nav {
+  /* border: 2px solid blue; */
+  margin: 10px 10px;
+  /* background-color: orange; */
+  height: 100%;
+}
+
+nav ul {
+  border: 2px solid red;
+  width: 40%;
+  margin: 0px auto;
+  height: 100%;
+  display: flex;
+  align-items: center;
+
+  justify-content: space-between;
+}
+
+nav a {
+  text-decoration-line: none;
+  color: grey;
+}
+
+nav ul > li {
+  font-size: 20px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+section {
+  /* border: 2px solid green; */
+  height: 100%;
+}
+
+/* 위치 */
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 200, "opsz" 48;
+}
+
+a.active {
+  color: #ff5752;
+  font-weight: bolder;
+  font-weight: 900;
+}
+
+/* 내용 섹션 윗칸 */
+.community_section {
+  background-color: rgb(255, 251, 236);
+}
+
+/* 부화한 메추리알들의 커뮤니티 */
+.community_for_metury {
+  border: 1px red solid;
+  margin: 0 0 20px 0;
+  font-size: 40px;
+  color: rgb(107, 57, 0);
+}
+
+.community-div {
+  border: 1px rgb(59, 30, 30) solid;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  width: 1035px;
+  height: 650px;
+  margin: auto;
+}
+
+div.search_field {
+  overflow: auto;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+span.search_span {
+  margin: 10px 15px;
+}
+
+img {
+  cursor: pointer;
+  width: 224px;
+  height: 230px;
+}
+
+span {
+  display: grid;
+  justify-content: center;
+}
+
+/* 바닥글 윗칸 */
+footer {
+  background-color: gray;
+  width: 100%;
+}
