@@ -200,12 +200,12 @@ $(document).ready(function () {
 // 업로드 모달창 끝==========================================================================================================================
 
 // 게시물 상세보기 모달창 관련====================================================================================================================221212이태은
-async function CommunityDetail(community_id){
+async function CommunityDetail(community_id) {
   const community = await getCommunityDetail(community_id);
 
   var detail_modals = document.getElementsByClassName("post-detail-modal-container"); // 모달창 띄우는 자바스크립트 시작
 
-  var detail_btns = document.getElementsByClassName("card"); // Modal을 띄우는 클래스 이름을 가져옵니다.
+  var detail_btns = document.getElementsByClassName("card-list"); // Modal을 띄우는 클래스 이름을 가져옵니다.
 
   var detail_spanes = document.getElementsByClassName("post-detail-modal-close"); // Modal을 닫는 close 클래스를 가져옵니다.
   var detail_funcs = [];
@@ -216,7 +216,6 @@ async function CommunityDetail(community_id){
       // 해당 클래스의 내용을 클릭하면 Modal을 띄웁니다.
       detail_btns[num].onclick = function () {
         detail_modals[num].style.display = "block";
-        console.log(num);
       };
 
       // <span> 태그(X 버튼)를 클릭하면 Modal이 닫습니다.
@@ -302,7 +301,7 @@ async function Community() {
     newContent.innerText = community.content;
     newDescription.appendChild(newTitle);
     newDescription.appendChild(newContent);
-    
+
     newCard.setAttribute("id", community.id)
     newCard.setAttribute("onclick", "CommunityDetail(this.id)")
 
