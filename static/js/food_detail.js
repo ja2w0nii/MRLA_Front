@@ -53,9 +53,9 @@ async function ProfileInfo() {
 }
 ProfileInfo();
 
-
+// 음식 사진, 이름, 코멘트 조회
 window.onload = async function loadFooddetail() {
-  const food = await getFooddetail(food_id);
+  food = await getFooddetail(food_id);
   console.log(response_json);
 
   const food_title = document.getElementById("food-title");
@@ -72,7 +72,7 @@ window.onload = async function loadFooddetail() {
   response_json.forEach(comment => {
 
     commentList.innerHTML += `
-    <li class="media d-flex">
+    <li class="media d-flex" style="margin-right: ">
     <img class="mr-3" src="../templates/mascot.jpeg" alt="프로필 이미지" width="50px" height="50px">
     <div class="media-body">
       <h5 class="mt-0 mb-1">${comment.user}</h5>
@@ -81,26 +81,10 @@ window.onload = async function loadFooddetail() {
     `
 
   });
-  // const user = document.getElementById("user");
-  // const comments = document.getElementById("comments");
-  // const edit_button = document.getElementById("edit_btn");
-  // const delete_button = document.getElementById("delete_btn");
-
-  // comments.forEach((comment) => {
-  //     const newUser = document.createElement("li");
-  //     const newComment = document.createElement("li");
-  //     newUser.setAttribute("id", comment.user);
-  //     newUser.innerText = comment.user;
-  //     newComment.innerText = comment.comment;
-  //     user.appendChild(newUser);
-  //     comments.appendChild(newComment);
-
-
-  // });
 }
 
 // 댓글 작성
-async function createComment() {
-  const comment = document.getElementById("input-reply-detail").value;
-  loadcreateComment(commnet);
+async function submitComment() {
+  const newComment = document.getElementById("new-comment").value;
+  const response = await postFoodComment(food_id, newComment)
 }
