@@ -66,6 +66,21 @@ window.onload = async function loadFooddetail() {
 
   comment = await getFoodComment(food_id);
   console.log(response_json);
+
+  const commentList = document.getElementById("comment-list")
+
+  response_json.forEach(comment => {
+
+    commentList.innerHTML += `
+    <li class="media d-flex">
+    <img class="mr-3" src="../templates/mascot.jpeg" alt="프로필 이미지" width="50px" height="50px">
+    <div class="media-body">
+      <h5 class="mt-0 mb-1">${comment.user}</h5>
+      ${comment.comment}
+    </div>  
+    `
+
+  });
   // const user = document.getElementById("user");
   // const comments = document.getElementById("comments");
   // const edit_button = document.getElementById("edit_btn");
