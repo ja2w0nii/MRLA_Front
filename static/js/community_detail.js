@@ -91,6 +91,23 @@ async function CommunityDetail(community_id) {
     update_botton.style.visibility = "hidden";
     delete_botton.style.visibility = "hidden";
   }
+
+  const like_button = document.getElementById("post-like-button");
+  like_button.setAttribute("id", community.id)
+  like_button.setAttribute("onclick", "DoCommunityLike(this.id)")
+
+  for (i in community.likes) {
+    if (userinfo.id == community.likes[i]) {
+      like_button.setAttribute("class", "btn btn-danger")
+      break;
+    } else {
+      like_button.setAttribute("class", "btn btn-outline-danger")
+    }
+  }
+
+  const like_count = document.getElementById("post-like-count");
+  like_number = community.likes.length;
+  like_count.innerText = like_number + " 명이 좋아합니다.";
 }
 CommunityDetail(community_id);
 

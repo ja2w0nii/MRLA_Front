@@ -388,6 +388,25 @@ async function loadDeleteCommunityDetail(community_id) {
   }
 }
 
+// 커뮤니티 게시글 좋아요 등록/취소 //
+async function DoCommunityLike(community_id) {
+  const response = await fetch(`${backend_base_url}/posts/community/${community_id}/like/`, {
+    headers: {
+      "content-type": "application/json",
+      Authorization: "Bearer " + localStorage.getItem("access"),
+    },
+    method: "POST",
+  });
+  response_json = await response.json();
+
+  if (response.status == 200) {
+    window.location.replace(`${frontend_base_url}/community_detail.html?id=${community_id}`);
+    alert(response_json["message"]);
+  } else {
+    alert(response.status);
+  }
+}
+
 // 커뮤니티 상세 페이지 _ 댓글 조회 //
 async function getCommunityComment(community_id) {
   const response = await fetch(`${backend_base_url}/posts/community/${community_id}/comment/`, {

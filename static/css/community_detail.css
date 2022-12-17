@@ -297,6 +297,18 @@ a.active {
     flex-direction: row;
 }
 
+.like-box {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 10px 150px;
+}
+
+.post-like-count {
+    margin: 0px 100px 0px 10px;
+    font-size: 18px;
+}
+
 /* 댓글 */
 .comment-container {
     width: 900px;
