@@ -140,7 +140,7 @@ async function Profile(user_id) {
   like_community_button.innerText = "커뮤니티";
   like_community_button.setAttribute("id", user_id);
   like_community_button.setAttribute("type", "button");
-  like_community_button.setAttribute("class", "btn btn-outline-dark profile");
+  like_community_button.setAttribute("class", "btn btn-dark profile");
   like_community_button.setAttribute("onclick", "getProfileCommunityPage(this.id)");
 
   const like_community_icon = document.createElement("i");

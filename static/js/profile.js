@@ -127,7 +127,7 @@ async function Profile(user_id) {
   like_food_button.setAttribute("id", user_id);
   like_food_button.innerText = "추천 메뉴";
   like_food_button.setAttribute("type", "button");
-  like_food_button.setAttribute("class", "btn btn-outline-dark profile");
+  like_food_button.setAttribute("class", "btn btn-dark profile");
   like_food_button.setAttribute("onclick", "getProfilePage(this.id)");
 
   const like_food_icon = document.createElement("i");
