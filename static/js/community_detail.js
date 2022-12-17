@@ -56,6 +56,7 @@ ProfileInfo()
 // 게시글 상세보기
 async function CommunityDetail(community_id) {
   const community = await getCommunityDetail(community_id);
+  const userinfo = await getName();
 
   const image_box = document.getElementById("wrapper");
   const image = document.createElement("img");
@@ -69,7 +70,7 @@ async function CommunityDetail(community_id) {
   detail_user.appendChild(user);
 
   const detail_title = document.getElementById("detail_title");
-  const title = document.createElement("h3");
+  const title = document.createElement("h5");
   title.setAttribute("id", "title");
   title.innerText = community.title;
   detail_title.appendChild(title);
@@ -80,9 +81,16 @@ async function CommunityDetail(community_id) {
   content.innerText = community.content;
   detail_content.appendChild(content);
 
+  const update_botton = document.getElementById("post-update-button");
+
   const delete_botton = document.getElementById("post-delete-button");
   delete_botton.setAttribute("id", community.id);
   delete_botton.setAttribute("onclick", "DeleteCommunityDetail(this.id)");
+
+  if (userinfo.email != community.user) {
+    update_botton.style.visibility = "hidden";
+    delete_botton.style.visibility = "hidden";
+  }
 }
 CommunityDetail(community_id);
 

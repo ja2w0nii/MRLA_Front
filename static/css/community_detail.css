@@ -214,6 +214,10 @@ a.active {
     margin: 30px;
 }
 
+.post-buttons {
+    margin: 0px 0px 30px 220px;
+}
+
 .detail-container {
     margin: 0px;
 }
@@ -223,6 +227,7 @@ a.active {
     padding: 20px 10px;
     background-color: rgb(241, 240, 240);
     width: 900px;
+    height: 600px;
     top: 100px;
     border-radius: 10px;
 }
@@ -230,8 +235,20 @@ a.active {
 .detail-small-box {
     width: 100%;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-direction: row;
+}
+
+.detail-small-box-left {
+    width: 470px;
+}
+
+.detail-small-box-right {
+    width: 350px;
+}
+
+.detail_content {
+    width: 350px;
+    height: 400px;
 }
 
 .detail-small-box-img {
@@ -249,19 +266,25 @@ a.active {
     text-align: center;
 }
 
-.detail-small-box-text {
+.detail-small-box-text-title {
     border-radius: 20px;
-    height: 100%;
-    width: 400px;
+    height: 50px;
+    width: 350px;
     background-color: #a37d002f;
-    padding: 20px;
-    margin: 10px;
-    align-items: center;
+    margin: 10px 10px;
+}
+
+.detail-small-box-text-content {
+    border-radius: 20px;
+    height: 350px;
+    width: 350px;
+    background-color: #a37d002f;
+    padding-top: 25px;
 }
 
 .detail_title {
     width: 100%;
-    height: 15%;
+    margin-top: 13px;
 }
 
 .image_box {
@@ -305,7 +328,9 @@ a.active {
     padding: 5px;
 }
 
-.user_list, .comment_list, .createdat_list {
+.user_list,
+.comment_list,
+.createdat_list {
     list-style: none;
 }
 
@@ -338,26 +363,26 @@ a.active {
     width: 90%;
     text-align: right;
     margin-bottom: 10px;
-  }
-  
-  .post-upload-button {
+}
+
+.post-upload-button {
     background-color: #e74b24;
     border-radius: 7px;
     font-size: 16px;
     border: 0px solid #e74b24;
     color: rgb(255, 255, 255);
     cursor: pointer;
-  }
-  
-  .post-upload-button:hover {
+}
+
+.post-upload-button:hover {
     font-weight: 500;
     letter-spacing: 3px;
     background-color: #e74b24;
     transition: 1s;
-  }
-  
-  /* 배경 */
-  .post-upload-modal-container {
+}
+
+/* 배경 */
+.post-upload-modal-container {
     display: none;
     position: fixed;
     z-index: 1;
@@ -367,10 +392,10 @@ a.active {
     height: 100%;
     /* 배경 어둡게 */
     background-color: rgba(0, 0, 0, 0.7);
-  }
-  
-  /* 게시물 업로드 모달창 */
-  .post-upload-modal-box {
+}
+
+/* 게시물 업로드 모달창 */
+.post-upload-modal-box {
     background-color: #fefefe;
     margin: 150px auto;
     padding: 20px 10px;
@@ -379,39 +404,39 @@ a.active {
     /* height: 600px; */
     top: 100px;
     border-radius: 10px;
-  }
-  
-  .post-upload-modal-top {
+}
+
+.post-upload-modal-top {
     /* border: 2px solid rgb(255, 153, 0); */
     height: 30px;
     width: 100%;
     font-size: 20px;
     margin-bottom: 10px;
-  }
-  
-  .post-upload-modal-close {
+}
+
+.post-upload-modal-close {
     float: right;
     margin: 0 30px;
     font-size: 30px;
     text-decoration: none;
-  }
-  
-  /*모달창 닫는 버튼*/
-  .post-upload-modal-close:hover,
-  .post-upload-modal-close:focus {
+}
+
+/*모달창 닫는 버튼*/
+.post-upload-modal-close:hover,
+.post-upload-modal-close:focus {
     color: rgb(255, 187, 0);
     text-decoration: none;
     cursor: pointer;
-  }
-  
-  .post-upload-modal-content {
+}
+
+.post-upload-modal-content {
     /* border: 2px solid purple; */
     /* height: 80%; */
     width: 100%;
     display: flex;
-  }
-  
-  .post-upload-modal-content-img {
+}
+
+.post-upload-modal-content-img {
     border-radius: 20px;
     /* border: 2px solid purple; */
     height: 100%;
@@ -419,26 +444,26 @@ a.active {
     background-color: #a37d002f;
     padding: 23px;
     margin: 0 20px 20px;
-  }
-  
-  /* 이미지 업로드 박스 */
-  .flex-container {
+}
+
+/* 이미지 업로드 박스 */
+.flex-container {
     /* margin: 30px 10px; */
     border-radius: 20px;
     display: flex;
     /* border: 1px solid red; */
     /* padding: 20px 20px; */
     /* background-color: #252222; */
-  }
-  
-  .wrapper {
+}
+
+.wrapper {
     border-radius: 20px;
     text-align: center;
     flex-grow: 1;
     /* border: 1px solid rgb(255, 174, 0); */
-  }
-  
-  .image-box {
+}
+
+.image-box {
     width: 350px;
     height: 350px;
     object-fit: cover;
@@ -447,9 +472,9 @@ a.active {
     padding: 10px 10px;
     background-color: #ffffff;
     border-radius: 20px;
-  }
-  
-  .img-upload-btn {
+}
+
+.img-upload-btn {
     width: 350px;
     border: 1px solid #ddd;
     padding: 6px 12px;
@@ -458,15 +483,15 @@ a.active {
     background-color: #ffffff;
     margin: 10px;
     border-radius: 10px;
-  }
-  
-  .img-upload-btn > input[type="file"] {
+}
+
+.img-upload-btn>input[type="file"] {
     display: none;
     margin: 10px;
-  }
-  
-  /* 텍스트 입력 하는 구역 */
-  .post-upload-modal-content-text {
+}
+
+/* 텍스트 입력 하는 구역 */
+.post-upload-modal-content-text {
     border-radius: 20px;
     /* border: 2px solid purple; */
     height: 100%;
@@ -474,33 +499,27 @@ a.active {
     background-color: #a37d002f;
     padding: 20px;
     margin: 0 20px 0;
-  }
-  
-  .post-modal-input-text {
+}
+
+.post-modal-input-text {
     /* padding: 10px 10px; */
     height: 100%;
     /* border: 2px solid rgb(241, 13, 241); */
-  }
-  
-  .post-modal-input-text-top {
+}
+
+.post-modal-input-text-top {
     width: 100%;
     height: 15%;
     margin-bottom: 20px;
     margin-left: 20px;
-  }
-  
-  .post-modal-input-text-middle {
-    width: 100%;
-    height: 15%;
-    margin-bottom: 10px;
-  }
-  
-  .post-modal-input-text-bottom {
+}
+
+.post-modal-input-text-bottom {
     width: 100%;
     height: 50%;
-  }
-  
-  .post-title {
+}
+
+.post-title {
     text-align: left;
     padding: 10px;
     display: flex;
@@ -512,31 +531,31 @@ a.active {
     outline: none;
     margin-top: 15px;
     margin-bottom: 10px;
-  }
-  
-  .post-location {
-    text-align: left;
-    padding: 10px;
-    width: 41%;
-    height: 32px;
-    font-size: 15px;
-    border: 0;
-    border-radius: 20px;
-    outline: none;
-  }
-  
-  .post-tag {
-    text-align: left;
-    padding: 10px;
-    width: 41%;
-    height: 32px;
-    font-size: 15px;
-    border: 0;
-    border-radius: 20px;
-    outline: none;
-  }
+}
 
-  .tag-plus {
+.post-location {
+    text-align: left;
+    padding: 5px;
+    width: 300px;
+    height: 35px;
+    font-size: 18px;
+    border-radius: 20px;
+    background-color: white;
+}
+
+.post-tag {
+    text-align: left;
+    padding: 10px;
+    width: 41%;
+    height: 32px;
+    font-size: 15px;
+    border: 0;
+    border-radius: 20px;
+    outline: none;
+    background-color: white;
+}
+
+.tag-plus {
     border: 1px rgba(46, 9, 9, 0.281) solid;
     text-align: left;
     padding: 10px;
@@ -548,36 +567,41 @@ a.active {
     margin-top: 15px;
     margin-bottom: 10px;
     overflow: auto;
-  }
-  
-  /* 아래의 모든 코드는 영역::코드로 사용 */
-  .tag-plus::-webkit-scrollbar {
-    width: 10px; /* 스크롤바의 너비 */
-  }
-  
-  .tag-plus::-webkit-scrollbar-thumb {
-    height: 30%; /* 스크롤바의 길이 */
-    background: #8a5300; /* 스크롤바의 색상 */
+}
+
+/* 아래의 모든 코드는 영역::코드로 사용 */
+.tag-plus::-webkit-scrollbar {
+    width: 10px;
+    /* 스크롤바의 너비 */
+}
+
+.tag-plus::-webkit-scrollbar-thumb {
+    height: 30%;
+    /* 스크롤바의 길이 */
+    background: #8a5300;
+    /* 스크롤바의 색상 */
     border-radius: 10px;
-  }
-  
-  .tag-plus::-webkit-scrollbar-track {
-    background: rgba(33, 122, 244, 0.1); /*스크롤바 뒷 배경 색상*/
-  }
-  /* 태그 관련 css============================================================ 2221211 이태은*/
-  
-  .tag-box ul li {
+}
+
+.tag-plus::-webkit-scrollbar-track {
+    background: rgba(33, 122, 244, 0.1);
+    /*스크롤바 뒷 배경 색상*/
+}
+
+/* 태그 관련 css============================================================ 2221211 이태은*/
+
+.tag-box ul li {
     display: inline-block;
     margin: 0 5px 5px;
     font-size: 14px;
     letter-spacing: -0.5px;
-  }
-  
-  .tag-box form {
-    padding-top: 16px;
-  }
+}
 
-  .tag-wright {
+.tag-box form {
+    padding-top: 16px;
+}
+
+.tag-wright {
     text-align: left;
     padding: 10px;
     width: 41%;
@@ -587,39 +611,39 @@ a.active {
     border-radius: 20px;
     outline: none;
     background-color: antiquewhite;
-  }
+}
 
-  ul li.tag-item {
+ul li.tag-item {
     padding: 4px 8px;
     background-color: orange;
     color: #000;
     border-radius: 10px;
-  }
-  
-  .tag-item:hover {
+}
+
+.tag-item:hover {
     background-color: #262626;
     color: #fff;
-  }
-  
-  .del-btn {
+}
+
+.del-btn {
     font-size: 12px;
     font-weight: bold;
     cursor: pointer;
     margin-left: 8px;
-  }
-  
-  /* =============태그 관련 끝 */
-  /* 텍스트 수 제한 textarea */
-  .text_box {
+}
+
+/* =============태그 관련 끝 */
+/* 텍스트 수 제한 textarea */
+.text_box {
     position: relative;
     display: inline-block;
     width: 100%;
-  }
-  
-  .detail_content_box {
+}
+
+.detail_content_box {
     background-color: white;
     width: 90%;
-    height: 173px;
+    height: 300px;
     display: flex;
     text-align: center;
     justify-content: center;
@@ -632,16 +656,16 @@ a.active {
     resize: none;
     border-radius: 20px;
     overflow: auto;
-  }
-  
-  .post-modal-upload-button {
+}
+
+.post-modal-upload-button {
     /* border: 2px solid purple; */
     width: 100%;
     display: flex;
-  }
-  
-  /* 커뮤니티 업로드 버튼 */
-  .community-upload-btn {
+}
+
+/* 커뮤니티 업로드 버튼 */
+.community-upload-btn {
     width: 150px;
     border: 1px solid #ddd;
     padding: 6px 12px;
@@ -651,13 +675,13 @@ a.active {
     border-radius: 10px;
     text-align: center;
     font-size: 20px;
-  }
-  
-  .community-upload-btn:hover {
-    background-color: #ff8ef9;
-  }
+}
 
-  .community_content {
+.community-upload-btn:hover {
+    background-color: #ff8ef9;
+}
+
+.community_content {
     width: 300px;
     height: 200px;
-  }
+}

@@ -94,7 +94,7 @@
             </div>
             <div class="post-modal-input-text-bottom">
               <div class="text_box">
-                <textarea class = "community_content" id="community_content"></textarea>
+                <textarea class="community_content" id="community_content"></textarea>
                 <div class="count"><span>0</span>/200</div>
               </div>
             </div>
@@ -149,21 +149,32 @@
     <div class="detail-container">
       <div class="detail-box">
         <div class="detail-small-box">
-          <div class="detail-user-title">
-            <div id="detail_user" class="detail_user"></div>
-            <div class="detail-small-box-text">
-              <div id="detail_title" class="detail_title"></div>
+          <div class="detail-small-box-left">
+            <div class="detail-user-title">
+              <div id="detail_user" class="detail_user"></div>
+              <div class="detail-small-box-text-title">
+                <div id="detail_title" class="detail_title"></div>
+              </div>
+
             </div>
+            <div class="detail-small-box-img">
+              <div id="wrapper" class="wrapper"></div>
+            </div>
+          </div>
+          <div class="detail-small-box-right">
             <div class="post-buttons">
-              <button class="btn btn-success create_button post-upload-button"> 수정</button>
+              <button id="post-update-button" class="btn btn-success create_button post-upload-button"> 수정</button>
               <button id="post-delete-button" class="btn btn-danger create_button"> 삭제</button>
             </div>
-          </div>
-          <div class="detail-small-box-img">
-            <div id="wrapper" class="wrapper"></div>
-          </div>
-          <div class="detail-small-box-text">
-            <div id="detail_content" class="detail_content"></div>
+            <div class="post-modal-input-text-middle">
+              <div id="location" class="post-location">위치</div>
+            </div>
+            <div class="tag-box">
+              <ul id="tag-list" class="tag-plus"></ul>
+            </div>
+            <div class="detail-small-box-text-content">
+              <div id="detail_content" class="detail_content"></div>
+            </div>
           </div>
         </div>
       </div>
