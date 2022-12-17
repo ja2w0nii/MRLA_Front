@@ -340,7 +340,7 @@ function getCommunityDetailPage(community_id) {
   location.href = url;
 }
 
-// 커뮤니티 게시글 상세 정보 조회 //
+// 커뮤니티 상세 페이지 _ 게시글 상세 정보 조회 //
 async function getCommunityDetail(community_id) {
   const response = await fetch(`${backend_base_url}/posts/community/${community_id}`, {
     headers: {
@@ -350,6 +350,42 @@ async function getCommunityDetail(community_id) {
   });
   response_json = await response.json();
   return response_json;
+}
+
+// 커뮤니티 상세 페이지 _ 게시글 상세 정보 수정 //
+async function putUpdateCommunityDetail(formdata) {
+  const response = await fetch(`${backend_base_url}/posts/community/${community_id}/`, {
+    headers: {
+      Authorization: "Bearer " + localStorage.getItem("access"),
+    },
+    method: "PUT",
+    body: formdata,
+  });
+  response_json = await response.json();
+
+  if (response.status == 200) {
+    window.location.replace(`${frontend_base_url}/community_detail.html?id=${community_id}`);
+  } else {
+    alert(response.status);
+  }
+}
+
+// 커뮤니티 상세 페이지 _ 게시글 상세 정보 삭제 //
+async function loadDeleteCommunityDetail(community_id) {
+  const response = await fetch(`${backend_base_url}/posts/community/${community_id}/`, {
+    headers: {
+      "content-type": "application/json",
+      Authorization: "Bearer " + localStorage.getItem("access"),
+    },
+    method: "DELETE",
+  });
+
+  if (response.status == 204) {
+    alert("해당 게시글을 삭제합니다.")
+    window.location.replace(`${frontend_base_url}/community.html`);
+  } else {
+    alert(response.status);
+  }
 }
 
 // 커뮤니티 상세 페이지 _ 댓글 조회 //

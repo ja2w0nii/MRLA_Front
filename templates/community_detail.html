@@ -58,6 +58,54 @@
       </div>
     </div>
   </div>
+
+  <!-- 게시글 수정 Modal의 내용 ==============================================================-->
+  <div class="post-upload-modal-container">
+    <!-- 모달창 하얀색 부분 -->
+    <div class="post-upload-modal-box">
+      <div class="post-upload-modal-top">
+        <a class="post-upload-modal-close">x</a>
+      </div>
+      <div class="post-upload-modal-content">
+        <div class="post-upload-modal-content-img">
+          <!-- 이미지업로드 박스 -->
+          <div class="flex-container">
+            <div class="wrapper">
+              <img src="https://i0.wp.com/adventure.co.kr/wp-content/uploads/2020/09/no-image.jpg" class="image-box" />
+              <label for="community_image" class="img-upload-btn">
+                <input id="community_image" type="file" />
+                <span>이미지 업로드하기</span>
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="post-upload-modal-content-text">
+          <div class="post-modal-input-text">
+            <div class="post-modal-input-text-top">
+              <input type="text" id="community_title" placeholder="제목" class="post-title" />
+            </div>
+            <div class="post-modal-input-text-middle">
+              <input type="text" id="location" placeholder="위치" class="post-location" />
+              <input type="text" id="tag" placeholder="태그 검색" class="post-tag" />
+            </div>
+            <div class="tag-box">
+              <!-- 입력한 태그가 붙은 부분 -->
+              <ul id="tag-list" class="tag-plus"></ul>
+            </div>
+            <div class="post-modal-input-text-bottom">
+              <div class="text_box">
+                <textarea class = "community_content" id="community_content"></textarea>
+                <div class="count"><span>0</span>/200</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="post-modal-upload-button">
+        <button type="button" onclick="UpdateCommunityDetail()" class="community-upload-btn">수정 완료</button>
+      </div>
+    </div>
+  </div>
   <header>
     <h2 href="main.html" onclick="location.href='main.html'">메추리알</h2>
     <div id="profile_info_box" class="profile_info_box">
@@ -105,6 +153,10 @@
             <div id="detail_user" class="detail_user"></div>
             <div class="detail-small-box-text">
               <div id="detail_title" class="detail_title"></div>
+            </div>
+            <div class="post-buttons">
+              <button class="btn btn-success create_button post-upload-button"> 수정</button>
+              <button id="post-delete-button" class="btn btn-danger create_button"> 삭제</button>
             </div>
           </div>
           <div class="detail-small-box-img">

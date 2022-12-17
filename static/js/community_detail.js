@@ -53,7 +53,7 @@ async function ProfileInfo() {
 }
 ProfileInfo()
 
-// 게시물 상세보기
+// 게시글 상세보기
 async function CommunityDetail(community_id) {
   const community = await getCommunityDetail(community_id);
 
@@ -79,9 +79,151 @@ async function CommunityDetail(community_id) {
   content.setAttribute("class", "detail_content_box");
   content.innerText = community.content;
   detail_content.appendChild(content);
+
+  const delete_botton = document.getElementById("post-delete-button");
+  delete_botton.setAttribute("id", community.id);
+  delete_botton.setAttribute("onclick", "DeleteCommunityDetail(this.id)");
 }
 CommunityDetail(community_id);
 
+// 게시글 수정하기 _ 모달 띄우기
+var upload_modals = document.getElementsByClassName("post-upload-modal-container"); // 모달창 띄우는 자바스크립트 시작
+
+var upload_btns = document.getElementsByClassName("post-upload-button"); // Modal을 띄우는 클래스 이름을 가져옵니다.
+
+var upload_spanes = document.getElementsByClassName("post-upload-modal-close"); // Modal을 닫는 close 클래스를 가져옵니다.
+var upload_funcs = [];
+
+function Modal(num) {
+  // Modal을 띄우고 닫는 클릭 이벤트를 정의한 함수
+  return function () {
+    // 해당 클래스의 내용을 클릭하면 Modal을 띄웁니다.
+    upload_btns[num].onclick = function () {
+      upload_modals[num].style.display = "block";
+    };
+
+    // <span> 태그(X 버튼)를 클릭하면 Modal이 닫습니다.
+    upload_spanes[num].onclick = function () {
+      upload_modals[num].style.display = "none";
+    };
+  };
+}
+
+// 원하는 Modal 수만큼 Modal 함수를 호출해서 funcs 함수에 정의합니다.
+for (var i = 0; i < upload_btns.length; i++) {
+  upload_funcs[i] = Modal(i);
+}
+
+// 원하는 Modal 수만큼 funcs 함수를 호출합니다.
+for (var j = 0; j < upload_btns.length; j++) {
+  upload_funcs[j]();
+}
+
+// Modal 영역 밖을 클릭하면 Modal을 닫습니다.
+window.onclick = function (event) {
+  if (event.target.className == "post-upload-modal-container") {
+    event.target.style.display = "none";
+  }
+};
+
+// 게시물 작성 모달창에서의 이미지 미리보기 스크립트 221208 이태은
+const fileDOM = document.querySelector("#community_image");
+const previews = document.querySelectorAll(".image-box");
+
+fileDOM.addEventListener("change", () => {
+  const reader = new FileReader();
+  reader.onload = ({ target }) => {
+    // 이미지 미리보기 출력
+    previews[0].src = target.result;
+  };
+  reader.readAsDataURL(fileDOM.files[0]);
+});
+
+// 텍스트 수 제한 textarea
+$(".text_box textarea").keyup(function () {
+  var content = $(this).val();
+  $(".text_box .count span").html(content.length);
+  if (content.length > 200) {
+    alert("최대 200자까지 입력 가능합니다.");
+    $(this).val(content.substring(0, 200));
+    $(".text_box .count span").html(200);
+  }
+});
+
+//   태그 관련 스트립트 ============================================== 221211 이태은
+$(document).ready(function () {
+  var tag = {};
+  var counter = 0;
+
+  // 태그를 추가한다.
+  function addTag(value) {
+    tag[counter] = value; // 태그를 Object 안에 추가
+    counter++; // counter 증가 삭제를 위한 del-btn 의 고유 id 가 된다.
+  }
+
+  // 최종적으로 서버에 넘길때 tag 안에 있는 값을 array type 으로 만들어서 넘긴다.
+  function marginTag() {
+    return Object.values(tag).filter(function (word) {
+      return word !== "";
+    });
+  }
+
+  $("#tag").on("keyup", function (e) {
+    var self = $(this);
+    console.log("keypress");
+
+    // input 에 focus 되있을 때 엔터 및 스페이스바 입력시 구동
+    if (e.key === "Enter" || e.keyCode == 32) {
+      var tagValue = self.val(); // 값 가져오기
+
+      // 값이 없으면 동작 안합니다.
+      if (tagValue !== "") {
+        // 같은 태그가 있는지 검사한다. 있다면 해당값이 array 로 return 된다.
+        var result = Object.values(tag).filter(function (word) {
+          return word === tagValue;
+        });
+
+        // 태그 중복 검사
+        if (result.length == 0) {
+          $("#tag-list").append("<li class='tag-item'>" + tagValue + "<span class='del-btn' idx='" + counter + "'>x</span></li>");
+          addTag(tagValue);
+          self.val("");
+        } else {
+          alert("태그값이 중복됩니다.");
+        }
+      }
+      e.preventDefault(); // SpaceBar 시 빈공간이 생기지 않도록 방지
+    }
+  });
+
+  // 삭제 버튼
+  // 삭제 버튼은 비동기적 생성이므로 document 최초 생성시가 아닌 검색을 통해 이벤트를 구현시킨다.
+  $(document).on("click", ".del-btn", function (e) {
+    var index = $(this).attr("idx");
+    tag[index] = "";
+    $(this).parent().remove();
+  });
+});
+
+// 게시글 수정하기 _ 수정 사항 적용하기
+async function UpdateCommunityDetail() {
+  const title = document.getElementById("community_title").value;
+  const content = document.getElementById("community_content").value;
+  const image = document.getElementById("community_image").files[0];
+
+  const formdata = new FormData();
+
+  formdata.append("title", title);
+  formdata.append("content", content);
+  formdata.append("image", image);
+
+  putUpdateCommunityDetail(formdata);
+}
+
+// 게시글 삭제하기
+async function DeleteCommunityDetail(community_id) {
+  await loadDeleteCommunityDetail(community_id);
+}
 
 // 댓글 목록 조회하기
 async function CommunityComment(community_id) {
