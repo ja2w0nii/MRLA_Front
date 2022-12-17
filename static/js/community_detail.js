@@ -2,6 +2,10 @@ if (!token) {
   window.location.replace(`${frontend_base_url}/signin_signup.html`);
 }
 
+// url id 값 받아오기
+const urlParams = new URLSearchParams(window.location.search);
+const community_id = urlParams.get("id");
+
 // 프로필 드롭다운 가져오기
 async function ProfileInfo() {
     login_user = await getName();
@@ -49,22 +53,39 @@ async function ProfileInfo() {
 }
 ProfileInfo()
 
-// 디테일 페이지 보여주기 //
-const urlParams = new URLSearchParams(window.location.search);
-const community_id = urlParams.get("id");
-
+// 게시물 상세보기
 async function CommunityDetail(community_id) {
   const community = await getCommunityDetail(community_id);
 
-  const user = document.getElementById("user");
-  const title = document.getElementById("title");
-  const content = document.getElementById("content");
+  const image_box = document.getElementById("wrapper");
+  const image = document.createElement("img");
+  image.setAttribute("class", "image_box");
+  image.src = `${backend_base_url}${community.image}`;
+  image_box.appendChild(image);
 
-  user.setAttribute("id", community.user);
-  user.setAttribute("onclick", "getProfilePage(this.id)");
-
-  user.innerText = community.user;
+  const detail_user = document.getElementById("detail_user");
+  const user = document.createElement("h5");
+  user.innerText = community.user
+  detail_user.appendChild(user);
+  
+  const detail_title = document.getElementById("detail_title");
+  const title = document.createElement("h3");
+  title.setAttribute("id", "title");
   title.innerText = community.title;
+  detail_title.appendChild(title);
+
+  const detail_content = document.getElementById("detail_content");
+  const content = document.createElement("h5");
+  content.setAttribute("class", "detail_content_box");
   content.innerText = community.content;
+  detail_content.appendChild(content);
+  console.log(image_box)
 }
 CommunityDetail(community_id);
+
+
+// 댓글 목록 조회하기
+async function CommunityComment(community_id) {
+
+}
+CommunityComment(community_id);

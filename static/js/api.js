@@ -334,7 +334,13 @@ async function getCommunity() {
   return response_json;
 }
 
-// 커뮤니티 게시글 상세 정보 조회 (모달) //
+// 커뮤니티 상세 페이지 연결 //
+function getCommunityDetailPage(community_id) {
+  const url = `${frontend_base_url}/community_detail.html?id=${community_id}`;
+  location.href = url;
+}
+
+// 커뮤니티 게시글 상세 정보 조회 //
 async function getCommunityDetail(community_id) {
   const response = await fetch(`${backend_base_url}/posts/community/${community_id}`, {
     headers: {
