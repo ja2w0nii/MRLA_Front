@@ -364,6 +364,28 @@ async function getCommunityComment(community_id) {
   return response_json;
 }
 
+// 커뮤니티 댓글 작성 //
+async function postCreateCommunityComment(community_id, comment) {
+  const response = await fetch(`${backend_base_url}/posts/community/${community_id}/comment/`, {
+    headers: {
+      "content-type": "application/json",
+      Authorization: "Bearer " + localStorage.getItem("access"),
+    },
+    method: "POST",
+    body: JSON.stringify({
+      comment: comment,
+    }),
+  });
+
+  response_json = await response.json();
+
+  if (response.status == 200) {
+    window.location.replace(`${frontend_base_url}/community_detail.html?id=${community_id}`);
+  } else {
+    alert(response.status);
+  }
+}
+
 // 커뮤니티 게시글 검색 페이지 연결 //
 function CommunitySearch() {
   const word = document.getElementById("inputSearch").value;

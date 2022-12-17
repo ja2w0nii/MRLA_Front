@@ -88,12 +88,7 @@ async function CommunityComment(community_id) {
   const comments = await getCommunityComment(community_id);
   const userinfo = await getName();
 
-  const comment_list = document.getElementById("comment-box")
-  // const user_list = document.getElementById("email");
-  // const comment_list = document.getElementById("comment");
-  // const created_at_list = document.getElementById("comment_created_at");
-  // const update_button_list = document.getElementById("update_button");
-  // const delete_button_list = document.getElementById("delete_button");
+  const comment_list = document.getElementById("comment-inner-box")
 
   comments.forEach((comment) => {
     const newComment_box = document.createElement("div");
@@ -139,3 +134,15 @@ async function CommunityComment(community_id) {
   });
 }
 CommunityComment(community_id);
+
+// 고객센터 게시글 등록
+async function CreateCommunityComment() {
+  const comment = document.getElementById("comment-input").value;
+
+  if (comment == "") {
+    alert("내용을 입력해 주세요!");
+    return false;
+  }
+
+  postCreateCommunityComment(community_id, comment);
+}
