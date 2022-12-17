@@ -229,15 +229,16 @@ section {
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  width: 850px;
-  height: 400px;
+  width: 1500px;
+  height: 550px;
   padding-bottom: 30px;
-  background-color: rgb(253, 237, 237);
+  background-color: rgb(248, 248, 236);
+  border: solid 5px #FED049;
 }
 
 div.odd {
-  width: 100px;
-  height: 100px;
+  width: 200px;
+  height: 200px;
   border-radius: 50%;
   display: flex;
   flex-direction: column;
@@ -249,8 +250,8 @@ div.odd {
 }
 
 div.even {
-  width: 100px;
-  height: 100px;
+  width: 200px;
+  height: 200px;
   border-radius: 50%;
   display: flex;
   flex-direction: column;
@@ -262,9 +263,14 @@ div.even {
 }
 
 img {
-  width: 100px;
-  height: 100px;
+  width: 200px;
+  height: 200px;
   border-radius: 50%;
+  cursor: pointer;
+}
+
+.food_name {
+  cursor: pointer;
 }
 
 /* 바닥글 윗칸 ============================================= 221205 이태은 */
