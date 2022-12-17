@@ -120,8 +120,8 @@ async function CommunityComment(community_id) {
 
     delete_comment_button.setAttribute("id", comment.id);
     delete_comment_button.setAttribute("class", "btn btn-danger create_button");
-    update_comment_button.setAttribute("onclick", "UpdateComment(this.id)");
-    delete_comment_button.setAttribute("onclick", "DeleteComment(this.id)");
+    update_comment_button.setAttribute("onclick", "UpdateCommunityComment(this.id)");
+    delete_comment_button.setAttribute("onclick", "DeleteCommunityComment(this.id)");
     newComment_box.appendChild(update_comment_button);
     newComment_box.appendChild(delete_comment_button);
 
@@ -135,7 +135,7 @@ async function CommunityComment(community_id) {
 }
 CommunityComment(community_id);
 
-// 고객센터 게시글 등록
+// 댓글 작성하기
 async function CreateCommunityComment() {
   const comment = document.getElementById("comment-input").value;
 
@@ -145,4 +145,17 @@ async function CreateCommunityComment() {
   }
 
   postCreateCommunityComment(community_id, comment);
+}
+
+// 댓글 수정하기
+async function UpdateCommunityComment(comment_id) {
+  const save_button = document.getElementById("save_button");
+
+  save_button.setAttribute("id", comment_id);
+  save_button.setAttribute("onclick", "putUpdateCommunityComment(this.id)");
+}
+
+// 댓글 삭제하기 //
+async function DeleteCommunityComment(comment_id) {
+  await loadDeleteCommunityComment(comment_id);
 }

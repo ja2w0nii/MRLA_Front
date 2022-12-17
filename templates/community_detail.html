@@ -38,6 +38,26 @@
 </head>
 
 <body>
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">댓글을 수정해주세요!</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="input-group mb-3">
+            <input type="text" id="modal_comment" class="form-control" placeholder="Update Comment"
+              aria-label="Username" aria-describedby="basic-addon1" />
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">닫기</button>
+          <button type="button" class="btn btn-success" id="save_button">수정</button>
+        </div>
+      </div>
+    </div>
+  </div>
   <header>
     <h2 href="main.html" onclick="location.href='main.html'">메추리알</h2>
     <div id="profile_info_box" class="profile_info_box">
@@ -106,7 +126,8 @@
             <input type="text" class="form-control" id="comment-input" placeholder="댓글을 입력해주세요!" required />
             <label for="floatingInput">댓글을 입력해주세요!</label>
           </div>
-          <button type="button" class="btn btn-secondary comment_input_button" onclick="CreateCommunityComment()">등록</button>
+          <button type="button" class="btn btn-secondary comment_input_button"
+            onclick="CreateCommunityComment()">등록</button>
         </div>
       </div>
     </div>

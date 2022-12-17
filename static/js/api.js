@@ -352,7 +352,7 @@ async function getCommunityDetail(community_id) {
   return response_json;
 }
 
-// 커뮤니티 댓글 조회 //
+// 커뮤니티 상세 페이지 _ 댓글 조회 //
 async function getCommunityComment(community_id) {
   const response = await fetch(`${backend_base_url}/posts/community/${community_id}/comment/`, {
     headers: {
@@ -364,7 +364,7 @@ async function getCommunityComment(community_id) {
   return response_json;
 }
 
-// 커뮤니티 댓글 작성 //
+// 커뮤니티 상세 페이지 _ 댓글 작성 //
 async function postCreateCommunityComment(community_id, comment) {
   const response = await fetch(`${backend_base_url}/posts/community/${community_id}/comment/`, {
     headers: {
@@ -380,6 +380,48 @@ async function postCreateCommunityComment(community_id, comment) {
   response_json = await response.json();
 
   if (response.status == 200) {
+    window.location.replace(`${frontend_base_url}/community_detail.html?id=${community_id}`);
+  } else {
+    alert(response.status);
+  }
+}
+
+
+// 커뮤니티 상세 페이지 _ 댓글 수정 //
+async function putUpdateCommunityComment(comment_id) {
+  const input_comment = document.getElementById("modal_comment").value;
+
+  const response = await fetch(`${backend_base_url}/posts/community/${community_id}/comment/${comment_id}/`, {
+    headers: {
+      "content-type": "application/json",
+      Authorization: "Bearer " + localStorage.getItem("access"),
+    },
+    method: "PUT",
+    body: JSON.stringify({
+      comment: input_comment,
+    }),
+  });
+  response_json = await response.json();
+
+  if (response.status == 200) {
+    window.location.replace(`${frontend_base_url}/community_detail.html?id=${community_id}`);
+  } else {
+    alert(response.status);
+  }
+}
+
+// 커뮤니티 상세 페이지 _ 댓글 삭제 //
+async function loadDeleteCommunityComment(comment_id) {
+  const response = await fetch(`${backend_base_url}/posts/community/${community_id}/comment/${comment_id}/`, {
+    headers: {
+      "content-type": "application/json",
+      Authorization: "Bearer " + localStorage.getItem("access"),
+    },
+    method: "DELETE",
+  });
+
+  if (response.status == 204) {
+    alert("해당 댓글을 삭제합니다.")
     window.location.replace(`${frontend_base_url}/community_detail.html?id=${community_id}`);
   } else {
     alert(response.status);
