@@ -194,8 +194,6 @@ async function LikeFoodList(user_id) {
     const newImg = document.createElement("a");
     newImg.setAttribute("class", "card-image");
     newImg.src = food.image;
-    newImg.setAttribute("style", newImg.src);
-    newImg.setAttribute("data-image-full", newImg.src);
 
     const image = document.createElement("img");
     image.src = food.image;

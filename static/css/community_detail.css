@@ -318,14 +318,13 @@ a.active {
 .comment-box {
     display: flex;
     flex-direction: column;
-    /* margin: 0px auto; */
 }
 
 .comment-inner-box {
     display: flex;
     flex-direction: column;
     overflow: auto;
-    border: solid 1px #FED049;
+    border: solid 5px #FED049;
     border-radius: 30px;
     width: 800px;
     height: 500px;

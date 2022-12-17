@@ -193,12 +193,10 @@ async function LikeCommunityList(user_id) {
 
     const newImg = document.createElement("a");
     newImg.setAttribute("class", "card-image");
-    newImg.src = `https://storage.googleapis.com/jjalbot/2018/12/IPJVU9tjx/zzal.jpg`;
-    newImg.setAttribute("style", newImg.src);
-    newImg.setAttribute("data-image-full", newImg.src);
+    newImg.src = `${backend_base_url}${community.image}`;
 
     const image = document.createElement("img");
-    image.src = `https://storage.googleapis.com/jjalbot/2018/12/IPJVU9tjx/zzal.jpg`;
+    image.src = `${backend_base_url}${community.image}`;
     image.setAttribute("alt", "Psychopomp");
     newImg.appendChild(image);
     newCard.appendChild(newImg);
@@ -207,8 +205,11 @@ async function LikeCommunityList(user_id) {
     newDescription.setAttribute("class", "card-description");
     newCard.appendChild(newDescription);
 
+    console.log(community)
+
     const newTitle = document.createElement("h2");
     const newContent = document.createElement("p");
+    newContent.setAttribute("class", "community-content")
     newTitle.innerText = community.title;
     newContent.innerText = community.content;
     newDescription.appendChild(newTitle);

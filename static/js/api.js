@@ -173,16 +173,8 @@ async function getLikeCommunityList(user_id) {
     },
     method: "GET",
   });
-
-  if (response.status == 200) {
-    response_json = await response.json();
-    return response_json;
-  } else if (response.status == 401) {
-    alert("권한이 없습니다!");
-    window.location.replace(`${frontend_base_url}/service.html`);
-  } else {
-    alert(response.status);
-  }
+  response_json = await response.json();
+  return response_json;
 }
 
 // 고객센터 게시글 조회
