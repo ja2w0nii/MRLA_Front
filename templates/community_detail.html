@@ -71,7 +71,7 @@
           <!-- 이미지업로드 박스 -->
           <div class="flex-container">
             <div class="wrapper">
-              <img src="https://i0.wp.com/adventure.co.kr/wp-content/uploads/2020/09/no-image.jpg" class="image-box" />
+              <img id="before_image" src="https://i0.wp.com/adventure.co.kr/wp-content/uploads/2020/09/no-image.jpg" class="image-box" />
               <label for="community_image" class="img-upload-btn">
                 <input id="community_image" type="file" />
                 <span>이미지 업로드하기</span>
@@ -82,10 +82,10 @@
         <div class="post-upload-modal-content-text">
           <div class="post-modal-input-text">
             <div class="post-modal-input-text-top">
-              <input type="text" id="community_title" placeholder="제목" class="post-title" />
+              <input type="text" id="community_title" class="post-title" />
             </div>
             <div class="post-modal-input-text-middle">
-              <input type="text" id="location" placeholder="위치" class="post-location" />
+              <input type="text" id="location" placeholder="위치" class="post-update-location" />
               <input type="text" id="tag" placeholder="태그 검색" class="post-tag" />
             </div>
             <div class="tag-box">

@@ -364,6 +364,7 @@ async function putUpdateCommunityDetail(formdata) {
   response_json = await response.json();
 
   if (response.status == 200) {
+    alert("수정이 완료되었습니다!")
     window.location.replace(`${frontend_base_url}/community_detail.html?id=${community_id}`);
   } else {
     alert(response.status);

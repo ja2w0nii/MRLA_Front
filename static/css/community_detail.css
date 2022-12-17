@@ -555,7 +555,7 @@ a.active {
     background-color: white;
 }
 
-.post-tag {
+.post-update-location, .post-tag {
     text-align: left;
     padding: 10px;
     width: 41%;
