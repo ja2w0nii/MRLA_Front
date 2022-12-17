@@ -985,6 +985,7 @@ ul li.tag-item {
 /* 각각의 카드에 대해 */
 .card {
   display: inline-block;
+  height: 450px;
   width: 90%;
   max-width: 20rem;
   margin: 1rem;
@@ -1022,6 +1023,11 @@ ul li.tag-item {
 .image_box {
   width: 300px;
   height: 300px;
+}
+
+.community-content {
+  height: 30px;
+  overflow: auto;
 }
 
 /* 바닥글 윗칸 ============================================= 221205 이태은 */

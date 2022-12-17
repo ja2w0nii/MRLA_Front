@@ -120,8 +120,7 @@ form {
   font-size: 0;
   text-align: center;
   list-style: none;
-
-  overflow: scroll;
+  width: 1500px;
   height: 500px;
 }
 

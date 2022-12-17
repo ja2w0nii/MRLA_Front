@@ -297,6 +297,7 @@ async function Community() {
 
     const newTitle = document.createElement("h2");
     const newContent = document.createElement("p");
+    newContent.setAttribute("class", "community-content")
     newTitle.innerText = community.title;
     newContent.innerText = community.content;
     newDescription.appendChild(newTitle);
