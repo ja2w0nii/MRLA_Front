@@ -258,11 +258,11 @@ input {
     color: aliceblue;
 }
 
-.btn-detail {
+.food-like-button {
     background-color: gray;
 }
 
-.btn-detail:focus {
+.food-like-button:focus {
     font-weight: 800;
     background-color: crimson;
 }

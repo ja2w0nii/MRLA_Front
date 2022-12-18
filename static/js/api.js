@@ -330,6 +330,25 @@ async function postFoodComment(food_id, newComment) {
   }
 }
 
+// 메뉴 좋아요 등록/취소
+async function DoFoodLike(Food_id) {
+  const response = await fetch(`${backend_base_url}/foods/main/${food_id}/like/`, {
+    headers: {
+      "content-type": "application/json",
+      Authorization: "Bearer " + localStorage.getItem("access"),
+    },
+    method: "POST",
+  });
+  response_json = await response.json();
+
+  if (response.status == 200) {
+    window.location.replace(`${frontend_base_url}/food_detail.html?id=${food_id}`);
+    alert(response_json["message"]);
+  } else {
+    alert(response.status);
+  }
+}
+
 // 커뮤니티 게시글 목록 조회 //
 async function getCommunity() {
   const response = await fetch(`${backend_base_url}/posts/community/`, {

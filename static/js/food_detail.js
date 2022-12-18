@@ -81,6 +81,20 @@ window.onload = async function loadFooddetail() {
     `
 
   });
+
+  const like_button = document.getElementById("food-like-button");
+  like_button.setAttribute("id", food.id)
+  like_button.setAttribute("onclick", "DoFoodLike(this.id)")
+
+  for (i in food.likes) {
+    if (userinfo.id == food.likes[i]) {
+      like_button.setAttribute("class", "btn btn-danger")
+      break;
+    } else {
+      like_button.setAttribute("class", "btn btn-outline-danger")
+    }
+  }
+
 }
 
 // 댓글 작성
