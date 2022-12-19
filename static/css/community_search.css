@@ -5,6 +5,12 @@
   font-family: "Jua", sans-serif;
 }
 
+body {
+  display: grid;
+  align-content: space-between;
+  height: 100vh;
+}
+
 /* 헤더============================================ */
 header {
   background-color: #fed049;
@@ -54,13 +60,14 @@ header > h2:hover {
 
 /* 네비게이션=============================================*/
 .nav_box {
+  margin: 60px 0px 0px 0px;
   width: 100%;
   height: 60px;
 }
 
 .navContainer {
   background-color: white;
-  border: 10px solid #fed049;
+  border: 10px solid #FED049;
   align-items: center;
   box-sizing: border-box;
   display: flex;
@@ -174,7 +181,7 @@ nav a {
   color: grey;
 }
 
-nav ul > li {
+nav ul>li {
   font-size: 20px;
   height: 100%;
   display: flex;
@@ -213,10 +220,9 @@ a.active {
 .community-div {
   border: 1px rgb(59, 30, 30) solid;
   display: grid;
-  justify-content: center;
-  align-items: center;
-  width: 1035px;
-  height: 650px;
+  align-content: space-between;
+  width: 98vw;
+  height: 65vh;
   margin: auto;
 }
 
@@ -225,10 +231,14 @@ div.search_field {
   height: 100%;
   display: flex;
   flex-wrap: wrap;
+  margin: 0;
 }
 
 span.search_span {
+  cursor: pointer;
+  width: 230px;
   margin: 10px 15px;
+  border: 1px black solid;
 }
 
 img {
