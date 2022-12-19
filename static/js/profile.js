@@ -127,7 +127,7 @@ async function Profile(user_id) {
   like_food_button.setAttribute("id", user_id);
   like_food_button.innerText = "추천 메뉴";
   like_food_button.setAttribute("type", "button");
-  like_food_button.setAttribute("class", "btn btn-outline-dark profile");
+  like_food_button.setAttribute("class", "btn btn-dark profile");
   like_food_button.setAttribute("onclick", "getProfilePage(this.id)");
 
   const like_food_icon = document.createElement("i");
@@ -194,8 +194,6 @@ async function LikeFoodList(user_id) {
     const newImg = document.createElement("a");
     newImg.setAttribute("class", "card-image");
     newImg.src = food.image;
-    newImg.setAttribute("style", newImg.src);
-    newImg.setAttribute("data-image-full", newImg.src);
 
     const image = document.createElement("img");
     image.src = food.image;
