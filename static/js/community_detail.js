@@ -184,7 +184,6 @@ $(document).ready(function () {
 
   $("#tag").on("keyup", function (e) {
     var self = $(this);
-    console.log("keypress");
 
     if (e.key === "Enter" || e.keyCode == 32) {
       var tagValue = self.val();

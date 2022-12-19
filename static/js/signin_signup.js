@@ -16,7 +16,6 @@ signInButton.addEventListener("click", () => {
 
 // 입력 없으면 표시 현재 구현 안됨
 window.onload = () => {
-  console.log("load");
 };
 
 window.addEventListener(
@@ -60,7 +59,6 @@ async function handleSignIn() {
 
   localStorage.setItem("access", response_json.access);
   localStorage.setItem("refresh", response_json.refresh);
-  console.log(response_json);
   const base64Url = response_json.access.split(".")[1];
   const base64 = base64Url.replace(/-/g, "+").replace(/_/g, "/");
   const jsonPayload = decodeURIComponent(
@@ -85,7 +83,6 @@ async function handleSignIn() {
 //         method: 'GET',
 //     })
 //     const response_json = await response.json()
-//     console.log(response_json)
 // }
 
 // async function handleLogout() {
@@ -222,11 +219,7 @@ async function handleSignUp() {
     }),
   });
   const response_json = await response.json();
-  console.log(response_json);
   for (var key in response_json) {
-    console.log("key: ", key);
-    console.log("value: ", response_json[key]);
-    console.log("----------------");
     alert(response_json[key]);
   }
 }

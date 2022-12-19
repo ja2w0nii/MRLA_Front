@@ -56,7 +56,6 @@ ProfileInfo();
 
 window.onload = async function loadFooddetail() {
   const food = await getFooddetail(food_id);
-  console.log(response_json);
 
   const food_title = document.getElementById("food-title");
   food_title.innerText = response_json.menu;
@@ -65,7 +64,6 @@ window.onload = async function loadFooddetail() {
 
 
   comment = await getFoodComment(food_id);
-  console.log(response_json);
   // const user = document.getElementById("user");
   // const comments = document.getElementById("comments");
   // const edit_button = document.getElementById("edit_btn");
