@@ -38,7 +38,6 @@
   <header>
     <div class="header_small_box">
       <h2 href="main.html" onclick="location.href='main.html'">메추리알</h2>
-      <a href="intro_2.html" class="category_return">🔍카테고리 다시 고르기</a>
     </div>
     <div id="profile_info_box" class="profile_info_box">
       <div id="profile_img_box" class="profile_img_box"></div>
@@ -95,19 +94,17 @@
   </section>
   <section class="sns_famous_restaurant_section">
     <div id="sns_famous_restaurant_container" class="sns_famous_restaurant_container">
+      <span class="slide_title">🔍추천 받고 싶은 음식 종류를 골라보세요!</span>
       <div id="sns_slider-container">
         <span onclick="slideRight()" class="btn"></span>
         <div id="slider">
-          <div class="slide"><span>1</span></div>
-          <div class="slide"><span>2</span></div>
-          <div class="slide"><span>3</span></div>
-          <div class="slide"><span>4</span></div>
-          <div class="slide"><span>5</span></div>
-          <div class="slide"><span>6</span></div>
-          <div class="slide"><span>7</span></div>
-          <div class="slide"><span>8</span></div>
-          <div class="slide"><span>9</span></div>
-          <div class="slide"><span>10</span></div>
+          <div class="slide"><a href="#" onclick="getMainPage(1)"><span>한식</span></a></div>
+          <div class="slide"><a href="#" onclick="getMainPage(2)"><span>중식</span></a></div>
+          <div class="slide"><a href="#" onclick="getMainPage(3)"><span>일식</span></a></div>
+          <div class="slide"><a href="#" onclick="getMainPage(4)"><span>양식</span></a></div>
+          <div class="slide"><a href="#" onclick="getMainPage(5)"><span>분식</span></a></div>
+          <div class="slide"><a href="#" onclick="getMainPage(6)"><span>아시안</span></a></div>
+          <div class="slide"><a href="#" onclick="getMainPage(7)"><span>야식</span></a></div>
         </div>
         <span onclick="slideLeft()" class="btn"></span>
       </div>
