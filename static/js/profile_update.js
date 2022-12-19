@@ -63,10 +63,10 @@ async function MyProfileUpdate(user_id) {
   const age = document.getElementById("age");
   const gender = document.getElementById("gender");
 
-  let image = document.createElement("img");
-  image.setAttribute("class", "profile_image");
-  image.src = `${backend_base_url}${profile.profile_img}`;
-  profile_img.appendChild(image);
+  // let image = document.createElement("img");
+  profile_img.setAttribute("class", "profile_image");
+  profile_img.src = `${backend_base_url}${profile.profile_img}`;
+  // profile_img.appendChild(image);
 
   nickname.setAttribute("placeholder", profile.nickname);
 
@@ -125,3 +125,19 @@ async function ChangeGender(id) {
   const gender = document.getElementById("gender");
   gender.setAttribute("value", id);
 }
+
+// =====================================================================================사부작
+
+
+// 게시물 작성 모달창에서의 이미지 미리보기 스크립트 221208 이태은
+const fileDOM = document.querySelector("#profile_img_file");
+const previews = document.querySelectorAll(".image-box");
+
+fileDOM.addEventListener("change", () => {
+  const reader = new FileReader();
+  reader.onload = ({ target }) => {
+    // 이미지 미리보기 출력
+    previews[0].src = target.result;
+  };
+  reader.readAsDataURL(fileDOM.files[0]);
+});
