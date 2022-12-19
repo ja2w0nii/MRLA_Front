@@ -105,12 +105,13 @@ window.onload = async function loadFooddetail() {
       delete_comment_button.style.visibility = "hidden";
     }
   });
-
-
   const like_button = document.getElementById("food-like-button");
   like_button.setAttribute("id", food.id)
   like_button.setAttribute("onclick", "DoFoodLike(this.id)")
 
+  const like_count = document.getElementById("food-like-count");
+  like_count.innerText = food.likes + " 명이 좋아합니다.";
+  console.log(like_count)
 }
 
 // 댓글 작성
