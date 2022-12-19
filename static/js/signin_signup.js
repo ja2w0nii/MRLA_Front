@@ -54,7 +54,6 @@ async function handleSignIn() {
 
     const response_json = await response.json()
 
-
     localStorage.setItem("access", response_json.access);
     localStorage.setItem("refresh", response_json.refresh);
     console.log(response_json)
@@ -65,10 +64,8 @@ async function handleSignIn() {
 
     }).join(''));
 
-
-
     localStorage.setItem("payload", jsonPayload);
-    window.location.href = 'intro_2.html'
+    window.location.href = 'main.html'
 }
 
 

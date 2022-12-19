@@ -1,13 +1,13 @@
 /* 전체 설정 */
 * {
-  font-family: 'Jua', sans-serif;
+  font-family: "Jua", sans-serif;
   text-align: center;
   margin: auto;
 }
 
 /* 헤더=============================================*/
 header {
-  background-color: #FED049;
+  background-color: #fed049;
   width: 100%;
   height: 70px;
   display: flex;
@@ -58,7 +58,6 @@ header {
   cursor: pointer;
 }
 
-
 /* 네비게이션============================================= */
 .nav_box {
   margin: -80px 0px;
@@ -70,7 +69,7 @@ header {
 
 .navContainer {
   background-color: white;
-  border: 10px solid #FED049;
+  border: 10px solid #fed049;
   align-items: center;
   box-sizing: border-box;
   display: flex;
@@ -233,6 +232,15 @@ a.active {
 }
 
 /* 추천 맛집 라운드 슬라이드==========================================221205 이태은 */
+.slide_title {
+  font-size: 24px;
+  color: #ff5752;
+}
+
+.slide a {
+  text-decoration: none;
+}
+
 img {
   width: 200px;
   height: 200px;
@@ -383,7 +391,6 @@ img {
   color: rgb(63, 62, 62);
 }
 
-
 /* 내용 섹션 아래칸 ============================================= 221205 이태은 */
 .sns_famous_restaurant_section {
   background-color: rgb(255, 174, 205);
@@ -492,7 +499,6 @@ img {
     width: calc(10% - 20px);
   }
 }
-
 
 /* 바닥글 윗칸 ============================================= 221205 이태은 */
 /* footer {
