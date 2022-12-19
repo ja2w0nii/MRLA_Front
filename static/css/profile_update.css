@@ -94,12 +94,7 @@ form {
 /* 이미지 업로드 박스 */
 .img-box {
   margin-right: 100px;
-  object-fit: cover;
-  display: block;
   width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  border: solid rgb(220, 220, 158);
 }
 
 .img-upload-btn {
