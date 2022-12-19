@@ -88,7 +88,7 @@
       <!-- 버튼 -->
       <div class="box-btn-detail">
         <p id="food-title" style="margin: auto; font-size: 2.4rem;"></p>
-        <button id="food-like-button" class="btn btn-outline-danger">좋아요</button>
+        <button id="food-like-button" class="btn btn-danger">좋아요</button>
       </div>
     </article>
     <!-- 댓글 -->
@@ -98,6 +98,8 @@
           <div class="box-title-comment-detail">
             <span class="text-title-comment-detail">Comments</span>
           </div>
+          <div id="comment-inner-box" class="comment-inner-box"></div>
+          <div class="comment-input-box">
           <div class="box-comment-detail">
             <ul class="list-unstyled" id="comment-list">
             </ul>
@@ -107,7 +109,7 @@
         </div>
         <div class="box-reply-detail">
           <div class="box-reply-user">
-            <input class="input-reply-detail" id="new-comment" type="text" placeholder="댓글을 입력하세요">
+            <input class="input-reply-detail" id="new-comment" type="text" placeholder="댓글을 입력해주세요!">
           </div>
           <button type="button" class="btn-reply-detail" onclick="submitComment()">작성</button>
         </div>

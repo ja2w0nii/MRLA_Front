@@ -72,10 +72,9 @@ window.onload = async function loadFooddetail() {
   response_json.forEach(comment => {
 
     commentList.innerHTML += `
-    <li class="media d-flex" style="margin-right: ">
-    <img class="mr-3" src="../templates/mascot.jpeg" alt="프로필 이미지" width="50px" height="50px">
-    <div class="media-body">
-      <h5 class="mt-0 mb-1">${comment.user}</h5>
+    <li class="media">
+    <div class="media-body" style="flex-direction: column;>
+      <h4 class="mt-0 mb-10">${comment.user} |</h4> 
       ${comment.comment}
     </div>  
     `
@@ -86,19 +85,15 @@ window.onload = async function loadFooddetail() {
   like_button.setAttribute("id", food.id)
   like_button.setAttribute("onclick", "DoFoodLike(this.id)")
 
-  for (i in food.likes) {
-    if (userinfo.id == food.likes[i]) {
-      like_button.setAttribute("class", "btn btn-danger")
-      break;
-    } else {
-      like_button.setAttribute("class", "btn btn-outline-danger")
-    }
-  }
-
 }
 
 // 댓글 작성
 async function submitComment() {
   const newComment = document.getElementById("new-comment").value;
   const response = await postFoodComment(food_id, newComment)
+}
+
+// 댓글 삭제
+async function DeleteFoodComment(comment_id) {
+  await loadDeleteFoodComment(comment_id);
 }
