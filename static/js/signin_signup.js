@@ -200,7 +200,6 @@ async function handleSignUp() {
     const password = document.getElementById("password").value
     const password_check = document.getElementById("password_check").value
     const nickname = document.getElementById("nickname").value
-        // const response = await fetch('http://127.0.0.1:8000/users/signup/', {
     const response = await fetch('http://127.0.0.1:8000/users/signup/', {
         headers: {
             'content-type': 'application/json',
