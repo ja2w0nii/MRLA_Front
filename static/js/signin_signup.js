@@ -15,8 +15,7 @@ signInButton.addEventListener("click", () => {
 });
 
 // 입력 없으면 표시 현재 구현 안됨
-window.onload = () => {
-};
+window.onload = () => {};
 
 window.addEventListener(
   "load",
@@ -221,5 +220,6 @@ async function handleSignUp() {
   const response_json = await response.json();
   for (var key in response_json) {
     alert(response_json[key]);
+    window.location.reload()
   }
 }
