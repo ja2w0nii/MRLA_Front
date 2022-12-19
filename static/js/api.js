@@ -301,19 +301,46 @@ async function getFoodComment(food_id) {
   return response_json;
 }
 
-// 코멘트 등록
-async function loadcreateComment(comment) {
+// 메뉴 코멘트 등록
+async function postFoodComment(food_id, newComment) {
   const response = await fetch(`${backend_base_url}/foods/main/${food_id}/comment/`, {
     headers: {
-      "content-type": "applications/json",
+      "content-type": "application/json",
       Authorization: "Bearer " + localStorage.getItem("access"),
     },
     method: "POST",
     body: JSON.stringify({
-      food: food_id,
-      comment: comment,
+      "comment": newComment,
     }),
   });
+
+  if (response.status == 200) {
+    alert("작성 완료!");
+    window.location.reload();
+  } else if (response.status == 400) {
+    alert("댓글을 작성해 주세요!");
+  } else {
+    alert(response.status);
+  }
+}
+
+// 메뉴 좋아요 등록/취소
+async function DoFoodLike(Food_id) {
+  const response = await fetch(`${backend_base_url}/foods/main/${food_id}/like/`, {
+    headers: {
+      "content-type": "application/json",
+      Authorization: "Bearer " + localStorage.getItem("access"),
+    },
+    method: "POST",
+  });
+  response_json = await response.json();
+
+  if (response.status == 200) {
+    window.location.replace(`${frontend_base_url}/food_detail.html?id=${food_id}`);
+    alert(response_json["message"]);
+  } else {
+    alert(response.status);
+  }
 }
 
 // 커뮤니티 게시글 목록 조회 //

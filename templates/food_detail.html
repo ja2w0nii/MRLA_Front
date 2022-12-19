@@ -81,12 +81,14 @@
     <article class="wrap-post-detail">
       <!-- 컨텐츠 섹션 -->
       <div class="wrap-content-detail">
-        <img id="viewer" src="">
+        <div style="text-align: center;">
+          <img id="viewer" src="">
+        </div>
       </div>
       <!-- 버튼 -->
       <div class="box-btn-detail">
         <p id="food-title" style="margin: auto; font-size: 2.4rem;"></p>
-        <button class="btn-detail">좋아요</button>
+        <button id="food-like-button" class="btn btn-danger">좋아요</button>
       </div>
     </article>
     <!-- 댓글 -->
@@ -96,19 +98,20 @@
           <div class="box-title-comment-detail">
             <span class="text-title-comment-detail">Comments</span>
           </div>
+          <div id="comment-inner-box" class="comment-inner-box"></div>
+          <div class="comment-input-box">
           <div class="box-comment-detail">
-            <p id="user"></p>
-            <p id="comments"></p>
-            <input id="edit_btn" type="button" value="수정">
-            <input id="delete_btn" type="button" value="삭제">
+            <ul class="list-unstyled" id="comment-list">
+            </ul>
+            <!-- <input id="edit_btn" type="button" value="수정">
+            <input id="delete_btn" type="button" value="삭제">-->
           </div>
         </div>
         <div class="box-reply-detail">
           <div class="box-reply-user">
-            <span class="user-reply-detail"></span>
-            <input class="input-reply-detail" type="text" placeholder="댓글을 입력하세요">
+            <input class="input-reply-detail" id="new-comment" type="text" placeholder="댓글을 입력해주세요!">
           </div>
-          <button class="btn-reply-detail" onclick="createComment()">작성</button>
+          <button type="button" class="btn-reply-detail" onclick="submitComment()">작성</button>
         </div>
       </div>
     </div>

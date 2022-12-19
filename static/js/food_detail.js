@@ -53,9 +53,9 @@ async function ProfileInfo() {
 }
 ProfileInfo();
 
-
+// 음식 사진, 이름, 코멘트 조회
 window.onload = async function loadFooddetail() {
-  const food = await getFooddetail(food_id);
+  food = await getFooddetail(food_id);
   console.log(response_json);
 
   const food_title = document.getElementById("food-title");
@@ -66,26 +66,34 @@ window.onload = async function loadFooddetail() {
 
   comment = await getFoodComment(food_id);
   console.log(response_json);
-  // const user = document.getElementById("user");
-  // const comments = document.getElementById("comments");
-  // const edit_button = document.getElementById("edit_btn");
-  // const delete_button = document.getElementById("delete_btn");
 
-  // comments.forEach((comment) => {
-  //     const newUser = document.createElement("li");
-  //     const newComment = document.createElement("li");
-  //     newUser.setAttribute("id", comment.user);
-  //     newUser.innerText = comment.user;
-  //     newComment.innerText = comment.comment;
-  //     user.appendChild(newUser);
-  //     comments.appendChild(newComment);
+  const commentList = document.getElementById("comment-list")
 
+  response_json.forEach(comment => {
 
-  // });
+    commentList.innerHTML += `
+    <li class="media">
+    <div class="media-body" style="flex-direction: column;>
+      <h4 class="mt-0 mb-10">${comment.user} |</h4> 
+      ${comment.comment}
+    </div>  
+    `
+
+  });
+
+  const like_button = document.getElementById("food-like-button");
+  like_button.setAttribute("id", food.id)
+  like_button.setAttribute("onclick", "DoFoodLike(this.id)")
+
 }
 
 // 댓글 작성
-async function createComment() {
-  const comment = document.getElementById("input-reply-detail").value;
-  loadcreateComment(commnet);
+async function submitComment() {
+  const newComment = document.getElementById("new-comment").value;
+  const response = await postFoodComment(food_id, newComment)
+}
+
+// 댓글 삭제
+async function DeleteFoodComment(comment_id) {
+  await loadDeleteFoodComment(comment_id);
 }
