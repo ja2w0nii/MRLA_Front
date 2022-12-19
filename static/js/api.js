@@ -324,6 +324,49 @@ async function postFoodComment(food_id, newComment) {
   }
 }
 
+// 메뉴 코멘트 수정
+async function loadUpdateFoodComment(comment_id) {
+  const input_comment = document.getElementById("modal_comment").value;
+
+  const response = await fetch(`${backend_base_url}/foods/main/${food_id}/comment/${comment_id}/`, {
+    headers: {
+      "content-type": "application/json",
+      Authorization: "Bearer " + localStorage.getItem("access"),
+    },
+    method: "PUT",
+    body: JSON.stringify({
+      menu_id: food_id,
+      comment: input_comment,
+    }),
+  });
+  response_json = await response.json();
+
+  if (response.status == 200) {
+    alert("수정이 완료되었습니다!")
+    window.location.replace(`${frontend_base_url}/food_detail.html?id=${food_id}`);
+  } else {
+    alert(response.status);
+  }
+}
+
+// 메뉴 코멘트 삭제
+async function loadDeleteFoodComment(comment_id) {
+  const response = await fetch(`${backend_base_url}/foods/main/${food_id}/comment/${comment_id}/`, {
+    headers: {
+      "content-type": "application/json",
+      Authorization: "Bearer " + localStorage.getItem("access"),
+    },
+    method: "DELETE",
+  });
+
+  if (response.status == 204) {
+    alert("해당 댓글을 삭제합니다.")
+    window.location.replace(`${frontend_base_url}/food_detail.html?id=${food_id}`);
+  } else {
+    alert(response.status);
+  }
+}
+
 // 메뉴 좋아요 등록/취소
 async function DoFoodLike(Food_id) {
   const response = await fetch(`${backend_base_url}/foods/main/${food_id}/like/`, {
@@ -481,6 +524,7 @@ async function putUpdateCommunityComment(comment_id) {
   response_json = await response.json();
 
   if (response.status == 200) {
+    alert("수정이 완료되었습니다!")
     window.location.replace(`${frontend_base_url}/community_detail.html?id=${community_id}`);
   } else {
     alert(response.status);
@@ -520,7 +564,7 @@ function CommunitySearch() {
 // 커뮤니티 게시글 검색 //
 async function getCommunitySearch() {
   const response = await fetch(`${backend_base_url}/posts/community/search?` + new URLSearchParams(window.location.search), {
-    method: "GET",
+    method: "GET"
   });
 
   response_json = await response.json();

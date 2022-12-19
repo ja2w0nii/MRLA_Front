@@ -56,7 +56,6 @@ ProfileInfo();
 // 음식 사진, 이름, 코멘트 조회
 window.onload = async function loadFooddetail() {
   food = await getFooddetail(food_id);
-  console.log(response_json);
 
   const food_title = document.getElementById("food-title");
   food_title.innerText = response_json.menu;
@@ -64,14 +63,16 @@ window.onload = async function loadFooddetail() {
   food_image.src = response_json.image;
 
 
-  comment = await getFoodComment(food_id);
-  console.log(response_json);
+  comments = await getFoodComment(food_id);
+  login_user = await getName();
 
   const commentList = document.getElementById("comment-list")
 
-  response_json.forEach(comment => {
+  comments.forEach(comment => {
+    const newComment_box = document.createElement("div");
+    newComment_box.setAttribute("class", "comment-div")
 
-    commentList.innerHTML += `
+    newComment_box.innerHTML += `
     <li class="media">
     <div class="media-body" style="flex-direction: column;>
       <h4 class="mt-0 mb-10">${comment.user} |</h4> 
@@ -79,7 +80,32 @@ window.onload = async function loadFooddetail() {
     </div>  
     `
 
+    const update_comment_button = document.createElement("button");
+    const delete_comment_button = document.createElement("button");
+
+    update_comment_button.innerText = "수정";
+    delete_comment_button.innerText = "삭제";
+
+    update_comment_button.setAttribute("id", comment.id);
+    update_comment_button.setAttribute("class", "btn btn-modify-comment-detail");
+    update_comment_button.setAttribute("data-bs-toggle", "modal");
+    update_comment_button.setAttribute("data-bs-target", "#exampleModal");
+
+    delete_comment_button.setAttribute("id", comment.id);
+    delete_comment_button.setAttribute("class", "btn btn-delete-comment-detail");
+    update_comment_button.setAttribute("onclick", "UpdateFoodComment(this.id)");
+    delete_comment_button.setAttribute("onclick", "DeleteFoodComment(this.id)");
+    newComment_box.appendChild(update_comment_button);
+    newComment_box.appendChild(delete_comment_button);
+
+    commentList.appendChild(newComment_box);
+
+    if (login_user.nickname != comment.user) {
+      update_comment_button.style.visibility = "hidden";
+      delete_comment_button.style.visibility = "hidden";
+    }
   });
+
 
   const like_button = document.getElementById("food-like-button");
   like_button.setAttribute("id", food.id)
@@ -91,6 +117,14 @@ window.onload = async function loadFooddetail() {
 async function submitComment() {
   const newComment = document.getElementById("new-comment").value;
   const response = await postFoodComment(food_id, newComment)
+}
+
+// 댓글 수정
+async function UpdateFoodComment(comment_id) {
+  const save_button = document.getElementById("save_button");
+
+  save_button.setAttribute("id", comment_id);
+  save_button.setAttribute("onclick", "loadUpdateFoodComment(this.id)");
 }
 
 // 댓글 삭제

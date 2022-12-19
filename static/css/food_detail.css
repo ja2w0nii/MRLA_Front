@@ -92,6 +92,7 @@ header>h2:hover {
     text-decoration-line: none;
     font-size: 20px;
     font-weight: 500;
+    text-align: center;
 }
 
 .near_restaurant:hover {
@@ -111,6 +112,7 @@ header>h2:hover {
     box-sizing: border-box;
     font-size: 20px;
     font-weight: 500;
+    text-align: center;
 }
 
 .who:hover {
@@ -129,6 +131,7 @@ header>h2:hover {
     box-sizing: border-box;
     font-size: 20px;
     font-weight: 500;
+    text-align: center;
 }
 
 .community:hover {
@@ -147,6 +150,7 @@ header>h2:hover {
     box-sizing: border-box;
     font-size: 20px;
     font-weight: 500;
+    text-align: center;
 }
 
 .service:hover {
@@ -224,6 +228,11 @@ input {
     border: none;
 }
 
+img {
+    width: 400px;
+    height: 300px;
+}
+
 .container-post-detail {
     width: 70%;
     padding: 2%;
@@ -256,12 +265,17 @@ input {
     color: aliceblue;
 }
 
-.food-like-button {
-    background-color: gray;
+.food-title {
+    margin: auto;
+    font-size: 2.4rem;
+}
+
+.btn-danger {
+    margin: 0px;
 }
 
 .food-like-button:hover {
-    font-weight: 800;
+    font-weight: 500;
     background-color: crimson;
 }
 
@@ -357,9 +371,20 @@ input {
 .btn-delete-comment-detail:hover {
     color: aliceblue;
     background-color: crimson;
+    margin: 1px;
 }
 
 .btn-modify-comment-detail:hover {
     color: aliceblue;
     background-color: black;
+    margin: 1px;
+}
+
+.comment-div {
+    display: flex;
+    flex-direction: row;
+}
+
+.media {
+    margin-left: 5px;
 }
