@@ -211,23 +211,22 @@ a.active {
 .all-container {
     display: flex;
     flex-direction: row;
-    margin: 30px;
 }
 
 .post-buttons {
-    margin: 0px 0px 30px 220px;
+    margin: 5px 0px 30px 150px;
 }
 
 .detail-container {
-    margin: 0px;
+    margin-top: 20px;
 }
 
 .detail-box {
     margin: 20px;
-    padding: 20px 10px;
+    padding: 0px 10px;
     background-color: rgb(241, 240, 240);
-    width: 900px;
-    height: 600px;
+    width: 700px;
+    height: 535px;
     top: 100px;
     border-radius: 10px;
 }
@@ -239,11 +238,12 @@ a.active {
 }
 
 .detail-small-box-left {
-    width: 470px;
+    width: 390px;
+    margin: 0px;
 }
 
 .detail-small-box-right {
-    width: 350px;
+    width: 280px;
 }
 
 .detail_content {
@@ -253,15 +253,16 @@ a.active {
 
 .detail-small-box-img {
     border-radius: 20px;
-    height: 450px;
-    width: 450px;
+    height: 410px;
+    width: 370px;
     background-color: #a37d002f;
-    padding: 23px
+    padding: 23px;
+    margin: 0px 10px;
 }
 
 .wrapper {
-    width: 400px;
-    height: 400px;
+    width: 325px;
+    height: 365px;
     border-radius: 20px;
     text-align: center;
 }
@@ -276,15 +277,15 @@ a.active {
 
 .detail-small-box-text-content {
     border-radius: 20px;
-    height: 350px;
-    width: 350px;
+    height: 300px;
+    width: 280px;
     background-color: #a37d002f;
     padding-top: 25px;
 }
 
 .detail_title {
     width: 100%;
-    margin-top: 13px;
+    margin-top: 15px;
 }
 
 .image_box {
@@ -301,7 +302,7 @@ a.active {
     display: flex;
     flex-direction: row;
     align-items: center;
-    margin: 10px 150px;
+    margin: 10px 100px;
 }
 
 .post-like-count {
@@ -311,8 +312,9 @@ a.active {
 
 /* 댓글 */
 .comment-container {
-    width: 900px;
-    height: 900px;
+    width: 700px;
+    height: 700px;
+    padding-top: 20px;
 }
 
 .comment-box {
@@ -326,8 +328,8 @@ a.active {
     overflow: auto;
     border: solid 5px #FED049;
     border-radius: 30px;
-    width: 800px;
-    height: 500px;
+    width: 700px;
+    height: 400px;
 }
 
 .small-comment-box {
@@ -335,7 +337,7 @@ a.active {
     flex-direction: row;
     justify-content: space-between;
     margin: 5px;
-    width: 750px;
+    width: 680px;
     padding: 5px;
 }
 
@@ -356,7 +358,7 @@ a.active {
 }
 
 .comment-input-inner-box {
-    width: 500px;
+    width: 400px;
 }
 
 .comment_input_button {
@@ -451,7 +453,7 @@ a.active {
     border-radius: 20px;
     /* border: 2px solid purple; */
     height: 100%;
-    width: 60%;
+    width: 70%;
     background-color: #a37d002f;
     padding: 23px;
     margin: 0 20px 20px;
@@ -459,19 +461,14 @@ a.active {
 
 /* 이미지 업로드 박스 */
 .flex-container {
-    /* margin: 30px 10px; */
     border-radius: 20px;
     display: flex;
-    /* border: 1px solid red; */
-    /* padding: 20px 20px; */
-    /* background-color: #252222; */
 }
 
-.wrapper {
+.modal-wrapper {
     border-radius: 20px;
     text-align: center;
     flex-grow: 1;
-    /* border: 1px solid rgb(255, 174, 0); */
 }
 
 .image-box {
@@ -547,7 +544,7 @@ a.active {
 .post-location {
     text-align: left;
     padding: 5px;
-    width: 300px;
+    width: 260px;
     height: 35px;
     font-size: 18px;
     border-radius: 20px;
@@ -653,20 +650,20 @@ ul li.tag-item {
 
 .detail_content_box {
     background-color: white;
-    width: 90%;
-    height: 300px;
+    width: 75%;
+    height: 280px;
     display: flex;
     text-align: center;
     justify-content: center;
     color: #666;
     font-family: "ht_r";
-    font-size: 18px;
+    font-size: 15px;
     line-height: 28px;
-    padding: 10px;
     outline: 0;
     resize: none;
     border-radius: 20px;
     overflow: auto;
+    margin: -15px 0px 8px 8px;
 }
 
 .post-modal-upload-button {
