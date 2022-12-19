@@ -111,7 +111,6 @@ window.onload = async function loadFooddetail() {
 
   const like_count = document.getElementById("food-like-count");
   like_count.innerText = food.likes + " 명이 좋아합니다.";
-  console.log(like_count)
 }
 
 // 댓글 작성
