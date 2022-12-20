@@ -89,7 +89,8 @@ async function CommunityDetail(community_id) {
   delete_botton.setAttribute("id", community.id);
   delete_botton.setAttribute("onclick", "DeleteCommunityDetail(this.id)");
 
-  if (userinfo.email != community.user) {
+  console.log(userinfo)
+  if (userinfo.nickname != community.user_nickname) {
     update_botton.style.visibility = "hidden";
     delete_botton.style.visibility = "hidden";
   }
@@ -297,7 +298,7 @@ async function CommunityComment(community_id) {
 
     comment_list.appendChild(newComment_box);
 
-    if (userinfo.nickname != comment.user) {
+    if (userinfo.nickname != comment.user_nickname) {
       update_comment_button.style.visibility = "hidden";
       delete_comment_button.style.visibility = "hidden";
     }

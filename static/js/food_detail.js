@@ -101,7 +101,7 @@ window.onload = async function loadFooddetail() {
 
     commentList.appendChild(newComment_box);
 
-    if (login_user.nickname != comment.user) {
+    if (login_user.nickname != comment.user_nickname) {
       update_comment_button.style.visibility = "hidden";
       delete_comment_button.style.visibility = "hidden";
     }
