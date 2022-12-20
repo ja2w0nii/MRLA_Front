@@ -67,7 +67,7 @@ async function loadCommunitySearch() {
     // newSpan.appendChild(newImage);
 
     const newEmail = document.createElement("p");
-    newEmail.innerText = community.user;
+    newEmail.innerText = community.user_nickname;
     newEmail.setAttribute("id", community.id);
     newSpan.appendChild(newEmail);
 
