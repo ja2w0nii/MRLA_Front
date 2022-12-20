@@ -2,7 +2,7 @@
 const backend_base_url = "https://www.mrla.tk";
 // const backend_base_url = "http://3.36.132.172";
 // const backend_base_url = "http://127.0.0.1:8000";
-const frontend_base_url = "http://127.0.0.1:5500/templates";
+const frontend_base_url = "";
 const token = localStorage.getItem("access");
 
 // 로그아웃
@@ -310,7 +310,7 @@ async function postFoodComment(food_id, newComment) {
     },
     method: "POST",
     body: JSON.stringify({
-      "comment": newComment,
+      comment: newComment,
     }),
   });
 
@@ -342,7 +342,7 @@ async function loadUpdateFoodComment(comment_id) {
   response_json = await response.json();
 
   if (response.status == 200) {
-    alert("수정이 완료되었습니다!")
+    alert("수정이 완료되었습니다!");
     window.location.replace(`${frontend_base_url}/food_detail.html?id=${food_id}`);
   } else {
     alert(response.status);
@@ -360,7 +360,7 @@ async function loadDeleteFoodComment(comment_id) {
   });
 
   if (response.status == 204) {
-    alert("해당 댓글을 삭제합니다.")
+    alert("해당 댓글을 삭제합니다.");
     window.location.replace(`${frontend_base_url}/food_detail.html?id=${food_id}`);
   } else {
     alert(response.status);
@@ -428,7 +428,7 @@ async function putUpdateCommunityDetail(formdata) {
   response_json = await response.json();
 
   if (response.status == 200) {
-    alert("수정이 완료되었습니다!")
+    alert("수정이 완료되었습니다!");
     window.location.replace(`${frontend_base_url}/community_detail.html?id=${community_id}`);
   } else {
     alert(response.status);
@@ -446,7 +446,7 @@ async function loadDeleteCommunityDetail(community_id) {
   });
 
   if (response.status == 204) {
-    alert("해당 게시글을 삭제합니다.")
+    alert("해당 게시글을 삭제합니다.");
     window.location.replace(`${frontend_base_url}/community.html`);
   } else {
     alert(response.status);
@@ -506,7 +506,6 @@ async function postCreateCommunityComment(community_id, comment) {
   }
 }
 
-
 // 커뮤니티 상세 페이지 _ 댓글 수정 //
 async function putUpdateCommunityComment(comment_id) {
   const input_comment = document.getElementById("modal_comment").value;
@@ -524,7 +523,7 @@ async function putUpdateCommunityComment(comment_id) {
   response_json = await response.json();
 
   if (response.status == 200) {
-    alert("수정이 완료되었습니다!")
+    alert("수정이 완료되었습니다!");
     window.location.replace(`${frontend_base_url}/community_detail.html?id=${community_id}`);
   } else {
     alert(response.status);
@@ -542,7 +541,7 @@ async function loadDeleteCommunityComment(comment_id) {
   });
 
   if (response.status == 204) {
-    alert("해당 댓글을 삭제합니다.")
+    alert("해당 댓글을 삭제합니다.");
     window.location.replace(`${frontend_base_url}/community_detail.html?id=${community_id}`);
   } else {
     alert(response.status);
@@ -564,7 +563,7 @@ function CommunitySearch() {
 // 커뮤니티 게시글 검색 //
 async function getCommunitySearch() {
   const response = await fetch(`${backend_base_url}/posts/community/search?` + new URLSearchParams(window.location.search), {
-    method: "GET"
+    method: "GET",
   });
 
   response_json = await response.json();
