@@ -66,7 +66,9 @@ async function CommunityDetail(community_id) {
 
   const detail_user = document.getElementById("detail_user");
   const user = document.createElement("h5");
-  user.innerText = community.user
+  user.innerText = community.user_nickname
+  user.setAttribute("id", community.user)
+  user.setAttribute("onclick", "getProfilePage(this.id)")
   detail_user.appendChild(user);
 
   const detail_title = document.getElementById("detail_title");
@@ -262,11 +264,13 @@ async function CommunityComment(community_id) {
 
     const newUser = document.createElement("li");
     newUser.setAttribute("class", "user_list");
+    newUser.setAttribute("id", comment.user_id);
+    newUser.setAttribute("onclick", "getProfilePage(this.id)");
     const newComment = document.createElement("li");
     newComment.setAttribute("class", "comment_list");
     const newCreatedat = document.createElement("li");
     newCreatedat.setAttribute("class", "createdat_list");
-    newUser.innerText = "🐥 " + comment.user;
+    newUser.innerText = "🐥 " + comment.user_nickname;
     newComment.innerText = comment.comment;
     newCreatedat.innerText = comment.created_at.replace("T", " ").substr(0, 16);
     newComment_box.appendChild(newUser);

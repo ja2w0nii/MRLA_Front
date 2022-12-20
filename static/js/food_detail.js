@@ -71,11 +71,12 @@ window.onload = async function loadFooddetail() {
   comments.forEach(comment => {
     const newComment_box = document.createElement("div");
     newComment_box.setAttribute("class", "comment-div")
+    console.log(comment)
 
     newComment_box.innerHTML += `
     <li class="media">
-    <div class="media-body" style="flex-direction: column;>
-      <h4 class="mt-0 mb-10">${comment.user} |</h4> 
+    <div class="media-body" id=${comment.user} onclick="getProfilePage(this.id)" style="flex-direction: column;>
+      <h4 class="mt-0 mb-10">${comment.user_nickname} |</h4> 
       ${comment.comment}
     </div>  
     `

@@ -394,3 +394,7 @@ img {
     flex-direction: column;
     margin: 0px;
 }
+
+.media-body {
+    cursor: pointer;
+}
