@@ -56,15 +56,15 @@ async function loadCommunitySearch() {
   const search_list = document.getElementById("search");
   communitys.forEach((community) => {
     const newSpan = document.createElement("span");
+    newSpan.setAttribute("id", community.id);
     newSpan.setAttribute("class", "search_span");
-    
-    // 사진 버전 //
-    const newImage = document.createElement("img");
-    newImage.src = `${backend_base_url}${community.image}`;
-    newImage.setAttribute("id", community.id);
-    newImage.setAttribute("onclick", "getCommunityDetailPage(this.id)");
-    newSpan.appendChild(newImage);
-    console.log(newImage)
+    newSpan.setAttribute("onclick", "getCommunityDetailPage(this.id)");
+
+    // const newImage = document.createElement("img");
+    // newImage.src = `${backend_base_url + community.image}`;
+    // newImage.setAttribute("id", community.id);
+    // newImage.setAttribute("onclick", "getCommunityDetailPage(this.id)");
+    // newSpan.appendChild(newImage);
 
     const newEmail = document.createElement("p");
     newEmail.innerText = community.user;
