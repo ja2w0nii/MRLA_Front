@@ -56,21 +56,27 @@ async function handleSignIn() {
 
   const response_json = await response.json();
 
-  localStorage.setItem("access", response_json.access);
-  localStorage.setItem("refresh", response_json.refresh);
-  const base64Url = response_json.access.split(".")[1];
-  const base64 = base64Url.replace(/-/g, "+").replace(/_/g, "/");
-  const jsonPayload = decodeURIComponent(
-    atob(base64)
-      .split("")
-      .map(function (c) {
-        return "%" + ("00" + c.charCodeAt(0).toString(16)).slice(-2);
-      })
-      .join("")
-  );
+  if (response.status == 200) {
+    localStorage.setItem("access", response_json.access);
+    localStorage.setItem("refresh", response_json.refresh);
 
-  localStorage.setItem("payload", jsonPayload);
-  window.location.href = "main.html";
+    const base64Url = response_json.access.split(".")[1];
+    const base64 = base64Url.replace(/-/g, "+").replace(/_/g, "/");
+
+    const jsonPayload = decodeURIComponent(
+      atob(base64)
+        .split("")
+        .map(function (c) {
+          return "%" + ("00" + c.charCodeAt(0).toString(16)).slice(-2);
+        })
+        .join("")
+    );
+    localStorage.setItem("payload", jsonPayload);
+
+    window.location.href = "main.html";
+  } else {
+    alert("아이디, 비밀번호를 확인하세요!");
+  }
 }
 
 // async function handleMock() {
@@ -220,6 +226,6 @@ async function handleSignUp() {
   const response_json = await response.json();
   for (var key in response_json) {
     alert(response_json[key]);
-    window.location.reload()
+    window.location.reload();
   }
 }
