@@ -57,13 +57,14 @@ async function loadCommunitySearch() {
   communitys.forEach((community) => {
     const newSpan = document.createElement("span");
     newSpan.setAttribute("class", "search_span");
-
+    
     // 사진 버전 //
     const newImage = document.createElement("img");
-    newImage.src = community.image;
+    newImage.src = `${backend_base_url}${community.image}`;
     newImage.setAttribute("id", community.id);
-    newImage.setAttribute("onclick", "CommunityDetail(this.id)");
+    newImage.setAttribute("onclick", "getCommunityDetailPage(this.id)");
     newSpan.appendChild(newImage);
+    console.log(newImage)
 
     const newEmail = document.createElement("p");
     newEmail.innerText = community.user;
