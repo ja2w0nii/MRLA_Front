@@ -43,144 +43,146 @@
     <title>메추리알 | 커뮤니티</title>
 
     <link rel="stylesheet" href="../static/css/community.css" />
-    <body>
-      <header>
-        <h2 href="main.html" onclick="location.href='main.html'">메추리알</h2>
-        <div id="profile_info_box" class="profile_info_box">
-          <div id="profile_img_box" class="profile_img_box"></div>
-          <div id="profile_name_box" class="nav-item dropdown">
-            <ul id="profile_dropdown" class="dropdown-menu dropdown-menu-dark"></ul>
-          </div>
-        </div>
-      </header>
-      <nav class="nav_box">
-        <div class="navContainer">
-          <div class="service1">
-            <div class="near_restaurant">
-              <a href="restaurants_nearby.html" onclick="location.href='restaurants_nearby.html'">
-                <span class="material-symbols-outlined"> location_on </span>
-                근처 맛집
-              </a>
-            </div>
-            <div class="who">
-              <a href="with_who.html" onclick="location.href='with_who.html'">
-                <span class="material-symbols-outlined"> groups </span>
-                누구랑 먹나요
-              </a>
-            </div>
-            <div class="community">
-              <a href="community.html" onclick="location.href='community.html'">
-                <span class="material-symbols-outlined">chat_bubble</span>
-                커뮤니티
-              </a>
-            </div>
-            <div class="service">
-              <a href="service.html" onclick="location.href='service.html'">
-                <span class="material-symbols-outlined">support_agent</span>
-                고객센터
-              </a>
-            </div>
-          </div>
-        </div>
-      </nav>
+  </head>
 
-      <section class="community_section">
-        <div class="community_for_metury">
-          <a>부화한 메추리알들의 커뮤니티 </a>
+  <body>
+    <header>
+      <h2 href="main.html" onclick="location.href='main.html'">메추리알</h2>
+      <div id="profile_info_box" class="profile_info_box">
+        <div id="profile_img_box" class="profile_img_box"></div>
+        <div id="profile_name_box" class="nav-item dropdown">
+          <ul id="profile_dropdown" class="dropdown-menu dropdown-menu-dark"></ul>
         </div>
-        <div>
-          <div class="post-upload-button-div">
-            <span class="space">
-              <input class="form-control" type="search" placeholder="이름 or 제목 or 내용" aria-label="Search" id="inputSearch" />
-              <button class="btn btn-outline-success my-2 my-sm-0" type="button" onclick="CommunitySearch()">검색</button>
-            </span>
-            <!-- 이미지 업로드  Modal을 여는 클래스 -->
-            <button class="post-upload-button">게시글 작성</button>
+      </div>
+    </header>
+    <nav class="nav_box">
+      <div class="navContainer">
+        <div class="service1">
+          <div class="near_restaurant">
+            <a href="restaurants_nearby.html" onclick="location.href='restaurants_nearby.html'">
+              <span class="material-symbols-outlined"> location_on </span>
+              근처 맛집
+            </a>
           </div>
-          <div class="community-div">
-            <div class="cards-box">
-              <div id="card-list" class="card-list"></div>
-            </div>
+          <div class="who">
+            <a href="with_who.html" onclick="location.href='with_who.html'">
+              <span class="material-symbols-outlined"> groups </span>
+              누구랑 먹나요
+            </a>
           </div>
-        </div>
-      </section>
-
-      <!-- 게시물 작성 Modal의 내용 ==============================================================-->
-      <div class="post-upload-modal-container">
-        <!-- 모달창 하얀색 부분 -->
-        <div class="post-upload-modal-box">
-          <div class="post-upload-modal-top">
-            <a class="post-upload-modal-close">x</a>
+          <div class="community">
+            <a href="community.html" onclick="location.href='community.html'">
+              <span class="material-symbols-outlined">chat_bubble</span>
+              커뮤니티
+            </a>
           </div>
-          <div class="post-upload-modal-content">
-            <div class="post-upload-modal-content-img">
-              <!-- 이미지업로드 박스 -->
-              <div class="flex-container">
-                <div class="wrapper">
-                  <img src="https://i0.wp.com/adventure.co.kr/wp-content/uploads/2020/09/no-image.jpg" class="image-box" />
-                  <label for="community_image" class="img-upload-btn">
-                    <input id="community_image" type="file" />
-                    <span>이미지 업로드하기</span>
-                  </label>
-                </div>
-              </div>
-            </div>
-            <div class="post-upload-modal-content-text">
-              <div class="post-modal-input-text">
-                <div class="post-modal-input-text-top">
-                  <input type="text" id="community_title" placeholder="제목" class="post-title" />
-                </div>
-                <div class="post-modal-input-text-middle">
-                  <input type="text" id="location" placeholder="위치" class="post-location" />
-                  <input type="text" id="tag" placeholder="태그 검색" class="post-tag" />
-                </div>
-                <div class="tag-box">
-                  <!-- 입력한 태그가 붙은 부분 -->
-                  <ul id="tag-list" class="tag-plus"></ul>
-                </div>
-                <div class="post-modal-input-text-bottom" style="border: 1px solid red">
-                  <!-- <textarea   style="resize: none;" type="text" id="content" placeholder="내용" class="post-content"></textarea> -->
-                  <div class="text_box">
-                    <textarea id="community_content"></textarea>
-                    <div class="count"><span>0</span>/200</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="post-modal-upload-button">
-            <button type="button" onclick="loadpostCommunity()" class="community-upload-btn">게시글 업로드</button>
+          <div class="service">
+            <a href="service.html" onclick="location.href='service.html'">
+              <span class="material-symbols-outlined">support_agent</span>
+              고객센터
+            </a>
           </div>
         </div>
       </div>
+    </nav>
 
-      <!-- 게시물 상세보기 Modal의 내용 ==============================================================-->
-      <div id="post-detail-modal-container" class="post-detail-modal-container">
-        <!-- 모달창 하얀색 부분 -->
-        <div class="post-detail-modal-box">
-          <div class="post-detail-modal-top">
-            <a class="post-detail-modal-close">x</a>
+    <section class="community_section">
+      <div class="community_for_metury">
+        <a>부화한 메추리알들의 커뮤니티 </a>
+      </div>
+      <div>
+        <div class="post-upload-button-div">
+          <span class="space">
+            <input class="form-control" type="search" placeholder="이름 or 제목 or 내용" aria-label="Search" id="inputSearch" />
+            <button class="btn btn-outline-success my-2 my-sm-0" type="button" onclick="CommunitySearch()">검색</button>
+          </span>
+          <!-- 이미지 업로드  Modal을 여는 클래스 -->
+          <button class="post-upload-button">게시글 작성</button>
+        </div>
+        <div class="community-div">
+          <div class="cards-box">
+            <div id="card-list" class="card-list"></div>
           </div>
-          <div class="post-detail-modal-content">
-            <div class="post-detail-modal-content-img">
-              <!-- 이미지업로드 박스 -->
-              <div class="flex-container">
-                <div id="wrapper" class="wrapper"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 게시물 작성 Modal의 내용 ==============================================================-->
+    <div class="post-upload-modal-container">
+      <!-- 모달창 하얀색 부분 -->
+      <div class="post-upload-modal-box">
+        <div class="post-upload-modal-top">
+          <a class="post-upload-modal-close">x</a>
+        </div>
+        <div class="post-upload-modal-content">
+          <div class="post-upload-modal-content-img">
+            <!-- 이미지업로드 박스 -->
+            <div class="flex-container">
+              <div class="wrapper">
+                <img src="https://i0.wp.com/adventure.co.kr/wp-content/uploads/2020/09/no-image.jpg" class="image-box" />
+                <label for="community_image" class="img-upload-btn">
+                  <input id="community_image" type="file" />
+                  <span>이미지 업로드하기</span>
+                </label>
               </div>
             </div>
-            <div class="post-detail-modal-content-text">
-              <div class="post-modal-input-text">
-                <div id="detail_user_title" class="post-modal-input-text-top"></div>
-                <div class="post-modal-input-text-bottom">
-                  <div id="detail_content" class="text_box"></div>
+          </div>
+          <div class="post-upload-modal-content-text">
+            <div class="post-modal-input-text">
+              <div class="post-modal-input-text-top">
+                <input type="text" id="community_title" placeholder="제목" class="post-title" />
+              </div>
+              <div class="post-modal-input-text-middle">
+                <input type="text" id="location" placeholder="위치" class="post-location" />
+                <input type="text" id="tag" placeholder="태그 검색" class="post-tag" />
+              </div>
+              <div class="tag-box">
+                <!-- 입력한 태그가 붙은 부분 -->
+                <ul id="tag-list" class="tag-plus"></ul>
+              </div>
+              <div class="post-modal-input-text-bottom" style="border: 1px solid red">
+                <!-- <textarea   style="resize: none;" type="text" id="content" placeholder="내용" class="post-content"></textarea> -->
+                <div class="text_box">
+                  <textarea id="community_content"></textarea>
+                  <div class="count"><span>0</span>/200</div>
                 </div>
               </div>
             </div>
           </div>
         </div>
+        <div class="post-modal-upload-button">
+          <button type="button" onclick="loadpostCommunity()" class="community-upload-btn">게시글 업로드</button>
+        </div>
       </div>
-    </body>
+    </div>
+
+    <!-- 게시물 상세보기 Modal의 내용 ==============================================================-->
+    <div id="post-detail-modal-container" class="post-detail-modal-container">
+      <!-- 모달창 하얀색 부분 -->
+      <div class="post-detail-modal-box">
+        <div class="post-detail-modal-top">
+          <a class="post-detail-modal-close">x</a>
+        </div>
+        <div class="post-detail-modal-content">
+          <div class="post-detail-modal-content-img">
+            <!-- 이미지업로드 박스 -->
+            <div class="flex-container">
+              <div id="wrapper" class="wrapper"></div>
+            </div>
+          </div>
+          <div class="post-detail-modal-content-text">
+            <div class="post-modal-input-text">
+              <div id="detail_user_title" class="post-modal-input-text-top"></div>
+              <div class="post-modal-input-text-bottom">
+                <div id="detail_content" class="text_box"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <script type="text/javascript" src="../static/js/api.js"></script>
     <script type="text/javascript" src="../static/js/community.js"></script>
-  </head>
+  </body>
 </html>
