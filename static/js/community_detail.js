@@ -281,12 +281,12 @@ async function CommunityComment(community_id) {
     delete_comment_button.innerText = "삭제";
 
     update_comment_button.setAttribute("id", comment.id);
-    update_comment_button.setAttribute("class", "btn btn-success create_button");
+    update_comment_button.setAttribute("class", "update_comment_button btn btn-success create_button");
     update_comment_button.setAttribute("data-bs-toggle", "modal");
     update_comment_button.setAttribute("data-bs-target", "#exampleModal");
 
     delete_comment_button.setAttribute("id", comment.id);
-    delete_comment_button.setAttribute("class", "btn btn-danger create_button");
+    delete_comment_button.setAttribute("class", "delete_comment_button btn btn-danger create_button");
     update_comment_button.setAttribute("onclick", "UpdateCommunityComment(this.id)");
     delete_comment_button.setAttribute("onclick", "DeleteCommunityComment(this.id)");
     newComment_box.appendChild(update_comment_button);

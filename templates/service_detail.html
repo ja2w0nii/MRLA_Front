@@ -35,7 +35,9 @@
 
 <body>
   <header>
-    <h2 href="main.html" onclick="location.href='main.html'">메추리알</h2>
+    <div class="header_small_box">
+      <h2 href="main.html" onclick="location.href='main.html'">메추리알</h2>
+    </div>
     <div id="profile_info_box" class="profile_info_box">
       <div id="profile_img_box" class="profile_img_box"></div>
       <div id="profile_name_box" class="nav-item dropdown">
@@ -91,7 +93,10 @@
   </section>
 
   <div class="comment_box_all">
+    <p>답변 달기 </p>
     <div class="comment_box">
+
+
       <textarea class="comment" id="comment" cols="85" rows="3"
         placeholder="타인의 권리를 침해하거나 명예를 훼손하는 댓글은 운영 원칙 및 관련 법률에 제제를 받을 수 있습니다."></textarea>
       <div class="comment_box_btn">
@@ -100,9 +105,6 @@
       </div>
     </div>
     <div>
-
-      <footer>Footer 영역</footer>
-
       <script type="text/javascript" src="../static/js/api.js"></script>
       <script type="text/javascript" src="../static/js/service_detail.js"></script>
 </body>

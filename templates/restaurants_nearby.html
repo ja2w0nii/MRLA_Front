@@ -56,7 +56,9 @@
 
   <body>
     <header>
-      <h2 href="main.html" onclick="location.href='main.html'">메추리알</h2>
+      <div class="header_small_box">
+        <h2 href="main.html" onclick="location.href='main.html'">메추리알</h2>
+      </div>
       <div id="profile_info_box" class="profile_info_box">
         <div id="profile_img_box" class="profile_img_box"></div>
         <div id="profile_name_box" class="nav-item dropdown">
@@ -64,7 +66,6 @@
         </div>
       </div>
     </header>
-
     <nav class="nav_box">
       <div class="navContainer">
         <div class="service1">
@@ -87,7 +88,7 @@
             </a>
           </div>
           <div class="service">
-            <a href="service.html" onclick="location.href='community.html'">
+            <a href="service.html" onclick="location.href='service.html'">
               <span class="material-symbols-outlined">support_agent</span>
               고객센터
             </a>
@@ -95,7 +96,6 @@
         </div>
       </div>
     </nav>
-
     <div class="map_wrap">
       <div id="map" style="width: 100%; height: 100%; position: relative; overflow: hidden"></div>
       <ul id="category">
@@ -109,8 +109,6 @@
         </li>
       </ul>
     </div>
-
-    <footer>Footer 영역</footer>
   </body>
 
   <script type="text/javascript" src="../static/js/api.js"></script>
