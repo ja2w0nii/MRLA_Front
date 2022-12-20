@@ -207,21 +207,22 @@ a.active {
 /* 내용 섹션 윗칸 */
 .community_section {
   background-color: rgb(255, 251, 236);
+  width: 100%;
+  height: 80vh;
 }
 
 /* 부화한 메추리알들의 커뮤니티 */
 .community_for_metury {
-  border: 1px red solid;
   margin: 0 0 20px 0;
   font-size: 40px;
   color: rgb(107, 57, 0);
 }
 
 .community-div {
-  border: 1px rgb(59, 30, 30) solid;
+  border: 5px solid #fed049;
   display: grid;
   align-content: space-between;
-  width: 98vw;
+  width: 90vw;
   height: 65vh;
   margin: auto;
 }
