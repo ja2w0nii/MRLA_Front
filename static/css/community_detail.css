@@ -298,6 +298,10 @@ a.active {
     flex-direction: row;
 }
 
+.detail_user {
+    cursor: pointer;
+}
+
 .like-box {
     display: flex;
     flex-direction: row;
@@ -341,7 +345,11 @@ a.active {
     padding: 5px;
 }
 
-.user_list,
+.user_list {
+    list-style: none;
+    cursor: pointer;
+}
+
 .comment_list,
 .createdat_list {
     list-style: none;

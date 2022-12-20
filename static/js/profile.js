@@ -189,7 +189,8 @@ async function LikeFoodList(user_id) {
   foods.forEach((food) => {
     const newCard = document.createElement("li");
     newCard.setAttribute("class", "card");
-    newCard.setAttribute("id", "card");
+    newCard.setAttribute("id", food.food_id);
+    newCard.setAttribute("onclick", "FoodDetail(this.id)");
 
     const newImg = document.createElement("a");
     newImg.setAttribute("class", "card-image");

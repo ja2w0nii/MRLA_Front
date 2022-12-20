@@ -92,6 +92,7 @@ header>h2:hover {
     text-decoration-line: none;
     font-size: 20px;
     font-weight: 500;
+    text-align: center;
 }
 
 .near_restaurant:hover {
@@ -111,6 +112,7 @@ header>h2:hover {
     box-sizing: border-box;
     font-size: 20px;
     font-weight: 500;
+    text-align: center;
 }
 
 .who:hover {
@@ -129,6 +131,7 @@ header>h2:hover {
     box-sizing: border-box;
     font-size: 20px;
     font-weight: 500;
+    text-align: center;
 }
 
 .community:hover {
@@ -147,6 +150,7 @@ header>h2:hover {
     box-sizing: border-box;
     font-size: 20px;
     font-weight: 500;
+    text-align: center;
 }
 
 .service:hover {
@@ -224,23 +228,28 @@ input {
     border: none;
 }
 
+img {
+    width: 400px;
+    height: 300px;
+}
+
 .container-post-detail {
+    width: 70%;
     padding: 2%;
 }
 
 .wrap-post-detail {
-    width: 65%;
     margin: auto;
     padding: 5% 5% 0;
     background-color: white;
 }
 
-img {
+.wrap-post-detail viewr {
     width: 100%;
-    height: 100%;
+    height: auto;
 }
 
-/* 버튼 */
+/* 타이틀, 좋아요 */
 .box-btn-detail {
     display: flex;
     justify-content: space-between;
@@ -248,35 +257,42 @@ img {
 }
 
 
-.box-btn-detail>button {
-    margin: 20px 10px;
+.like-box>button {
+    margin: 5px 10px;
     padding: 16px 24px;
     border-radius: 30px;
     font-size: 1.2rem;
     color: aliceblue;
 }
 
-.btn-detail {
-    background-color: gray;
+.food-title {
+    margin: auto;
+    font-size: 2.4rem;
 }
 
-.btn-detail:focus {
-    font-weight: 800;
+.btn-danger {
+    margin: 0px;
+}
+
+.food-like-button:hover {
+    font-weight: 500;
     background-color: crimson;
 }
 
 
 /* 댓글 */
 .wrap-reply-detail {
-    width: 65%;
-    margin: auto;
+  margin: auto;
+}
+
+.box-comment-detail {
+  margin: 0%;
+  flex-direction: column;
 }
 
 .box-reply-detail {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin: 20px 0;
+    margin: 0;
     padding: 14px;
     font-size: 1.2rem;
     background-color: white;
@@ -355,9 +371,30 @@ img {
 .btn-delete-comment-detail:hover {
     color: aliceblue;
     background-color: crimson;
+    margin: 1px;
 }
 
 .btn-modify-comment-detail:hover {
     color: aliceblue;
     background-color: black;
+    margin: 1px;
+}
+
+.comment-div {
+    display: flex;
+    flex-direction: row;
+}
+
+.media {
+    margin-left: 5px;
+}
+
+.like-box {
+    display: flex;
+    flex-direction: column;
+    margin: 0px;
+}
+
+.media-body {
+    cursor: pointer;
 }
