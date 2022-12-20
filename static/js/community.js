@@ -92,7 +92,6 @@ function Modal(num) {
     // 해당 클래스의 내용을 클릭하면 Modal을 띄웁니다.
     upload_btns[num].onclick = function () {
       upload_modals[num].style.display = "block";
-      console.log(num);
     };
 
     // <span> 태그(X 버튼)를 클릭하면 Modal이 닫습니다.
@@ -163,7 +162,6 @@ $(document).ready(function () {
 
   $("#tag").on("keyup", function (e) {
     var self = $(this);
-    console.log("keypress");
 
     // input 에 focus 되있을 때 엔터 및 스페이스바 입력시 구동
     if (e.key === "Enter" || e.keyCode == 32) {
