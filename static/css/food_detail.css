@@ -1,284 +1,280 @@
 /* 전체 설정 */
 * {
-    margin: auto;
-    font-family: 'Jua', sans-serif;
+  margin: auto;
+  font-family: "Jua", sans-serif;
 }
 
 body {
-    background-color: whitesmoke;
-    height: 100vh;
-    display: grid;
-    place-items: center;
+  background-color: whitesmoke;
+  height: 100vh;
+  display: grid;
+  place-items: center;
 }
-
 
 /* 헤더============================================= */
 header {
-    background-color: #FED049;
-    width: 100%;
-    height: 70px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    position: fixed;
-    top: 0;
+  background-color: #fed049;
+  width: 100%;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
 }
 
-header>h2 {
-    margin: 0px 30px;
-    width: 120px;
+header > h2 {
+  margin: 0px 30px;
+  width: 120px;
 }
 
-header>h2:hover {
-    color: #000000;
-    cursor: pointer;
+header > h2:hover {
+  color: #000000;
+  cursor: pointer;
 }
 
 .profile_info_box {
-    display: flex;
-    flex-direction: row;
-    margin: 0px 30px;
+  display: flex;
+  flex-direction: row;
+  margin: 0px 30px;
 }
 
 .profile_img {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    margin: 10px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin: 10px;
 }
 
 .dropdown-menu-dark {
-    height: 100px;
+  height: 100px;
 }
 
 .dropdown-item-box {
-    height: 43px;
+  height: 43px;
 }
 
 .dropdown-item {
-    margin: 0px;
-    cursor: pointer;
+  margin: 0px;
+  cursor: pointer;
 }
-
 
 /* 네비게이션=============================================*/
 .nav_box {
-    margin-top: 60px;
-    width: 100%;
-    height: 60px;
+  margin-top: 60px;
+  width: 100%;
+  height: 60px;
 }
 
 .navContainer {
-    background-color: white;
-    border: 10px solid #FED049;
-    align-items: center;
-    box-sizing: border-box;
-    display: flex;
-    width: 100%;
-    justify-content: flex-end;
-    align-items: center;
+  background-color: white;
+  border: 10px solid #fed049;
+  align-items: center;
+  box-sizing: border-box;
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+  align-items: center;
 }
 
 .service1 {
-    width: 60%;
+  width: 60%;
 }
 
 .near_restaurant {
-    border: solid 3px grey;
-    border-radius: 100px;
-    float: left;
-    width: 20%;
-    box-sizing: border-box;
-    text-decoration-line: none;
-    font-size: 20px;
-    font-weight: 500;
-    text-align: center;
+  border: solid 3px grey;
+  border-radius: 100px;
+  float: left;
+  width: 20%;
+  box-sizing: border-box;
+  text-decoration-line: none;
+  font-size: 20px;
+  font-weight: 500;
+  text-align: center;
 }
 
 .near_restaurant:hover {
-    letter-spacing: 3px;
-    color: #000000;
-    font-weight: bold;
-    text-decoration-line: none;
-    transition: all 0.7s;
+  letter-spacing: 3px;
+  color: #000000;
+  font-weight: bold;
+  text-decoration-line: none;
+  transition: all 0.7s;
 }
 
 .who {
-    border: 3px solid grey;
-    border-radius: 100px;
-    float: left;
-    margin-left: 5%;
-    width: 20%;
-    box-sizing: border-box;
-    font-size: 20px;
-    font-weight: 500;
-    text-align: center;
+  border: 3px solid grey;
+  border-radius: 100px;
+  float: left;
+  margin-left: 5%;
+  width: 20%;
+  box-sizing: border-box;
+  font-size: 20px;
+  font-weight: 500;
+  text-align: center;
 }
 
 .who:hover {
-    letter-spacing: 2px;
-    color: #000000;
-    font-weight: 900;
-    transition: all 0.7s;
+  letter-spacing: 2px;
+  color: #000000;
+  font-weight: 900;
+  transition: all 0.7s;
 }
 
 .community {
-    border: 3px solid grey;
-    border-radius: 100px;
-    float: left;
-    margin-left: 5%;
-    width: 20%;
-    box-sizing: border-box;
-    font-size: 20px;
-    font-weight: 500;
-    text-align: center;
+  border: 3px solid grey;
+  border-radius: 100px;
+  float: left;
+  margin-left: 5%;
+  width: 20%;
+  box-sizing: border-box;
+  font-size: 20px;
+  font-weight: 500;
+  text-align: center;
 }
 
 .community:hover {
-    letter-spacing: 3px;
-    color: #000000;
-    font-weight: 900;
-    transition: all 0.7s;
+  letter-spacing: 3px;
+  color: #000000;
+  font-weight: 900;
+  transition: all 0.7s;
 }
 
 .service {
-    border: 3px solid grey;
-    border-radius: 100px;
-    float: left;
-    margin-left: 5%;
-    width: 20%;
-    box-sizing: border-box;
-    font-size: 20px;
-    font-weight: 500;
-    text-align: center;
+  border: 3px solid grey;
+  border-radius: 100px;
+  float: left;
+  margin-left: 5%;
+  width: 20%;
+  box-sizing: border-box;
+  font-size: 20px;
+  font-weight: 500;
+  text-align: center;
 }
 
 .service:hover {
-    letter-spacing: 3px;
-    color: #000000;
-    font-weight: 900;
-    transition: all 0.7s;
+  letter-spacing: 3px;
+  color: #000000;
+  font-weight: 900;
+  transition: all 0.7s;
 }
 
 ul {
-    list-style: none;
-    padding-left: 0px;
+  list-style: none;
+  padding-left: 0px;
 }
 
 nav {
-    /* border: 2px solid blue; */
-    margin: 10px 10px;
-    /* background-color: orange; */
-    height: 100%;
+  /* border: 2px solid blue; */
+  margin: 10px 10px;
+  /* background-color: orange; */
+  height: 100%;
 }
 
 nav ul {
-    border: 2px solid red;
-    width: 40%;
-    margin: 0px auto;
-    height: 100%;
-    display: flex;
-    align-items: center;
+  border: 2px solid red;
+  width: 40%;
+  margin: 0px auto;
+  height: 100%;
+  display: flex;
+  align-items: center;
 
-    justify-content: space-between;
+  justify-content: space-between;
 }
 
 nav a {
-    text-decoration-line: none;
-    color: grey;
+  text-decoration-line: none;
+  color: grey;
 }
 
-nav ul>li {
-    font-size: 20px;
-    height: 100%;
-    display: flex;
-    align-items: center;
+nav ul > li {
+  font-size: 20px;
+  height: 100%;
+  display: flex;
+  align-items: center;
 }
 
 section {
-    /* border: 2px solid green; */
-    height: 100%;
+  /* border: 2px solid green; */
+  height: 100%;
 }
 
 /* 위치 */
 .material-symbols-outlined {
-    font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 200, "opsz" 48;
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 200, "opsz" 48;
 }
 
 a.active {
-    color: #ff5752;
-    font-weight: bolder;
-    font-weight: 900;
+  color: #ff5752;
+  font-weight: bolder;
+  font-weight: 900;
 }
 
-/* 내용 섹션 윗칸 ============================================= 221205 이태은 */
+/* 내용 섹션 윗칸 */
 .community_section {
-    background-color: rgb(255, 251, 236);
-    height: 80vh;
-    z-index: -100;
+  background-color: rgb(255, 251, 236);
+  height: 80vh;
+  z-index: -100;
 }
 
 button {
-    outline: none;
-    border: none;
+  outline: none;
+  border: none;
 }
 
 input {
-    outline: none;
-    border: none;
+  outline: none;
+  border: none;
 }
 
 img {
-    width: 400px;
-    height: 300px;
+  width: 400px;
+  height: 300px;
 }
 
 .container-post-detail {
-    width: 70%;
-    padding: 2%;
+  width: 70%;
+  padding: 2%;
 }
 
 .wrap-post-detail {
-    margin: auto;
-    padding: 5% 5% 0;
-    background-color: white;
+  margin: auto;
+  padding: 5% 5% 0;
+  background-color: white;
 }
 
 .wrap-post-detail viewr {
-    width: 100%;
-    height: auto;
+  width: 100%;
+  height: auto;
 }
 
 /* 타이틀, 좋아요 */
 .box-btn-detail {
-    display: flex;
-    justify-content: space-between;
-    align-content: center;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
 }
 
-
-.like-box>button {
-    margin: 5px 10px;
-    padding: 16px 24px;
-    border-radius: 30px;
-    font-size: 1.2rem;
-    color: aliceblue;
+.like-box > button {
+  margin: 5px 10px;
+  padding: 16px 24px;
+  border-radius: 30px;
+  font-size: 1.2rem;
+  color: aliceblue;
 }
 
 .food-title {
-    margin: auto;
-    font-size: 2.4rem;
+  margin: auto;
+  font-size: 2.4rem;
 }
 
 .btn-danger {
-    margin: 0px;
+  margin: 0px;
 }
 
 .food-like-button:hover {
-    font-weight: 500;
-    background-color: crimson;
+  font-weight: 500;
+  background-color: crimson;
 }
-
 
 /* 댓글 */
 .wrap-reply-detail {
@@ -291,110 +287,116 @@ img {
 }
 
 .box-reply-detail {
-    display: flex;
-    margin: 0;
-    padding: 14px;
-    font-size: 1.2rem;
-    background-color: white;
+  display: flex;
+  margin: 0;
+  padding: 14px;
+  font-size: 1.2rem;
+  background-color: white;
 }
 
 .box-reply-user {
-    width: 80%;
+  width: 80%;
 }
 
 .input-reply-detail {
-    width: 90%;
-    margin: 0 10px;
-    font-size: 1.2rem;
+  width: 90%;
+  margin: 0 10px;
+  font-size: 1.2rem;
 }
 
 .btn-reply-detail {
-    padding: 10px 12px;
-    color: aliceblue;
-    background-color: black;
-    border-radius: 10px;
+  padding: 10px 12px;
+  color: aliceblue;
+  background-color: black;
+  border-radius: 10px;
 }
 
 .btn-reply-detail:hover {
-    font-weight: 700;
-    background-color: #ff5733;
-    ;
+  font-weight: 700;
+  background-color: #ff5733;
 }
 
 .wrap-comment-detail {
-    margin: 40px 0;
+  margin: 40px 0;
 }
 
 .text-title-comment-detail {
-    font-size: 1.4rem;
-    font-weight: 400;
+  font-size: 1.4rem;
+  font-weight: 400;
 }
 
 .box-comment-detail {
-    margin: 20px 0;
-    padding: 14px;
-    background-color: white;
+  margin: 20px 0;
+  padding: 14px;
+  background-color: white;
 }
 
 .box-comment-content-detail {
-    display: flex;
-    justify-content: space-between;
-    margin: 30px 0 10px;
+  display: flex;
+  justify-content: space-between;
+  margin: 30px 0 10px;
 }
 
 .wrap-comment-content-detail {
-    display: block;
+  display: block;
 }
 
 .comment-content-detail {
-    font-weight: 300;
+  font-weight: 300;
 }
 
 .comment-content-detail-input {
-    width: 100%;
-    margin: 2px 0;
-    padding: 10px;
-    font-weight: 300;
-    background-color: whitesmoke;
-    border: 1px solid gainsboro;
+  width: 100%;
+  margin: 2px 0;
+  padding: 10px;
+  font-weight: 300;
+  background-color: whitesmoke;
+  border: 1px solid gainsboro;
 }
 
 .box-btn-comment-content {
-    margin: 8px 0;
+  margin: 8px 0;
 }
 
-.box-btn-comment-content>button {
-    margin-right: 5px;
-    padding: 5px 7px;
+.box-btn-comment-content > button {
+  margin-right: 5px;
+  padding: 5px 7px;
 }
 
 .btn-delete-comment-detail:hover {
-    color: aliceblue;
-    background-color: crimson;
-    margin: 1px;
+  color: aliceblue;
+  background-color: crimson;
+  margin: 1px;
 }
 
 .btn-modify-comment-detail:hover {
-    color: aliceblue;
-    background-color: black;
-    margin: 1px;
+  color: aliceblue;
+  background-color: black;
+  margin: 1px;
 }
 
 .comment-div {
-    display: flex;
-    flex-direction: row;
+  display: flex;
+  flex-direction: row;
 }
 
 .media {
-    margin-left: 5px;
+  margin-left: 5px;
 }
 
 .like-box {
-    display: flex;
-    flex-direction: column;
-    margin: 0px;
+  display: flex;
+  flex-direction: column;
+  margin: 0px;
 }
 
 .media-body {
-    cursor: pointer;
+  cursor: pointer;
+}
+
+.find {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 10px auto;
 }

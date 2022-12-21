@@ -11,6 +11,11 @@
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
     />
 
+    <script
+      type="text/javascript"
+      src="//dapi.kakao.com/v2/maps/sdk.js?appkey=fc92682b7556e05883bbb1ecdc5db8d5&libraries=services,clusterer,drawing"
+    ></script>
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -46,85 +51,92 @@
 
     <link rel="stylesheet" href="../static/css/food_detail.css" />
   </head>
-
-<body>
-  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h1 class="modal-title fs-5" id="exampleModalLabel">댓글을 수정해주세요!</h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <div class="input-group mb-3">
-            <input type="text" id="modal_comment" class="form-control" placeholder="Update Comment"
-              aria-label="Username" aria-describedby="basic-addon1" />
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">댓글을 수정해주세요!</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="input-group mb-3">
+              <input
+                type="text"
+                id="modal_comment"
+                class="form-control"
+                placeholder="Update Comment"
+                aria-label="Username"
+                aria-describedby="basic-addon1"
+              />
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">닫기</button>
+            <button type="button" class="btn btn-success" id="save_button">수정</button>
           </div>
         </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">닫기</button>
-          <button type="button" class="btn btn-success" id="save_button">수정</button>
-        </div>
       </div>
     </div>
-  </div>
 
-  <header>
-    <h2 href="main.html" onclick="location.href='main.html'">메추리알</h2>
-    <div id="profile_info_box" class="profile_info_box">
-      <div id="profile_img_box" class="profile_img_box"></div>
-      <div id="profile_name_box" class="nav-item dropdown">
-        <ul id="profile_dropdown" class="dropdown-menu dropdown-menu-dark"></ul>
-      </div>
-    </div>
-  </header>
-  <nav class="nav_box">
-    <div class="navContainer">
-      <div class="service1">
-        <div class="near_restaurant">
-          <a href="restaurants_nearby.html" onclick="location.href='restaurants_nearby.html'">
-            <span class="material-symbols-outlined"> location_on </span>
-            근처 맛집
-          </a>
-        </div>
-        <div class="who">
-          <a href="with_who.html" onclick="location.href='with_who.html'">
-            <span class="material-symbols-outlined"> groups </span>
-            누구랑 먹나요
-          </a>
-        </div>
-        <div class="community">
-          <a href="community.html" onclick="location.href='community.html'">
-            <span class="material-symbols-outlined">chat_bubble</span>
-            커뮤니티
-          </a>
-        </div>
-        <div class="service">
-          <a href="service.html" onclick="location.href='service.html'">
-            <span class="material-symbols-outlined">support_agent</span>
-            고객센터
-          </a>
+    <header>
+      <h2 href="main.html" onclick="location.href='main.html'">메추리알</h2>
+      <div id="profile_info_box" class="profile_info_box">
+        <div id="profile_img_box" class="profile_img_box"></div>
+        <div id="profile_name_box" class="nav-item dropdown">
+          <ul id="profile_dropdown" class="dropdown-menu dropdown-menu-dark"></ul>
         </div>
       </div>
-    </div>
-  </nav>
+    </header>
+    <nav class="nav_box">
+      <div class="navContainer">
+        <div class="service1">
+          <div class="near_restaurant">
+            <a href="restaurants_nearby.html" onclick="location.href='restaurants_nearby.html'">
+              <span class="material-symbols-outlined"> location_on </span>
+              근처 맛집
+            </a>
+          </div>
+          <div class="who">
+            <a href="with_who.html" onclick="location.href='with_who.html'">
+              <span class="material-symbols-outlined"> groups </span>
+              누구랑 먹나요
+            </a>
+          </div>
+          <div class="community">
+            <a href="community.html" onclick="location.href='community.html'">
+              <span class="material-symbols-outlined">chat_bubble</span>
+              커뮤니티
+            </a>
+          </div>
+          <div class="service">
+            <a href="service.html" onclick="location.href='service.html'">
+              <span class="material-symbols-outlined">support_agent</span>
+              고객센터
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
 
-  <section class="container-post-detail">
-    <article class="wrap-post-detail">
-      <!-- 컨텐츠 섹션 -->
-      <div class="wrap-content-detail">
-        <div style="text-align: center;">
-          <img id="viewer" src="">
+    <section class="container-post-detail">
+      <article class="wrap-post-detail">
+        <!-- 컨텐츠 섹션 -->
+        <div class="wrap-content-detail">
+          <div style="text-align: center">
+            <img id="viewer" src="" />
+          </div>
+          <div class="find">
+            <button type="button" id="find-restaurant" class="btn btn-warning">근처 맛집 찾기</button>
+          </div>
         </div>
-      </div>
-      <!-- 버튼 -->
-      <div class="box-btn-detail">
-        <p id="food-title" class="food-title"></p>
-        <div class="like-box">
-          <button id="food-like-button" class="btn btn-danger">좋아요</button>
-          <p id="food-like-count" class="food-like-count"></p>
+        <!-- 버튼 -->
+        <div class="box-btn-detail">
+          <p id="food-title" class="food-title"></p>
+          <div class="like-box">
+            <button id="food-like-button" class="btn btn-danger">좋아요</button>
+            <p id="food-like-count" class="food-like-count"></p>
+          </div>
         </div>
-      </div>
       </article>
       <!-- 댓글 -->
       <div class="container-reply-detail">
@@ -133,24 +145,24 @@
             <div class="box-title-comment-detail">
               <span class="text-title-comment-detail">Comments</span>
             </div>
-          <div id="comment-inner-box" class="comment-inner-box"></div>
-          <div class="comment-input-box">
-            <div class="box-comment-detail">
-              <ul class="list-unstyled" id="comment-list">
-              </ul>
+            <div id="comment-inner-box" class="comment-inner-box"></div>
+            <div class="comment-input-box">
+              <div class="box-comment-detail">
+                <ul class="list-unstyled" id="comment-list"></ul>
+              </div>
             </div>
-          </div>
-          <div class="box-reply-detail">
-            <div class="box-reply-user">
-              <input class="input-reply-detail" id="new-comment" type="text" placeholder="댓글을 입력해주세요!">
+            <div class="box-reply-detail">
+              <div class="box-reply-user">
+                <input class="input-reply-detail" id="new-comment" type="text" placeholder="댓글을 입력해주세요!" />
+              </div>
+              <button type="button" class="btn-reply-detail" onclick="submitComment()">작성</button>
             </div>
-            <button type="button" class="btn-reply-detail" onclick="submitComment()">작성</button>
           </div>
         </div>
       </div>
-  </section>
-</body>
-<script src="../static/js/api.js"></script>
-<script src="../static/js/food_detail.js"></script>
+    </section>
 
+    <script src="../static/js/api.js"></script>
+    <script src="../static/js/food_detail.js"></script>
+  </body>
 </html>

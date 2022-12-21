@@ -589,3 +589,9 @@ async function postCommunity(formdata) {
     alert(response.status);
   }
 }
+
+// 메뉴 상세 페이지 _ 근처 맛집 연결 
+function getNearRestaurant(food) {
+  const url = `${frontend_base_url}/map_search.html?id=${food}`;
+  location.href = url;
+}
