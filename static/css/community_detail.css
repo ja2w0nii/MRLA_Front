@@ -196,7 +196,6 @@ a.active {
     flex-direction: row;
     width: 95vw;
     margin-top: 170px;
-
 }
 .detail_user{
 
@@ -205,7 +204,6 @@ a.active {
 
 }
 .post-buttons {
-
     width: fit-content;
 }
 .post-modal-input-text-middle{
@@ -269,11 +267,11 @@ a.active {
 }
 /* 
 .detail-small-box-left {
+
     width: 100%;
 } */
 
 .detail-small-box-right {
-
 }
 
 .detail_content {
@@ -283,15 +281,14 @@ a.active {
 }
 
 .detail-small-box-img {
-
     padding: 5px;
-
     height: 50vh;
     display: flex;
     
 }
 
 .detail-small-box-text-content {
+
     border-radius: 10px;
     height: 200px;
     width: 100%;
@@ -299,6 +296,7 @@ a.active {
     padding-top: 9px;
     margin-top: 10px;
 }
+
 
 .image_box {
 max-width: 90%;
@@ -319,6 +317,7 @@ height: fit-content;
     margin-bottom: 5px;
 }
 
+
 .detail_title {
     width: 100%;
     margin: 10px 5px;
@@ -335,12 +334,14 @@ height: fit-content;
 .middle-box{
     display: flex;
 }
+
 .like-box {
     margin: 20px 10px;
 
     display: flex;
     flex-direction: row;
     align-items: center;
+
     bottom: 20px;
     width: fit-content;
    float: right;
@@ -369,6 +370,7 @@ height: fit-content;
 
 /* 댓글 */
 .comment-container {
+
     border: solid 5px #FED049;
     background-color:#FED049 ;
     border-radius: 10px;
@@ -442,7 +444,11 @@ height: 100%;
     
 }
 
-.user_list,
+.user_list {
+    list-style: none;
+    cursor: pointer;
+}
+
 .comment_list,
 .createdat_list {
     list-style: none;
@@ -477,7 +483,6 @@ vertical-align: center;
 
 }
 .comment-input-inner-box {
-
     width:30vw;
 }
 
@@ -568,7 +573,7 @@ font-size: 0.5vw;
     border-radius: 20px;
     /* border: 2px solid purple; */
     height: 100%;
-    width: 60%;
+    width: 70%;
     background-color: #a37d002f;
     padding: 23px;
     margin: 0 20px 20px;
@@ -576,17 +581,14 @@ font-size: 0.5vw;
 
 /* 이미지 업로드 박스 */
 .flex-container {
-    /* margin: 30px 10px; */
     border-radius: 20px;
     display: flex;
-    /* border: 1px solid red; */
-    /* padding: 20px 20px; */
-    /* background-color: #252222; */
 }
+
 
 .wrapper {
 
-    width: fit-content;
+    width: fit-content
 }
 
 .image-box {
@@ -662,7 +664,7 @@ font-size: 0.5vw;
 .post-location {
     text-align: left;
     padding: 5px;
-    width: 300px;
+    width: 260px;
     height: 35px;
     font-size: 18px;
     border-radius: 20px;
@@ -775,13 +777,13 @@ ul li.tag-item {
     justify-content: center;
 
     font-family: "ht_r";
-    font-size: 18px;
+    font-size: 15px;
     line-height: 28px;
-    padding: 10px;
     outline: 0;
     resize: none;
     border-radius: 10px;
     overflow: auto;
+    margin: -15px 0px 8px 8px;
 }
 
 .post-modal-upload-button {

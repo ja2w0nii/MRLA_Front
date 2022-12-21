@@ -89,5 +89,4 @@ async function AllFoodList(id) {
       }
     }
   });
-  console.log(food_list);
 }

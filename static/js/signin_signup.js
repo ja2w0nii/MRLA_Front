@@ -15,9 +15,7 @@ signInButton.addEventListener("click", () => {
 });
 
 // 입력 없으면 표시 현재 구현 안됨
-window.onload = () => {
-  console.log("load");
-};
+window.onload = () => {};
 
 window.addEventListener(
   "load",
@@ -43,37 +41,67 @@ window.addEventListener(
 );
 
 async function handleSignIn() {
-  const email = document.getElementById("email2").value;
-  const password = document.getElementById("password2").value;
-  const response = await fetch(`${backend_base_url}/users/api/token/`, {
-    headers: {
-      "content-type": "application/json",
-    },
-    method: "POST",
-    body: JSON.stringify({
-      email: email,
-      password: password,
-    }),
-  });
 
-  const response_json = await response.json();
+    const email = document.getElementById("email2").value
+    const password = document.getElementById("password2").value
+    console.log(Boolean(email))
+    if (email == false) {
+        alert("이메일을 입력해 주세요!")
+        return false
+    }
+    if (password == false) {
+        alert("패스워드를 입력해 주세요!")
+        return false
+    }
 
-  localStorage.setItem("access", response_json.access);
-  localStorage.setItem("refresh", response_json.refresh);
-  console.log(response_json);
-  const base64Url = response_json.access.split(".")[1];
-  const base64 = base64Url.replace(/-/g, "+").replace(/_/g, "/");
-  const jsonPayload = decodeURIComponent(
-    atob(base64)
-      .split("")
-      .map(function (c) {
-        return "%" + ("00" + c.charCodeAt(0).toString(16)).slice(-2);
-      })
-      .join("")
-  );
+    const response = await fetch('http://127.0.0.1:8000/users/api/token/', {
+        headers: {
+            'content-type': 'application/json',
+        },
+        method: 'POST',
+        body: JSON.stringify({
+            "email": email,
+            "password": password
+        })
+    })
 
-  localStorage.setItem("payload", jsonPayload);
-  window.location.href = "main.html";
+    const response_json = await response.json()
+
+
+    
+      console.log(response)
+      if (response.ok) {
+        localStorage.setItem("access", response_json.access);
+        localStorage.setItem("refresh", response_json.refresh); 
+        const base64Url = response_json.access.split('.')[1];
+        const base64 = base64Url.replace(/-/g, '+').replace(/_/g, '/');
+        const jsonPayload = decodeURIComponent(atob(base64).split('').map(function(c) {
+            return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
+    
+        }).join(''));
+    
+    
+    
+        localStorage.setItem("payload", jsonPayload);
+        window.location.href = 'intro_2.html'
+      } 
+        else{
+            for(var key in response_json) {
+                console.log("key: ", key)
+                console.log("value: ", response_json[key])
+                console.log("----------------")
+                alert(response_json[key])
+              }
+      }
+
+ 
+}
+
+
+    window.location.href = "main.html?id=1";
+  } else {
+    alert("아이디, 비밀번호를 확인하세요!");
+  }
 }
 
 // async function handleMock() {
@@ -85,7 +113,6 @@ async function handleSignIn() {
 //         method: 'GET',
 //     })
 //     const response_json = await response.json()
-//     console.log(response_json)
 // }
 
 // async function handleLogout() {
@@ -222,11 +249,8 @@ async function handleSignUp() {
     }),
   });
   const response_json = await response.json();
-  console.log(response_json);
   for (var key in response_json) {
-    console.log("key: ", key);
-    console.log("value: ", response_json[key]);
-    console.log("----------------");
     alert(response_json[key]);
+    window.location.reload();
   }
 }
