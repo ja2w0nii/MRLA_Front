@@ -216,6 +216,7 @@ a.active {
     cursor: pointer;
     visibility: none;
     border: none;
+    background-color: #ffffff;
 }
 
 .post-upload-button:hover {
@@ -226,6 +227,7 @@ a.active {
     border: none;
     cursor: pointer;
     visibility: none;
+    background-color: #ffffff;
 }
 .post-delete-button:hover {
     color: #e74b24;
@@ -345,12 +347,12 @@ height: fit-content;
 
 }
 .post-like-button{
-    background-color:  #FED049;
+    background-color: #ffffff;
     border: none;
 }
 
 .material-symbols-outlined{
-    background-color:  #FED049;
+    background-color: #ffffff;
     border: none;
 }
 .material-symbols-sharp {
