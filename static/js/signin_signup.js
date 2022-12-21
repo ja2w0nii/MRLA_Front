@@ -53,7 +53,7 @@ async function handleSignIn() {
     return false;
   }
 
-  const response = await fetch("http://127.0.0.1:8000/users/api/token/", {
+  const response = await fetch(`${backend_base_url}/users/api/token/`, {
     headers: {
       "content-type": "application/json",
     },
