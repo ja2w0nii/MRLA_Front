@@ -185,6 +185,7 @@ section.main_section {
   width: 95%;
   overflow-y: auto;
   box-sizing: content-box;
+  margin-top: 170px;
   /* padding: 10px 0px; */
 }
 
