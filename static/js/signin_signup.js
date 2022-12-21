@@ -41,6 +41,16 @@ window.addEventListener('load', () => {
 async function handleSignIn() {
     const email = document.getElementById("email2").value
     const password = document.getElementById("password2").value
+    console.log(Boolean(email))
+    if (email == false) {
+        alert("이메일을 입력해 주세요!")
+        return false
+    }
+    if (password == false) {
+        alert("패스워드를 입력해 주세요!")
+        return false
+    }
+
     const response = await fetch('http://127.0.0.1:8000/users/api/token/', {
         headers: {
             'content-type': 'application/json',
@@ -55,20 +65,33 @@ async function handleSignIn() {
     const response_json = await response.json()
 
 
-    localStorage.setItem("access", response_json.access);
-    localStorage.setItem("refresh", response_json.refresh);
-    console.log(response_json)
-    const base64Url = response_json.access.split('.')[1];
-    const base64 = base64Url.replace(/-/g, '+').replace(/_/g, '/');
-    const jsonPayload = decodeURIComponent(atob(base64).split('').map(function(c) {
-        return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
+    
+      console.log(response)
+      if (response.ok) {
+        localStorage.setItem("access", response_json.access);
+        localStorage.setItem("refresh", response_json.refresh); 
+        const base64Url = response_json.access.split('.')[1];
+        const base64 = base64Url.replace(/-/g, '+').replace(/_/g, '/');
+        const jsonPayload = decodeURIComponent(atob(base64).split('').map(function(c) {
+            return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
+    
+        }).join(''));
+    
+    
+    
+        localStorage.setItem("payload", jsonPayload);
+        window.location.href = 'intro_2.html'
+      } 
+        else{
+            for(var key in response_json) {
+                console.log("key: ", key)
+                console.log("value: ", response_json[key])
+                console.log("----------------")
+                alert(response_json[key])
+              }
+      }
 
-    }).join(''));
-
-
-
-    localStorage.setItem("payload", jsonPayload);
-    window.location.href = 'intro_2.html'
+ 
 }
 
 

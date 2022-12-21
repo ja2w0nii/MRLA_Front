@@ -18,14 +18,9 @@
 			<br>
 			<button type="submit" onclick="handleSignUp()">가입하기</button>
 			<br>
-			<span>--------------------------&nbsp;&nbsp;&nbsp;OR&nbsp;&nbsp;&nbsp;--------------------------</span>
-			<br>
-			<span>SNS 계정으로 가입하기</span>
 
-			<div class="social-container">
-				<a href="https://kauth.kakao.com/oauth/authorize?client_id=2226bdccf1314eb9e224554145dbd610&redirect_uri=http://127.0.0.1:5500/templates/signin_sigup.html&response_type=code" class="social"><i class="fa fa-github"></i></a>
-				<a href="http://127.0.0.1:8000/users/google/login/" class="social" onclick="handleSocial()"><i class="fa fa-google"></i></a>
-			</div>
+
+
 		</div>
 	</div>
 	<!-- 로그인 컨테이너 -->
@@ -35,7 +30,7 @@
 			<br>
 			<input type="email" name="email" placeholder="Email" id="email2">
 			<input type="password" name="password" placeholder="Password" id="password2">
-			<a href="#">비밀번호를 잊으셨습니까?</a>
+			<a href="http://127.0.0.1:8000/users/password/reset/">비밀번호를 잊으셨습니까?</a>
 			<button  onclick="handleSignIn()">로그인</button>
 			<br>
 			<span>--------------------------&nbsp;&nbsp;&nbsp;OR&nbsp;&nbsp;&nbsp;--------------------------</span>
@@ -43,7 +38,7 @@
 			<!-- 소셜 로그인 -->
 			<span>SNS 계정으로 로그인 하기</span>
 			<div class="social-container">
-				<a href="https://kauth.kakao.com/oauth/authorize?client_id=2226bdccf1314eb9e224554145dbd610&redirect_uri=http://127.0.0.1:5500/templates/signin_sigup.html&response_type=code" class="social" ><i class="fa fa-github"></i></a>
+				<a href="https://kauth.kakao.com/oauth/authorize?client_id=2226bdccf1314eb9e224554145dbd610&redirect_uri=http://127.0.0.1:5500/templates/signin_signup.html&response_type=code" class="social" ><i class="fa fa-github"></i></a>
 				<a href="http://127.0.0.1:8000/users/google/login/" class="social" ><i class="fa fa-google"></i></a>
 			</div>
 		</div>
