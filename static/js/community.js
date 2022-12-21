@@ -92,7 +92,6 @@ function Modal(num) {
     // 해당 클래스의 내용을 클릭하면 Modal을 띄웁니다.
     upload_btns[num].onclick = function () {
       upload_modals[num].style.display = "block";
-      console.log(num);
     };
 
     // <span> 태그(X 버튼)를 클릭하면 Modal이 닫습니다.
@@ -163,7 +162,6 @@ $(document).ready(function () {
 
   $("#tag").on("keyup", function (e) {
     var self = $(this);
-    console.log("keypress");
 
     // input 에 focus 되있을 때 엔터 및 스페이스바 입력시 구동
     if (e.key === "Enter" || e.keyCode == 32) {
@@ -200,76 +198,75 @@ $(document).ready(function () {
 // 업로드 모달창 끝==========================================================================================================================
 
 // 게시물 상세보기 모달창 관련====================================================================================================================221212이태은
-async function CommunityDetail(community_id) {
-  const community = await getCommunityDetail(community_id);
+// async function CommunityDetail(community_id) {
+//   const community = await getCommunityDetail(community_id);
 
-  var detail_modals = document.getElementsByClassName("post-detail-modal-container"); // 모달창 띄우는 자바스크립트 시작
+//   var detail_modals = document.getElementsByClassName("post-detail-modal-container"); // 모달창 띄우는 자바스크립트 시작
 
-  var detail_btns = document.getElementsByClassName("card"); // Modal을 띄우는 클래스 이름을 가져옵니다.
+//   var detail_btns = document.getElementsByClassName("card-list"); // Modal을 띄우는 클래스 이름을 가져옵니다.
 
-  var detail_spanes = document.getElementsByClassName("post-detail-modal-close"); // Modal을 닫는 close 클래스를 가져옵니다.
-  var detail_funcs = [];
+//   var detail_spanes = document.getElementsByClassName("post-detail-modal-close"); // Modal을 닫는 close 클래스를 가져옵니다.
+//   var detail_funcs = [];
 
-  function DetailModal(num) {
-    // Modal을 띄우고 닫는 클릭 이벤트를 정의한 함수
-    return function () {
-      // 해당 클래스의 내용을 클릭하면 Modal을 띄웁니다.
-      detail_btns[num].onclick = function () {
-        detail_modals[num].style.display = "block";
-        console.log(num);
-      };
+//   function DetailModal(num) {
+//     // Modal을 띄우고 닫는 클릭 이벤트를 정의한 함수
+//     return function () {
+//       // 해당 클래스의 내용을 클릭하면 Modal을 띄웁니다.
+//       detail_btns[num].onclick = function () {
+//         detail_modals[num].style.display = "block";
+//       };
 
-      // <span> 태그(X 버튼)를 클릭하면 Modal이 닫습니다.
-      detail_spanes[num].onclick = function () {
-        detail_modals[num].style.display = "none";
-      };
-    };
-  }
+//       // <span> 태그(X 버튼)를 클릭하면 Modal이 닫습니다.
+//       detail_spanes[num].onclick = function () {
+//         detail_modals[num].style.display = "none";
+//       };
+//     };
+//   }
 
-  // 원하는 Modal 수만큼 Modal 함수를 호출해서 funcs 함수에 정의합니다.
-  for (var i = 0; i < detail_btns.length; i++) {
-    detail_funcs[i] = DetailModal(i);
-  }
+//   // 원하는 Modal 수만큼 Modal 함수를 호출해서 funcs 함수에 정의합니다.
+//   for (var i = 0; i < detail_btns.length; i++) {
+//     detail_funcs[i] = DetailModal(i);
+//   }
 
-  // 원하는 Modal 수만큼 funcs 함수를 호출합니다.
-  for (var j = 0; j < detail_btns.length; j++) {
-    detail_funcs[j]();
-  }
+//   // 원하는 Modal 수만큼 funcs 함수를 호출합니다.
+//   for (var j = 0; j < detail_btns.length; j++) {
+//     detail_funcs[j]();
+//   }
 
-  // Modal 영역 밖을 클릭하면 Modal을 닫습니다.
-  window.onclick = function (event) {
-    if (event.target.className == "post-detail-modal-container") {
-      event.target.style.display = "none";
-    }
-  };
+//   // Modal 영역 밖을 클릭하면 Modal을 닫습니다.
+//   window.onclick = function (event) {
+//     if (event.target.className == "post-detail-modal-container") {
+//       event.target.style.display = "none";
+//     }
+//   };
 
-  const image_box = document.getElementById("wrapper");
-  const image = document.createElement("img");
-  image.setAttribute("class", "image_box");
-  image.src = `${backend_base_url}${community.image}`;
-  image_box.appendChild(image);
+//   const image_box = document.getElementById("wrapper");
+//   const image = document.createElement("img");
+//   image.setAttribute("class", "image_box");
+//   image.src = `${backend_base_url}${community.image}`;
+//   image_box.appendChild(image);
 
-  const detail_user_title = document.getElementById("detail_user_title");
-  const user = document.createElement("input");
-  user.setAttribute("type", "text");
-  user.setAttribute("id", "title");
-  user.setAttribute("class", "post-title");
-  user.setAttribute("placeholder", "작성자 : " + community.user);
-  detail_user_title.appendChild(user);
+//   const detail_user_title = document.getElementById("detail_user_title");
+//   const user = document.createElement("input");
+//   user.setAttribute("type", "text");
+//   user.setAttribute("id", "title");
+//   user.setAttribute("class", "post-title");
+//   user.setAttribute("placeholder", "작성자 : " + community.user);
+//   detail_user_title.appendChild(user);
 
-  const title = document.createElement("input");
-  title.setAttribute("type", "text");
-  title.setAttribute("id", "title");
-  title.setAttribute("class", "post-title");
-  title.setAttribute("placeholder", "제목 : " + community.title);
-  detail_user_title.appendChild(title);
+//   const title = document.createElement("input");
+//   title.setAttribute("type", "text");
+//   title.setAttribute("id", "title");
+//   title.setAttribute("class", "post-title");
+//   title.setAttribute("placeholder", "제목 : " + community.title);
+//   detail_user_title.appendChild(title);
 
-  const detail_content = document.getElementById("detail_content");
-  const content = document.createElement("div");
-  content.setAttribute("class", "detail_content_box");
-  content.innerText = community.content;
-  detail_content.appendChild(content);
-}
+//   const detail_content = document.getElementById("detail_content");
+//   const content = document.createElement("div");
+//   content.setAttribute("class", "detail_content_box");
+//   content.innerText = community.content;
+//   detail_content.appendChild(content);
+// }
 
 // 커뮤니티 게시글 목록 조회
 async function Community() {
@@ -298,13 +295,14 @@ async function Community() {
 
     const newTitle = document.createElement("h2");
     const newContent = document.createElement("p");
+    newContent.setAttribute("class", "community-content")
     newTitle.innerText = community.title;
     newContent.innerText = community.content;
     newDescription.appendChild(newTitle);
     newDescription.appendChild(newContent);
 
-    newCard.setAttribute("id", community.id);
-    newCard.setAttribute("onclick", "CommunityDetail(this.id)");
+    newCard.setAttribute("id", community.id)
+    newCard.setAttribute("onclick", "getCommunityDetailPage(this.id)")
 
     card_list.appendChild(newCard);
   });
