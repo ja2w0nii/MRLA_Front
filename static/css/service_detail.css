@@ -185,6 +185,7 @@ section.main_section {
   display: grid;
   align-items: flex-start;
   overflow: auto;
+  margin-top: 140px;
   /* padding: 5px 5px; */
   /* border-radius: 20px; */
 
