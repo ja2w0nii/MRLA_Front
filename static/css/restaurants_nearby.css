@@ -171,7 +171,6 @@ section {
   /* border: 2px solid green; */
   height: 100%;
 }
-
 /* 위치 */
 .material-symbols-outlined {
   font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 200, "opsz" 48;
@@ -227,6 +226,7 @@ footer {
   margin: auto;
   width: 60vw;
   height: 75vh;
+  z-index: -1000;
 }
 #category {
   position: absolute;
