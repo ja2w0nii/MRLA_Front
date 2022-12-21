@@ -1,6 +1,8 @@
 // 전역 변수
-const backend_base_url = "http://127.0.0.1:8000";
-const frontend_base_url = "http://127.0.0.1:5500/templates";
+const backend_base_url = "https://www.mrla.tk";
+// const backend_base_url = "http://3.36.132.172";
+// const backend_base_url = "http://127.0.0.1:8000";
+const frontend_base_url = "";
 const token = localStorage.getItem("access");
 
 // 로그아웃
@@ -173,16 +175,8 @@ async function getLikeCommunityList(user_id) {
     },
     method: "GET",
   });
-
-  if (response.status == 200) {
-    response_json = await response.json();
-    return response_json;
-  } else if (response.status == 401) {
-    alert("권한이 없습니다!");
-    window.location.replace(`${frontend_base_url}/service.html`);
-  } else {
-    alert(response.status);
-  }
+  response_json = await response.json();
+  return response_json;
 }
 
 // 고객센터 게시글 조회
@@ -307,19 +301,89 @@ async function getFoodComment(food_id) {
   return response_json;
 }
 
-// 코멘트 등록
-async function loadcreateComment(comment) {
+// 메뉴 코멘트 등록
+async function postFoodComment(food_id, newComment) {
   const response = await fetch(`${backend_base_url}/foods/main/${food_id}/comment/`, {
     headers: {
-      "content-type": "applications/json",
+      "content-type": "application/json",
       Authorization: "Bearer " + localStorage.getItem("access"),
     },
     method: "POST",
     body: JSON.stringify({
-      food: food_id,
-      comment: comment,
+      comment: newComment,
     }),
   });
+
+  if (response.status == 200) {
+    alert("작성 완료!");
+    window.location.reload();
+  } else if (response.status == 400) {
+    alert("댓글을 작성해 주세요!");
+  } else {
+    alert(response.status);
+  }
+}
+
+// 메뉴 코멘트 수정
+async function loadUpdateFoodComment(comment_id) {
+  const input_comment = document.getElementById("modal_comment").value;
+
+  const response = await fetch(`${backend_base_url}/foods/main/${food_id}/comment/${comment_id}/`, {
+    headers: {
+      "content-type": "application/json",
+      Authorization: "Bearer " + localStorage.getItem("access"),
+    },
+    method: "PUT",
+    body: JSON.stringify({
+      menu_id: food_id,
+      comment: input_comment,
+    }),
+  });
+  response_json = await response.json();
+
+  if (response.status == 200) {
+    alert("수정이 완료되었습니다!");
+    window.location.replace(`${frontend_base_url}/food_detail.html?id=${food_id}`);
+  } else {
+    alert(response.status);
+  }
+}
+
+// 메뉴 코멘트 삭제
+async function loadDeleteFoodComment(comment_id) {
+  const response = await fetch(`${backend_base_url}/foods/main/${food_id}/comment/${comment_id}/`, {
+    headers: {
+      "content-type": "application/json",
+      Authorization: "Bearer " + localStorage.getItem("access"),
+    },
+    method: "DELETE",
+  });
+
+  if (response.status == 204) {
+    alert("해당 댓글을 삭제합니다.");
+    window.location.replace(`${frontend_base_url}/food_detail.html?id=${food_id}`);
+  } else {
+    alert(response.status);
+  }
+}
+
+// 메뉴 좋아요 등록/취소
+async function DoFoodLike(Food_id) {
+  const response = await fetch(`${backend_base_url}/foods/main/${food_id}/like/`, {
+    headers: {
+      "content-type": "application/json",
+      Authorization: "Bearer " + localStorage.getItem("access"),
+    },
+    method: "POST",
+  });
+  response_json = await response.json();
+
+  if (response.status == 200) {
+    window.location.replace(`${frontend_base_url}/food_detail.html?id=${food_id}`);
+    alert(response_json["message"]);
+  } else {
+    alert(response.status);
+  }
 }
 
 // 커뮤니티 게시글 목록 조회 //
@@ -334,7 +398,13 @@ async function getCommunity() {
   return response_json;
 }
 
-// 커뮤니티 게시글 상세 정보 조회 (모달) //
+// 커뮤니티 상세 페이지 연결 //
+function getCommunityDetailPage(community_id) {
+  const url = `${frontend_base_url}/community_detail.html?id=${community_id}`;
+  location.href = url;
+}
+
+// 커뮤니티 상세 페이지 _ 게시글 상세 정보 조회 //
 async function getCommunityDetail(community_id) {
   const response = await fetch(`${backend_base_url}/posts/community/${community_id}`, {
     headers: {
@@ -344,6 +414,138 @@ async function getCommunityDetail(community_id) {
   });
   response_json = await response.json();
   return response_json;
+}
+
+// 커뮤니티 상세 페이지 _ 게시글 상세 정보 수정 //
+async function putUpdateCommunityDetail(formdata) {
+  const response = await fetch(`${backend_base_url}/posts/community/${community_id}/`, {
+    headers: {
+      Authorization: "Bearer " + localStorage.getItem("access"),
+    },
+    method: "PUT",
+    body: formdata,
+  });
+  response_json = await response.json();
+
+  if (response.status == 200) {
+    alert("수정이 완료되었습니다!");
+    window.location.replace(`${frontend_base_url}/community_detail.html?id=${community_id}`);
+  } else {
+    alert(response.status);
+  }
+}
+
+// 커뮤니티 상세 페이지 _ 게시글 상세 정보 삭제 //
+async function loadDeleteCommunityDetail(community_id) {
+  const response = await fetch(`${backend_base_url}/posts/community/${community_id}/`, {
+    headers: {
+      "content-type": "application/json",
+      Authorization: "Bearer " + localStorage.getItem("access"),
+    },
+    method: "DELETE",
+  });
+
+  if (response.status == 204) {
+    alert("해당 게시글을 삭제합니다.");
+    window.location.replace(`${frontend_base_url}/community.html`);
+  } else {
+    alert(response.status);
+  }
+}
+
+// 커뮤니티 게시글 좋아요 등록/취소 //
+async function DoCommunityLike(community_id) {
+  const response = await fetch(`${backend_base_url}/posts/community/${community_id}/like/`, {
+    headers: {
+      "content-type": "application/json",
+      Authorization: "Bearer " + localStorage.getItem("access"),
+    },
+    method: "POST",
+  });
+  response_json = await response.json();
+
+  if (response.status == 200) {
+    window.location.replace(`${frontend_base_url}/community_detail.html?id=${community_id}`);
+    alert(response_json["message"]);
+  } else {
+    alert(response.status);
+  }
+}
+
+// 커뮤니티 상세 페이지 _ 댓글 조회 //
+async function getCommunityComment(community_id) {
+  const response = await fetch(`${backend_base_url}/posts/community/${community_id}/comment/`, {
+    headers: {
+      Authorization: "Bearer " + localStorage.getItem("access"),
+    },
+    method: "GET",
+  });
+  response_json = await response.json();
+  return response_json;
+}
+
+// 커뮤니티 상세 페이지 _ 댓글 작성 //
+async function postCreateCommunityComment(community_id, comment) {
+  const response = await fetch(`${backend_base_url}/posts/community/${community_id}/comment/`, {
+    headers: {
+      "content-type": "application/json",
+      Authorization: "Bearer " + localStorage.getItem("access"),
+    },
+    method: "POST",
+    body: JSON.stringify({
+      comment: comment,
+    }),
+  });
+
+  response_json = await response.json();
+
+  if (response.status == 200) {
+    window.location.replace(`${frontend_base_url}/community_detail.html?id=${community_id}`);
+  } else {
+    alert(response.status);
+  }
+}
+
+// 커뮤니티 상세 페이지 _ 댓글 수정 //
+async function putUpdateCommunityComment(comment_id) {
+  const input_comment = document.getElementById("modal_comment").value;
+
+  const response = await fetch(`${backend_base_url}/posts/community/${community_id}/comment/${comment_id}/`, {
+    headers: {
+      "content-type": "application/json",
+      Authorization: "Bearer " + localStorage.getItem("access"),
+    },
+    method: "PUT",
+    body: JSON.stringify({
+      comment: input_comment,
+    }),
+  });
+  response_json = await response.json();
+
+  if (response.status == 200) {
+    alert("수정이 완료되었습니다!");
+    window.location.replace(`${frontend_base_url}/community_detail.html?id=${community_id}`);
+  } else {
+    alert(response.status);
+  }
+}
+
+// 커뮤니티 상세 페이지 _ 댓글 삭제 //
+async function loadDeleteCommunityComment(comment_id) {
+  const response = await fetch(`${backend_base_url}/posts/community/${community_id}/comment/${comment_id}/`, {
+    headers: {
+      "content-type": "application/json",
+      Authorization: "Bearer " + localStorage.getItem("access"),
+    },
+    method: "DELETE",
+  });
+
+  if (response.status == 204) {
+    alert("해당 댓글을 삭제합니다.");
+    window.location.replace(`${frontend_base_url}/community_detail.html?id=${community_id}`);
+  } else {
+    alert(response.status);
+  }
 }
 
 // 커뮤니티 게시글 검색 페이지 연결 //

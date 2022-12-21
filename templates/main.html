@@ -1,122 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet" />
 
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet" />
+    <!-- CSS only -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css" />
 
-  <!-- CSS only -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <!-- jquery -->
+    <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-  <!-- jquery -->
-  <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- JavaScript Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+      crossorigin="anonymous"
+    ></script>
 
-  <!-- JavaScript Bundle with Popper -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
-    crossorigin="anonymous"></script>
+    <title>메추리알 | 홈페이지</title>
 
-  <title>메추리알 | 홈페이지</title>
+    <link rel="stylesheet" href="../static/css/main.css" />
+  </head>
 
-  <link rel="stylesheet" href="../static/css/main.css" />
-</head>
-
-<body>
-  <header>
-    <div class="header_small_box">
-      <h2 href="main.html" onclick="location.href='main.html'">메추리알</h2>
-      <a href="intro_2.html" class="category_return">🔍카테고리 다시 고르기</a>
-    </div>
-    <div id="profile_info_box" class="profile_info_box">
-      <div id="profile_img_box" class="profile_img_box"></div>
-      <div id="profile_name_box" class="nav-item dropdown">
-        <ul id="profile_dropdown" class="dropdown-menu dropdown-menu-dark"></ul>
+  <body>
+    <header>
+      <div class="header_small_box">
+        <h2 href="main.html" onclick="location.href='main.html'">메추리알</h2>
       </div>
-    </div>
-  </header>
-  <nav class="nav_box">
-    <div class="navContainer">
-      <div class="service1">
-        <div class="near_restaurant">
-          <a href="restaurants_nearby.html" onclick="location.href='restaurants_nearby.html'">
-            <span class="material-symbols-outlined"> location_on </span>
-            근처 맛집
-          </a>
-        </div>
-        <div class="who">
-          <a href="with_who.html" onclick="location.href='with_who.html'">
-            <span class="material-symbols-outlined"> groups </span>
-            누구랑 먹나요
-          </a>
-        </div>
-        <div class="community">
-          <a href="community.html" onclick="location.href='community.html'">
-            <span class="material-symbols-outlined">chat_bubble</span>
-            커뮤니티
-          </a>
-        </div>
-        <div class="service">
-          <a href="service.html" onclick="location.href='service.html'">
-            <span class="material-symbols-outlined">support_agent</span>
-            고객센터
-          </a>
+      <div id="profile_info_box" class="profile_info_box">
+        <div id="profile_img_box" class="profile_img_box"></div>
+        <div id="profile_name_box" class="nav-item dropdown">
+          <ul id="profile_dropdown" class="dropdown-menu dropdown-menu-dark"></ul>
         </div>
       </div>
-    </div>
-  </nav>
-  <section class="recommend_food_img_section">
-    <!-- 라운드  슬라이드 박스 -->
-    <div id="recommend_center" class="recommend_center">
-      <div id="recommend_box1" class="recommend_container1"></div>
-      <div id="recommend_box2" class="recommend_container2"></div>
-      <div id="recommend_box3" class="recommend_container3"></div>
-      <div id="recommend_box4" class="recommend_container4"></div>
-      <div id="recommend_box5" class="recommend_container5"></div>
-      <div id="recommend_box6" class="recommend_container6"></div>
-      <div id="recommend_box7" class="recommend_container7"></div>
-      <div class="slide_change_button">
-        <button id="ClickLeft" class="btn btn-warning">⬅️Click Left</button>
-        <button id="ClickRight" class="btn btn-warning">Click Right➡️</button>
-      </div>
-    </div>
-  </section>
-  <section class="sns_famous_restaurant_section">
-    <div id="sns_famous_restaurant_container" class="sns_famous_restaurant_container">
-      <div id="sns_slider-container">
-        <span onclick="slideRight()" class="btn"></span>
-        <div id="slider">
-          <div class="slide"><span>1</span></div>
-          <div class="slide"><span>2</span></div>
-          <div class="slide"><span>3</span></div>
-          <div class="slide"><span>4</span></div>
-          <div class="slide"><span>5</span></div>
-          <div class="slide"><span>6</span></div>
-          <div class="slide"><span>7</span></div>
-          <div class="slide"><span>8</span></div>
-          <div class="slide"><span>9</span></div>
-          <div class="slide"><span>10</span></div>
+    </header>
+    <nav class="nav_box">
+      <div class="navContainer">
+        <div class="service1">
+          <div class="near_restaurant">
+            <a href="restaurants_nearby.html" onclick="location.href='restaurants_nearby.html'">
+              <span class="material-symbols-outlined"> location_on </span>
+              근처 맛집
+            </a>
+          </div>
+          <div class="who">
+            <a href="with_who.html" onclick="location.href='with_who.html'">
+              <span class="material-symbols-outlined"> groups </span>
+              누구랑 먹나요
+            </a>
+          </div>
+          <div class="community">
+            <a href="community.html" onclick="location.href='community.html'">
+              <span class="material-symbols-outlined">chat_bubble</span>
+              커뮤니티
+            </a>
+          </div>
+          <div class="service">
+            <a href="service.html" onclick="location.href='service.html'">
+              <span class="material-symbols-outlined">support_agent</span>
+              고객센터
+            </a>
+          </div>
         </div>
-        <span onclick="slideLeft()" class="btn"></span>
       </div>
-    </div>
-  </section>
-  <!-- <footer>Footer 영역</footer> -->
-</body>
+    </nav>
+    <section class="recommend_food_img_section">
+      <!-- 라운드  슬라이드 박스 -->
+      <div id="recommend_center" class="recommend_center">
+        <div id="recommend_box1" class="recommend_container1"></div>
+        <div id="recommend_box2" class="recommend_container2"></div>
+        <div id="recommend_box3" class="recommend_container3"></div>
+        <div id="recommend_box4" class="recommend_container4"></div>
+        <div id="recommend_box5" class="recommend_container5"></div>
+        <div id="recommend_box6" class="recommend_container6"></div>
+        <div id="recommend_box7" class="recommend_container7"></div>
+        <div class="slide_change_button">
+          <button id="ClickLeft" class="btn btn-warning">⬅️Click Left</button>
+          <button id="ClickRight" class="btn btn-warning">Click Right➡️</button>
+        </div>
+      </div>
+    </section>
+    <section class="sns_famous_restaurant_section">
+      <div id="sns_famous_restaurant_container" class="sns_famous_restaurant_container">
+        <span class="slide_title">🔍추천 받고 싶은 음식 종류를 골라보세요!</span>
+        <div id="sns_slider-container">
+          <span onclick="slideRight()" class="btn"></span>
+          <div id="slider">
+            <div class="slide">
+              <a href="#" onclick="getMainPage(1)"><span>한식</span></a>
+            </div>
+            <div class="slide">
+              <a href="#" onclick="getMainPage(2)"><span>중식</span></a>
+            </div>
+            <div class="slide">
+              <a href="#" onclick="getMainPage(3)"><span>일식</span></a>
+            </div>
+            <div class="slide">
+              <a href="#" onclick="getMainPage(4)"><span>양식</span></a>
+            </div>
+            <div class="slide">
+              <a href="#" onclick="getMainPage(5)"><span>분식</span></a>
+            </div>
+            <div class="slide">
+              <a href="#" onclick="getMainPage(6)"><span>아시안</span></a>
+            </div>
+            <div class="slide">
+              <a href="#" onclick="getMainPage(7)"><span>야식</span></a>
+            </div>
+          </div>
+          <span onclick="slideLeft()" class="btn"></span>
+        </div>
+      </div>
+    </section>
+    <!-- <footer>Footer 영역</footer> -->
+  </body>
 
-<script src="../static/js/api.js"></script>
-<script src="../static/js/main.js"></script>
-
+  <script src="../static/js/api.js"></script>
+  <script src="../static/js/main.js"></script>
 </html>

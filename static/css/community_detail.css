@@ -57,8 +57,7 @@ header>h2:hover {
 
 /* 네비게이션=============================================*/
 .nav_box {
-    margin: -80px 0px;
-    position: fixed;
+    margin: 60px 0px 0px 0px;
     width: 100%;
     height: 60px;
     z-index: -1;
@@ -205,4 +204,500 @@ a.active {
 
 .community_detail {
     margin-top: 140px;
+}
+
+
+/* 게시글 상세 */
+.all-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.post-buttons {
+    margin: 5px 0px 30px 150px;
+}
+
+.detail-container {
+    margin-top: 20px;
+}
+
+.detail-box {
+    margin: 20px;
+    padding: 0px 10px;
+    background-color: rgb(241, 240, 240);
+    width: 700px;
+    height: 535px;
+    top: 100px;
+    border-radius: 10px;
+}
+
+.detail-small-box {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.detail-small-box-left {
+    width: 390px;
+    margin: 0px;
+}
+
+.detail-small-box-right {
+    width: 280px;
+}
+
+.detail_content {
+    width: 350px;
+    height: 400px;
+}
+
+.detail-small-box-img {
+    border-radius: 20px;
+    height: 410px;
+    width: 370px;
+    background-color: #a37d002f;
+    padding: 23px;
+    margin: 0px 10px;
+}
+
+.wrapper {
+    width: 325px;
+    height: 365px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.detail-small-box-text-title {
+    border-radius: 20px;
+    height: 50px;
+    width: 350px;
+    background-color: #a37d002f;
+    margin: 10px 10px;
+}
+
+.detail-small-box-text-content {
+    border-radius: 20px;
+    height: 300px;
+    width: 280px;
+    background-color: #a37d002f;
+    padding-top: 25px;
+}
+
+.detail_title {
+    width: 100%;
+    margin-top: 15px;
+}
+
+.image_box {
+    width: 100%;
+    height: 100%;
+}
+
+.detail-user-title {
+    display: flex;
+    flex-direction: row;
+}
+
+.detail_user {
+    cursor: pointer;
+}
+
+.like-box {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 10px 100px;
+}
+
+.post-like-count {
+    margin: 0px 100px 0px 10px;
+    font-size: 18px;
+}
+
+/* 댓글 */
+.comment-container {
+    width: 700px;
+    height: 700px;
+    padding-top: 20px;
+}
+
+.comment-box {
+    display: flex;
+    flex-direction: column;
+}
+
+.comment-inner-box {
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    border: solid 5px #FED049;
+    border-radius: 30px;
+    width: 700px;
+    height: 400px;
+}
+
+.small-comment-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 5px;
+    width: 680px;
+    padding: 5px;
+}
+
+.user_list {
+    list-style: none;
+    cursor: pointer;
+}
+
+.comment_list,
+.createdat_list {
+    list-style: none;
+}
+
+.create_button {
+    margin: 0px 5px;
+}
+
+.comment-input-box {
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+}
+
+.comment-input-inner-box {
+    width: 400px;
+}
+
+.comment_input_button {
+    margin: 0px 10px;
+    width: 100px;
+    height: 60px;
+    font-size: 20px;
+}
+
+/* 게시글 수정 (모달) */
+.post-upload-button-div {
+    border: 5px solid #fed049;
+    margin: 0px auto;
+    /* float: right; */
+    width: 90%;
+    text-align: right;
+    margin-bottom: 10px;
+}
+
+.post-upload-button {
+    background-color: #e74b24;
+    border-radius: 7px;
+    font-size: 16px;
+    border: 0px solid #e74b24;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+}
+
+.post-upload-button:hover {
+    font-weight: 500;
+    letter-spacing: 3px;
+    background-color: #e74b24;
+    transition: 1s;
+}
+
+/* 배경 */
+.post-upload-modal-container {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    /* 배경 어둡게 */
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* 게시물 업로드 모달창 */
+.post-upload-modal-box {
+    background-color: #fefefe;
+    margin: 150px auto;
+    padding: 20px 10px;
+    border: 1px solid rgb(153, 153, 153);
+    width: 900px;
+    /* height: 600px; */
+    top: 100px;
+    border-radius: 10px;
+}
+
+.post-upload-modal-top {
+    /* border: 2px solid rgb(255, 153, 0); */
+    height: 30px;
+    width: 100%;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.post-upload-modal-close {
+    float: right;
+    margin: 0 30px;
+    font-size: 30px;
+    text-decoration: none;
+}
+
+/*모달창 닫는 버튼*/
+.post-upload-modal-close:hover,
+.post-upload-modal-close:focus {
+    color: rgb(255, 187, 0);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.post-upload-modal-content {
+    /* border: 2px solid purple; */
+    /* height: 80%; */
+    width: 100%;
+    display: flex;
+}
+
+.post-upload-modal-content-img {
+    border-radius: 20px;
+    /* border: 2px solid purple; */
+    height: 100%;
+    width: 70%;
+    background-color: #a37d002f;
+    padding: 23px;
+    margin: 0 20px 20px;
+}
+
+/* 이미지 업로드 박스 */
+.flex-container {
+    border-radius: 20px;
+    display: flex;
+}
+
+.modal-wrapper {
+    border-radius: 20px;
+    text-align: center;
+    flex-grow: 1;
+}
+
+.image-box {
+    width: 350px;
+    height: 350px;
+    object-fit: cover;
+    display: block;
+    /* margin: 20px auto; */
+    padding: 10px 10px;
+    background-color: #ffffff;
+    border-radius: 20px;
+}
+
+.img-upload-btn {
+    width: 350px;
+    border: 1px solid #ddd;
+    padding: 6px 12px;
+    display: inline-block;
+    cursor: pointer;
+    background-color: #ffffff;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+.img-upload-btn>input[type="file"] {
+    display: none;
+    margin: 10px;
+}
+
+/* 텍스트 입력 하는 구역 */
+.post-upload-modal-content-text {
+    border-radius: 20px;
+    /* border: 2px solid purple; */
+    height: 100%;
+    width: 65%;
+    background-color: #a37d002f;
+    padding: 20px;
+    margin: 0 20px 0;
+}
+
+.post-modal-input-text {
+    /* padding: 10px 10px; */
+    height: 100%;
+    /* border: 2px solid rgb(241, 13, 241); */
+}
+
+.post-modal-input-text-top {
+    width: 100%;
+    height: 15%;
+    margin-bottom: 20px;
+    margin-left: 20px;
+}
+
+.post-modal-input-text-bottom {
+    width: 100%;
+    height: 50%;
+}
+
+.post-title {
+    text-align: left;
+    padding: 10px;
+    display: flex;
+    width: 90%;
+    height: 32px;
+    font-size: 15px;
+    border: 0;
+    border-radius: 20px;
+    outline: none;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+.post-location {
+    text-align: left;
+    padding: 5px;
+    width: 260px;
+    height: 35px;
+    font-size: 18px;
+    border-radius: 20px;
+    background-color: white;
+}
+
+.post-update-location, .post-tag {
+    text-align: left;
+    padding: 10px;
+    width: 41%;
+    height: 32px;
+    font-size: 15px;
+    border: 0;
+    border-radius: 20px;
+    outline: none;
+    background-color: white;
+}
+
+.tag-plus {
+    border: 1px rgba(46, 9, 9, 0.281) solid;
+    text-align: left;
+    padding: 10px;
+    /* display: flex; */
+    width: 90%;
+    height: 45px;
+    font-size: 15px;
+    border-radius: 10px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    overflow: auto;
+}
+
+/* 아래의 모든 코드는 영역::코드로 사용 */
+.tag-plus::-webkit-scrollbar {
+    width: 10px;
+    /* 스크롤바의 너비 */
+}
+
+.tag-plus::-webkit-scrollbar-thumb {
+    height: 30%;
+    /* 스크롤바의 길이 */
+    background: #8a5300;
+    /* 스크롤바의 색상 */
+    border-radius: 10px;
+}
+
+.tag-plus::-webkit-scrollbar-track {
+    background: rgba(33, 122, 244, 0.1);
+    /*스크롤바 뒷 배경 색상*/
+}
+
+/* 태그 관련 css============================================================ 2221211 이태은*/
+
+.tag-box ul li {
+    display: inline-block;
+    margin: 0 5px 5px;
+    font-size: 14px;
+    letter-spacing: -0.5px;
+}
+
+.tag-box form {
+    padding-top: 16px;
+}
+
+.tag-wright {
+    text-align: left;
+    padding: 10px;
+    width: 41%;
+    height: 32px;
+    font-size: 15px;
+    border: 0;
+    border-radius: 20px;
+    outline: none;
+    background-color: antiquewhite;
+}
+
+ul li.tag-item {
+    padding: 4px 8px;
+    background-color: orange;
+    color: #000;
+    border-radius: 10px;
+}
+
+.tag-item:hover {
+    background-color: #262626;
+    color: #fff;
+}
+
+.del-btn {
+    font-size: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-left: 8px;
+}
+
+/* =============태그 관련 끝 */
+/* 텍스트 수 제한 textarea */
+.text_box {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+.detail_content_box {
+    background-color: white;
+    width: 75%;
+    height: 280px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    color: #666;
+    font-family: "ht_r";
+    font-size: 15px;
+    line-height: 28px;
+    outline: 0;
+    resize: none;
+    border-radius: 20px;
+    overflow: auto;
+    margin: -15px 0px 8px 8px;
+}
+
+.post-modal-upload-button {
+    /* border: 2px solid purple; */
+    width: 100%;
+    display: flex;
+}
+
+/* 커뮤니티 업로드 버튼 */
+.community-upload-btn {
+    width: 150px;
+    border: 1px solid #ddd;
+    padding: 6px 12px;
+    display: inline-block;
+    cursor: pointer;
+    background-color: #ffd1fd;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 20px;
+}
+
+.community-upload-btn:hover {
+    background-color: #ff8ef9;
+}
+
+.community_content {
+    width: 300px;
+    height: 200px;
 }

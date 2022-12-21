@@ -12,46 +12,46 @@ async function ProfileInfo() {
 
   const profile_img_box = document.getElementById("profile_img_box");
   let newImage = document.createElement("img");
-  newImage.setAttribute("id", login_user.id)
-  newImage.setAttribute("class", "dropdown_profile_img")
+  newImage.setAttribute("id", login_user.id);
+  newImage.setAttribute("class", "dropdown_profile_img");
   newImage.src = `${backend_base_url}${login_user.profile_img}`;
   profile_img_box.appendChild(newImage);
 
   const profile_name_box = document.getElementById("profile_name_box");
-  const newNickname = document.createElement("a")
-  newNickname.setAttribute("id", login_user.id)
-  newNickname.setAttribute("class", "nav-link dropdown-toggle")
-  newNickname.setAttribute("href", "#")
-  newNickname.setAttribute("role", "button")
-  newNickname.setAttribute("data-bs-toggle", "dropdown")
-  newNickname.setAttribute("aria-expanded", "false")
-  newNickname.innerText = login_user.nickname
-  profile_name_box.appendChild(newNickname)
+  const newNickname = document.createElement("a");
+  newNickname.setAttribute("id", login_user.id);
+  newNickname.setAttribute("class", "nav-link dropdown-toggle");
+  newNickname.setAttribute("href", "#");
+  newNickname.setAttribute("role", "button");
+  newNickname.setAttribute("data-bs-toggle", "dropdown");
+  newNickname.setAttribute("aria-expanded", "false");
+  newNickname.innerText = login_user.nickname;
+  profile_name_box.appendChild(newNickname);
 
-  const profile_dropdown = document.getElementById("profile_dropdown")
-  const newItem = document.createElement("li")
-  newItem.setAttribute("class", "dropdown-item-box")
-  profile_dropdown.appendChild(newItem)
+  const profile_dropdown = document.getElementById("profile_dropdown");
+  const newItem = document.createElement("li");
+  newItem.setAttribute("class", "dropdown-item-box");
+  profile_dropdown.appendChild(newItem);
 
-  const newItem_a = document.createElement("a")
-  newItem_a.setAttribute("id", login_user.id)
-  newItem_a.setAttribute("class", "dropdown-item")
-  newItem_a.setAttribute("onclick", "getProfilePage(this.id)")
-  newItem_a.innerText = "My 프로필"
-  newItem.appendChild(newItem_a)
+  const newItem_a = document.createElement("a");
+  newItem_a.setAttribute("id", login_user.id);
+  newItem_a.setAttribute("class", "dropdown-item");
+  newItem_a.setAttribute("onclick", "getProfilePage(this.id)");
+  newItem_a.innerText = "My 프로필";
+  newItem.appendChild(newItem_a);
 
-  const newItem2 = document.createElement("li")
-  newItem2.setAttribute("class", "dropdown-item-box")
-  profile_dropdown.appendChild(newItem2)
+  const newItem2 = document.createElement("li");
+  newItem2.setAttribute("class", "dropdown-item-box");
+  profile_dropdown.appendChild(newItem2);
 
-  const newItem_a2 = document.createElement("a")
-  newItem_a2.setAttribute("id", login_user.id)
-  newItem_a2.setAttribute("class", "dropdown-item")
-  newItem_a2.setAttribute("onclick", "handleLogout()")
-  newItem_a2.innerText = "로그아웃"
-  newItem2.appendChild(newItem_a2)
+  const newItem_a2 = document.createElement("a");
+  newItem_a2.setAttribute("id", login_user.id);
+  newItem_a2.setAttribute("class", "dropdown-item");
+  newItem_a2.setAttribute("onclick", "handleLogout()");
+  newItem_a2.innerText = "로그아웃";
+  newItem2.appendChild(newItem_a2);
 }
-ProfileInfo()
+ProfileInfo();
 
 async function Profile(user_id) {
   profile = await getProfile(user_id);
@@ -140,7 +140,7 @@ async function Profile(user_id) {
   like_community_button.innerText = "커뮤니티";
   like_community_button.setAttribute("id", user_id);
   like_community_button.setAttribute("type", "button");
-  like_community_button.setAttribute("class", "btn btn-outline-dark profile");
+  like_community_button.setAttribute("class", "btn btn-dark profile");
   like_community_button.setAttribute("onclick", "getProfileCommunityPage(this.id)");
 
   const like_community_icon = document.createElement("i");
@@ -189,29 +189,30 @@ async function LikeCommunityList(user_id) {
   communities.forEach((community) => {
     const newCard = document.createElement("li");
     newCard.setAttribute("class", "card");
-    newCard.setAttribute("id", "card");
+    newCard.setAttribute("id", community.id);
+    newCard.setAttribute("onclick", "getCommunityDetailPage(this.id)");
 
     const newImg = document.createElement("a");
     newImg.setAttribute("class", "card-image");
-    newImg.src = `https://storage.googleapis.com/jjalbot/2018/12/IPJVU9tjx/zzal.jpg`;
-    newImg.setAttribute("style", newImg.src);
-    newImg.setAttribute("data-image-full", newImg.src);
+    newImg.src = `${backend_base_url}${community.image}`;
+    newCard.appendChild(newImg);
 
     const image = document.createElement("img");
-    image.src = `https://storage.googleapis.com/jjalbot/2018/12/IPJVU9tjx/zzal.jpg`;
+    image.src = `${backend_base_url}${community.image}`;
     image.setAttribute("alt", "Psychopomp");
     newImg.appendChild(image);
-    newCard.appendChild(newImg);
 
     const newDescription = document.createElement("a");
     newDescription.setAttribute("class", "card-description");
     newCard.appendChild(newDescription);
 
     const newTitle = document.createElement("h2");
-    const newContent = document.createElement("p");
     newTitle.innerText = community.title;
-    newContent.innerText = community.content;
     newDescription.appendChild(newTitle);
+
+    const newContent = document.createElement("p");
+    newContent.setAttribute("class", "community-content");
+    newContent.innerText = community.content;
     newDescription.appendChild(newContent);
 
     card_list.appendChild(newCard);
