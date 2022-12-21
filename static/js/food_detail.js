@@ -5,7 +5,6 @@ if (!token) {
 const urlParams = new URLSearchParams(window.location.search);
 const food_id = urlParams.get("id");
 
-
 // 프로필 드롭다운 가져오기
 async function ProfileInfo() {
   login_user = await getName();
@@ -62,16 +61,17 @@ window.onload = async function loadFooddetail() {
   const food_image = document.getElementById("viewer");
   food_image.src = response_json.image;
 
+  const find_restaurant = document.getElementById("find-restaurant");
+  find_restaurant.setAttribute("onclick", "getNearRestaurant(food.menu)");
 
   comments = await getFoodComment(food_id);
   login_user = await getName();
 
-  const commentList = document.getElementById("comment-list")
+  const commentList = document.getElementById("comment-list");
 
-  comments.forEach(comment => {
+  comments.forEach((comment) => {
     const newComment_box = document.createElement("div");
-    newComment_box.setAttribute("class", "comment-div")
-    console.log(comment)
+    newComment_box.setAttribute("class", "comment-div");
 
     newComment_box.innerHTML += `
     <li class="media">
@@ -79,7 +79,7 @@ window.onload = async function loadFooddetail() {
       <h4 class="mt-0 mb-10">${comment.user_nickname} |</h4> 
       ${comment.comment}
     </div>  
-    `
+    `;
 
     const update_comment_button = document.createElement("button");
     const delete_comment_button = document.createElement("button");
@@ -107,17 +107,17 @@ window.onload = async function loadFooddetail() {
     }
   });
   const like_button = document.getElementById("food-like-button");
-  like_button.setAttribute("id", food.id)
-  like_button.setAttribute("onclick", "DoFoodLike(this.id)")
+  like_button.setAttribute("id", food.id);
+  like_button.setAttribute("onclick", "DoFoodLike(this.id)");
 
   const like_count = document.getElementById("food-like-count");
   like_count.innerText = food.likes + " 명이 좋아합니다.";
-}
+};
 
 // 댓글 작성
 async function submitComment() {
   const newComment = document.getElementById("new-comment").value;
-  const response = await postFoodComment(food_id, newComment)
+  const response = await postFoodComment(food_id, newComment);
 }
 
 // 댓글 수정
