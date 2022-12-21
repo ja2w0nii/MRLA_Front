@@ -51,7 +51,7 @@ async function handleSignIn() {
         return false
     }
 
-    const response = await fetch('http://127.0.0.1:8000/users/api/token/', {
+    const response = await fetch(`${backend_base_url}/users/api/token/`, {
         headers: {
             'content-type': 'application/json',
         },
@@ -80,7 +80,6 @@ async function handleSignIn() {
     
     
         localStorage.setItem("payload", jsonPayload);
-        window.location.href = 'intro_2.html'
       } 
         else{
             for(var key in response_json) {
@@ -159,7 +158,7 @@ async function handleSignIn() {
 async function handleKakao() {
     let code = new URL(window.location.href).searchParams.get('code')
     if (code) {
-        const response = await fetch('http://127.0.0.1:8000/users/kakao/callback/', {
+        const response = await fetch(`${backend_base_url}/users/kakao/callback/`, {
             
             headers: {
                 'content-type': 'application/json',
@@ -191,10 +190,6 @@ window.onload  = function(){
 
 
 
-//---------------------------------------------------------------------------------------------//
-//---------------------------------------------------------------------------------------------//
-//signUp//
-// 입력 없으면 표시 
 
 async function check_value() {
     const forms = document.getElementsByClassName('validation-form');
@@ -208,18 +203,6 @@ async function check_value() {
         }, false);
     });
 }
-// window.addEventListener('load', () => {
-//     const forms = document.getElementsByClassName('validation-form');
-//     Array.prototype.filter.call(forms, (form) => {
-//         form.addEventListener('submit', function(event) {
-//             if (form.checkValidity() === false) {
-//                 event.preventDefault();
-//                 event.stopPropagation();
-//             }
-//             form.classList.add('was-validated');
-//         }, false);
-//     });
-// }, false);
 
 async function handleSignUp() {
     const email = document.getElementById("email").value
@@ -227,7 +210,7 @@ async function handleSignUp() {
     const password_check = document.getElementById("password_check").value
     const nickname = document.getElementById("nickname").value
         // const response = await fetch('http://127.0.0.1:8000/users/signup/', {
-    const response = await fetch('http://127.0.0.1:8000/users/signup/', {
+    const response = await fetch(`${backend_base_url}/users/signup/`, {
         headers: {
             'content-type': 'application/json',
         },
