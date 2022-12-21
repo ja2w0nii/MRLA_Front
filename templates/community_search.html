@@ -42,15 +42,41 @@
 
     <title>메추리알 | 커뮤니티 검색</title>
 
-    <link rel="stylesheet" href="../static/css/community_search.css" />
-  </head>
-  <body>
-    <header>
+  <link rel="stylesheet" href="../static/css/community_search.css" />
+</head>
+
+<body>
+  <header>
+    <div class="header_small_box">
       <h2 href="main.html" onclick="location.href='main.html'">메추리알</h2>
-      <div id="profile_info_box" class="profile_info_box">
-        <div id="profile_img_box" class="profile_img_box"></div>
-        <div id="profile_name_box" class="nav-item dropdown">
-          <ul id="profile_dropdown" class="dropdown-menu dropdown-menu-dark"></ul>
+    </div>
+    <div id="profile_info_box" class="profile_info_box">
+      <div id="profile_img_box" class="profile_img_box"></div>
+      <div id="profile_name_box" class="nav-item dropdown">
+        <ul id="profile_dropdown" class="dropdown-menu dropdown-menu-dark"></ul>
+      </div>
+    </div>
+  </header>
+  <nav class="nav_box">
+    <div class="navContainer">
+      <div class="service1">
+        <div class="near_restaurant">
+          <a href="restaurants_nearby.html" onclick="location.href='restaurants_nearby.html'">
+            <span class="material-symbols-outlined"> location_on </span>
+            근처 맛집
+          </a>
+        </div>
+        <div class="who">
+          <a href="with_who.html" onclick="location.href='with_who.html'">
+            <span class="material-symbols-outlined"> groups </span>
+            누구랑 먹나요
+          </a>
+        </div>
+        <div class="community">
+          <a href="community.html" onclick="location.href='community.html'">
+            <span class="material-symbols-outlined">chat_bubble</span>
+            커뮤니티
+          </a>
         </div>
       </div>
     </header>
@@ -94,10 +120,8 @@
         <div class="search_field" id="search"></div>
       </div>
     </section>
-
-    <footer>Footer 영역</footer>
-
-    <script type="text/javascript" src="../static/js/api.js"></script>
-    <script type="text/javascript" src="../static/js/community_search.js"></script>
-  </body>
+</body>
+<script type="text/javascript" src="../static/js/api.js"></script>
+<script type="text/javascript" src="../static/js/community_search.js"></script>
+  
 </html>

@@ -65,7 +65,7 @@ async function CommunityDetail(community_id) {
   image_box.appendChild(image);
 
   const detail_user = document.getElementById("detail_user");
-  const user = document.createElement("h5");
+  const user = document.createElement("p");
   user.innerText = community.user_nickname
   user.setAttribute("id", community.user)
   user.setAttribute("onclick", "getProfilePage(this.id)")
@@ -101,12 +101,14 @@ async function CommunityDetail(community_id) {
 
   for (i in community.likes) {
     if (userinfo.id == community.likes[i]) {
-      like_button.setAttribute("class", "btn btn-danger")
+      like_button.setAttribute("class", "material-symbols-sharp")
       break;
     } else {
-      like_button.setAttribute("class", "btn btn-outline-danger")
+      like_button.setAttribute("class", "material-symbols-outlined")
     }
   }
+
+
 
   const like_count = document.getElementById("post-like-count");
   like_number = community.likes.length;
@@ -285,12 +287,12 @@ async function CommunityComment(community_id) {
     delete_comment_button.innerText = "삭제";
 
     update_comment_button.setAttribute("id", comment.id);
-    update_comment_button.setAttribute("class", "btn btn-success create_button");
+    update_comment_button.setAttribute("class", "update_comment_button btn btn-success create_button");
     update_comment_button.setAttribute("data-bs-toggle", "modal");
     update_comment_button.setAttribute("data-bs-target", "#exampleModal");
 
     delete_comment_button.setAttribute("id", comment.id);
-    delete_comment_button.setAttribute("class", "btn btn-danger create_button");
+    delete_comment_button.setAttribute("class", "delete_comment_button btn btn-danger create_button");
     update_comment_button.setAttribute("onclick", "UpdateCommunityComment(this.id)");
     delete_comment_button.setAttribute("onclick", "DeleteCommunityComment(this.id)");
     newComment_box.appendChild(update_comment_button);

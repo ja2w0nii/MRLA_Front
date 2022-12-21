@@ -1,21 +1,11 @@
 /* 전체 설정 */
 * {
+  font-family: "Jua", sans-serif;
   text-align: center;
   margin: auto;
-  font-family: "Jua", sans-serif;
 }
 
-button {
-  cursor: pointer;
-  transition: all 0.2s linear;
-}
-
-button:hover {
-  background-color: rgb(237, 177, 135);
-  transform: scale(1.2);
-}
-
-/* 헤더============================================= 221205 이태은 */
+/* 헤더=============================================*/
 header {
   background-color: #fed049;
   width: 100%;
@@ -24,16 +14,22 @@ header {
   align-items: center;
   justify-content: space-between;
   position: fixed;
+  z-index: 1000;
   top: 0;
 }
 
-header > h2 {
-  margin: 0px 30px;
-  width: 120px;
+.header_small_box {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 30px;
+  cursor: pointer;
 }
 
-header > h2:hover {
-  color: #000000;
+.category_return {
+  margin: 0px 10px;
+  text-decoration-line: none;
+  color: red;
   cursor: pointer;
 }
 
@@ -63,13 +59,14 @@ header > h2:hover {
   cursor: pointer;
 }
 
-/* 네비게이션=============================================*/
+
+/* 네비게이션============================================= */
 .nav_box {
-  margin: -80px 0px;
+  border: 1px solid red;
+top: 70px;
   position: fixed;
   width: 100%;
-  height: 60px;
-  z-index: -1;
+
 }
 
 .navContainer {
@@ -84,7 +81,7 @@ header > h2:hover {
 }
 
 .service1 {
-  width: 60%;
+  width: 80%;
 }
 
 .near_restaurant {
@@ -165,34 +162,14 @@ ul {
   padding-left: 0px;
 }
 
-nav {
-  margin: 10px 10px;
-  height: 100%;
-}
-
-nav ul {
-  border: 2px solid red;
-  width: 40%;
-  margin: 0px auto;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
 
 nav a {
   text-decoration-line: none;
   color: grey;
 }
 
-nav ul > li {
-  font-size: 20px;
-  height: 100%;
-  display: flex;
-  align-items: center;
-}
-
 section {
+  /* border: 2px solid green; */
   height: 100%;
 }
 
@@ -244,6 +221,8 @@ button:hover + p.arrow_box {
   width: 50%;
   display: flex;
   flex-direction: row;
+  justify-content: center;
+  margin-bottom: 20px;
 }
 
 .target {
@@ -266,11 +245,27 @@ button:hover + p.arrow_box {
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  width: 100vw;
-  height: 550px;
-  padding-bottom: 30px;
+
+  width: 95vw;
+  height: 65vh;
+  padding: 30px;
   background-color: rgb(248, 248, 236);
-  border: solid 5px #fed049;
+  border: solid 5px #FED049;
+  overflow: overlay;
+}
+.target_foods::-webkit-scrollbar {
+  width: 10px; /* 스크롤바의 너비 */
+}
+
+.target_foods::-webkit-scrollbar-thumb {
+  height: 30%; /* 스크롤바의 길이 */
+  background: #8a5300; /* 스크롤바의 색상 */
+
+  border-radius: 10px;
+}
+
+.target_foods::-webkit-scrollbar-track {
+  background: rgba(33, 122, 244, 0.1); /*스크롤바 뒷 배경 색상*/
 }
 
 div.odd {

@@ -1,126 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
-    />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-    <!-- jquery -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet" />
+  <!-- jquery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-    <!-- CSS -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
-      crossorigin="anonymous"
-    />
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet" />
 
-    <!-- JavaScript Bundle with Popper -->
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
-      crossorigin="anonymous"
-    ></script>
+  <!-- CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous" />
 
-    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <!-- JavaScript Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+    crossorigin="anonymous"></script>
 
-    <title>메추리알 | 고객센터</title>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
-    <link rel="stylesheet" href="../static/css/service.css" />
-  </head>
+  <link rel="stylesheet" href="../static/css/service.css" />
 
-  <body>
-    <!-- Modal -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h1 class="modal-title fs-4" id="exampleModalLabel">수정/삭제가 불가능하오니 신중히 작성 바랍니다.</h1>
+  <title>메추리알 | 고객센터</title>
+</head>
+
+<body>
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-4" id="exampleModalLabel">수정/삭제가 불가능하오니 신중히 작성 바랍니다.</h1>
+        </div>
+        <div class="modal-body">
+          <h6>제목</h6>
+          <input type="text" class="service_title" id="service_title" size="105" placeholder="50자 미만으로 작성하여 주십시오" />
+          <br />
+          <h6>내용</h6>
+          <div class="text_box">
+            <textarea class="service_content" id="service_content" cols="105" rows="10"></textarea>
+            <div class="count"><span>0</span>/200</div>
           </div>
-          <div class="modal-body">
-            <h6>제목</h6>
-            <input type="text" class="service_title" id="service_title" size="105" placeholder="50자 미만으로 작성하여 주십시오" />
-            <br />
-            <h6>내용</h6>
-            <div class="text_box">
-              <textarea class="service_content" id="service_content" cols="105" rows="10"></textarea>
-              <div class="count"><span>0</span>/200</div>
-            </div>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn-primary" onclick="loadpostService()">확인</button>
-            <button type="button" class="btn-secondary" data-bs-dismiss="modal">취소</button>
-          </div>
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn-primary" onclick="loadpostService()">확인</button>
+          <button type="button" class="btn-secondary" data-bs-dismiss="modal">취소</button>
         </div>
       </div>
     </div>
+  </div>
 
-    <header>
+  <header>
+    <div class="header_small_box">
       <h2 href="main.html" onclick="location.href='main.html'">메추리알</h2>
-      <div id="profile_info_box" class="profile_info_box">
-        <div id="profile_img_box" class="profile_img_box"></div>
-        <div id="profile_name_box" class="nav-item dropdown">
-          <ul id="profile_dropdown" class="dropdown-menu dropdown-menu-dark"></ul>
+    </div>
+    <div id="profile_info_box" class="profile_info_box">
+      <div id="profile_img_box" class="profile_img_box"></div>
+      <div id="profile_name_box" class="nav-item dropdown">
+        <ul id="profile_dropdown" class="dropdown-menu dropdown-menu-dark"></ul>
+      </div>
+    </div>
+  </header>
+  <nav class="nav_box">
+    <div class="navContainer">
+      <div class="service1">
+        <div class="near_restaurant">
+          <a href="restaurants_nearby.html" onclick="location.href='restaurants_nearby.html'">
+            <span class="material-symbols-outlined"> location_on </span>
+            근처 맛집
+          </a>
+        </div>
+        <div class="who">
+          <a href="with_who.html" onclick="location.href='with_who.html'">
+            <span class="material-symbols-outlined"> groups </span>
+            누구랑 먹나요
+          </a>
+        </div>
+        <div class="community">
+          <a href="community.html" onclick="location.href='community.html'">
+            <span class="material-symbols-outlined">chat_bubble</span>
+            커뮤니티
+          </a>
+        </div>
+        <div class="service">
+          <a href="service.html" onclick="location.href='service.html'">
+            <span class="material-symbols-outlined">support_agent</span>
+            고객센터
+          </a>
         </div>
       </div>
-    </header>
-    <nav class="nav_box">
-      <div class="navContainer">
-        <div class="service1">
-          <div class="near_restaurant">
-            <a href="restaurants_nearby.html" onclick="location.href='restaurants_nearby.html'">
-              <span class="material-symbols-outlined"> location_on </span>
-              근처 맛집
-            </a>
-          </div>
-          <div class="who">
-            <a href="with_who.html" onclick="location.href='with_who.html'">
-              <span class="material-symbols-outlined"> groups </span>
-              누구랑 먹나요
-            </a>
-          </div>
-          <div class="community">
-            <a href="community.html" onclick="location.href='community.html'">
-              <span class="material-symbols-outlined">chat_bubble</span>
-              커뮤니티
-            </a>
-          </div>
-          <div class="service">
-            <a href="service.html" onclick="location.href='service.html'">
-              <span class="material-symbols-outlined">support_agent</span>
-              고객센터
-            </a>
-          </div>
-        </div>
-      </div>
-    </nav>
+    </div>
+  </nav>
 
-    <section id="main_section" class="main_section">
-      <span class="service_nav">
-        <p id="" class="service_id">No.</p>
-        <p id="" class="service_title">제목</p>
-        <p id="" class="service_user">작성자</p>
-        <p id="" class="service_created_at">작성 시간</p>
-      </span>
-    </section>
-    <button type="button" class="btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">문의하기</button>
+  <section id="main_section" class="main_section">
+    <span class="service_nav">
+      <p id="" class="service_id">No.</p>
+      <p id="" class="service_title">제목</p>
+      <p id="" class="service_user">작성자</p>
+      <p id="" class="service_created_at">작성 시간</p>
+    </span>
+  </section>
+  <button type="button" class="btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">문의하기</button>
+  <script type="text/javascript" src="../static/js/api.js"></script>
+  <script type="text/javascript" src="../static/js/service.js"></script>
+</body>
 
-    <footer>Footer 영역</footer>
-
-    <script type="text/javascript" src="../static/js/api.js"></script>
-    <script type="text/javascript" src="../static/js/service.js"></script>
-  </body>
 </html>
