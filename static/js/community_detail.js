@@ -65,7 +65,7 @@ async function CommunityDetail(community_id) {
   image_box.appendChild(image);
 
   const detail_user = document.getElementById("detail_user");
-  const user = document.createElement("h5");
+  const user = document.createElement("p");
   user.innerText = community.user
   detail_user.appendChild(user);
 
@@ -98,12 +98,14 @@ async function CommunityDetail(community_id) {
 
   for (i in community.likes) {
     if (userinfo.id == community.likes[i]) {
-      like_button.setAttribute("class", "btn btn-danger")
+      like_button.setAttribute("class", "material-symbols-sharp")
       break;
     } else {
-      like_button.setAttribute("class", "btn btn-outline-danger")
+      like_button.setAttribute("class", "material-symbols-outlined")
     }
   }
+
+
 
   const like_count = document.getElementById("post-like-count");
   like_number = community.likes.length;
