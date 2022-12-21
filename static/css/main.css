@@ -65,6 +65,7 @@ header {
 top: 70px;
   position: fixed;
   width: 100%;
+  z-index: 100;
 
 }
 
