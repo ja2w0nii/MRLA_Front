@@ -73,7 +73,7 @@ async function handleSignIn() {
     );
     localStorage.setItem("payload", jsonPayload);
 
-    window.location.href = "main.html";
+    window.location.href = "main.html?id=1";
   } else {
     alert("아이디, 비밀번호를 확인하세요!");
   }
