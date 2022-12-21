@@ -1,17 +1,11 @@
 /* 전체 설정 */
 * {
-  margin: auto;
   font-family: "Jua", sans-serif;
+  text-align: center;
+  margin: auto;
 }
 
-body {
-  background-color: whitesmoke;
-  height: 100vh;
-  display: grid;
-  place-items: center;
-}
-
-/* 헤더============================================= */
+/* 헤더=============================================*/
 header {
   background-color: #fed049;
   width: 100%;
@@ -20,16 +14,22 @@ header {
   align-items: center;
   justify-content: space-between;
   position: fixed;
+  z-index: 1000;
   top: 0;
 }
 
-header > h2 {
-  margin: 0px 30px;
-  width: 120px;
+.header_small_box {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 30px;
+  cursor: pointer;
 }
 
-header > h2:hover {
-  color: #000000;
+.category_return {
+  margin: 0px 10px;
+  text-decoration-line: none;
+  color: red;
   cursor: pointer;
 }
 
@@ -59,11 +59,12 @@ header > h2:hover {
   cursor: pointer;
 }
 
-/* 네비게이션=============================================*/
+/* 네비게이션============================================= */
 .nav_box {
-  margin-top: 60px;
+top: 70px;
+  position: fixed;
   width: 100%;
-  height: 60px;
+
 }
 
 .navContainer {
@@ -78,7 +79,7 @@ header > h2:hover {
 }
 
 .service1 {
-  width: 60%;
+  width: 80%;
 }
 
 .near_restaurant {
@@ -90,7 +91,6 @@ header > h2:hover {
   text-decoration-line: none;
   font-size: 20px;
   font-weight: 500;
-  text-align: center;
 }
 
 .near_restaurant:hover {
@@ -110,7 +110,6 @@ header > h2:hover {
   box-sizing: border-box;
   font-size: 20px;
   font-weight: 500;
-  text-align: center;
 }
 
 .who:hover {
@@ -129,7 +128,6 @@ header > h2:hover {
   box-sizing: border-box;
   font-size: 20px;
   font-weight: 500;
-  text-align: center;
 }
 
 .community:hover {
@@ -148,7 +146,6 @@ header > h2:hover {
   box-sizing: border-box;
   font-size: 20px;
   font-weight: 500;
-  text-align: center;
 }
 
 .service:hover {
@@ -163,40 +160,21 @@ ul {
   padding-left: 0px;
 }
 
-nav {
-  /* border: 2px solid blue; */
-  margin: 10px 10px;
-  /* background-color: orange; */
-  height: 100%;
-}
-
-nav ul {
-  border: 2px solid red;
-  width: 40%;
-  margin: 0px auto;
-  height: 100%;
-  display: flex;
-  align-items: center;
-
-  justify-content: space-between;
-}
 
 nav a {
   text-decoration-line: none;
   color: grey;
 }
 
-nav ul > li {
-  font-size: 20px;
-  height: 100%;
-  display: flex;
-  align-items: center;
-}
-
 section {
   /* border: 2px solid green; */
   height: 100%;
 }
+
+
+
+
+
 
 /* 위치 */
 .material-symbols-outlined {
@@ -227,19 +205,28 @@ input {
 }
 
 img {
-  width: 400px;
-  height: 300px;
+  max-width: 80%;
+  max-height: 50vh;
 }
 
 .container-post-detail {
-  width: 70%;
+  background-color: #fed049;
+  border-radius: 10px;
+  width: 90vw;
+  height: 70vh;
   padding: 2%;
+  margin-top : 180px;
+  display: flex;
 }
 
 .wrap-post-detail {
-  margin: auto;
-  padding: 5% 5% 0;
+  border-radius: 10px;
+  margin: 0px 10px;
+  padding: 10px;
   background-color: white;
+  width: 50vw;
+  height: 100%;
+position : relative;
 }
 
 .wrap-post-detail viewr {
@@ -247,23 +234,28 @@ img {
   height: auto;
 }
 
+.wrap-content-detail{
+  margin: 20px 0px 25px;
+}
+
 /* 타이틀, 좋아요 */
 .box-btn-detail {
+  width: 50%;
   display: flex;
   justify-content: space-between;
   align-content: center;
 }
 
 .like-box > button {
-  margin: 5px 10px;
-  padding: 16px 24px;
+  margin: 0px 10px;
+  padding: 5px 20px;
   border-radius: 30px;
-  font-size: 1.2rem;
+  font-size: 1vw;
   color: aliceblue;
 }
 
 .food-title {
-  margin: auto;
+  margin: 10px auto;
   font-size: 2.4rem;
 }
 
@@ -277,8 +269,19 @@ img {
 }
 
 /* 댓글 */
+.container-reply-detail{
+  margin: 0px 10px;
+  width: 40vw;
+
+  border-radius: 10px;
+  background-color: #a37d002f;
+  height: 100%;
+}
 .wrap-reply-detail {
+  padding: 5px;
   margin: auto;
+  height: 100%;
+
 }
 
 .box-comment-detail {
@@ -287,15 +290,24 @@ img {
 }
 
 .box-reply-detail {
+  border: 1px solid rgba(0, 0, 0, 0.486);
+  border-radius: 10px;
   display: flex;
-  margin: 0;
-  padding: 14px;
+  margin: 0 auto;
+  padding: 5px;
   font-size: 1.2rem;
   background-color: white;
+  position : absolute;
+width: 95%;
+height: 7vh;
+margin: auto ;
+  bottom : 10px;
+
 }
 
 .box-reply-user {
   width: 80%;
+
 }
 
 .input-reply-detail {
@@ -317,10 +329,19 @@ img {
 }
 
 .wrap-comment-detail {
-  margin: 40px 0;
+  position : relative;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #ffffff;
+  width: 40vw;
+  height: 100%;
 }
-
+.box-title-comment-detail{
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
 .text-title-comment-detail {
+  margin: 10px;
   font-size: 1.4rem;
   font-weight: 400;
 }
@@ -386,17 +407,29 @@ img {
 
 .like-box {
   display: flex;
-  flex-direction: column;
+  /* flex-direction: column; */
+  text-align: center;
   margin: 0px;
 }
-
+.food-like-count{
+  margin-bottom: 0px;
+}
 .media-body {
   cursor: pointer;
 }
 
 .find {
-  width: 100%;
-  display: flex;
+  width: 50%;
   justify-content: center;
   margin: 10px auto;
+}
+
+
+.find-and-like{
+  position: absolute;
+  border: solid 1px black;
+  width: 90%;
+  display: flex;
+  bottom: 20px;
+  height: fit-content;
 }
