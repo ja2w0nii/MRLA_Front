@@ -595,3 +595,5 @@ function getNearRestaurant(food) {
   const url = `${frontend_base_url}/map_search.html?id=${food}`;
   location.href = url;
 }
+
+//수정//
