@@ -8,6 +8,7 @@ body {
   display: grid;
   align-content: space-between;
   height: 100vh;
+  background-color: rgb(255, 251, 236);
 }
 
 /* 헤더============================================ */
@@ -210,6 +211,7 @@ a.active {
   width: 90vw;
   height: 65vh;
   margin: auto;
+  margin-top: 140px;
 }
 
 div.search_field {
@@ -220,7 +222,7 @@ div.search_field {
   margin: 0;
 }
 
-span.search_span {
+.search_span {
   cursor: pointer;
   width: 230px;
   margin: 10px 15px;
@@ -242,4 +244,6 @@ span {
 footer {
   background-color: gray;
   width: 100%;
+  position: absolute;
+  bottom: 0px;
 }

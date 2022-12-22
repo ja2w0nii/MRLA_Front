@@ -176,7 +176,7 @@
 
 /* 위치 */
 .material-symbols-outlined {
-    font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 200, "opsz" 48;
+    /* font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 200, "opsz" 48; */
 }
 
 a.active {
@@ -353,7 +353,7 @@ height: fit-content;
 }
 
 .material-symbols-outlined{
-    background-color: #FED049;
+    background-color: #ffffff;
     border: none;
 }
 .material-symbols-sharp {
@@ -362,6 +362,7 @@ height: fit-content;
   color: red;
   background-color:  #FED049;
 }
+
 
 .post-like-count {
     /* margin: 0px 100px 0px 10px; */

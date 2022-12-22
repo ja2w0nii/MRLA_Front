@@ -300,7 +300,7 @@ async function Community() {
     newContent.innerText = community.content;
     newDescription.appendChild(newTitle);
     newDescription.appendChild(newContent);
-
+// 카드생성
     newCard.setAttribute("id", community.id)
     newCard.setAttribute("onclick", "getCommunityDetailPage(this.id)")
 
