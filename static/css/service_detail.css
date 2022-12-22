@@ -62,7 +62,7 @@ header {
 /* 네비게이션============================================= */
 .nav_box {
   border: 1px solid red;
-top: 70px;
+  top: 70px;
   position: fixed;
   width: 100%;
 

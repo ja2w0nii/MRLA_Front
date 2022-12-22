@@ -228,16 +228,16 @@ button:hover + p.arrow_box {
 
 .target {
   width: 90px;
-  height: 126px;
+  height: 100px;
   background: #ffc000;
   display: block;
   border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
-  border: solid 2px rgb(91, 89, 85);
+  border: none;
   align-items: center;
   justify-content: center;
   font-size: 20px;
   margin: 10px 20px;
-  background-color: blanchedalmond;
+  background-color: rgb(252, 244, 198);
 }
 
 .target_foods {

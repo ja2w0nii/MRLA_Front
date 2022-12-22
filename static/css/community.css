@@ -62,10 +62,10 @@ header {
 /* 네비게이션============================================= */
 .nav_box {
   border: 1px solid red;
-top: 70px;
+  top: 70px;
   position: fixed;
   width: 100%;
-z-index: 100;
+  z-index: 100;
 }
 
 .navContainer {
@@ -171,6 +171,7 @@ section {
   /* border: 2px solid green; */
   height: 100%;
 }
+
 /* 위치 */
 .material-symbols-outlined {
   font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 200, "opsz" 48;
@@ -366,7 +367,7 @@ a.active {
   border-radius: 10px;
 }
 
-.img-upload-btn > input[type="file"] {
+.img-upload-btn>input[type="file"] {
   display: none;
   margin: 10px;
 }
@@ -441,6 +442,7 @@ a.active {
   border-radius: 20px;
   outline: none;
 }
+
 .tag-plus {
   border: 1px rgba(46, 9, 9, 0.281) solid;
   text-align: left;
@@ -457,19 +459,24 @@ a.active {
 
 /* 아래의 모든 코드는 영역::코드로 사용 */
 .tag-plus::-webkit-scrollbar {
-  width: 10px; /* 스크롤바의 너비 */
+  width: 10px;
+  /* 스크롤바의 너비 */
 }
 
 .tag-plus::-webkit-scrollbar-thumb {
-  height: 30%; /* 스크롤바의 길이 */
-  background: #8a5300; /* 스크롤바의 색상 */
+  height: 30%;
+  /* 스크롤바의 길이 */
+  background: #8a5300;
+  /* 스크롤바의 색상 */
 
   border-radius: 10px;
 }
 
 .tag-plus::-webkit-scrollbar-track {
-  background: rgba(33, 122, 244, 0.1); /*스크롤바 뒷 배경 색상*/
+  background: rgba(33, 122, 244, 0.1);
+  /*스크롤바 뒷 배경 색상*/
 }
+
 /* 태그 관련 css============================================================ 2221211 이태은*/
 
 .tag-box ul li {
@@ -482,6 +489,7 @@ a.active {
 .tag-box form {
   padding-top: 16px;
 }
+
 .tag-wright {
   text-align: left;
   padding: 10px;
@@ -493,6 +501,7 @@ a.active {
   outline: none;
   background-color: antiquewhite;
 }
+
 ul li.tag-item {
   padding: 4px 8px;
   background-color: orange;
@@ -708,7 +717,7 @@ ul li.tag-item {
   border-radius: 10px;
 }
 
-.img-detail-btn > input[type="file"] {
+.img-detail-btn>input[type="file"] {
   display: none;
   margin: 10px;
 }
@@ -782,6 +791,7 @@ ul li.tag-item {
   border-radius: 20px;
   outline: none;
 }
+
 .tag-plus {
   border: 1px rgba(46, 9, 9, 0.281) solid;
   text-align: left;
@@ -798,19 +808,24 @@ ul li.tag-item {
 
 /* 아래의 모든 코드는 영역::코드로 사용 */
 .tag-plus::-webkit-scrollbar {
-  width: 10px; /* 스크롤바의 너비 */
+  width: 10px;
+  /* 스크롤바의 너비 */
 }
 
 .tag-plus::-webkit-scrollbar-thumb {
-  height: 30%; /* 스크롤바의 길이 */
-  background: #8a5300; /* 스크롤바의 색상 */
+  height: 30%;
+  /* 스크롤바의 길이 */
+  background: #8a5300;
+  /* 스크롤바의 색상 */
 
   border-radius: 10px;
 }
 
 .tag-plus::-webkit-scrollbar-track {
-  background: rgba(33, 122, 244, 0.1); /*스크롤바 뒷 배경 색상*/
+  background: rgba(33, 122, 244, 0.1);
+  /*스크롤바 뒷 배경 색상*/
 }
+
 /* 태그 관련 css============================================================ 2221211 이태은*/
 
 .tag-box ul li {
@@ -823,6 +838,7 @@ ul li.tag-item {
 .tag-box form {
   padding-top: 16px;
 }
+
 .tag-wright {
   text-align: left;
   padding: 10px;
@@ -834,6 +850,7 @@ ul li.tag-item {
   outline: none;
   background-color: antiquewhite;
 }
+
 ul li.tag-item {
   padding: 4px 8px;
   background-color: orange;
@@ -939,7 +956,7 @@ ul li.tag-item {
   /* blur the lowres image */
 }
 
-.card-image > img {
+.card-image>img {
   display: block;
   width: 100%;
   height: 0;
@@ -993,12 +1010,12 @@ ul li.tag-item {
 }
 
 /* 각각의 카드의 제목 */
-.card-description > h2 {
+.card-description>h2 {
   margin: 0 0 0.5em;
 }
 
 /* 각각의 카드의 내용 글 */
-.card-description > p {
+.card-description>p {
   margin: 0;
 }
 
