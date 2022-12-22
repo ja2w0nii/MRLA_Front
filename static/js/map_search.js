@@ -74,10 +74,10 @@ function placesSearchCB(data, status, pagination) {
     displayPagination(pagination);
   } else if (status === kakao.maps.services.Status.ZERO_RESULT) {
     alert("검색 결과가 존재하지 않습니다.");
-    return;
+    window.history.back()
   } else if (status === kakao.maps.services.Status.ERROR) {
     alert("검색 결과 중 오류가 발생했습니다.");
-    return;
+    window.history.back()
   }
 }
 
