@@ -77,9 +77,9 @@ async function loadCommunitySearch() {
     newTitle.setAttribute("id", community.id);
     newSpan.appendChild(newTitle);
 
-    const newImg = document.createElement("img");
-    newImg.setAttribute("src", community.image);
-    newSpan.appendChild(newImg);
+    // const newImg = document.createElement("img");
+    // newImg.setAttribute("src", community.image);
+    // newSpan.appendChild(newImg);
 
 
     const newContent = document.createElement("p");
