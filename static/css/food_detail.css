@@ -290,7 +290,7 @@ position : relative;
 }
 
 .box-reply-detail {
-  border: 1px solid rgba(0, 0, 0, 0.486);
+  border: 1px solid rgba(0, 0, 0, 0.171);
   border-radius: 10px;
   display: flex;
   margin: 0 auto;
@@ -427,8 +427,8 @@ margin: auto ;
 
 .find-and-like{
   position: absolute;
-  border: solid 1px black;
-  width: 90%;
+  /* border: solid 1px black; */
+  width: 95%;
   display: flex;
   bottom: 20px;
   height: fit-content;
