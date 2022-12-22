@@ -41,6 +41,7 @@ window.addEventListener(
 );
 
 async function handleSignIn() {
+
   const email = document.getElementById("email2").value;
   const password = document.getElementById("password2").value;
   console.log(Boolean(email));
@@ -83,6 +84,7 @@ async function handleSignIn() {
   } else {
     alert("아이디, 비밀번호를 확인하세요!");
   }
+
 }
 
 // async function handleMock() {
@@ -144,6 +146,7 @@ async function handleSignIn() {
 // }
 
 async function handleKakao() {
+
   let code = new URL(window.location.href).searchParams.get("code");
   if (code) {
     const response = await fetch(`${backend_base_url}/users/kakao/callback/`, {
@@ -167,20 +170,20 @@ async function handleKakao() {
         .split("")
         .map(function (c) {
           return "%" + ("00" + c.charCodeAt(0).toString(16)).slice(-2);
+
         })
         .join("")
     );
 
     localStorage.setItem("payload", jsonPayload);
-    window.location.href = "main.html";
+    window.location.href = "main.html?id=1";
   }
 }
 window.onload = function () {
   handleKakao();
 };
 
-//signUp//
-// 입력 없으면 표시
+
 
 async function check_value() {
   const forms = document.getElementsByClassName("validation-form");
@@ -198,20 +201,9 @@ async function check_value() {
     );
   });
 }
-// window.addEventListener('load', () => {
-//     const forms = document.getElementsByClassName('validation-form');
-//     Array.prototype.filter.call(forms, (form) => {
-//         form.addEventListener('submit', function(event) {
-//             if (form.checkValidity() === false) {
-//                 event.preventDefault();
-//                 event.stopPropagation();
-//             }
-//             form.classList.add('was-validated');
-//         }, false);
-//     });
-// }, false);
 
 async function handleSignUp() {
+
   const email = document.getElementById("email").value;
   const password = document.getElementById("password").value;
   const password_check = document.getElementById("password_check").value;
@@ -234,4 +226,5 @@ async function handleSignUp() {
     alert(response_json[key]);
     window.location.reload();
   }
+
 }

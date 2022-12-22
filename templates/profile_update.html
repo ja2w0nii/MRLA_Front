@@ -36,7 +36,7 @@
 
   <body>
     <header>
-      <h2 href="main.html" onclick="location.href='main.html'">메추리알</h2>
+      <h2 href="main.html" onclick="location.href='main.html?id=1'">메추리알</h2>
       <div id="profile_info_box" class="profile_info_box">
         <div id="profile_img_box" class="profile_img_box"></div>
         <div id="profile_name_box" class="nav-item dropdown">
@@ -45,33 +45,27 @@
       </div>
     </header>
 
-
-  <form>
-    <h1>✨ Profile Update ✨</h1>
-    <hr />
-    <div class="main">
-      <div class="main_small">
-        <div class="img-box">
-          <!-- 프로필 업로드 박스 -->
-              <img src="https://i0.wp.com/adventure.co.kr/wp-content/uploads/2020/09/no-image.jpg"  id="profile_img" class="image-box" />
-              <label for="profile_img_file" class="img-upload-btn">
-                <input id="profile_img_file" type="file" />
-                <span>이미지 업로드하기</span>
-              </label>
-        </div>
-        <div class="main_profile">
-          <div>
-            <h2 class="profile_detail" id="email"></h2>
-            <div class="nickname-box">
-              <div class="btn btn-secondary nickname">닉네임</div>
-              <div class="form mb-3 choose">
-                <input type="text" class="form-control" id="nickname" required />
-              </div>
-            </div>
-            <div class="age-box">
-              <div class="btn btn-secondary age">나이</div>
-              <div class="form mb-3 choose">
-                <input type="text" class="form-control" id="age" required />
+    <form>
+      <h1>✨ Profile Update ✨</h1>
+      <hr />
+      <div class="main">
+        <div class="main_small">
+          <div class="img-box">
+            <!-- 프로필 업로드 박스 -->
+            <img src="https://i0.wp.com/adventure.co.kr/wp-content/uploads/2020/09/no-image.jpg" id="profile_img" class="image-box" />
+            <label for="profile_img_file" class="img-upload-btn">
+              <input id="profile_img_file" type="file" />
+              <span>이미지 업로드하기</span>
+            </label>
+          </div>
+          <div class="main_profile">
+            <div>
+              <h2 class="profile_detail" id="email"></h2>
+              <div class="nickname-box">
+                <div class="btn btn-secondary nickname">닉네임</div>
+                <div class="form mb-3 choose">
+                  <input type="text" class="form-control" id="nickname" required />
+                </div>
               </div>
               <div class="age-box">
                 <div class="btn btn-secondary age">나이</div>
@@ -99,9 +93,8 @@
           </div>
         </div>
       </div>
-    </div>
-  </form>
-  <script src="../static/js/api.js"></script>
-  <script src="../static/js/profile_update.js"></script>
+    </form>
+    <script src="../static/js/api.js"></script>
+    <script src="../static/js/profile_update.js"></script>
   </body>
 </html>

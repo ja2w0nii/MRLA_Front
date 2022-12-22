@@ -2,7 +2,8 @@
 const backend_base_url = "https://www.mrla.tk";
 // const backend_base_url = "http://3.36.132.172";
 // const backend_base_url = "http://127.0.0.1:8000";
-const frontend_base_url = "";
+// const frontend_base_url = "";
+const frontend_base_url = "http://localhost:5500/templates";
 const token = localStorage.getItem("access");
 
 // 로그아웃
@@ -595,3 +596,5 @@ function getNearRestaurant(food) {
   const url = `${frontend_base_url}/map_search.html?id=${food}`;
   location.href = url;
 }
+
+//수정//
