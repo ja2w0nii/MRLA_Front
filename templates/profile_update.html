@@ -1,95 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-  <!-- jquery -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet" />
 
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet" />
+    <!-- CSS only -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css" />
 
-  <!-- CSS only -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css" />
+    <!-- JavaScript Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+      crossorigin="anonymous"
+    ></script>
 
-  <!-- JavaScript Bundle with Popper -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
-    crossorigin="anonymous"></script>
+    <title>메추리알 | 프로필 수정</title>
 
-  <link rel="stylesheet" href="../static/css/profile_update.css" />
+    <link rel="stylesheet" href="../static/css/profile_update.css" />
+  </head>
 
-  <title>메추리알 | 프로필</title>
-</head>
-
-<body>
-  <header>
-    <h2 href="main.html" onclick="location.href='main.html'">메추리알</h2>
-    <div id="profile_info_box" class="profile_info_box">
-      <div id="profile_img_box" class="profile_img_box"></div>
-      <div id="profile_name_box" class="nav-item dropdown">
-        <ul id="profile_dropdown" class="dropdown-menu dropdown-menu-dark"></ul>
-      </div>
-    </div>
-  </header>
-
-  <form>
-    <h1>✨ Profile Update ✨</h1>
-    <hr />
-    <div class="main">
-      <div class="main_small">
-        <div class="img-box">
-          <p class="profile_img" id="profile_img"></p>
-          <input type="file" class="form-control profile_img_file" id="profile_img_file" />
+  <body>
+    <header>
+      <h2 href="main.html" onclick="location.href='main.html?id=1'">메추리알</h2>
+      <div id="profile_info_box" class="profile_info_box">
+        <div id="profile_img_box" class="profile_img_box"></div>
+        <div id="profile_name_box" class="nav-item dropdown">
+          <ul id="profile_dropdown" class="dropdown-menu dropdown-menu-dark"></ul>
         </div>
-        <div class="main_profile">
-          <div>
-            <h2 class="profile_detail" id="email"></h2>
-            <div class="nickname-box">
-              <div class="btn btn-secondary nickname">닉네임</div>
-              <div class="form mb-3 choose">
-                <input type="text" class="form-control" id="nickname" required />
+      </div>
+    </header>
+
+    <form>
+      <h1>✨ Profile Update ✨</h1>
+      <hr />
+      <div class="main">
+        <div class="main_small">
+          <div class="img-box">
+            <!-- 프로필 업로드 박스 -->
+            <img src="https://i0.wp.com/adventure.co.kr/wp-content/uploads/2020/09/no-image.jpg" id="profile_img" class="image-box" />
+            <label for="profile_img_file" class="img-upload-btn">
+              <input id="profile_img_file" type="file" />
+              <span>이미지 업로드하기</span>
+            </label>
+          </div>
+          <div class="main_profile">
+            <div>
+              <h2 class="profile_detail" id="email"></h2>
+              <div class="nickname-box">
+                <div class="btn btn-secondary nickname">닉네임</div>
+                <div class="form mb-3 choose">
+                  <input type="text" class="form-control" id="nickname" required />
+                </div>
               </div>
+              <div class="age-box">
+                <div class="btn btn-secondary age">나이</div>
+                <div class="form mb-3 choose">
+                  <input type="text" class="form-control" id="age" required />
+                </div>
+              </div>
+              <div class="gender-box">
+                <div class="dropdown">
+                  <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">성별</button>
+                  <ul class="dropdown-menu" id="dropdown-menu">
+                    <li><a class="dropdown-item" id="사용 안 함" onclick="ChangeGender(id)">사용 안 함</a></li>
+                    <li><a class="dropdown-item" id="남" onclick="ChangeGender(id)">남</a></li>
+                    <li><a class="dropdown-item" id="여" onclick="ChangeGender(id)">여</a></li>
+                  </ul>
+                </div>
+                <div class="form mb-3 choose">
+                  <input type="text" class="form-control" id="gender" required />
+                </div>
+              </div>
+              <button type="button" class="btn btn-outline-secondary profile_update_button" onclick="MyProfileUpdateForm()">
+                <i class="bi bi-gear"></i> 수정 완료
+              </button>
             </div>
-            <div class="age-box">
-              <div class="btn btn-secondary age">나이</div>
-              <div class="form mb-3 choose">
-                <input type="text" class="form-control" id="age" required />
-              </div>
-            </div>
-            <div class="gender-box">
-              <div class="dropdown">
-                <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
-                  aria-expanded="false">성별</button>
-                <ul class="dropdown-menu" id="dropdown-menu">
-                  <li><a class="dropdown-item" id="사용 안 함" onclick="ChangeGender(id)">사용 안 함</a></li>
-                  <li><a class="dropdown-item" id="남" onclick="ChangeGender(id)">남</a></li>
-                  <li><a class="dropdown-item" id="여" onclick="ChangeGender(id)">여</a></li>
-                </ul>
-              </div>
-              <div class="form mb-3 choose">
-                <input type="text" class="form-control" id="gender" required />
-              </div>
-            </div>
-            <button type="button" class="btn btn-outline-secondary profile_update_button"
-              onclick="MyProfileUpdateForm()">
-              <i class="bi bi-gear"></i> 수정 완료
-            </button>
           </div>
         </div>
       </div>
-    </div>
-  </form>
-
-  <script src="../static/js/api.js"></script>
-  <script src="../static/js/profile_update.js"></script>
-</body>
-
+    </form>
+    <script src="../static/js/api.js"></script>
+    <script src="../static/js/profile_update.js"></script>
+  </body>
 </html>

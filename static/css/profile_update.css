@@ -70,6 +70,8 @@ form {
 
 .img-box {
   margin-right: 0px;
+  object-fit: cover;
+  display: block;
 }
 
 .profile_img_file {
@@ -88,6 +90,31 @@ form {
   margin-right: 50px;
 }
 
+
+/* 이미지 업로드 박스 */
+.img-box {
+  margin-right: 100px;
+  width: 200px;
+}
+
+.img-upload-btn {
+  width: 170px;
+  border: 1px solid #ddd;
+  padding: 6px 12px;
+  display: inline-block;
+  cursor: pointer;
+  background-color: #ffffff;
+  margin: 10px;
+  border-radius: 10px;
+}
+
+.img-upload-btn > input[type="file"] {
+  display: none;
+  margin: 10px;
+}
+
+
+/* ====================================================== */
 .main_profile {
   margin-left: 0px;
 }

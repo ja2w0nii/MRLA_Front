@@ -14,7 +14,6 @@ header {
   align-items: center;
   justify-content: space-between;
   position: fixed;
-  z-index: 1000;
   top: 0;
 }
 
@@ -61,10 +60,11 @@ header {
 
 /* 네비게이션============================================= */
 .nav_box {
-top: 70px;
+  margin: -140px 0px;
   position: fixed;
   width: 100%;
-  z-index: 100;
+  height: 60px;
+  z-index: -1;
 }
 
 .navContainer {
@@ -76,10 +76,11 @@ top: 70px;
   width: 100%;
   justify-content: flex-end;
   align-items: center;
+  margin-top: 50px;
 }
 
 .service1 {
-  width: 80%;
+  width: 60%;
 }
 
 .near_restaurant {
@@ -160,10 +161,34 @@ ul {
   padding-left: 0px;
 }
 
+nav {
+  /* border: 2px solid blue; */
+  margin: 10px 10px;
+  /* background-color: orange; */
+  height: 100%;
+}
+
+nav ul {
+  border: 2px solid red;
+  width: 40%;
+  margin: 0px auto;
+  height: 100%;
+  display: flex;
+  align-items: center;
+
+  justify-content: space-between;
+}
 
 nav a {
   text-decoration-line: none;
   color: grey;
+}
+
+nav ul > li {
+  font-size: 20px;
+  height: 100%;
+  display: flex;
+  align-items: center;
 }
 
 section {
@@ -208,25 +233,21 @@ a.active {
   font-family: "Malgun Gothic", dotum, "돋움", sans-serif;
   font-size: 12px;
 }
-
-.map_warp h1 {
+.map_warp h1{
   font-size: 24px;
 }
-
 .map_wrap a,
 .map_wrap a:hover,
 .map_wrap a:active {
   color: #000;
   text-decoration: none;
 }
-
 .map_wrap {
   position: relative;
-  margin: auto;
+  margin: 150px auto auto auto;
   width: 60vw;
   height: 70vh;
 }
-
 #menu_wrap {
   position: absolute;
   top: 0;
@@ -242,11 +263,9 @@ a.active {
   font-size: 12px;
   border-radius: 10px;
 }
-
 .bg_white {
   background: #fff;
 }
-
 #menu_wrap hr {
   display: block;
   height: 1px;
@@ -254,23 +273,18 @@ a.active {
   border-top: 2px solid #5f5f5f;
   margin: 3px 0;
 }
-
 #menu_wrap .option {
   text-align: center;
 }
-
 #menu_wrap .option p {
   margin: 10px 0;
 }
-
 #menu_wrap .option button {
   margin-left: 5px;
 }
-
 #placesList li {
   list-style: none;
 }
-
 #placesList .item {
   position: relative;
   border-bottom: 1px solid #888;
@@ -278,36 +292,29 @@ a.active {
   cursor: pointer;
   min-height: 65px;
 }
-
 #placesList .item span {
   display: block;
   margin-top: 4px;
 }
-
 #placesList .item h5,
 #placesList .item .info {
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
 }
-
 #placesList .item .info {
   padding: 10px 0 10px 55px;
 }
-
 #placesList .info .gray {
   color: #8a8a8a;
 }
-
 #placesList .info .jibun {
   padding-left: 26px;
   background: url(https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/places_jibun.png) no-repeat;
 }
-
 #placesList .info .tel {
   color: #009900;
 }
-
 #placesList .item .markerbg {
   float: left;
   position: absolute;
@@ -316,77 +323,59 @@ a.active {
   margin: 10px 0 0 10px;
   background: url(https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/marker_number_blue.png) no-repeat;
 }
-
 #placesList .item .marker_1 {
   background-position: 0 -10px;
 }
-
 #placesList .item .marker_2 {
   background-position: 0 -56px;
 }
-
 #placesList .item .marker_3 {
   background-position: 0 -102px;
 }
-
 #placesList .item .marker_4 {
   background-position: 0 -148px;
 }
-
 #placesList .item .marker_5 {
   background-position: 0 -194px;
 }
-
 #placesList .item .marker_6 {
   background-position: 0 -240px;
 }
-
 #placesList .item .marker_7 {
   background-position: 0 -286px;
 }
-
 #placesList .item .marker_8 {
   background-position: 0 -332px;
 }
-
 #placesList .item .marker_9 {
   background-position: 0 -378px;
 }
-
 #placesList .item .marker_10 {
   background-position: 0 -423px;
 }
-
 #placesList .item .marker_11 {
   background-position: 0 -470px;
 }
-
 #placesList .item .marker_12 {
   background-position: 0 -516px;
 }
-
 #placesList .item .marker_13 {
   background-position: 0 -562px;
 }
-
 #placesList .item .marker_14 {
   background-position: 0 -608px;
 }
-
 #placesList .item .marker_15 {
   background-position: 0 -654px;
 }
-
 #pagination {
   margin: 10px auto;
   text-align: center;
 }
-
 #pagination a {
   display: inline-block;
   margin-right: 10px;
 }
-
 #pagination .on {
   font-weight: bold;
   cursor: default;
@@ -406,35 +395,3 @@ footer {
   font: bold;
   font-size: 30px;
 }
-
-/* 메뉴 대분류 */
-.target_small_box {
-  width: 50%;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-}
-
-.target {
-  width: 90px;
-  height: 100px;
-  background: #ffc000;
-  display: block;
-  border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
-  border: none;
-  align-items: center;
-  justify-content: center;
-  font-size: 20px;
-  margin: 10px 20px;
-  background-color: rgb(252, 244, 198);
-}
-
-.image_box>img {
-  width: 150px;
-  height: 150px;
-}
-
-.title {
-  margin-top: 150px;
-}
-

@@ -64,6 +64,7 @@ async function AllFoodList(id) {
         const menu_image = document.createElement("div");
 
         const newFood = document.createElement("p");
+        newFood.setAttribute("class", "food_name")
         newFood.setAttribute("id", food.food_id);
         newFood.setAttribute("onclick", "FoodDetail(this.id)");
         newFood.innerText = food.menu;
@@ -88,5 +89,4 @@ async function AllFoodList(id) {
       }
     }
   });
-  console.log(food_list);
 }
