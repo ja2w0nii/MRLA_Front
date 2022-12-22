@@ -176,6 +176,7 @@ async function handleKakao() {
     );
 
     localStorage.setItem("payload", jsonPayload);
+    window.location.href = "main.html?id=1";
   }
 }
 window.onload = function () {
