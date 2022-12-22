@@ -99,7 +99,6 @@ async function searchPlaces() {
       radius: 3000,
       location: new kakao.maps.LatLng(lat, lon),
     });
-    console.log(lat, lon);
   });
 
   // 장소검색 객체를 통해 키워드로 장소검색을 요청합니다
