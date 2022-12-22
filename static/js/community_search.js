@@ -53,6 +53,7 @@ ProfileInfo()
 async function loadCommunitySearch() {
   communitys = await getCommunitySearch();
 
+  console.log(communitys)
   const search_list = document.getElementById("search");
   communitys.forEach((community) => {
     const newSpan = document.createElement("span");
@@ -68,13 +69,18 @@ async function loadCommunitySearch() {
 
     const newEmail = document.createElement("p");
     newEmail.innerText = community.user_nickname;
-    newEmail.setAttribute("id", community.id);
+    newEmail.setAttribute("id", community.id); 
     newSpan.appendChild(newEmail);
 
     const newTitle = document.createElement("p");
     newTitle.innerText = community.title;
     newTitle.setAttribute("id", community.id);
     newSpan.appendChild(newTitle);
+
+    const newImg = document.createElement("img");
+    newImg.setAttribute("src", community.image);
+    newSpan.appendChild(newImg);
+
 
     const newContent = document.createElement("p");
     newContent.innerText = community.content;

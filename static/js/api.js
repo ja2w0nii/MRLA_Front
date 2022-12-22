@@ -567,6 +567,7 @@ async function getCommunitySearch() {
   });
 
   response_json = await response.json();
+  alert(response);
   return response_json;
 }
 
