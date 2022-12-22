@@ -362,8 +362,21 @@ footer {
   place-items: center;
 }
 
-.h1 {
-  margin: 10px;
-  font: bold;
+.info_font {
+  margin: 10px 10px;
   font-size: 30px;
+  background-color: #fed049;
+  border-radius: 20px;
+  font-family: "Jua", sans-serif;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.h1 {
+  margin: 10px 10px;
+  font-size: 40px;
+  color: red;
+  font-family: "Jua", sans-serif;
 }

@@ -7,56 +7,58 @@ async function ProfileInfo() {
   login_user = await getName();
   const profile_img_box = document.getElementById("profile_img_box");
   let newImage = document.createElement("img");
-  newImage.setAttribute("id", login_user.id)
-  newImage.setAttribute("class", "profile_img")
+  newImage.setAttribute("id", login_user.id);
+  newImage.setAttribute("class", "profile_img");
   newImage.src = `${backend_base_url}${login_user.profile_img}`;
   profile_img_box.appendChild(newImage);
   const profile_name_box = document.getElementById("profile_name_box");
-  const newNickname = document.createElement("a")
-  newNickname.setAttribute("id", login_user.id)
-  newNickname.setAttribute("class", "nav-link dropdown-toggle")
-  newNickname.setAttribute("href", "#")
-  newNickname.setAttribute("role", "button")
-  newNickname.setAttribute("data-bs-toggle", "dropdown")
-  newNickname.setAttribute("aria-expanded", "false")
-  newNickname.innerText = login_user.nickname
-  profile_name_box.appendChild(newNickname)
+  const newNickname = document.createElement("a");
+  newNickname.setAttribute("id", login_user.id);
+  newNickname.setAttribute("class", "nav-link dropdown-toggle");
+  newNickname.setAttribute("href", "#");
+  newNickname.setAttribute("role", "button");
+  newNickname.setAttribute("data-bs-toggle", "dropdown");
+  newNickname.setAttribute("aria-expanded", "false");
+  newNickname.innerText = login_user.nickname;
+  profile_name_box.appendChild(newNickname);
 
-  const profile_dropdown = document.getElementById("profile_dropdown")
-  const newItem = document.createElement("li")
-  newItem.setAttribute("class", "dropdown-item-box")
-  profile_dropdown.appendChild(newItem)
+  const profile_dropdown = document.getElementById("profile_dropdown");
+  const newItem = document.createElement("li");
+  newItem.setAttribute("class", "dropdown-item-box");
+  profile_dropdown.appendChild(newItem);
 
-  const newItem_a = document.createElement("a")
-  newItem_a.setAttribute("id", login_user.id)
-  newItem_a.setAttribute("class", "dropdown-item")
-  newItem_a.setAttribute("onclick", "getProfilePage(this.id)")
-  newItem_a.innerText = "My 프로필"
-  newItem.appendChild(newItem_a)
+  const newItem_a = document.createElement("a");
+  newItem_a.setAttribute("id", login_user.id);
+  newItem_a.setAttribute("class", "dropdown-item");
+  newItem_a.setAttribute("onclick", "getProfilePage(this.id)");
+  newItem_a.innerText = "My 프로필";
+  newItem.appendChild(newItem_a);
 
-  const newItem2 = document.createElement("li")
-  newItem2.setAttribute("class", "dropdown-item-box")
-  profile_dropdown.appendChild(newItem2)
+  const newItem2 = document.createElement("li");
+  newItem2.setAttribute("class", "dropdown-item-box");
+  profile_dropdown.appendChild(newItem2);
 
-
-  const newItem_a2 = document.createElement("a")
-  newItem_a2.setAttribute("id", login_user.id)
-  newItem_a2.setAttribute("class", "dropdown-item")
-  newItem_a2.setAttribute("onclick", "handleLogout()")
-  newItem_a2.innerText = "로그아웃"
-  newItem2.appendChild(newItem_a2)
+  const newItem_a2 = document.createElement("a");
+  newItem_a2.setAttribute("id", login_user.id);
+  newItem_a2.setAttribute("class", "dropdown-item");
+  newItem_a2.setAttribute("onclick", "handleLogout()");
+  newItem_a2.innerText = "로그아웃";
+  newItem2.appendChild(newItem_a2);
 }
-ProfileInfo()
+ProfileInfo();
 
 const urlParams = new URLSearchParams(window.location.search);
 const food = urlParams.get("id");
+
 // 마커를 담을 배열입니다
 var markers = [];
+
 var mapContainer = document.getElementById("map"), // 지도를 표시할 div
   mapOption = {
     center: new kakao.maps.LatLng(37.566826, 126.9786567), // 지도의 중심좌표
     level: 3, // 지도의 확대 레벨
   };
+
 // 지도를 생성합니다
 var map = new kakao.maps.Map(mapContainer, mapOption);
 
@@ -74,9 +76,13 @@ var infowindow = new kakao.maps.InfoWindow({ zIndex: 1 });
 searchPlaces();
 
 // 키워드 검색을 요청하는 함수입니다
-function searchPlaces() {
+async function searchPlaces() {
+  login_user = await getName();
+
   const title = document.getElementById("title");
-  title.innerHTML += `<h1 class="h1">"${food}" 맛집을 찾아드립니다!</h1>`;
+
+  title.innerHTML += `<div class="info_font">${login_user.nickname} 님 근처 [<h1 class="h1"> ${food} </h1>] 맛집</div>`;
+
 
   var keyword = food;
 
@@ -93,10 +99,11 @@ function searchPlaces() {
       radius: 3000,
       location: new kakao.maps.LatLng(lat, lon),
     });
-    console.log(lat, lon)
+    console.log(lat, lon);
   });
 
-// 장소검색 객체를 통해 키워드로 장소검색을 요청합니다
+  // 장소검색 객체를 통해 키워드로 장소검색을 요청합니다
+
   // ps.keywordSearch(keyword, placesSearchCB, {
   //   useMapBounds: true,
   //   page: 1,
@@ -117,10 +124,10 @@ function placesSearchCB(data, status, pagination) {
     displayPagination(pagination);
   } else if (status === kakao.maps.services.Status.ZERO_RESULT) {
     alert("검색 결과가 존재하지 않습니다.");
-    window.history.back()
+    window.history.back();
   } else if (status === kakao.maps.services.Status.ERROR) {
     alert("검색 결과 중 오류가 발생했습니다.");
-    window.history.back()
+    window.history.back();
   }
 }
 
@@ -143,6 +150,7 @@ function displayPlaces(places) {
     var placePosition = new kakao.maps.LatLng(places[i].y, places[i].x),
       marker = addMarker(placePosition, i),
       itemEl = getListItem(i, places[i]); // 검색 결과 항목 Element를 생성합니다
+
     // 검색된 장소 위치를 기준으로 지도 범위를 재설정하기위해
     // LatLngBounds 객체에 좌표를 추가합니다
     bounds.extend(placePosition);
