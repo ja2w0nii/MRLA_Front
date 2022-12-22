@@ -76,9 +76,11 @@ var infowindow = new kakao.maps.InfoWindow({ zIndex: 1 });
 searchPlaces();
 
 // 키워드 검색을 요청하는 함수입니다
-function searchPlaces() {
+async function searchPlaces() {
+  login_user = await getName();
+
   const title = document.getElementById("title");
-  title.innerHTML += `<h1 class="h1">"${food}" 맛집을 찾아드립니다!</h1>`;
+  title.innerHTML += `<div class="info_font">${login_user.nickname} 님 근처 [<h1 class="h1"> ${food} </h1>] 맛집</div>`;
 
   var keyword = food;
 
