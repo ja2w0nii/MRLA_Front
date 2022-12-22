@@ -80,7 +80,9 @@ async function searchPlaces() {
   login_user = await getName();
 
   const title = document.getElementById("title");
+
   title.innerHTML += `<div class="info_font">${login_user.nickname} 님 근처 [<h1 class="h1"> ${food} </h1>] 맛집</div>`;
+
 
   var keyword = food;
 
@@ -101,6 +103,7 @@ async function searchPlaces() {
   });
 
   // 장소검색 객체를 통해 키워드로 장소검색을 요청합니다
+
   // ps.keywordSearch(keyword, placesSearchCB, {
   //   useMapBounds: true,
   //   page: 1,
