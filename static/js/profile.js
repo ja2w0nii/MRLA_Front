@@ -59,7 +59,6 @@ async function Profile(user_id) {
 
   const profile_img = document.getElementById("profile_img");
   const nickname = document.getElementById("nickname");
-  const email = document.getElementById("email");
   const age = document.getElementById("age");
   const gender = document.getElementById("gender");
 
@@ -68,8 +67,7 @@ async function Profile(user_id) {
   image.src = `${backend_base_url}${profile.profile_img}`;
   profile_img.appendChild(image);
 
-  nickname.innerText = "닉네임 : " + profile.nickname;
-  email.innerText = profile.email;
+  nickname.innerText = profile.nickname;
 
   if (profile.age) {
     age.innerText = "나이 : " + profile.age;
