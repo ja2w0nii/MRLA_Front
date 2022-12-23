@@ -181,11 +181,6 @@
     height: 100%;
   }
 
-/* 위치 */
-.material-symbols-outlined {
-    /* font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 200, "opsz" 48; */
-}
-
 a.active {
     color: #ff5752;
     font-weight: bolder;
@@ -271,14 +266,6 @@ a.active {
     width: 100%;
     height: 100%;
     flex-direction: row;
-}
-/* 
-.detail-small-box-left {
-
-    width: 100%;
-} */
-
-.detail-small-box-right {
 }
 
 .detail_content {
