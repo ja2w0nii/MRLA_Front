@@ -204,12 +204,11 @@ section.main_section {
   border: 2px solid #ffca84;
   border-top: none;
   background-color: rgb(255, 255, 255);
-  height: 65vh;
+  height: 62vh;
   width: 95%;
   overflow-y: auto;
   box-sizing: content-box;
   margin-top: 30px;
-  /* padding: 10px 0px; */
 }
 
 
@@ -221,7 +220,7 @@ section.main_section {
 /* 스크롤바 막대 설정*/
 .main_section::-webkit-scrollbar-thumb {
   height: 17%;
-  background-color: #a1a1fc;
+  background: #8a5300;
   border-radius: 10px;
 }
 
