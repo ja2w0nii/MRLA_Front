@@ -19,7 +19,14 @@
     z-index: 1000;
     top: 0;
   }
-  
+
+  h2 {
+    margin: 0 5px 0 0;
+  }
+  .mascot {
+    width: 55px;
+    height: 60px;
+  }
   .header_small_box {
     display: flex;
     flex-direction: row;
