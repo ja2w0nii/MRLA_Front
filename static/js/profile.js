@@ -94,30 +94,6 @@ async function Profile(user_id) {
 
   profile_update.appendChild(profile_update_button);
 
-  const do_follow = document.getElementById("do_follow");
-
-  const do_follow_button = document.createElement("button");
-  do_follow_button.setAttribute("id", user_id);
-
-  for (i in profile.follower) {
-    if (login_user.email == profile.follower[i]) {
-      do_follow_button.setAttribute("class", "btn btn-outline-warning");
-      do_follow_button.innerText = "언팔로우";
-      break;
-    } else {
-      do_follow_button.setAttribute("class", "btn btn-warning");
-      do_follow_button.innerText = "팔로우";
-    }
-  }
-
-  if (profile.follower.length == 0) {
-    do_follow_button.setAttribute("class", "btn btn-warning");
-    do_follow_button.innerText = "팔로우";
-  }
-
-  do_follow_button.setAttribute("onclick", "DoFollow(this.id)");
-  do_follow.appendChild(do_follow_button);
-
   const like_community = document.getElementById("recommend_community");
 
   const like_food_button = document.createElement("button");
@@ -153,7 +129,37 @@ async function Profile(user_id) {
     do_follow.style.visibility = "hidden";
   }
 }
-Profile(user_id);
+Profile(user_id)
+
+async function Follow(user_id) {
+  profile = await getProfile(user_id);
+  login_user = await getName();
+
+  const do_follow = document.getElementById("do_follow");
+
+  const do_follow_button = document.createElement("button");
+  do_follow_button.setAttribute("id", user_id);
+
+  for (i in profile.follower) {
+    if (login_user.email == profile.follower[i]) {
+      do_follow_button.setAttribute("class", "btn btn-outline-warning");
+      do_follow_button.innerText = "언팔로우";
+      break;
+    } else {
+      do_follow_button.setAttribute("class", "btn btn-warning");
+      do_follow_button.innerText = "팔로우";
+    }
+  }
+
+  if (profile.follower.length == 0) {
+    do_follow_button.setAttribute("class", "btn btn-warning");
+    do_follow_button.innerText = "팔로우";
+  }
+
+  do_follow_button.setAttribute("onclick", "DoFollow(this.id)");
+  do_follow.appendChild(do_follow_button);
+}
+Follow(user_id)
 
 // 프로필 유저의 팔로잉/팔로워 리스트 가져오기
 async function FollowList(user_id) {

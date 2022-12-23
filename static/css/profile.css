@@ -112,6 +112,12 @@ form {
   height: 50px;
 }
 
+.do_follow {
+  margin: 30px;
+  display: flex;
+  align-items: center;
+}
+
 
 /* 게시글 */
 .card-list {
