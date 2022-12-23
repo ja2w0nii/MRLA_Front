@@ -13,7 +13,7 @@ body {
 
 /* 헤더============================================= */
 header {
-  background-color: #FED049;
+  background-color: #fed049;
   width: 100%;
   height: 70px;
   display: flex;
@@ -23,40 +23,40 @@ header {
   top: 0;
 }
 
-header>h2 {
+header > h2 {
   margin: 0px 30px;
   width: 120px;
 }
 
-header>h2:hover {
+header > h2:hover {
   color: #000000;
   cursor: pointer;
 }
 
 .profile_info_box {
-    display: flex;
-    flex-direction: row;
-    margin: 0px 30px;
+  display: flex;
+  flex-direction: row;
+  margin: 0px 30px;
 }
 
 .dropdown_profile_img {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    margin: 10px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin: 10px;
 }
 
 .dropdown-menu-dark {
-    height: 100px;
+  height: 100px;
 }
 
 .dropdown-item-box {
-    height: 43px;
+  height: 43px;
 }
 
 .dropdown-item {
-    margin: 0px;
-    cursor: pointer;
+  margin: 0px;
+  cursor: pointer;
 }
 
 form {
@@ -110,6 +110,12 @@ form {
   height: 50px;
 }
 
+.do_follow {
+  margin: 30px;
+  display: flex;
+  align-items: center;
+}
+
 /* 게시글 */
 .card-list {
   display: block;
@@ -154,7 +160,7 @@ form {
   margin: 0;
 }
 
-.card-image>img {
+.card-image > img {
   width: 100%;
   height: 250px;
 }
@@ -162,4 +168,19 @@ form {
 .community-content {
   height: 30px;
   overflow: auto;
+}
+
+/* 모달 */
+/* 팔로잉-팔로워 리스트 */
+.modal-content {
+  border-radius: 20px;
+  width: 350px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }

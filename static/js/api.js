@@ -140,7 +140,7 @@ async function DoFollow(user_id) {
 
   if (response.status == 200) {
     alert(response_json["message"]);
-    window.location.replace(`${frontend_base_url}/profile.html?id=${user_id}`);
+    window.location.reload();
   }
 }
 
