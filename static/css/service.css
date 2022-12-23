@@ -196,6 +196,9 @@ h1.title {
   color: #af7d00;
   font-size: 32px;
 }
+h5.title {
+  color: #af7d00af;
+}
 
 section.main_section {
   border: 2px solid #ffca84;
