@@ -298,9 +298,10 @@ a.active {
 }
 
 .post-upload-modal-close {
-  border: solid 1px red;
   float: right;
-  margin: 0 10px;
+  margin: 0 30px;
+  font-size: 30px;
+  text-decoration: none;
 }
 
 /*모달창 닫는 버튼*/
