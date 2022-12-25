@@ -131,12 +131,25 @@ fileDOM.addEventListener("change", () => {
   reader.readAsDataURL(fileDOM.files[0]);
 });
 
+//제목 텍스트 수 제한 textarea
+$(".post-modal-input-text-top input").keyup(function () {
+  var content = $(this).val();
+  $(".post-modal-input-text-top .title-count span").html(content.length);
+  if (content.length > 15) {
+    alert("제목은 최대 15자까지 입력 가능합니다.");
+    $(this).val(content.substring(0, 15));
+    $(".post-modal-input-text-top .title-count span").html(15);
+  }
+});
+
+
+
 // 텍스트 수 제한 textarea
 $(".text_box textarea").keyup(function () {
   var content = $(this).val();
   $(".text_box .count span").html(content.length);
   if (content.length > 200) {
-    alert("최대 200자까지 입력 가능합니다.");
+    alert("내용은 최대 200자까지 입력 가능합니다.");
     $(this).val(content.substring(0, 200));
     $(".text_box .count span").html(200);
   }
