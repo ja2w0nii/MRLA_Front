@@ -22,6 +22,13 @@ header {
   top: 0;
 }
 
+h2 {
+  margin: 0 5px 0 0;
+}
+.mascot {
+  width: 55px;
+  height: 60px;
+}
 .header_small_box {
   display: flex;
   flex-direction: row;
@@ -180,16 +187,28 @@ section {
 }
 
 /* 바디 */
+section.main_title{
+  margin-top: 160px;
+  height: auto;
+}
+
+h1.title {
+  color: #af7d00;
+  font-size: 32px;
+}
+h5.title {
+  color: #af7d00af;
+}
+
 section.main_section {
   border: 2px solid #ffca84;
   border-top: none;
   background-color: rgb(255, 255, 255);
-  height: 65vh;
+  height: 62vh;
   width: 95%;
   overflow-y: auto;
   box-sizing: content-box;
-  margin-top: 170px;
-  /* padding: 10px 0px; */
+  margin-top: 30px;
 }
 
 
@@ -201,7 +220,7 @@ section.main_section {
 /* 스크롤바 막대 설정*/
 .main_section::-webkit-scrollbar-thumb {
   height: 17%;
-  background-color: #a1a1fc;
+  background: #8a5300;
   border-radius: 10px;
 }
 

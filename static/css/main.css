@@ -3,9 +3,8 @@
   font-family: "Jua", sans-serif;
   text-align: center;
   margin: auto;
-  
 }
-body{
+body {
   overflow: hidden;
 }
 /* 헤더=============================================*/
@@ -21,6 +20,13 @@ header {
   top: 0;
 }
 
+h2 {
+  margin: 0 5px 0 0;
+}
+.mascot {
+  width: 55px;
+  height: 60px;
+}
 .header_small_box {
   display: flex;
   flex-direction: row;
@@ -65,11 +71,10 @@ header {
 /* 네비게이션============================================= */
 .nav_box {
   /* border: 1px solid red; */
-top: 70px;
+  top: 70px;
   position: fixed;
   width: 100%;
   z-index: 100;
-
 }
 
 .navContainer {
@@ -164,7 +169,6 @@ ul {
   list-style: none;
   padding-left: 0px;
 }
-
 
 nav a {
   text-decoration-line: none;
@@ -493,13 +497,14 @@ footer {
   font-size: 11px;
   background-color: #5c5c5c;
 }
-footer nav{
+footer nav {
   margin-top: 5px;
 }
 footer a {
   display: inline-block;
   margin: 0 20px 10px 20px;
-  color: #ffffff; font-size: 11px;
+  color: #ffffff;
+  font-size: 11px;
 }
 
 footer a:visited {
@@ -507,7 +512,8 @@ footer a:visited {
 }
 
 footer p {
-  margin-top: 0; margin-bottom: 0;   
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 footer p span {
