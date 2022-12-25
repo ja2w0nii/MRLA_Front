@@ -36,7 +36,10 @@
 
   <body>
     <header>
-      <h2 href="main.html" onclick="location.href='main.html?id=1'">메추리알</h2>
+      <div class="header_small_box">
+        <h2 href="main.html" onclick="location.href='main.html?id=1'">메추리알</h2>
+        <img class="mascot" src="mascot.jpeg" alt="마스코트" onclick="location.href='main.html?id=1'" />
+      </div>
       <div id="profile_info_box" class="profile_info_box">
         <div id="profile_img_box" class="profile_img_box"></div>
         <div id="profile_name_box" class="nav-item dropdown">
@@ -99,16 +102,15 @@
           <p class="profile_img" id="profile_img"></p>
           <div class="main_profile">
             <div class="email_profile_update">
-              <h2 id="email"></h2>
+              <h2 id="nickname"></h2>
               <div id="profile_update"></div>
             </div>
             <div class="profile_detail_box">
               <div>
-                <p class="profile_detail" id="nickname"></p>
                 <p class="profile_detail" id="age"></p>
                 <p class="profile_detail" id="gender"></p>
               </div>
-              <div id="do_follow"></div>
+              <div id="do_follow" class="do_follow"></div>
               <div>
                 <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#followingModal">팔로잉</button>
                 <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#followerModal">팔로워</button>

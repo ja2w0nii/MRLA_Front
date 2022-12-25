@@ -22,6 +22,13 @@ header {
   top: 0;
 }
 
+h2 {
+  margin: 0 5px 0 0;
+}
+.mascot {
+  width: 55px;
+  height: 60px;
+}
 .header_small_box {
   display: flex;
   flex-direction: row;
@@ -347,9 +354,11 @@ a.active {
 }
 
 .post-upload-modal-close {
+
   /* border: solid 1px red; */
   float: right;
   margin: 0 10px;
+
   text-decoration: none;
 }
 
