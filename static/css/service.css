@@ -22,6 +22,13 @@ header {
   top: 0;
 }
 
+h2 {
+  margin: 0 5px 0 0;
+}
+.mascot {
+  width: 55px;
+  height: 60px;
+}
 .header_small_box {
   display: flex;
   flex-direction: row;
@@ -181,6 +188,19 @@ section {
 
 
 /* 바디 */
+section.main_title{
+  margin-top: 160px;
+  height: auto;
+}
+
+h1.title {
+  color: #af7d00;
+  font-size: 32px;
+}
+h5.title {
+  color: #af7d00af;
+}
+
 section.main_section {
   border: 2px solid #ffca84;
   border-top: none;
@@ -192,6 +212,7 @@ section.main_section {
   width: 95vw;
 
   /* padding: 10px 0px; */
+
 }
 .main_title{
   margin-top: 150px;

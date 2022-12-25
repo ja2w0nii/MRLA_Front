@@ -1,24 +1,32 @@
-@import url("https://fonts.googleapis.com/css?family=Amatic+SC");
-
 body {
   height: 100vh;
   display: grid;
   justify-content: center;
   align-items: center;
-  background-image: linear-gradient(to top, #d9afd9 0%, #97d9e1 100%);
+  background-image: linear-gradient(to top, #ffffff 0%, #fdf5be 100%);
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
 }
 
-.description,
-.link {
-  font-family: "Amatic SC", cursive;
+.description {
+  font-family: "Jua", cursive;
   text-align: center;
+  font-size: 50px;
 }
 
-.description {
+.description-content {
+  font-family: "Jua", cursive;
+  text-align: center;
   font-size: 35px;
+}
+
+b.kr {
+  font-size: 60px;
+}
+
+b.en {
+  font-size: 45px;
 }
 
 .btn {

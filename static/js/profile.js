@@ -8,46 +8,46 @@ async function ProfileInfo() {
 
   const profile_img_box = document.getElementById("profile_img_box");
   let newImage = document.createElement("img");
-  newImage.setAttribute("id", login_user.id)
-  newImage.setAttribute("class", "dropdown_profile_img")
+  newImage.setAttribute("id", login_user.id);
+  newImage.setAttribute("class", "dropdown_profile_img");
   newImage.src = `${backend_base_url}${login_user.profile_img}`;
   profile_img_box.appendChild(newImage);
 
   const profile_name_box = document.getElementById("profile_name_box");
-  const newNickname = document.createElement("a")
-  newNickname.setAttribute("id", login_user.id)
-  newNickname.setAttribute("class", "nav-link dropdown-toggle")
-  newNickname.setAttribute("href", "#")
-  newNickname.setAttribute("role", "button")
-  newNickname.setAttribute("data-bs-toggle", "dropdown")
-  newNickname.setAttribute("aria-expanded", "false")
-  newNickname.innerText = login_user.nickname
-  profile_name_box.appendChild(newNickname)
+  const newNickname = document.createElement("a");
+  newNickname.setAttribute("id", login_user.id);
+  newNickname.setAttribute("class", "nav-link dropdown-toggle");
+  newNickname.setAttribute("href", "#");
+  newNickname.setAttribute("role", "button");
+  newNickname.setAttribute("data-bs-toggle", "dropdown");
+  newNickname.setAttribute("aria-expanded", "false");
+  newNickname.innerText = login_user.nickname;
+  profile_name_box.appendChild(newNickname);
 
-  const profile_dropdown = document.getElementById("profile_dropdown")
-  const newItem = document.createElement("li")
-  newItem.setAttribute("class", "dropdown-item-box")
-  profile_dropdown.appendChild(newItem)
+  const profile_dropdown = document.getElementById("profile_dropdown");
+  const newItem = document.createElement("li");
+  newItem.setAttribute("class", "dropdown-item-box");
+  profile_dropdown.appendChild(newItem);
 
-  const newItem_a = document.createElement("a")
-  newItem_a.setAttribute("id", login_user.id)
-  newItem_a.setAttribute("class", "dropdown-item")
-  newItem_a.setAttribute("onclick", "getProfilePage(this.id)")
-  newItem_a.innerText = "My 프로필"
-  newItem.appendChild(newItem_a)
+  const newItem_a = document.createElement("a");
+  newItem_a.setAttribute("id", login_user.id);
+  newItem_a.setAttribute("class", "dropdown-item");
+  newItem_a.setAttribute("onclick", "getProfilePage(this.id)");
+  newItem_a.innerText = "My 프로필";
+  newItem.appendChild(newItem_a);
 
-  const newItem2 = document.createElement("li")
-  newItem2.setAttribute("class", "dropdown-item-box")
-  profile_dropdown.appendChild(newItem2)
+  const newItem2 = document.createElement("li");
+  newItem2.setAttribute("class", "dropdown-item-box");
+  profile_dropdown.appendChild(newItem2);
 
-  const newItem_a2 = document.createElement("a")
-  newItem_a2.setAttribute("id", login_user.id)
-  newItem_a2.setAttribute("class", "dropdown-item")
-  newItem_a2.setAttribute("onclick", "handleLogout()")
-  newItem_a2.innerText = "로그아웃"
-  newItem2.appendChild(newItem_a2)
+  const newItem_a2 = document.createElement("a");
+  newItem_a2.setAttribute("id", login_user.id);
+  newItem_a2.setAttribute("class", "dropdown-item");
+  newItem_a2.setAttribute("onclick", "handleLogout()");
+  newItem_a2.innerText = "로그아웃";
+  newItem2.appendChild(newItem_a2);
 }
-ProfileInfo()
+ProfileInfo();
 
 // 프로필 보여주기
 const urlParams = new URLSearchParams(window.location.search);
@@ -59,7 +59,6 @@ async function Profile(user_id) {
 
   const profile_img = document.getElementById("profile_img");
   const nickname = document.getElementById("nickname");
-  const email = document.getElementById("email");
   const age = document.getElementById("age");
   const gender = document.getElementById("gender");
 
@@ -68,8 +67,7 @@ async function Profile(user_id) {
   image.src = `${backend_base_url}${profile.profile_img}`;
   profile_img.appendChild(image);
 
-  nickname.innerText = "닉네임 : " + profile.nickname;
-  email.innerText = profile.email;
+  nickname.innerText = profile.nickname;
 
   if (profile.age) {
     age.innerText = "나이 : " + profile.age;
@@ -95,30 +93,6 @@ async function Profile(user_id) {
   profile_update_button.innerText = "⚙️프로필 수정";
 
   profile_update.appendChild(profile_update_button);
-
-  const do_follow = document.getElementById("do_follow");
-
-  const do_follow_button = document.createElement("button");
-  do_follow_button.setAttribute("id", user_id);
-
-  for (i in profile.follower) {
-    if (login_user.email == profile.follower[i]) {
-      do_follow_button.setAttribute("class", "btn btn-outline-warning");
-      do_follow_button.innerText = "언팔로우";
-      break;
-    } else {
-      do_follow_button.setAttribute("class", "btn btn-warning");
-      do_follow_button.innerText = "팔로우";
-    }
-  }
-
-  if (profile.follower.length == 0) {
-    do_follow_button.setAttribute("class", "btn btn-warning");
-    do_follow_button.innerText = "팔로우";
-  }
-
-  do_follow_button.setAttribute("onclick", "DoFollow(this.id)");
-  do_follow.appendChild(do_follow_button);
 
   const like_community = document.getElementById("recommend_community");
 
@@ -156,6 +130,37 @@ async function Profile(user_id) {
   }
 }
 Profile(user_id);
+
+async function Follow(user_id) {
+  profile = await getProfile(user_id);
+  login_user = await getName();
+
+  const do_follow = document.getElementById("do_follow");
+
+  const do_follow_button = document.createElement("button");
+  do_follow_button.setAttribute("id", user_id);
+  do_follow_button.setAttribute("type", "button");
+
+  for (i in profile.follower) {
+    if (login_user.email == profile.follower[i]) {
+      do_follow_button.setAttribute("class", "btn btn-outline-warning");
+      do_follow_button.innerText = "언팔로우";
+      break;
+    } else {
+      do_follow_button.setAttribute("class", "btn btn-warning");
+      do_follow_button.innerText = "팔로우";
+    }
+  }
+
+  if (profile.follower.length == 0) {
+    do_follow_button.setAttribute("class", "btn btn-warning");
+    do_follow_button.innerText = "팔로우";
+  }
+
+  do_follow_button.setAttribute("onclick", "DoFollow(this.id)");
+  do_follow.appendChild(do_follow_button);
+}
+Follow(user_id);
 
 // 프로필 유저의 팔로잉/팔로워 리스트 가져오기
 async function FollowList(user_id) {

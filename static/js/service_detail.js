@@ -84,7 +84,7 @@ async function loadgetServiceComment(service_id) {
     const newService = document.createElement("span");
     newService.setAttribute("id", servicecomment.service);
     newService.setAttribute("class", "servicecomment_user");
-    newService.innerText = "admin";
+    newService.innerText = "고객센터";
     comment_list.appendChild(newService);
 
     const newCreatedAt = document.createElement("span");
