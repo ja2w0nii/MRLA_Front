@@ -3,12 +3,13 @@
   font-family: "Jua", sans-serif;
   text-align: center;
   margin: auto;
+  
 }
 body{
+  overflow: hidden;
   background-color: rgb(255, 251, 236);
-  /* overflow: hidden; */
-}
 
+}
 /* 헤더=============================================*/
 header {
   background-color: #fed049;
@@ -65,13 +66,16 @@ header {
 
 /* 네비게이션============================================= */
 .nav_box {
+  /* border: 1px solid red; */
 top: 70px;
   position: fixed;
   width: 100%;
+  z-index: 100;
 
 }
 
 .navContainer {
+  padding: 5px;
   background-color: white;
   border: 10px solid #fed049;
   align-items: center;
@@ -87,13 +91,12 @@ top: 70px;
 }
 
 .near_restaurant {
-  border: solid 3px grey;
   border-radius: 100px;
   float: left;
   width: 20%;
   box-sizing: border-box;
   text-decoration-line: none;
-  font-size: 20px;
+  font-size: 1.2vw;
   font-weight: 500;
 }
 
@@ -106,13 +109,12 @@ top: 70px;
 }
 
 .who {
-  border: 3px solid grey;
   border-radius: 100px;
   float: left;
   margin-left: 5%;
   width: 20%;
   box-sizing: border-box;
-  font-size: 20px;
+  font-size: 1.2vw;
   font-weight: 500;
 }
 
@@ -124,13 +126,12 @@ top: 70px;
 }
 
 .community {
-  border: 3px solid grey;
   border-radius: 100px;
   float: left;
   margin-left: 5%;
   width: 20%;
   box-sizing: border-box;
-  font-size: 20px;
+  font-size: 1.2vw;
   font-weight: 500;
 }
 
@@ -142,13 +143,12 @@ top: 70px;
 }
 
 .service {
-  border: 3px solid grey;
   border-radius: 100px;
   float: left;
   margin-left: 5%;
   width: 20%;
   box-sizing: border-box;
-  font-size: 20px;
+  font-size: 1.2vw;
   font-weight: 500;
 }
 
@@ -174,45 +174,53 @@ section {
   /* border: 2px solid green; */
   height: 100%;
 }
+
 /* 위치 */
 .material-symbols-outlined {
   font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 200, "opsz" 48;
 }
 
 /* 바디 */
-section.main_section {
-  /* border-top: 2px solid rgb(0, 0, 0); */
-  /* background-color: rgb(253, 255, 222); */
-  width: 100%;
-  height: 100%;
-  display: grid;
-  align-items: flex-start;
-  overflow: auto;
-  margin-top: 140px;
+.big-div{
 
-  /* padding: 5px 5px; */
-  /* border-radius: 20px; */
-
+  top:120px;
+height: 88vh;
+position: relative;
 }
+.service-small-div{
+  margin: 20px auto;
+  padding: 0px 20px;
 
-
+  height:60vh;
+  overflow: auto;
+}
 /* 스크롤바 설정==================================*/
-.main_section::-webkit-scrollbar{
+.service-small-div::-webkit-scrollbar{
   width: 6px;
 }
 
 /* 스크롤바 막대 설정*/
-.main_section::-webkit-scrollbar-thumb{
+.service-small-div::-webkit-scrollbar-thumb{
   height: 17%;
-  background-color: #3D5656 ;
+  background-color: #b86e00d2 ;
   border-radius: 10px;  
 }
 
 /* 스크롤바 뒷 배경 설정*/
-.main_section::-webkit-scrollbar-track{
-  background-color: #3d565681 ;
+.service-small-div::-webkit-scrollbar-track{
+  background-color: #ff880038 ;
 }
 /* 스크롤바 설정==================================*/
+section.main_section {
+
+  width: 100%;
+  height: 100%;
+  display: grid;
+  align-items: flex-start;
+}
+
+
+
 
 span.user {
   float: left;
@@ -325,10 +333,12 @@ margin: 0px 10px;
 }
 /* 댓글 작성하는 칸 div========================= */
 .comment_box_all{
-  width: 100%;
+  width: 100vw;
   background-color: #ffffff;
-  height: 100%;
+  height: 25vh;
   border-top:1px solid  #fab15d ;
+  position: absolute;
+  bottom: 0px;
 }
 .comment_box_all p{
   /* border: 1px solid red; */
