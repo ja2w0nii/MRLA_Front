@@ -76,6 +76,8 @@ h2 {
   position: fixed;
   width: 100%;
   z-index: 100;
+position: relative;
+
 }
 
 .navContainer {
@@ -217,12 +219,14 @@ a.active {
   position: absolute;
   border-bottom: 0px;
   width: 100vw;
+  position: absolute;
+  bottom: -30px;
 }
 
 /* 부화한 메추리알들의 커뮤니티 */
 .community_for_metury {
   margin: 20px auto;
-  font-size: 40px;
+  font-size: 2vw;
   color: rgb(107, 57, 0);
 }
 
@@ -468,7 +472,12 @@ a.active {
   font-family: "ht_r";
   font-size: 15px;
 }
+.post-modal-input-text-middle {
+  width: 100%;
+  height: 15%;
+  margin-bottom: 20px;
 
+}
 /*내용 텍스트 수 제한 textarea */
 .text_box {
   border: none;
@@ -480,7 +489,7 @@ a.active {
 
 .text_box textarea {
   width: 100%;
-  height: 35vh;
+  height: 25vh;
   text-align: left;
   color: #666;
   font-family: "ht_r";
@@ -557,11 +566,11 @@ a.active {
 .post-location {
   text-align: left;
   padding: 10px;
-  width: 41%;
-  height: 32px;
+  width: 100%;
+  height: 5vh;
   font-size: 15px;
   border: 0;
-  border-radius: 20px;
+  border-radius: 10px;
   outline: none;
 }
 

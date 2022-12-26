@@ -20,12 +20,15 @@ header {
   top: 0;
 }
 
-h2 {
-  margin: 0 5px 0 0;
+header h2{
+  margin-bottom: 0px;
 }
+
+
 .mascot {
   width: 55px;
   height: 60px;
+
 }
 .header_small_box {
   display: flex;
@@ -217,14 +220,17 @@ a.active {
 }
 .slide_change_button {
   position: absolute;
-  top: 10px;
+  top: 20vw;
   width: 100vw;
 }
-.clickleft {
-  font-size: 1vw;
+
+.clickleft{
+font-size: 4vw;
+margin-right: 90vw;
 }
-.clickright {
-  font-size: 1vw;
+.clickright{
+  font-size: 4vw;
+
 }
 
 /* 추천 맛집 라운드 슬라이드==========================================221205 이태은 */
