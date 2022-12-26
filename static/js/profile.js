@@ -157,23 +157,49 @@ Follow(user_id);
 
 // 프로필 유저의 팔로잉/팔로워 리스트 가져오기
 async function FollowList(user_id) {
-  follows = await getFollowList(user_id);
+  followings = await getFollowingList(user_id);
+  followers = await getFollowerList(user_id);
 
-  follows.following.forEach((following) => {
+  followings.forEach((following) => {
     const following_list = document.getElementById("following-modal-body");
 
+    const newFollowingBox = document.createElement("div")
+    newFollowingBox.setAttribute("class", "following-box");
+
+    const newImage = document.createElement("img");
+    newImage.src = `${backend_base_url}${following.profile_img}`;
+    newImage.setAttribute("id", following.id);
+    newImage.setAttribute("onclick", "getProfilePage(this.id)");
+    newFollowingBox.appendChild(newImage);
+
     const newFollowing = document.createElement("li");
-    newFollowing.innerText = following;
-    following_list.appendChild(newFollowing);
+    newFollowing.innerText = following.nickname;
+    newFollowing.setAttribute("id", following.id);
+    newFollowing.setAttribute("onclick", "getProfilePage(this.id)");
+    newFollowingBox.appendChild(newFollowing);
+
+    following_list.appendChild(newFollowingBox);
   });
 
-  follows.follower.forEach((follower) => {
+  followers.forEach((follower) => {
     const follower_list = document.getElementById("follower-modal-body");
 
+    const newFollowerBox = document.createElement("div")
+    newFollowerBox.setAttribute("class", "follower-box");
+
+    const newImage = document.createElement("img");
+    newImage.src = `${backend_base_url}${follower.profile_img}`;
+    newImage.setAttribute("id", follower.id);
+    newImage.setAttribute("onclick", "getProfilePage(this.id)");
+    newFollowerBox.appendChild(newImage);
+
     const newFollower = document.createElement("li");
-    newFollower.setAttribute("id", follower);
-    newFollower.innerText = follower;
-    follower_list.appendChild(newFollower);
+    newFollower.innerText = follower.nickname;
+    newFollower.setAttribute("id", follower.id);
+    newFollower.setAttribute("onclick", "getProfilePage(this.id)");
+    newFollowerBox.appendChild(newFollower);
+
+    follower_list.appendChild(newFollowerBox);
   });
 }
 FollowList(user_id);

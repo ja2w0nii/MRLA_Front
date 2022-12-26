@@ -224,9 +224,21 @@ async function DoFollow(user_id) {
   }
 }
 
-// 팔로잉/팔로워 리스트 가져오기
-async function getFollowList(user_id) {
-  const response = await fetch(`${backend_base_url}/users/follow/${user_id}`, {
+// 팔로잉 리스트 가져오기
+async function getFollowingList(user_id) {
+  const response = await fetch(`${backend_base_url}/users/following/${user_id}`, {
+    headers: {
+      Authorization: "Bearer " + localStorage.getItem("access"),
+    },
+    method: "GET",
+  });
+  response_json = await response.json();
+  return response_json;
+}
+
+// 팔로워 리스트 가져오기
+async function getFollowerList(user_id) {
+  const response = await fetch(`${backend_base_url}/users/follower/${user_id}`, {
     headers: {
       Authorization: "Bearer " + localStorage.getItem("access"),
     },
