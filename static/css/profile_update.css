@@ -146,18 +146,16 @@ form {
   text-align: left;
 }
 
-.gender-box,
-.age-box,
 .nickname-box {
   display: flex;
   flex-direction: row;
+  margin-bottom: 60px;
 }
 
 .choose {
   margin: 17px 10px;
 }
 
-.age,
 .nickname {
   width: 70px;
 }

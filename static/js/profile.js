@@ -59,8 +59,6 @@ async function Profile(user_id) {
 
   const profile_img = document.getElementById("profile_img");
   const nickname = document.getElementById("nickname");
-  const age = document.getElementById("age");
-  const gender = document.getElementById("gender");
 
   let image = document.createElement("img");
   image.setAttribute("class", "profile_image");
@@ -68,20 +66,6 @@ async function Profile(user_id) {
   profile_img.appendChild(image);
 
   nickname.innerText = profile.nickname;
-
-  if (profile.age) {
-    age.innerText = "나이 : " + profile.age;
-  } else {
-    age.innerText = "나이 : 사용 안 함";
-  }
-
-  if (profile.gender == true) {
-    gender.innerText = "성별 : 남";
-  } else if (profile.gender == false) {
-    gender.innerText = "성별 : 여";
-  } else {
-    gender.innerText = "성별 : 사용 안 함";
-  }
 
   const profile_update = document.getElementById("profile_update");
 

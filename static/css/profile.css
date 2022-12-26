@@ -112,11 +112,6 @@ form {
   flex-direction: row;
 }
 
-.profile_detail {
-  margin: 20px auto;
-  text-align: left;
-}
-
 .btn.profile {
   margin: 0px 200px;
   width: 130px;
@@ -128,7 +123,7 @@ form {
 }
 
 .do_follow {
-  margin: 30px;
+  margin: 30px 30px 30px 5px;
   display: flex;
   align-items: center;
 }
