@@ -72,119 +72,112 @@ h2 {
 .nav_box {
   /* border: 1px solid red; */
   top: 70px;
-    position: fixed;
-    width: 100%;
-    z-index: 100;
-  
-  }
-  
-  .navContainer {
-    padding: 5px;
-    background-color: white;
-    border: 10px solid #fed049;
-    align-items: center;
-    box-sizing: border-box;
-    display: flex;
-    width: 100%;
-    justify-content: flex-end;
-    align-items: center;
-  }
-  
-  .service1 {
-    width: 80%;
-  }
-  
-  .near_restaurant {
-    border-radius: 100px;
-    float: left;
-    width: 20%;
-    box-sizing: border-box;
-    text-decoration-line: none;
-    font-size: 1.2vw;
-    font-weight: 500;
-  }
-  
-  .near_restaurant:hover {
-    letter-spacing: 3px;
-    color: #000000;
-    font-weight: bold;
-    text-decoration-line: none;
-    transition: all 0.7s;
-  }
-  
-  .who {
-    border-radius: 100px;
-    float: left;
-    margin-left: 5%;
-    width: 20%;
-    box-sizing: border-box;
-    font-size: 1.2vw;
-    font-weight: 500;
-  }
-  
-  .who:hover {
-    letter-spacing: 2px;
-    color: #000000;
-    font-weight: 900;
-    transition: all 0.7s;
-  }
-  
-  .community {
-    border-radius: 100px;
-    float: left;
-    margin-left: 5%;
-    width: 20%;
-    box-sizing: border-box;
-    font-size: 1.2vw;
-    font-weight: 500;
-  }
-  
-  .community:hover {
-    letter-spacing: 3px;
-    color: #000000;
-    font-weight: 900;
-    transition: all 0.7s;
-  }
-  
-  .service {
-    border-radius: 100px;
-    float: left;
-    margin-left: 5%;
-    width: 20%;
-    box-sizing: border-box;
-    font-size: 1.2vw;
-    font-weight: 500;
-  }
-  
-  .service:hover {
-    letter-spacing: 3px;
-    color: #000000;
-    font-weight: 900;
-    transition: all 0.7s;
-  }
-  
-  ul {
-    list-style: none;
-    padding-left: 0px;
-  }
-  
-  
-  nav a {
-    text-decoration-line: none;
-    color: grey;
-  }
-  
-  section {
-    /* border: 2px solid green; */
-    height: 100%;
-  }
-
-  } 
-/* 위치 */
-.material-symbols-outlined {
-    /* font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 200, "opsz" 48; */
+  position: fixed;
+  width: 100%;
+  z-index: 100;
 }
 
+.navContainer {
+  padding: 5px;
+  background-color: white;
+  border: 10px solid #fed049;
+  align-items: center;
+  box-sizing: border-box;
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.service1 {
+  width: 80%;
+}
+
+.near_restaurant {
+  border-radius: 100px;
+  float: left;
+  width: 20%;
+  box-sizing: border-box;
+  text-decoration-line: none;
+  font-size: 1.2vw;
+  font-weight: 500;
+}
+
+.near_restaurant:hover {
+  letter-spacing: 3px;
+  color: #000000;
+  font-weight: bold;
+  text-decoration-line: none;
+  transition: all 0.7s;
+}
+
+.who {
+  border-radius: 100px;
+  float: left;
+  margin-left: 5%;
+  width: 20%;
+  box-sizing: border-box;
+  font-size: 1.2vw;
+  font-weight: 500;
+}
+
+.who:hover {
+  letter-spacing: 2px;
+  color: #000000;
+  font-weight: 900;
+  transition: all 0.7s;
+}
+
+.community {
+  border-radius: 100px;
+  float: left;
+  margin-left: 5%;
+  width: 20%;
+  box-sizing: border-box;
+  font-size: 1.2vw;
+  font-weight: 500;
+}
+
+.community:hover {
+  letter-spacing: 3px;
+  color: #000000;
+  font-weight: 900;
+  transition: all 0.7s;
+}
+
+.service {
+  border-radius: 100px;
+  float: left;
+  margin-left: 5%;
+  width: 20%;
+  box-sizing: border-box;
+  font-size: 1.2vw;
+  font-weight: 500;
+}
+
+.service:hover {
+  letter-spacing: 3px;
+  color: #000000;
+  font-weight: 900;
+  transition: all 0.7s;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0px;
+}
+
+nav a {
+  text-decoration-line: none;
+  color: grey;
+}
+
+section {
+  /* border: 2px solid green; */
+  height: 100%;
+}
+
+/* 위치 */
 .near_restaurant {
   border-radius: 100px;
   float: left;
