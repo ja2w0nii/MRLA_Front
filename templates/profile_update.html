@@ -35,6 +35,24 @@
   </head>
 
   <body>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-4" id="exampleModalLabel">정말 탈퇴하시겠습니까?<br>맞으시면 "<b>회원 탈퇴</b>"를 입력하세요.</br></h1>
+          </div>
+          <div class="modal-body">
+            <input type="text" class="unregister" id="unregister" />
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-outline-danger" onclick="loadUnregister()">확인</button>
+            <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">취소</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <header>
       <div class="header_small_box">
         <h2 href="main.html" onclick="location.href='main.html?id=1'">메추리알</h2>
@@ -72,6 +90,9 @@
               </div>
               <button type="button" class="btn btn-outline-secondary profile_update_button" onclick="MyProfileUpdateForm()">
                 <i class="bi bi-gear"></i> 수정 완료
+              </button>
+              <button type="button" class="btn btn-outline-danger unregister" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                <i class="bi bi-exclamation-diamond"></i> 회원 탈퇴
               </button>
             </div>
           </div>
