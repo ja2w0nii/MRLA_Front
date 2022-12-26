@@ -19,12 +19,15 @@ header {
   z-index: 1000;
   top: 0;
 }
-/* .mascot{
-  width: 55px;
-  height: 60px;
-} */
+
 header h2{
   margin-bottom: 0px;
+}
+
+
+.mascot {
+  width: 55px;
+  height: 60px;
 
 }
 .header_small_box {
@@ -76,7 +79,7 @@ header h2{
   width: 100%;
   z-index: 100;
 }
-.nav_box .material-symbols-outlined{
+.nav_box .material-symbols-outlined {
   font-size: 2vw;
 }
 .navContainer {
@@ -215,10 +218,14 @@ a.active {
   /* z-index: -100; */
   position: relative;
 }
-.slide_change_button{
+
+.slide_change_button {
+  position: absolute;
+  top: 20vw;
 
   width: 100vw;
 }
+
 .clickleft{
   position: absolute;
   top: 15vh;
@@ -231,7 +238,9 @@ margin-right: 40vw;
   top: 15vh;
   right: -37vw;
   font-size: 4vw;
+
   margin-right: 40vw;
+
 }
 
 /* 추천 맛집 라운드 슬라이드==========================================221205 이태은 */
@@ -239,8 +248,6 @@ margin-right: 40vw;
   font-size: 2vw;
   color: #ff5752;
 }
-
-
 
 .slide a {
   text-decoration: none;

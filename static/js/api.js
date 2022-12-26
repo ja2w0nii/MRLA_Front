@@ -50,9 +50,15 @@ function getProfileUpdatePage(user_id) {
   location.href = url;
 }
 
-// 프로필 페이지 커뮤니티 탭 연결
+// 프로필 페이지 좋아요 커뮤니티 탭 연결
 function getProfileCommunityPage(user_id) {
   const url = `${frontend_base_url}/profile_community.html?id=${user_id}`;
+  location.href = url;
+}
+
+// 프로필 페이지 작성한 게시글 탭 연결
+function getProfileMyCommunityPage(user_id) {
+  const url = `${frontend_base_url}/profile_my_community.html?id=${user_id}`;
   location.href = url;
 }
 
@@ -81,8 +87,12 @@ async function handleUnregister() {
   localStorage.removeItem("refresh");
   localStorage.removeItem("payload");
 
-  response_json = await response.json();
-  return response_json;
+  if (response.status == 200) {
+    alert("메추리알 서비스를 이용해 주셔서 감사합니다.");
+    window.location.reload();
+  } else {
+    return false;
+  }
 }
 
 // 프로필 수정하기
@@ -144,9 +154,21 @@ async function DoFollow(user_id) {
   }
 }
 
-// 팔로잉/팔로워 리스트 가져오기
-async function getFollowList(user_id) {
-  const response = await fetch(`${backend_base_url}/users/follow/${user_id}`, {
+// 팔로잉 리스트 가져오기
+async function getFollowingList(user_id) {
+  const response = await fetch(`${backend_base_url}/users/following/${user_id}`, {
+    headers: {
+      Authorization: "Bearer " + localStorage.getItem("access"),
+    },
+    method: "GET",
+  });
+  response_json = await response.json();
+  return response_json;
+}
+
+// 팔로워 리스트 가져오기
+async function getFollowerList(user_id) {
+  const response = await fetch(`${backend_base_url}/users/follower/${user_id}`, {
     headers: {
       Authorization: "Bearer " + localStorage.getItem("access"),
     },
@@ -171,6 +193,18 @@ async function getLikeFoodList(user_id) {
 // 해당 프로필 유저가 좋아요한 커뮤니티 게시글 리스트 가져오기
 async function getLikeCommunityList(user_id) {
   const response = await fetch(`${backend_base_url}/posts/community/profile/${user_id}/likecommunity/`, {
+    headers: {
+      Authorization: "Bearer " + localStorage.getItem("access"),
+    },
+    method: "GET",
+  });
+  response_json = await response.json();
+  return response_json;
+}
+
+// 해당 프로필 유저가 작성한 커뮤니티 게시글 리스트 가져오기
+async function getMyCommunityList(user_id) {
+  const response = await fetch(`${backend_base_url}/posts/community/profile/${user_id}/mycommunity/`, {
     headers: {
       Authorization: "Bearer " + localStorage.getItem("access"),
     },
@@ -319,7 +353,7 @@ async function postFoodComment(food_id, newComment) {
     alert("작성 완료!");
     window.location.reload();
   } else if (response.status == 400) {
-    alert("댓글을 작성해 주세요!");
+    alert("댓글을 500자 이하로 작성해주세요.");
   } else {
     alert(response.status);
   }
@@ -591,10 +625,46 @@ async function postCommunity(formdata) {
   }
 }
 
-// 메뉴 상세 페이지 _ 근처 맛집 연결 
+// 메뉴 상세 페이지 _ 근처 맛집 연결
 function getNearRestaurant(food) {
   const url = `${frontend_base_url}/map_search.html?id=${food}`;
   location.href = url;
 }
 
-//수정//
+// 음식 검색 페이지 연결 //
+async function FoodSearch() {
+  const word = document.getElementById("inputSearch").value;
+  console.log(word);
+  a = await getFoodSearch();
+  // console.log(a);
+
+  // b = Object.values(a);
+  // console.log(b);
+
+  for (var i = 0; i < a.length; i++) {
+    var key = a[i];
+    b = key.menu.replace(/\"/gi, "");
+    // c = [b, key.food_id];
+    d = key.food_id;
+    // console.log(b);
+    // console.log(c);
+    // console.log(d);
+    if (b == word) {
+      location.href = `${frontend_base_url}/food_detail.html?id=${d}`;
+    }
+    // else {
+    //   alert("음식을 입력하세요!");
+    // }
+  }
+}
+
+// 음식 검색 //
+async function getFoodSearch() {
+  const response = await fetch(`${backend_base_url}/foods/main/search?` + new URLSearchParams(window.location.search), {
+    method: "GET",
+  });
+
+  response_json = await response.json();
+  // console.log(response_json);
+  return response_json;
+}

@@ -41,10 +41,8 @@ window.addEventListener(
 );
 
 async function handleSignIn() {
-
   const email = document.getElementById("email2").value;
   const password = document.getElementById("password2").value;
-  console.log(Boolean(email));
   if (email == false) {
     alert("이메일을 입력해 주세요!");
     return false;
@@ -84,7 +82,6 @@ async function handleSignIn() {
   } else {
     alert("아이디, 비밀번호를 확인하세요!");
   }
-
 }
 
 // async function handleMock() {
@@ -146,7 +143,6 @@ async function handleSignIn() {
 // }
 
 async function handleKakao() {
-
   let code = new URL(window.location.href).searchParams.get("code");
   if (code) {
     const response = await fetch(`${backend_base_url}/users/kakao/callback/`, {
@@ -170,7 +166,6 @@ async function handleKakao() {
         .split("")
         .map(function (c) {
           return "%" + ("00" + c.charCodeAt(0).toString(16)).slice(-2);
-
         })
         .join("")
     );
@@ -182,8 +177,6 @@ async function handleKakao() {
 window.onload = function () {
   handleKakao();
 };
-
-
 
 async function check_value() {
   const forms = document.getElementsByClassName("validation-form");
@@ -203,7 +196,6 @@ async function check_value() {
 }
 
 async function handleSignUp() {
-
   const email = document.getElementById("email").value;
   const password = document.getElementById("password").value;
   const password_check = document.getElementById("password_check").value;
@@ -226,5 +218,4 @@ async function handleSignUp() {
     alert(response_json[key]);
     window.location.reload();
   }
-
 }
