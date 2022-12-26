@@ -209,7 +209,7 @@ a.active {
 .recommend_food_img_section {
   background-color: white;
   height: 45vh;
-  z-index: -100;
+  /* z-index: -100; */
   position: relative;
 }
 .slide_change_button{

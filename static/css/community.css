@@ -480,7 +480,7 @@ height: 100%;
 
 .text_box textarea {
   width: 100%;
-  height: 100%;
+  height: 35vh;
   text-align: left;
   color: #666;
   font-family: "ht_r";
@@ -538,7 +538,7 @@ height: 100%;
 } */
 .post-modal-input-text-bottom{
   margin-top: 10px;
-  height: 35vh;
+  /* height: 35vh; */
 }
 .post-title {
   text-align: left;
