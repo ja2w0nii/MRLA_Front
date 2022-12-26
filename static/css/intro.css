@@ -88,3 +88,10 @@ div.image_box {
 div > img {
   width: 250px;
 }
+
+.space {
+  width: 70vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
