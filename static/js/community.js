@@ -142,6 +142,16 @@ $(".post-modal-input-text-top input").keyup(function () {
   }
 });
 
+//위치 텍스트 수 제한 textarea
+$(".post-modal-input-text-middle input").keyup(function () {
+  var content = $(this).val();
+  $(".post-modal-input-text-middle .title-count span").html(content.length);
+  if (content.length > 15) {
+    alert("위치는 최대 15자까지 입력 가능합니다.");
+    $(this).val(content.substring(0, 15));
+    $(".post-modal-input-text-middle .title-count span").html(15);
+  }
+});
 
 
 // 텍스트 수 제한 textarea
