@@ -344,9 +344,13 @@ height: fit-content;
     margin: 0px 20px;
 }
 
-.like-box {
-    margin: 20px 10px;
+.detail_updatedat {
+    margin: 25px 10px;
+    float: left;
+}
 
+.like-box {
+    margin: 25px 10px;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -455,7 +459,7 @@ height: 100%;
 }
 
 .comment_list,
-.createdat_list {
+.updatedat_list {
     list-style: none;
    
 }
@@ -472,7 +476,7 @@ height: 100%;
     width: 100vw;
  
 }
-.createdat_list{
+.updatedat_list{
 
     width:100%;
     font-size:0.9vw ;
@@ -500,14 +504,16 @@ height: 100%;
 }
 /* 댓글수정 */
 .update_comment_button{
-    margin: 0px 3px;
-
-font-size: 0.5vw;
+    margin: 5px 1px;
+    font-size: 0.5vw;
+    width: 110px;
+    height: 30px;
 }
 .delete_comment_button{
-
+    margin: 5px 0px;
     font-size: 0.5vw;
-
+    width: 113px;
+    height: 30px;
 }
 /* 게시글 수정 (모달) */
 .post-upload-button-div {

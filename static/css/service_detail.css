@@ -280,7 +280,7 @@ span.servicecomment_user {
 
 }
 
-span.servicecomment_created_at {
+span.servicecomment_updated_at {
   float: right;
   margin-right: 20px;
 }

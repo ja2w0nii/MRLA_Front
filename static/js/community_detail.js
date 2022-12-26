@@ -89,6 +89,13 @@ async function CommunityDetail(community_id) {
   content.innerText = community.content;
   detail_content.appendChild(content);
 
+  console.log(community)
+
+  const detail_updatedat = document.getElementById("detail_updatedat")
+  const updatedat = document.createElement("p");
+  updatedat.innerText = community.updated_at.replace("T", " ").substr(0, 16);
+  detail_updatedat.appendChild(updatedat);
+
   const update_botton = document.getElementById("post-update-button");
 
   const delete_botton = document.getElementById("post-delete-button");
@@ -281,14 +288,14 @@ async function CommunityComment(community_id) {
     newUser.setAttribute("onclick", "getProfilePage(this.id)");
     const newComment = document.createElement("li");
     newComment.setAttribute("class", "comment_list");
-    const newCreatedat = document.createElement("li");
-    newCreatedat.setAttribute("class", "createdat_list");
+    const newUpdatedat = document.createElement("li");
+    newUpdatedat.setAttribute("class", "updatedat_list");
     newUser.innerText = "🐥 " + comment.user_nickname;
     newComment.innerText = comment.comment;
-    newCreatedat.innerText = comment.created_at.replace("T", " ").substr(0, 16);
+    newUpdatedat.innerText = comment.updated_at.replace("T", " ").substr(0, 16);
     newComment_box.appendChild(newUser);
     newComment_box.appendChild(newComment);
-    newComment_box.appendChild(newCreatedat);
+    newComment_box.appendChild(newUpdatedat);
 
     const update_comment_button = document.createElement("button");
     const delete_comment_button = document.createElement("button");
