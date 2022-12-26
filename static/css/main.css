@@ -19,7 +19,10 @@ header {
   z-index: 1000;
   top: 0;
 }
-
+/* .mascot{
+  width: 55px;
+  height: 60px;
+} */
 header h2{
   margin-bottom: 0px;
 
@@ -214,14 +217,15 @@ a.active {
 }
 .slide_change_button{
   position: absolute;
-  top: 10px;
+  top: 20vw;
   width: 100vw;
 }
 .clickleft{
-font-size: 1vw;
+font-size: 4vw;
+margin-right: 90vw;
 }
 .clickright{
-  font-size: 1vw;
+  font-size: 4vw;
 }
 
 /* 추천 맛집 라운드 슬라이드==========================================221205 이태은 */
