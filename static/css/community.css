@@ -90,6 +90,7 @@ top: 70px;
   width: 100%;
   justify-content: flex-end;
   align-items: center;
+  position: relative;
 }
 
 .service1 {
@@ -213,10 +214,13 @@ a.active {
 
 /* 내용 섹션 윗칸 ============================================= 221205 이태은 */
 .community_section {
-  margin-top: 140px;
+  margin-top: 125px;
   background-color: rgb(255, 251, 236);
-  height: 80vh;
+  height: 90vh;
   z-index: -100;
+  position: absolute;
+  border-bottom: 0px;
+  width: 100vw;
 }
 
 /* 부화한 메추리알들의 커뮤니티 */
@@ -229,7 +233,7 @@ a.active {
 .community-div {
   border: 5px solid #fed049;
   width: 90vw;
-  height: 550px;
+  height: 60vh;
   overflow: overlay;
   
 }
@@ -270,6 +274,7 @@ a.active {
   margin: 0px auto;
   /* float: right; */
   width: 90vw;
+  height: 10vh;
   text-align: right;
   margin-bottom: 10px;
 }
