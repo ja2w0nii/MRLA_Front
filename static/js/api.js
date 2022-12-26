@@ -50,9 +50,15 @@ function getProfileUpdatePage(user_id) {
   location.href = url;
 }
 
-// 프로필 페이지 커뮤니티 탭 연결
+// 프로필 페이지 좋아요 커뮤니티 탭 연결
 function getProfileCommunityPage(user_id) {
   const url = `${frontend_base_url}/profile_community.html?id=${user_id}`;
+  location.href = url;
+}
+
+// 프로필 페이지 작성한 게시글 탭 연결
+function getProfileMyCommunityPage(user_id) {
+  const url = `${frontend_base_url}/profile_my_community.html?id=${user_id}`;
   location.href = url;
 }
 
@@ -171,6 +177,18 @@ async function getLikeFoodList(user_id) {
 // 해당 프로필 유저가 좋아요한 커뮤니티 게시글 리스트 가져오기
 async function getLikeCommunityList(user_id) {
   const response = await fetch(`${backend_base_url}/posts/community/profile/${user_id}/likecommunity/`, {
+    headers: {
+      Authorization: "Bearer " + localStorage.getItem("access"),
+    },
+    method: "GET",
+  });
+  response_json = await response.json();
+  return response_json;
+}
+
+// 해당 프로필 유저가 작성한 커뮤니티 게시글 리스트 가져오기
+async function getMyCommunityList(user_id) {
+  const response = await fetch(`${backend_base_url}/posts/community/profile/${user_id}/mycommunity/`, {
     headers: {
       Authorization: "Bearer " + localStorage.getItem("access"),
     },
