@@ -218,18 +218,28 @@ a.active {
   /* z-index: -100; */
   position: relative;
 }
+
 .slide_change_button {
   position: absolute;
   top: 20vw;
+
   width: 100vw;
 }
 
 .clickleft{
+  position: absolute;
+  top: 15vh;
+  right: 53vw;
 font-size: 4vw;
-margin-right: 90vw;
+margin-right: 40vw;
 }
 .clickright{
+  position: absolute;
+  top: 15vh;
+  right: -37vw;
   font-size: 4vw;
+
+  margin-right: 40vw;
 
 }
 
