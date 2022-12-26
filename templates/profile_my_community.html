@@ -29,9 +29,9 @@
       crossorigin="anonymous"
     ></script>
 
-    <title>메추리알 | 프로필</title>
+    <title>메추리알 | 프로필 커뮤니티</title>
 
-    <link rel="stylesheet" href="../static/css/profile.css" />
+    <link rel="stylesheet" href="../static/css/profile_my_community.css" />
   </head>
 
   <body>
@@ -49,7 +49,7 @@
     </header>
 
     <!-- Modal -->
-    <div class="modal fade followingModal" id="followingModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="followingModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
@@ -63,21 +63,6 @@
         </div>
       </div>
     </div>
-
-    <!-- <div class="followingModal " id="followingModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h1 class="modal-title fs-5" id="exampleModalLabel">팔로잉 리스트</h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div id="following-modal-body" class="modal-body"></div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        </div>
-      </div>
-    </div>
-  </div>-->
 
     <div class="modal fade" id="followerModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog">
@@ -106,7 +91,11 @@
               <div id="profile_update"></div>
             </div>
             <div class="profile_detail_box">
-              <div id="do_follow" class="do_follow"></div>
+              <div>
+                <p class="profile_detail" id="age"></p>
+                <p class="profile_detail" id="gender"></p>
+              </div>
+              <div class="do_follow" id="do_follow"></div>
               <div>
                 <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#followingModal">팔로잉</button>
                 <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#followerModal">팔로워</button>
@@ -115,7 +104,7 @@
           </div>
         </div>
         <hr />
-        <div id="recommend_community" class="recommend_community"></div>
+        <div id="recommend_community"></div>
         <hr />
       </div>
     </form>
@@ -139,6 +128,6 @@
     </script>
 
     <script src="../static/js/api.js"></script>
-    <script src="../static/js/profile.js"></script>
+    <script src="../static/js/profile_my_community.js"></script>
   </body>
 </html>

@@ -59,8 +59,6 @@ async function Profile(user_id) {
 
   const profile_img = document.getElementById("profile_img");
   const nickname = document.getElementById("nickname");
-  const age = document.getElementById("age");
-  const gender = document.getElementById("gender");
 
   let image = document.createElement("img");
   image.setAttribute("class", "profile_image");
@@ -68,20 +66,6 @@ async function Profile(user_id) {
   profile_img.appendChild(image);
 
   nickname.innerText = profile.nickname;
-
-  if (profile.age) {
-    age.innerText = "나이 : " + profile.age;
-  } else {
-    age.innerText = "나이 : 사용 안 함";
-  }
-
-  if (profile.gender == true) {
-    gender.innerText = "성별 : 남";
-  } else if (profile.gender == false) {
-    gender.innerText = "성별 : 여";
-  } else {
-    gender.innerText = "성별 : 사용 안 함";
-  }
 
   const profile_update = document.getElementById("profile_update");
 
@@ -97,9 +81,8 @@ async function Profile(user_id) {
   const like_community = document.getElementById("recommend_community");
 
   const like_food_button = document.createElement("button");
-
   like_food_button.setAttribute("id", user_id);
-  like_food_button.innerText = "추천 메뉴";
+  like_food_button.innerText = "좋아요 메뉴 ";
   like_food_button.setAttribute("type", "button");
   like_food_button.setAttribute("class", "btn btn-outline-dark profile");
   like_food_button.setAttribute("onclick", "getProfilePage(this.id)");
@@ -107,11 +90,10 @@ async function Profile(user_id) {
   const like_food_icon = document.createElement("i");
   like_food_icon.setAttribute("class", "bi bi-hand-thumbs-up");
   like_food_button.appendChild(like_food_icon);
-
   like_community.appendChild(like_food_button);
 
   const like_community_button = document.createElement("button");
-  like_community_button.innerText = "커뮤니티";
+  like_community_button.innerText = "좋아요 게시글 ";
   like_community_button.setAttribute("id", user_id);
   like_community_button.setAttribute("type", "button");
   like_community_button.setAttribute("class", "btn btn-dark profile");
@@ -120,8 +102,19 @@ async function Profile(user_id) {
   const like_community_icon = document.createElement("i");
   like_community_icon.setAttribute("class", "bi bi-people-fill");
   like_community_button.appendChild(like_community_icon);
-
   like_community.appendChild(like_community_button);
+
+  const my_community_button = document.createElement("button");
+  my_community_button.innerText = "작성한 게시글 ";
+  my_community_button.setAttribute("id", user_id);
+  my_community_button.setAttribute("type", "button");
+  my_community_button.setAttribute("class", "btn btn-outline-dark profile");
+  my_community_button.setAttribute("onclick", "getProfileMyCommunityPage(this.id)");
+
+  const my_community_icon = document.createElement("i");
+  my_community_icon.setAttribute("class", "bi bi-postcard-heart");
+  my_community_button.appendChild(my_community_icon);
+  like_community.appendChild(my_community_button);
 
   if (login_user.email != profile.email) {
     profile_update.style.visibility = "hidden";
@@ -164,23 +157,49 @@ Follow(user_id);
 
 // 프로필 유저의 팔로잉/팔로워 리스트 가져오기
 async function FollowList(user_id) {
-  follows = await getFollowList(user_id);
+  followings = await getFollowingList(user_id);
+  followers = await getFollowerList(user_id);
 
-  follows.following.forEach((following) => {
+  followings.forEach((following) => {
     const following_list = document.getElementById("following-modal-body");
 
+    const newFollowingBox = document.createElement("div")
+    newFollowingBox.setAttribute("class", "following-box");
+
+    const newImage = document.createElement("img");
+    newImage.src = `${backend_base_url}${following.profile_img}`;
+    newImage.setAttribute("id", following.id);
+    newImage.setAttribute("onclick", "getProfilePage(this.id)");
+    newFollowingBox.appendChild(newImage);
+
     const newFollowing = document.createElement("li");
-    newFollowing.innerText = following;
-    following_list.appendChild(newFollowing);
+    newFollowing.innerText = following.nickname;
+    newFollowing.setAttribute("id", following.id);
+    newFollowing.setAttribute("onclick", "getProfilePage(this.id)");
+    newFollowingBox.appendChild(newFollowing);
+
+    following_list.appendChild(newFollowingBox);
   });
 
-  follows.follower.forEach((follower) => {
+  followers.forEach((follower) => {
     const follower_list = document.getElementById("follower-modal-body");
 
+    const newFollowerBox = document.createElement("div")
+    newFollowerBox.setAttribute("class", "follower-box");
+
+    const newImage = document.createElement("img");
+    newImage.src = `${backend_base_url}${follower.profile_img}`;
+    newImage.setAttribute("id", follower.id);
+    newImage.setAttribute("onclick", "getProfilePage(this.id)");
+    newFollowerBox.appendChild(newImage);
+
     const newFollower = document.createElement("li");
-    newFollower.setAttribute("id", follower);
-    newFollower.innerText = follower;
-    follower_list.appendChild(newFollower);
+    newFollower.innerText = follower.nickname;
+    newFollower.setAttribute("id", follower.id);
+    newFollower.setAttribute("onclick", "getProfilePage(this.id)");
+    newFollowerBox.appendChild(newFollower);
+
+    follower_list.appendChild(newFollowerBox);
   });
 }
 FollowList(user_id);
