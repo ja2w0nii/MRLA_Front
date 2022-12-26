@@ -3,7 +3,7 @@ body {
   display: grid;
   justify-content: center;
   align-items: center;
-  background-image: linear-gradient(to top, #ffffff 0%, #fdf5be 100%);
+  background-image: linear-gradient(to top, #feffee 0%, #fdf5be 100%);
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;

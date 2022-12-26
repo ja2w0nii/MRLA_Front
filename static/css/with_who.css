@@ -3,8 +3,12 @@
   font-family: "Jua", sans-serif;
   text-align: center;
   margin: auto;
+  
 }
-
+body{
+  overflow: hidden;
+  min-width: 50vw;
+}
 /* 헤더=============================================*/
 header {
   background-color: #fed049;
@@ -68,6 +72,7 @@ h2 {
 
 /* 네비게이션============================================= */
 .nav_box {
+  /* border: 1px solid red; */
 top: 70px;
   position: fixed;
   width: 100%;
@@ -76,6 +81,7 @@ top: 70px;
 }
 
 .navContainer {
+  padding: 5px;
   background-color: white;
   border: 10px solid #fed049;
   align-items: center;
@@ -91,7 +97,6 @@ top: 70px;
 }
 
 .near_restaurant {
-  border: solid 3px grey;
   border-radius: 100px;
   float: left;
   width: 20%;
@@ -110,7 +115,6 @@ top: 70px;
 }
 
 .who {
-  border: 3px solid grey;
   border-radius: 100px;
   float: left;
   margin-left: 5%;
@@ -128,7 +132,6 @@ top: 70px;
 }
 
 .community {
-  border: 3px solid grey;
   border-radius: 100px;
   float: left;
   margin-left: 5%;
@@ -146,7 +149,6 @@ top: 70px;
 }
 
 .service {
-  border: 3px solid grey;
   border-radius: 100px;
   float: left;
   margin-left: 5%;

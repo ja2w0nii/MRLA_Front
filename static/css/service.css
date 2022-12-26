@@ -208,17 +208,25 @@ section.main_section {
   overflow-y: auto;
   box-sizing: content-box;
   overflow: auto;
-  height: 60vh;
+  height: 50vh;
   width: 95vw;
 
   /* padding: 10px 0px; */
 
 }
-
+.main_title{
+  margin-top: 150px;
+padding: 20px;
+}
+.main_title h1{
+  font-size: 2vw;
+}
+.main_title h5{
+  font-size: 1.5vw;
+}
 .service-nav{
   border: 2px solid #ffca84;
   width: 95vw;
-  margin-top: 170px;
   display: flex;
   background-color: #ffca84;
   padding: 10px 0px;
