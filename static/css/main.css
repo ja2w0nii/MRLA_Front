@@ -20,12 +20,9 @@ header {
   top: 0;
 }
 
-h2 {
-  margin: 0 5px 0 0;
-}
-.mascot {
-  width: 55px;
-  height: 60px;
+header h2{
+  margin-bottom: 0px;
+
 }
 .header_small_box {
   display: flex;
@@ -76,8 +73,11 @@ h2 {
   width: 100%;
   z-index: 100;
 }
-
+.nav_box .material-symbols-outlined{
+  font-size: 2vw;
+}
 .navContainer {
+  padding: 5px;
   background-color: white;
   border: 10px solid #fed049;
   align-items: center;
@@ -93,13 +93,12 @@ h2 {
 }
 
 .near_restaurant {
-  border: solid 3px grey;
   border-radius: 100px;
   float: left;
   width: 20%;
   box-sizing: border-box;
   text-decoration-line: none;
-  font-size: 20px;
+  font-size: 1.2vw;
   font-weight: 500;
 }
 
@@ -112,13 +111,12 @@ h2 {
 }
 
 .who {
-  border: 3px solid grey;
   border-radius: 100px;
   float: left;
   margin-left: 5%;
   width: 20%;
   box-sizing: border-box;
-  font-size: 20px;
+  font-size: 1.2vw;
   font-weight: 500;
 }
 
@@ -130,13 +128,12 @@ h2 {
 }
 
 .community {
-  border: 3px solid grey;
   border-radius: 100px;
   float: left;
   margin-left: 5%;
   width: 20%;
   box-sizing: border-box;
-  font-size: 20px;
+  font-size: 1.2vw;
   font-weight: 500;
 }
 
@@ -148,13 +145,12 @@ h2 {
 }
 
 .service {
-  border: 3px solid grey;
   border-radius: 100px;
   float: left;
   margin-left: 5%;
   width: 20%;
   box-sizing: border-box;
-  font-size: 20px;
+  font-size: 1.2vw;
   font-weight: 500;
 }
 
@@ -214,16 +210,31 @@ a.active {
   background-color: white;
   height: 45vh;
   z-index: -100;
+  position: relative;
+}
+.slide_change_button{
+  position: absolute;
+  top: 10px;
+  width: 100vw;
+}
+.clickleft{
+font-size: 1vw;
+}
+.clickright{
+  font-size: 1vw;
 }
 
 /* 추천 맛집 라운드 슬라이드==========================================221205 이태은 */
 .slide_title {
-  font-size: 24px;
+  font-size: 2vw;
   color: #ff5752;
 }
 
+
+
 .slide a {
   text-decoration: none;
+  font-size: 1vw;
 }
 
 img {
@@ -418,8 +429,8 @@ img {
   top: calc(50% - 30px);
   height: 30px;
   width: 30px;
-  border-left: 8px solid rgb(43, 42, 42);
-  border-top: 8px solid rgb(43, 42, 42);
+  border-left: 8px solid rgb(112, 64, 0);
+  border-top: 8px solid rgb(112, 64, 0);
 }
 
 #sns_slider-container .btn:hover {
@@ -458,7 +469,7 @@ img {
 
 #sns_slider-container #slider .slide span {
   color: rgb(7, 7, 7);
-  font-size: 50px;
+  font-size: 3vw;
 }
 
 @media only screen and (min-width: 1100px) {
@@ -496,6 +507,7 @@ footer {
   color: #ffffff;
   font-size: 11px;
   background-color: #5c5c5c;
+  z-index: -100;
 }
 footer nav {
   margin-top: 5px;

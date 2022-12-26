@@ -3,8 +3,11 @@
   font-family: "Jua", sans-serif;
   text-align: center;
   margin: auto;
+  
 }
-
+body{
+  overflow: hidden;
+}
 /* 헤더=============================================*/
 header {
   background-color: #fed049;
@@ -68,13 +71,16 @@ h2 {
 
 /* 네비게이션============================================= */
 .nav_box {
+  /* border: 1px solid red; */
 top: 70px;
   position: fixed;
   width: 100%;
+  z-index: 100;
 
 }
 
 .navContainer {
+  padding: 5px;
   background-color: white;
   border: 10px solid #fed049;
   align-items: center;
@@ -90,13 +96,12 @@ top: 70px;
 }
 
 .near_restaurant {
-  border: solid 3px grey;
   border-radius: 100px;
   float: left;
   width: 20%;
   box-sizing: border-box;
   text-decoration-line: none;
-  font-size: 20px;
+  font-size: 1.2vw;
   font-weight: 500;
 }
 
@@ -109,13 +114,12 @@ top: 70px;
 }
 
 .who {
-  border: 3px solid grey;
   border-radius: 100px;
   float: left;
   margin-left: 5%;
   width: 20%;
   box-sizing: border-box;
-  font-size: 20px;
+  font-size: 1.2vw;
   font-weight: 500;
 }
 
@@ -127,13 +131,12 @@ top: 70px;
 }
 
 .community {
-  border: 3px solid grey;
   border-radius: 100px;
   float: left;
   margin-left: 5%;
   width: 20%;
   box-sizing: border-box;
-  font-size: 20px;
+  font-size: 1.2vw;
   font-weight: 500;
 }
 
@@ -145,13 +148,12 @@ top: 70px;
 }
 
 .service {
-  border: 3px solid grey;
   border-radius: 100px;
   float: left;
   margin-left: 5%;
   width: 20%;
   box-sizing: border-box;
-  font-size: 20px;
+  font-size: 1.2vw;
   font-weight: 500;
 }
 
@@ -177,10 +179,6 @@ section {
   /* border: 2px solid green; */
   height: 100%;
 }
-
-
-
-
 
 
 /* 위치 */
@@ -213,7 +211,7 @@ input {
 
 img {
   max-width: 80%;
-  max-height: 50vh;
+  max-height: 40vh;
 }
 
 .container-post-detail {
@@ -247,7 +245,6 @@ position : relative;
 
 /* 타이틀, 좋아요 */
 .box-btn-detail {
-  width: 50%;
   display: flex;
   justify-content: space-between;
   align-content: center;
@@ -426,17 +423,19 @@ margin: auto ;
 }
 
 .find {
-  width: 50%;
   justify-content: center;
-  margin: 10px auto;
+  font-size: 2vw;
 }
-
+.btn-warning{
+  font-size: 1vw;
+}
 
 .find-and-like{
   position: absolute;
   /* border: solid 1px black; */
-  width: 95%;
+  width: 40vw;
   display: flex;
   bottom: 20px;
   height: fit-content;
+
 }

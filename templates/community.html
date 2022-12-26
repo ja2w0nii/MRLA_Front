@@ -97,10 +97,11 @@
         <div class="post-upload-button-div">
           <span class="space">
             <input class="form-control" type="search" placeholder="닉네임, 제목, 내용" aria-label="Search" id="inputSearch" />
-            <button class="btn btn-outline-success my-2 my-sm-0" type="button" onclick="CommunitySearch()">검색</button>
+            <button class="search_btn btn btn-outline-success my-2 my-sm-0" type="button" onclick="CommunitySearch()">검색</button>
+            <button class="post-upload-button">게시글 작성</button>
           </span>
           <!-- 이미지 업로드  Modal을 여는 클래스 -->
-          <button class="post-upload-button">게시글 작성</button>
+          
         </div>
         <div class="community-div">
           <div class="cards-box">
@@ -133,17 +134,18 @@
           <div class="post-upload-modal-content-text">
             <div class="post-modal-input-text">
               <div class="post-modal-input-text-top">
-                <input type="text" id="community_title" placeholder="제목" class="post-title" />
+                <input type="text" id="community_title" placeholder="제목은 15자 이하로 작성 해주십시요" class="post-title" />
               </div>
-              <div class="post-modal-input-text-middle">
+              <!--<div class="post-modal-input-text-middle">
                 <input type="text" id="location" placeholder="위치" class="post-location" />
                 <input type="text" id="tag" placeholder="태그 검색" class="post-tag" />
-              </div>
-              <div class="tag-box">
-                <!-- 입력한 태그가 붙은 부분 -->
+              </div>-->
+              <!--<div class="tag-box">
+            입력한 태그가 붙은 부분 
                 <ul id="tag-list" class="tag-plus"></ul>
-              </div>
-              <div class="post-modal-input-text-bottom">
+              </div>-->
+              <div class="post-modal-input-text-bottom" >
+
                 <!-- <textarea   style="resize: none;" type="text" id="content" placeholder="내용" class="post-content"></textarea> -->
                 <div class="text_box">
                   <textarea id="community_content"></textarea>
