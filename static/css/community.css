@@ -73,7 +73,7 @@ h2 {
 /* 네비게이션============================================= */
 .nav_box {
   /* border: 1px solid red; */
-top: 70px;
+  top: 70px;
   position: fixed;
   width: 100%;
   z-index: 100;
@@ -171,7 +171,6 @@ ul {
   padding-left: 0px;
 }
 
-
 nav a {
   text-decoration-line: none;
   color: grey;
@@ -228,6 +227,17 @@ a.active {
   margin: 20px auto;
   font-size: 40px;
   color: rgb(107, 57, 0);
+}
+
+.community_for_metury > p {
+  padding-top: 30px;
+  margin: 0;
+}
+
+.community_for_metury > h3 {
+  color: rgb(211, 160, 101);
+  font-size: 20px;
+  padding: 10px 0 20px 0;
 }
 
 .community-div {
@@ -433,7 +443,7 @@ a.active {
   font-size: 1vw;
 }
 
-.img-upload-btn>input[type="file"] {
+.img-upload-btn > input[type="file"] {
   display: none;
   margin: 10px;
 }
@@ -834,7 +844,7 @@ ul li.tag-item {
   border-radius: 10px;
 }
 
-.img-detail-btn>input[type="file"] {
+.img-detail-btn > input[type="file"] {
   display: none;
   margin: 10px;
 } */
@@ -918,7 +928,7 @@ ul li.tag-item {
   /* blur the lowres image */
 }
 
-.card-image>img {
+.card-image > img {
   display: block;
   width: 100%;
   height: 0;
@@ -973,12 +983,12 @@ ul li.tag-item {
 }
 
 /* 각각의 카드의 제목 */
-.card-description>h2 {
+.card-description > h2 {
   margin: 0 0 0.5em;
 }
 
 /* 각각의 카드의 내용 글 */
-.card-description>p {
+.card-description > p {
   margin: 0;
 }
 

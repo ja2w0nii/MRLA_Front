@@ -77,7 +77,7 @@ window.onload = async function loadFooddetail() {
     <li class="media">
     <div class="media-body" id=${comment.user} onclick="getProfilePage(this.id)" style="flex-direction: column;>
       <h4 class="mt-0 mb-10">${comment.user_nickname} |</h4> 
-      ${comment.comment}
+      ${comment.comment} | ${comment.updated_at.replace("T", " ").substr(0, 16)}
     </div>  
     `;
 
