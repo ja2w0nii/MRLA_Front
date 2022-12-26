@@ -3,9 +3,8 @@
   font-family: "Jua", sans-serif;
   text-align: center;
   margin: auto;
-  
 }
-body{
+body {
   overflow: hidden;
   min-width: 50vw;
 }
@@ -77,7 +76,6 @@ h2 {
   position: fixed;
   width: 100%;
   z-index: 100;
-
 }
 
 .navContainer {
@@ -181,7 +179,6 @@ section {
   height: 100%;
 }
 
-
 /* 위치 */
 .material-symbols-outlined {
   font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 200, "opsz" 48;
@@ -245,23 +242,22 @@ a.active {
   width: 90vw;
   height: 60vh;
   overflow: overlay;
-  
 }
 /* 스크롤바 설정*/
-.community-div::-webkit-scrollbar{
+.community-div::-webkit-scrollbar {
   width: 10px;
 }
 
 /* 스크롤바 막대 설정*/
-.community-div::-webkit-scrollbar-thumb{
-  background-color:#fed4499d;
+.community-div::-webkit-scrollbar-thumb {
+  background-color: #fed4499d;
   /* 스크롤바 둥글게 설정    */
-  border-radius: 10px;    
+  border-radius: 10px;
   z-index: -100;
 }
 /* 스크롤바 뒷 배경 설정*/
-.community-div::-webkit-scrollbar-track{
-  background-color: rgba(0,0,0,0);
+.community-div::-webkit-scrollbar-track {
+  background-color: rgba(0, 0, 0, 0);
 }
 
 .space {
@@ -290,10 +286,10 @@ a.active {
 }
 
 /* 검색 버튼 시작=========== */
-.search_btn{
+.search_btn {
   font-size: 1vw;
   margin: 10px;
-  padding:10px;
+  padding: 10px;
   border-radius: 10px;
   width: fit-content;
   border: #e74b24;
@@ -302,7 +298,7 @@ a.active {
   margin-top: 0px;
   margin-bottom: 0px;
 }
-.search_btn:hover{
+.search_btn:hover {
   border: #e74b24;
   background-color: #831a00;
   color: #ffffff;
@@ -310,10 +306,10 @@ a.active {
 /* 검색 버튼 끝=========== */
 
 /* 게시물 업로드 버튼 시작====== */
-.post-upload-button{
+.post-upload-button {
   font-size: 1vw;
-  margin:  10px;
-  padding:10px;
+  margin: 10px;
+  padding: 10px;
   border-radius: 10px;
   width: fit-content;
   border: #e74b24;
@@ -322,14 +318,12 @@ a.active {
   margin-top: 0px;
   margin-bottom: 0px;
 }
-.post-upload-button:hover{
+.post-upload-button:hover {
   border: #e74b24;
   background-color: #831a00;
   color: #ffffff;
 }
 /* 게시물 업로드 버튼 끝====== */
-
-
 
 /* 커뮤니티 작성용 모달창===================================================== */
 
@@ -369,7 +363,6 @@ a.active {
 }
 
 .post-upload-modal-close {
-
   /* border: solid 1px red; */
   float: right;
   margin: 0 10px;
@@ -401,7 +394,6 @@ a.active {
   width: 30vw;
   background-color: rgb(255, 215, 106);
   margin-right: 30px;
-
 }
 
 /* 이미지 업로드 박스 */
@@ -412,7 +404,7 @@ a.active {
 }
 
 .wrapper {
-    width: 30vw;
+  width: 30vw;
 
   border-radius: 20px;
   text-align: center;
@@ -450,12 +442,11 @@ a.active {
 
 /* 텍스트 입력 하는 구역 */
 .post-upload-modal-content-text {
- border-radius: 20px;
+  border-radius: 20px;
   height: 50vh;
   width: 35vw;
   background-color: rgb(255, 215, 106);
   padding: 30px;
-
 }
 
 .post-modal-input-text {
@@ -468,7 +459,6 @@ a.active {
   width: 100%;
   height: 15%;
   margin-bottom: 20px;
-
 }
 .post-modal-input-text-top .count {
   position: absolute;
@@ -481,11 +471,11 @@ a.active {
 
 /*내용 텍스트 수 제한 textarea */
 .text_box {
-  border : none;
+  border: none;
   position: relative;
   display: inline-block;
-width: 100%;
-height: 100%;
+  width: 100%;
+  height: 100%;
 }
 
 .text_box textarea {
@@ -546,7 +536,7 @@ height: 100%;
   width: 100%;
   height: 50%;
 } */
-.post-modal-input-text-bottom{
+.post-modal-input-text-bottom {
   margin-top: 10px;
   /* height: 35vh; */
 }
@@ -678,7 +668,6 @@ ul li.tag-item {
     background-color: rgb(233, 233, 233);
 } */
 
-
 .detail_content_box {
   background-color: white;
   width: 90%;
@@ -701,7 +690,6 @@ ul li.tag-item {
   /* border: 2px solid purple; */
   margin: 20px auto 20px;
   width: 100%;
-
 }
 
 /* 커뮤니티 업로드 버튼 */
@@ -720,9 +708,6 @@ ul li.tag-item {
 .community-upload-btn:hover {
   background-color: #ff8ef9;
 }
-
-
-
 
 /* 
 /* 게시물 상세보기 모달창 시작================================================= */
@@ -849,7 +834,6 @@ ul li.tag-item {
   margin: 10px;
 } */
 
-
 /* 태그 관련 css============================================================ 2221211 이태은*/
 /* 
 .tag-box ul li {
@@ -892,7 +876,8 @@ ul li.tag-item {
   font-weight: bold;
   cursor: pointer;
   margin-left: 8px;
-} */ */
+} */
+*/
 
 /* =============태그 관련 끝 */
 /* 
@@ -979,7 +964,6 @@ ul li.tag-item {
   padding: 1em 0.5em;
   color: #515151;
   text-decoration: none;
-  
 }
 
 /* 각각의 카드의 제목 */
@@ -1001,9 +985,9 @@ ul li.tag-item {
   height: 30px;
   overflow: auto;
   display: inline-block;
-overflow: hidden;
-text-overflow: ellipsis;
-/* white-space: nowrap; */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  /* white-space: nowrap; */
 }
 
 /* 바닥글 윗칸 ============================================= 221205 이태은 */

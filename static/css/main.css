@@ -20,9 +20,8 @@ header {
   top: 0;
 }
 
-header h2{
+header h2 {
   margin-bottom: 0px;
-
 }
 .header_small_box {
   display: flex;
@@ -73,7 +72,7 @@ header h2{
   width: 100%;
   z-index: 100;
 }
-.nav_box .material-symbols-outlined{
+.nav_box .material-symbols-outlined {
   font-size: 2vw;
 }
 .navContainer {
@@ -212,15 +211,15 @@ a.active {
   /* z-index: -100; */
   position: relative;
 }
-.slide_change_button{
+.slide_change_button {
   position: absolute;
   top: 10px;
   width: 100vw;
 }
-.clickleft{
-font-size: 1vw;
+.clickleft {
+  font-size: 1vw;
 }
-.clickright{
+.clickright {
   font-size: 1vw;
 }
 
@@ -229,8 +228,6 @@ font-size: 1vw;
   font-size: 2vw;
   color: #ff5752;
 }
-
-
 
 .slide a {
   text-decoration: none;
