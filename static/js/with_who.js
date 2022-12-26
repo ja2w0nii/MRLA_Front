@@ -49,6 +49,11 @@ async function ProfileInfo() {
 }
 ProfileInfo()
 
+// 배열의 요소를 랜덤하게 추출하기
+function shuffle(array) {
+  array.sort(() => Math.random() - 0.5);
+}
+
 // 전체 음식 리스트 target 나누기
 async function AllFoodList(id) {
   foods = await getAllFoodList();
@@ -56,37 +61,45 @@ async function AllFoodList(id) {
   const food_list = document.getElementById("target_foods");
   food_list.innerText = "";
 
-  var i = 0;
+  var target_food_list = [];
 
   foods.forEach((food) => {
     if (food.target == id) {
-      if (i < 9) {
-        const menu_image = document.createElement("div");
-
-        const newFood = document.createElement("p");
-        newFood.setAttribute("class", "food_name")
-        newFood.setAttribute("id", food.food_id);
-        newFood.setAttribute("onclick", "FoodDetail(this.id)");
-        newFood.innerText = food.menu;
-
-        const newImage = document.createElement("img");
-        newImage.setAttribute("id", food.food_id);
-        newImage.setAttribute("onclick", "FoodDetail(this.id)");
-        newImage.src = food.image;
-
-        menu_image.appendChild(newFood);
-        menu_image.appendChild(newImage);
-
-        if (i % 2 == 1) {
-          menu_image.setAttribute("class", "odd");
-        } else {
-          menu_image.setAttribute("class", "even");
-        }
-
-        food_list.appendChild(menu_image);
-
-        i += 1;
-      }
+      target_food_list.push(food)
     }
   });
+  shuffle(target_food_list)
+
+  var i = 0;
+
+  target_food_list.forEach((menu) => {
+    if (i < 9) {
+      const menu_image = document.createElement("div");
+
+      const newFood = document.createElement("p");
+      newFood.setAttribute("class", "food_name")
+      newFood.setAttribute("id", menu.food_id);
+      newFood.setAttribute("onclick", "FoodDetail(this.id)");
+      newFood.innerText = menu.menu;
+
+      const newImage = document.createElement("img");
+      newImage.setAttribute("id", menu.food_id);
+      newImage.setAttribute("onclick", "FoodDetail(this.id)");
+      newImage.src = menu.image;
+
+      menu_image.appendChild(newFood);
+      menu_image.appendChild(newImage);
+
+      if (i % 2 == 1) {
+        menu_image.setAttribute("class", "odd");
+      } else {
+        menu_image.setAttribute("class", "even");
+      }
+
+      food_list.appendChild(menu_image);
+
+      i += 1;
+    }
+  })
+
 }
