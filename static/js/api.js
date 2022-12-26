@@ -423,7 +423,7 @@ async function postFoodComment(food_id, newComment) {
     alert("작성 완료!");
     window.location.reload();
   } else if (response.status == 400) {
-    alert("댓글을 작성해 주세요!");
+    alert("댓글을 500자 이하로 작성해주세요.");
   } else {
     alert(response.status);
   }
