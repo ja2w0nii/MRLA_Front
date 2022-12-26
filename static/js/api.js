@@ -1,7 +1,7 @@
 // 전역 변수
-// const backend_base_url = "https://www.mrla.tk";
+const backend_base_url = "https://www.mrla.tk";
 // const backend_base_url = "http://3.36.132.172";
-const backend_base_url = "http://127.0.0.1:8000";
+// const backend_base_url = "http://127.0.0.1:8000";
 // const frontend_base_url = "";
 const frontend_base_url = "http://localhost:5500/templates";
 const token = localStorage.getItem("access");
@@ -220,9 +220,21 @@ async function DoFollow(user_id) {
   }
 }
 
-// 팔로잉/팔로워 리스트 가져오기
-async function getFollowList(user_id) {
-  const response = await fetch(`${backend_base_url}/users/follow/${user_id}`, {
+// 팔로잉 리스트 가져오기
+async function getFollowingList(user_id) {
+  const response = await fetch(`${backend_base_url}/users/following/${user_id}`, {
+    headers: {
+      Authorization: "Bearer " + localStorage.getItem("access"),
+    },
+    method: "GET",
+  });
+  response_json = await response.json();
+  return response_json;
+}
+
+// 팔로워 리스트 가져오기
+async function getFollowerList(user_id) {
+  const response = await fetch(`${backend_base_url}/users/follower/${user_id}`, {
     headers: {
       Authorization: "Bearer " + localStorage.getItem("access"),
     },
