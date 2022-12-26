@@ -71,6 +71,12 @@ async function CommunityDetail(community_id) {
   user.setAttribute("onclick", "getProfilePage(this.id)")
   detail_user.appendChild(user);
 
+  const detail_location = document.getElementById("detail_location");
+  const location = document.createElement("div");
+  location.innerText = community.location;
+  location.setAttribute("class", "location");
+  detail_location.appendChild(location);
+
   const detail_title = document.getElementById("detail_title");
   const title = document.createElement("h5");
   title.setAttribute("id", "title");
@@ -89,7 +95,6 @@ async function CommunityDetail(community_id) {
   delete_botton.setAttribute("id", community.id);
   delete_botton.setAttribute("onclick", "DeleteCommunityDetail(this.id)");
 
-  console.log(userinfo)
   if (userinfo.nickname != community.user_nickname) {
     update_botton.style.visibility = "hidden";
     delete_botton.style.visibility = "hidden";
@@ -224,9 +229,12 @@ async function UpdateCommunityDetailBefore(community_id) {
   const title = document.getElementById("community_title")
   const content = document.getElementById("community_content")
   const image = document.getElementById("before_image");
+  const location = document.getElementById("location")
   title.value = community.title
   content.value = community.content
+  location.value = community.location
   image.src = `${backend_base_url}${community.image}`;
+
 }
 UpdateCommunityDetailBefore(community_id)
 
@@ -235,12 +243,14 @@ UpdateCommunityDetailBefore(community_id)
 async function UpdateCommunityDetail() {
   let title = document.getElementById("community_title").value;
   let content = document.getElementById("community_content").value;
+  let location = document.getElementById("location").value;
   let image = document.getElementById("community_image").files[0];
 
   const formdata = new FormData();
 
   formdata.append("title", title);
   formdata.append("content", content);
+  formdata.append("location", location);
 
   if (image) {
     formdata.append("image", image);

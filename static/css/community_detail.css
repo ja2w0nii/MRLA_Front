@@ -200,10 +200,19 @@ a.active {
     margin-top: 170px;
 }
 .detail_user{
-
-    width:90%;
-    margin-bottom: 5px;
-
+    width:40%;
+}
+.detail_location{
+    width:60%;
+    display: flex;
+    flex-direction: row;
+}
+.detail_location span{
+    margin-right: 5px;
+}
+.location {
+    margin: 0px;
+    text-align: right;
 }
 .post-buttons {
     width: fit-content;
@@ -326,6 +335,13 @@ height: fit-content;
 }
 .middle-box{
     display: flex;
+    flex-direction: column;
+}
+
+.middle-box-small{
+    display: flex;
+    flex-direction: row;
+    margin: 0px 20px;
 }
 
 .like-box {
@@ -651,6 +667,19 @@ font-size: 0.5vw;
     margin-bottom: 10px;
 }
 
+.post-update-location {
+    text-align: left;
+    padding: 10px;
+    display: flex;
+    width: 90%;
+    height: 32px;
+    font-size: 15px;
+    border: 0;
+    border-radius: 20px;
+    outline: none;
+    margin: 0px 0px 20px 20px;
+}
+
 .post-location {
     text-align: left;
     padding: 5px;
@@ -658,18 +687,6 @@ font-size: 0.5vw;
     height: 35px;
     font-size: 18px;
     border-radius: 20px;
-    background-color: white;
-}
-
-.post-update-location, .post-tag {
-    text-align: left;
-    padding: 10px;
-    width: 41%;
-    height: 32px;
-    font-size: 15px;
-    border: 0;
-    border-radius: 20px;
-    outline: none;
     background-color: white;
 }
 

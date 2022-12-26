@@ -309,11 +309,12 @@ async function Community() {
 }
 Community();
 
-// 고객센터 게시글 등록
+// 커뮤니티 게시글 등록
 async function loadpostCommunity() {
   const title = document.getElementById("community_title").value;
   const content = document.getElementById("community_content").value;
   const image = document.getElementById("community_image").files[0];
+  const location = document.getElementById("location").value;
 
   if (title == "") {
     alert("제목을 입력해 주세요!");
@@ -328,6 +329,7 @@ async function loadpostCommunity() {
   formdata.append("title", title);
   formdata.append("content", content);
   formdata.append("image", image);
+  formdata.append("location", location);
 
   postCommunity(formdata);
 }
