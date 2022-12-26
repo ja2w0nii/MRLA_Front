@@ -1,6 +1,5 @@
 if (!token) {
   window.location.replace(`${frontend_base_url}/signin_signup.html`);
-
 }
 
 // url id 값 받아오기
@@ -225,3 +224,15 @@ function slideLeft() {
     buttons[0].classList.remove("inactive");
   }
 }
+
+// // 검색 페이지 보여주기 //
+// async function loadFoodSearch() {
+//   const urlParams = new URLSearchParams(window.location.search);
+//   const food_id = urlParams.get("id");
+
+//   foods = await getFoodSearch();
+//   console.log(foods);
+//   const search_list = document.getElementById("search");
+// }
+
+// loadCommunitySearch();

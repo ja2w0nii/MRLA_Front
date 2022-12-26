@@ -76,7 +76,7 @@ h2 {
   width: 100%;
   z-index: 100;
 }
-.nav_box .material-symbols-outlined{
+.nav_box .material-symbols-outlined {
   font-size: 2vw;
 }
 .navContainer {
@@ -212,18 +212,18 @@ a.active {
 .recommend_food_img_section {
   background-color: white;
   height: 45vh;
-  z-index: -100;
+  /* z-index: -100; */
   position: relative;
 }
-.slide_change_button{
+.slide_change_button {
   position: absolute;
   top: 10px;
   width: 100vw;
 }
-.clickleft{
-font-size: 1vw;
+.clickleft {
+  font-size: 1vw;
 }
-.clickright{
+.clickright {
   font-size: 1vw;
 }
 
@@ -232,8 +232,6 @@ font-size: 1vw;
   font-size: 2vw;
   color: #ff5752;
 }
-
-
 
 .slide a {
   text-decoration: none;

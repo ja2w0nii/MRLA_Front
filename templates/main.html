@@ -6,10 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
-    />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -47,6 +44,10 @@
         <h2 href="main.html" onclick="location.href='main.html?id=1'">메추리알</h2>
         <img class="mascot" src="mascot.jpeg" alt="마스코트" onclick="location.href='main.html?id=1'" />
       </div>
+      <span class="space">
+        <input class="form-control" type="search" placeholder="음식 이름" aria-label="Search" id="inputSearch" />
+        <button class="search_btn btn btn-outline-success my-2 my-sm-0" type="button" onclick="FoodSearch()">검색</button>
+      </span>
       <div id="profile_info_box" class="profile_info_box">
         <div id="profile_img_box" class="profile_img_box"></div>
         <div id="profile_name_box" class="nav-item dropdown">
@@ -95,8 +96,8 @@
         <div id="recommend_box6" class="recommend_container6"></div>
         <div id="recommend_box7" class="recommend_container7"></div>
         <div class="slide_change_button">
-          <button id="ClickLeft" class=" clickleft btn btn-warning">⬅️Click Left</button>
-          <button id="ClickRight" class=" clickright btn btn-warning">Click Right➡️</button>
+          <button id="ClickLeft" class="clickleft btn btn-warning">⬅️Click Left</button>
+          <button id="ClickRight" class="clickright btn btn-warning">Click Right➡️</button>
         </div>
       </div>
     </section>

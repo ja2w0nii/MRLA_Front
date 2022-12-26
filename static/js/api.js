@@ -353,7 +353,7 @@ async function postFoodComment(food_id, newComment) {
     alert("작성 완료!");
     window.location.reload();
   } else if (response.status == 400) {
-    alert("댓글을 작성해 주세요!");
+    alert("댓글을 500자 이하로 작성해주세요.");
   } else {
     alert(response.status);
   }
@@ -629,4 +629,42 @@ async function postCommunity(formdata) {
 function getNearRestaurant(food) {
   const url = `${frontend_base_url}/map_search.html?id=${food}`;
   location.href = url;
+}
+
+// 음식 검색 페이지 연결 //
+async function FoodSearch() {
+  const word = document.getElementById("inputSearch").value;
+  console.log(word);
+  a = await getFoodSearch();
+  // console.log(a);
+
+  // b = Object.values(a);
+  // console.log(b);
+
+  for (var i = 0; i < a.length; i++) {
+    var key = a[i];
+    b = key.menu.replace(/\"/gi, "");
+    // c = [b, key.food_id];
+    d = key.food_id;
+    // console.log(b);
+    // console.log(c);
+    // console.log(d);
+    if (b == word) {
+      location.href = `${frontend_base_url}/food_detail.html?id=${d}`;
+    }
+    // else {
+    //   alert("음식을 입력하세요!");
+    // }
+  }
+}
+
+// 음식 검색 //
+async function getFoodSearch() {
+  const response = await fetch(`${backend_base_url}/foods/main/search?` + new URLSearchParams(window.location.search), {
+    method: "GET",
+  });
+
+  response_json = await response.json();
+  // console.log(response_json);
+  return response_json;
 }
