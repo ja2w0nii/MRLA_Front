@@ -251,16 +251,16 @@ a.active {
 
 .clickleft{
   position: absolute;
-  top: 15vh;
+  top: 10vh;
   right: 53vw;
-font-size: 4vw;
+font-size: 3vw;
 margin-right: 40vw;
 }
 .clickright{
   position: absolute;
-  top: 15vh;
+  top: 10vh;
   right: -37vw;
-  font-size: 4vw;
+  font-size: 3vw;
 
   margin-right: 40vw;
 
@@ -296,7 +296,8 @@ img {
   position: fixed;
   top: 250px;
   transition: transform 0.6s;
-    transform: translateY(-100px);
+    transform: translateY(-80px);
+    z-index: 10;
 }
 
 /* 가운데로 오게되는 박스 */
@@ -443,7 +444,7 @@ img {
 
   display: grid;
   place-items: center;
-  /* z-index: 1000; */
+  z-index: 10;
   position: relative;
 }
 /* .sns_famous_restaurant_container{
