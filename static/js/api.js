@@ -630,13 +630,19 @@ async function FoodSearch() {
   const word = document.getElementById("inputSearch").value;
   foods = await getFoodSearch();
 
+  var search_food = [];
   for (var i = 0; i < foods.length; i++) {
     var key = foods[i];
     food = key.menu.replace(/\"/gi, "");
-    menu = key.food_id;
     if (food == word) {
-      location.href = `${frontend_base_url}/food_detail.html?id=${menu}`;
+      search_food.push(key);
     }
+  }
+  if (search_food[0]) {
+    location.href = `${frontend_base_url}/food_detail.html?id=${search_food[0].food_id}`;
+  } else {
+    alert("검색한 메뉴가 없습니다.")
+    window.location.reload()
   }
 }
 
