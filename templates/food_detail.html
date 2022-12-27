@@ -159,11 +159,30 @@
               </div>
             </div>
 
-            <div class="box-reply-detail">
-              <div class="box-reply-user">
-                <input class="input-reply-detail" id="new-comment" type="text" placeholder="댓글을 입력해주세요!" />
-              </div>
-              <button type="button" class="btn-reply-detail" onclick="submitComment()">작성</button>
+        </article>
+        <!-- 댓글 -->
+        <div class="container-reply-detail">
+            <div class="wrap-reply-detail">
+                <div class="wrap-comment-detail">
+                    <div class="box-title-comment-detail">
+                        <span class="text-title-comment-detail">🐣 댓글 🐣</span>
+                    </div>
+                    <hr>
+                    <div id="comment-inner-box" class="comment-inner-box"></div>
+                    <div class="comment-input-box">
+                        <div class="box-comment-detail">
+                            <ul class="list-unstyled" id="comment-list"></ul>
+                        </div>
+                    </div>
+     
+                    <div class="box-reply-detail">
+                        <div class="box-reply-user">
+                            <input class="input-reply-detail" id="new-comment" type="text" placeholder="댓글은 20자 이하로 입력해주세요!" />
+                        </div>
+                        <button type="button" class="btn-reply-detail" onclick="submitComment()">작성</button>
+                    </div>
+                </div>
+
             </div>
           </div>
         </div>

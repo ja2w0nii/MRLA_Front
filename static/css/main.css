@@ -429,8 +429,9 @@ img {
   object-fit: contain;
 }
 #sns_slider-container {
-  padding: 5px;
-  width: 80vw;
+  padding: 10px;
+  /* height: 15vh; */
+  width: 82vw;
   max-width: 1400px;
   background: #ffcd71;
   position: relative;
