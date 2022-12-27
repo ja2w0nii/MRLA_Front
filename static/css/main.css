@@ -417,16 +417,16 @@ img {
 
 /* 유명 맛집 스크롤 css ================================ 221205 이태은*/
 #sns_famous_restaurant_container {
-  height: 32vh;
+  position: absolute;
+  bottom: 90px;
   width: 100%;
-  margin: 0;
+  /* margin: 0; */
+  height: 32vh;
   padding: 0;
   background-color: rgb(255, 235, 168);
-
   display: grid;
   place-items: center;
   z-index: 10;
-  position: relative;
 }
 .slid-img {
   object-fit: cover;
