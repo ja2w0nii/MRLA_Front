@@ -49,6 +49,8 @@ border: none;
 .search_btn{
   border: 1px;
   background-color: #ffffff;
+  border-top-right-radius: 10px;
+border-bottom-right-radius: 10px;
 
 }
 .header_small_box {
@@ -294,7 +296,7 @@ img {
   position: fixed;
   top: 250px;
   transition: transform 0.6s;
-  /*   transform: translateY(-100px); */
+    transform: translateY(-100px);
 }
 
 /* 가운데로 오게되는 박스 */
@@ -321,7 +323,7 @@ img {
   width: 200px;
   height: 200px;
   transition: transform 0.5s;
-  transform: translateY(20px);
+  transform: translateY(-40px);
   border-radius: 2px;
   cursor: pointer;
   font-size: 20px;
@@ -333,7 +335,7 @@ img {
   position: fixed;
   top: 170px;
   transition: transform 0.5s;
-  transform: translateY(150px);
+  transform: translateY(90px);
 }
 
 .recommend_container3 div {
@@ -399,7 +401,7 @@ img {
   width: 200px;
   height: 200px;
   transition: transform 0.5s;
-  transform: translateY(60px);
+  transform: translateY(0px);
   border-radius: 2px;
   cursor: pointer;
   font-size: 20px;
@@ -418,7 +420,7 @@ img {
   width: 200px;
   height: 200px;
   transition: transform 0.5;
-  transform: translateY(20px);
+  transform: translateY(-40px);
   border-radius: 2px;
   cursor: pointer;
   font-size: 20px;
