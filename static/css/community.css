@@ -7,6 +7,7 @@
 body {
   overflow: hidden;
   min-width: 50vw;
+  position: relative;
 }
 /* 헤더=============================================*/
 header {
@@ -76,7 +77,7 @@ h2 {
   position: fixed;
   width: 100%;
   z-index: 100;
-position: relative;
+
 
 }
 
@@ -220,12 +221,29 @@ a.active {
   border-bottom: 0px;
   width: 100vw;
   position: absolute;
-  bottom: -30px;
+  overflow: auto;
+}
+
+/* 스크롤바 설정*/
+.community_section::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* 스크롤바 막대 설정*/
+.community_section::-webkit-scrollbar-thumb {
+  background-color: #fed4499d;
+  /* 스크롤바 둥글게 설정    */
+  border-radius: 10px;
+  z-index: -100;
+}
+/* 스크롤바 뒷 배경 설정*/
+.community_section::-webkit-scrollbar-track {
+  background-color: rgba(0, 0, 0, 0);
 }
 
 /* 부화한 메추리알들의 커뮤니티 */
 .community_for_metury {
-  margin: 20px auto;
+  /* margin: 20px auto; */
   font-size: 2vw;
   color: rgb(107, 57, 0);
 }
@@ -238,14 +256,15 @@ a.active {
 .community_for_metury > h3 {
   color: rgb(211, 160, 101);
   font-size: 20px;
-  padding: 10px 0 20px 0;
+  /* padding: 10px 0 20px 0; */
 }
 
 .community-div {
-  border: 5px solid #fed049;
+  border: 10px solid #fed049;
   width: 90vw;
-  height: 60vh;
+  /* height: 80vh; */
   overflow: overlay;
+  
 }
 /* 스크롤바 설정*/
 .community-div::-webkit-scrollbar {
@@ -279,14 +298,13 @@ a.active {
 /* 버튼============================================================== 221225이태은*/
 .post-upload-button-div {
   display: flex;
-  padding: 20px;
-  border: 5px solid #fed049;
+  border-bottom: 3px solid #fed049;
   margin: 0px auto;
-  /* float: right; */
   width: 90vw;
   height: 10vh;
   text-align: right;
   margin-bottom: 10px;
+
 }
 
 /* 검색 버튼 시작=========== */
@@ -718,6 +736,11 @@ ul li.tag-item {
   background-color: #ff8ef9;
 }
 
+
+
+.post-detail-modal-container{
+  visibility: hidden;
+}
 /* 
 /* 게시물 상세보기 모달창 시작================================================= */
 
@@ -910,6 +933,7 @@ ul li.tag-item {
 .cards-box {
   width: 90%;
   height: 60vh;
+
 }
 
 .card-image {

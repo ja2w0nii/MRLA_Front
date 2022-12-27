@@ -403,8 +403,13 @@ margin: auto ;
 .comment-div {
   display: flex;
   flex-direction: row;
+  font-size: 1vw;
 }
-
+.comment-div  button{
+  display: flex;
+  flex-direction: row;
+  font-size: 1vw;
+}
 .media {
   margin-left: 5px;
 }
