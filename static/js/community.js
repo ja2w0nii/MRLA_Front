@@ -76,14 +76,11 @@ function lazyLoad() {
 }
 
 // 모달창 관련=============================================================== 221208 이태은
-
 //  업로드 영역 모달창 시작====================================
-
 var upload_modals = document.getElementsByClassName("post-upload-modal-container"); // 모달창 띄우는 자바스크립트 시작
-
 var upload_btns = document.getElementsByClassName("post-upload-button"); // Modal을 띄우는 클래스 이름을 가져옵니다.
-
 var upload_spanes = document.getElementsByClassName("post-upload-modal-close"); // Modal을 닫는 close 클래스를 가져옵니다.
+
 var upload_funcs = [];
 
 function Modal(num) {
@@ -153,7 +150,6 @@ $(".post-modal-input-text-middle input").keyup(function () {
   }
 });
 
-
 // 텍스트 수 제한 textarea
 $(".text_box textarea").keyup(function () {
   var content = $(this).val();
@@ -164,132 +160,6 @@ $(".text_box textarea").keyup(function () {
     $(".text_box .count span").html(200);
   }
 });
-
-//   태그 관련 스트립트 ============================================== 221211 이태은
-$(document).ready(function () {
-  var tag = {};
-  var counter = 0;
-
-  // 태그를 추가한다.
-  function addTag(value) {
-    tag[counter] = value; // 태그를 Object 안에 추가
-    counter++; // counter 증가 삭제를 위한 del-btn 의 고유 id 가 된다.
-  }
-
-  // 최종적으로 서버에 넘길때 tag 안에 있는 값을 array type 으로 만들어서 넘긴다.
-  function marginTag() {
-    return Object.values(tag).filter(function (word) {
-      return word !== "";
-    });
-  }
-
-  $("#tag").on("keyup", function (e) {
-    var self = $(this);
-
-    // input 에 focus 되있을 때 엔터 및 스페이스바 입력시 구동
-    if (e.key === "Enter" || e.keyCode == 32) {
-      var tagValue = self.val(); // 값 가져오기
-
-      // 값이 없으면 동작 안합니다.
-      if (tagValue !== "") {
-        // 같은 태그가 있는지 검사한다. 있다면 해당값이 array 로 return 된다.
-        var result = Object.values(tag).filter(function (word) {
-          return word === tagValue;
-        });
-
-        // 태그 중복 검사
-        if (result.length == 0) {
-          $("#tag-list").append("<li class='tag-item'>" + tagValue + "<span class='del-btn' idx='" + counter + "'>x</span></li>");
-          addTag(tagValue);
-          self.val("");
-        } else {
-          alert("태그값이 중복됩니다.");
-        }
-      }
-      e.preventDefault(); // SpaceBar 시 빈공간이 생기지 않도록 방지
-    }
-  });
-
-  // 삭제 버튼
-  // 삭제 버튼은 비동기적 생성이므로 document 최초 생성시가 아닌 검색을 통해 이벤트를 구현시킨다.
-  $(document).on("click", ".del-btn", function (e) {
-    var index = $(this).attr("idx");
-    tag[index] = "";
-    $(this).parent().remove();
-  });
-});
-// 업로드 모달창 끝==========================================================================================================================
-
-// 게시물 상세보기 모달창 관련====================================================================================================================221212이태은
-// async function CommunityDetail(community_id) {
-//   const community = await getCommunityDetail(community_id);
-
-//   var detail_modals = document.getElementsByClassName("post-detail-modal-container"); // 모달창 띄우는 자바스크립트 시작
-
-//   var detail_btns = document.getElementsByClassName("card-list"); // Modal을 띄우는 클래스 이름을 가져옵니다.
-
-//   var detail_spanes = document.getElementsByClassName("post-detail-modal-close"); // Modal을 닫는 close 클래스를 가져옵니다.
-//   var detail_funcs = [];
-
-//   function DetailModal(num) {
-//     // Modal을 띄우고 닫는 클릭 이벤트를 정의한 함수
-//     return function () {
-//       // 해당 클래스의 내용을 클릭하면 Modal을 띄웁니다.
-//       detail_btns[num].onclick = function () {
-//         detail_modals[num].style.display = "block";
-//       };
-
-//       // <span> 태그(X 버튼)를 클릭하면 Modal이 닫습니다.
-//       detail_spanes[num].onclick = function () {
-//         detail_modals[num].style.display = "none";
-//       };
-//     };
-//   }
-
-//   // 원하는 Modal 수만큼 Modal 함수를 호출해서 funcs 함수에 정의합니다.
-//   for (var i = 0; i < detail_btns.length; i++) {
-//     detail_funcs[i] = DetailModal(i);
-//   }
-
-//   // 원하는 Modal 수만큼 funcs 함수를 호출합니다.
-//   for (var j = 0; j < detail_btns.length; j++) {
-//     detail_funcs[j]();
-//   }
-
-//   // Modal 영역 밖을 클릭하면 Modal을 닫습니다.
-//   window.onclick = function (event) {
-//     if (event.target.className == "post-detail-modal-container") {
-//       event.target.style.display = "none";
-//     }
-//   };
-
-//   const image_box = document.getElementById("wrapper");
-//   const image = document.createElement("img");
-//   image.setAttribute("class", "image_box");
-//   image.src = `${backend_base_url}${community.image}`;
-//   image_box.appendChild(image);
-
-//   const detail_user_title = document.getElementById("detail_user_title");
-//   const user = document.createElement("input");
-//   user.setAttribute("type", "text");
-//   user.setAttribute("id", "title");
-//   user.setAttribute("class", "post-title");
-//   user.setAttribute("placeholder", "작성자 : " + community.user);
-//   detail_user_title.appendChild(user);
-
-//   const title = document.createElement("input");
-//   title.setAttribute("type", "text");
-//   title.setAttribute("id", "title");
-//   title.setAttribute("class", "post-title");
-//   title.setAttribute("placeholder", "제목 : " + community.title);
-//   detail_user_title.appendChild(title);
-
-//   const detail_content = document.getElementById("detail_content");
-//   const content = document.createElement("div");
-//   content.setAttribute("class", "detail_content_box");
-//   content.innerText = community.content;
-//   detail_content.appendChild(content);
-// }
 
 // 커뮤니티 게시글 목록 조회
 async function Community() {
@@ -318,14 +188,14 @@ async function Community() {
 
     const newTitle = document.createElement("h2");
     const newContent = document.createElement("p");
-    newContent.setAttribute("class", "community-content")
+    newContent.setAttribute("class", "community-content");
     newTitle.innerText = community.title;
     newContent.innerText = community.content;
     newDescription.appendChild(newTitle);
     newDescription.appendChild(newContent);
-// 카드생성
-    newCard.setAttribute("id", community.id)
-    newCard.setAttribute("onclick", "getCommunityDetailPage(this.id)")
+    // 카드생성
+    newCard.setAttribute("id", community.id);
+    newCard.setAttribute("onclick", "getCommunityDetailPage(this.id)");
 
     card_list.appendChild(newCard);
   });

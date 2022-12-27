@@ -3,9 +3,8 @@
   font-family: "Jua", sans-serif;
   text-align: center;
   margin: auto;
-  
 }
-body{
+body {
   overflow: hidden;
   background-color: rgb(255, 251, 236);
 }
@@ -73,11 +72,10 @@ h2 {
 /* 네비게이션============================================= */
 .nav_box {
   /* border: 1px solid red; */
-top: 70px;
+  top: 70px;
   position: fixed;
   width: 100%;
   z-index: 100;
-
 }
 
 .navContainer {
@@ -170,7 +168,6 @@ ul {
   padding-left: 0px;
 }
 
-
 nav a {
   text-decoration-line: none;
   color: grey;
@@ -186,9 +183,8 @@ section {
   font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 200, "opsz" 48;
 }
 
-
 /* 바디 */
-section.main_title{
+section.main_title {
   margin-top: 160px;
   height: auto;
 }
@@ -212,19 +208,18 @@ section.main_section {
   width: 95vw;
 
   /* padding: 10px 0px; */
-
 }
-.main_title{
+.main_title {
   margin-top: 150px;
-padding: 20px;
+  padding: 20px;
 }
-.main_title h1{
+.main_title h1 {
   font-size: 2vw;
 }
-.main_title h5{
+.main_title h5 {
   font-size: 1.5vw;
 }
-.service-nav{
+.service-nav {
   border: 2px solid #ffca84;
   width: 95vw;
   display: flex;
@@ -233,7 +228,7 @@ padding: 20px;
   text-align: center;
   height: 5vh;
 }
-.service-body{
+.service-body {
   border: 2px solid red;
   height: 55vh;
 }
@@ -272,9 +267,7 @@ span p {
   margin: 7px 5px;
   display: grid;
   align-items: center;
-
 }
-
 
 /* 말머리 / 내용 / 작성자 / 작성 시간 */
 .service_nav {
@@ -295,7 +288,6 @@ p.service_title {
   text-overflow: ellipsis;
   white-space: nowrap;
   /* text-align: left; */
-
 }
 
 p.service_user {
@@ -335,7 +327,6 @@ p.service_created_at {
   font-family: "ht_r";
   font-size: 12px;
   display: flex;
-
 }
 
 /* 문의하기 모달창 시작 ===================================   */
@@ -414,12 +405,10 @@ textarea.service_content {
 }
 
 /* 문의하기 모달창 끝 ===================================   */
-
-
 /* 푸터 */
 footer {
   width: 100%;
-  background-color: #3D5656;
+  background-color: #3d5656;
   display: grid;
   place-items: center;
 }

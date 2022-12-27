@@ -1,8 +1,6 @@
 // 전역 변수
 const backend_base_url = "https://www.mrla.tk";
-// const backend_base_url = "http://3.36.132.172";
 // const backend_base_url = "http://127.0.0.1:8000";
-// const frontend_base_url = "";
 const frontend_base_url = "http://localhost:5500/templates";
 const token = localStorage.getItem("access");
 
@@ -482,13 +480,6 @@ async function loadDeleteCommunityDetail(community_id) {
 
   response_json = await response.json();
   return response_json;
-
-  // if (response.status == 204) {
-  //   alert("해당 게시글을 삭제합니다.");
-  //   window.location.replace(`${frontend_base_url}/community.html`);
-  // } else {
-  //   alert(response.status);
-  // }
 }
 
 // 커뮤니티 게시글 좋아요 등록/취소 //
@@ -637,27 +628,15 @@ function getNearRestaurant(food) {
 // 음식 검색 페이지 연결 //
 async function FoodSearch() {
   const word = document.getElementById("inputSearch").value;
-  console.log(word);
-  a = await getFoodSearch();
-  // console.log(a);
+  foods = await getFoodSearch();
 
-  // b = Object.values(a);
-  // console.log(b);
-
-  for (var i = 0; i < a.length; i++) {
-    var key = a[i];
-    b = key.menu.replace(/\"/gi, "");
-    // c = [b, key.food_id];
-    d = key.food_id;
-    // console.log(b);
-    // console.log(c);
-    // console.log(d);
-    if (b == word) {
-      location.href = `${frontend_base_url}/food_detail.html?id=${d}`;
+  for (var i = 0; i < foods.length; i++) {
+    var key = foods[i];
+    food = key.menu.replace(/\"/gi, "");
+    menu = key.food_id;
+    if (food == word) {
+      location.href = `${frontend_base_url}/food_detail.html?id=${menu}`;
     }
-    // else {
-    //   alert("음식을 입력하세요!");
-    // }
   }
 }
 
@@ -668,6 +647,5 @@ async function getFoodSearch() {
   });
 
   response_json = await response.json();
-  // console.log(response_json);
   return response_json;
 }

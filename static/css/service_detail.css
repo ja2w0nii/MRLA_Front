@@ -3,12 +3,10 @@
   font-family: "Jua", sans-serif;
   text-align: center;
   margin: auto;
-  
 }
-body{
+body {
   overflow: hidden;
   background-color: rgb(255, 251, 236);
-
 }
 /* 헤더=============================================*/
 header {
@@ -73,12 +71,10 @@ h2 {
 
 /* 네비게이션============================================= */
 .nav_box {
-  /* border: 1px solid red; */
-top: 70px;
+  top: 70px;
   position: fixed;
   width: 100%;
   z-index: 100;
-
 }
 
 .navContainer {
@@ -171,14 +167,12 @@ ul {
   padding-left: 0px;
 }
 
-
 nav a {
   text-decoration-line: none;
   color: grey;
 }
 
 section {
-  /* border: 2px solid green; */
   height: 100%;
 }
 
@@ -188,46 +182,41 @@ section {
 }
 
 /* 바디 */
-.big-div{
-
-  top:120px;
-height: 88vh;
-position: relative;
+.big-div {
+  top: 120px;
+  height: 88vh;
+  position: relative;
 }
-.service-small-div{
+.service-small-div {
   margin: 20px auto;
   padding: 0px 20px;
 
-  height:60vh;
+  height: 60vh;
   overflow: auto;
 }
 /* 스크롤바 설정==================================*/
-.service-small-div::-webkit-scrollbar{
+.service-small-div::-webkit-scrollbar {
   width: 6px;
 }
 
 /* 스크롤바 막대 설정*/
-.service-small-div::-webkit-scrollbar-thumb{
+.service-small-div::-webkit-scrollbar-thumb {
   height: 17%;
-  background-color: #b86e00d2 ;
-  border-radius: 10px;  
+  background-color: #b86e00d2;
+  border-radius: 10px;
 }
 
 /* 스크롤바 뒷 배경 설정*/
-.service-small-div::-webkit-scrollbar-track{
-  background-color: #ff880038 ;
+.service-small-div::-webkit-scrollbar-track {
+  background-color: #ff880038;
 }
 /* 스크롤바 설정==================================*/
 section.main_section {
-
   width: 100%;
   height: 100%;
   display: grid;
   align-items: flex-start;
 }
-
-
-
 
 span.user {
   float: left;
@@ -240,44 +229,39 @@ span.created_at {
 }
 
 div.p_box {
-  background-color:  #ffca84 ;
+  background-color: #ffca84;
 }
-.title{
-  /* border: 1px solid orange; */
-  /* border-radius: 10px; */
-text-align: left;
-font-size: 20px;
-padding: 10px 10px 0;
-margin-bottom: 0px;
-/* border-bottom: 1px solid black; */
-
+.title {
+  text-align: left;
+  font-size: 20px;
+  padding: 10px 10px 0;
+  margin-bottom: 0px;
 }
-.content{
-text-align: left;
-padding: 10px 20px;
-overflow : auto;
-height: 300px;
-width: 100%;
+.content {
+  text-align: left;
+  padding: 10px 20px;
+  overflow: auto;
+  height: 300px;
+  width: 100%;
 }
 
 /* 스크롤바 설정==================================*/
-.content::-webkit-scrollbar{
+.content::-webkit-scrollbar {
   width: 6px;
 }
 
 /* 스크롤바 막대 설정*/
-.content::-webkit-scrollbar-thumb{
+.content::-webkit-scrollbar-thumb {
   height: 17%;
-  background-color: #3D5656 ;
-  border-radius: 10px;  
+  background-color: #3d5656;
+  border-radius: 10px;
 }
 
 /* 스크롤바 뒷 배경 설정*/
-.content::-webkit-scrollbar-track{
-  background-color: #3d565669 ;
+.content::-webkit-scrollbar-track {
+  background-color: #3d565669;
 }
 /* 스크롤바 설정==================================*/
-
 p.content {
   margin: 0;
 }
@@ -285,7 +269,6 @@ p.content {
 span.servicecomment_user {
   float: left;
   margin-left: 20px;
-
 }
 
 span.servicecomment_updated_at {
@@ -294,78 +277,65 @@ span.servicecomment_updated_at {
 }
 
 p.servicecomment_comment {
-
-  border-bottom: 1px solid  #e2a658;
+  border-bottom: 1px solid #e2a658;
   margin: 30px 0 0 0;
   color: #000000;
 
   background-color: #ffffff;
-padding: 20px 20px;
-  text-align:left;
-
-
+  padding: 20px 20px;
+  text-align: left;
 }
 
 div.service_detail {
-  border: 1px solid  #fab15d;
+  border: 1px solid #fab15d;
   width: 95%;
   margin: 30px auto;
-  /* border-radius: 10px; */
   background-color: #ffffff;
-
 }
-.span_box{
+.span_box {
   border-radius: 10px;
-  /* padding: 5px 5px;
-  margin: 5px ;
-  /* border: 1px solid red; */
   height: 20px;
   font-size: 15px;
   color: rgb(124, 124, 124);
 }
 
 /* 작성한 댓글이 달리는 div ====================*/
-.comment_list_box{
-  width:100%;
+.comment_list_box {
+  width: 100%;
   margin: 30px auto;
 }
 div.comment_list {
-  border: 1px solid  #fab15d;
-width: 95%;
-  background-color:  #fab15d;
+  border: 1px solid #fab15d;
+  width: 95%;
+  background-color: #fab15d;
 }
 /* 작성한 댓글의 작성자 및 작성시간 표시 바*/
 .comment_list span {
-margin: 0px 10px;
+  margin: 0px 10px;
 }
 /* 댓글 작성하는 칸 div========================= */
-.comment_box_all{
+.comment_box_all {
   width: 100vw;
   background-color: #ffffff;
   height: 25vh;
-  border-top:1px solid  #fab15d ;
+  border-top: 1px solid #fab15d;
   position: absolute;
   bottom: 0px;
 }
-.comment_box_all p{
-  /* border: 1px solid red; */
+.comment_box_all p {
   width: 80%;
   padding: 20px 25px 0px;
-text-align: left;
-width: 90%;
-font-size: 1.5vw;
-
-
+  text-align: left;
+  width: 90%;
+  font-size: 1.5vw;
 }
 div.comment_box {
   display: flex;
   align-items: center;
-  /* border: 1px solid red; */
   padding: 0px 20px 40px;
   width: 90%;
   background-color: #ffffff;
   margin: 0px auto;
-
 }
 
 /* 댓글 텍스트 작성 칸  */
@@ -373,20 +343,20 @@ textarea {
   padding: 10px;
   resize: none;
   text-align: left;
-  width:85%;
+  width: 85%;
 }
 
 /* 확인 버튼 */
 .btn-primary {
   padding: 10px;
   border-radius: 5px;
-  background-color:  #e7c194;
+  background-color: #e7c194;
   border: none;
 }
 
 .btn-primary:hover {
   color: #ffffff;
-  background-color:  #66441e;
+  background-color: #66441e;
   cursor: pointer;
 }
 
@@ -407,7 +377,7 @@ textarea {
 footer {
   width: 100%;
   height: 100%;
-  background-color: #3D5656;
+  background-color: #3d5656;
   display: grid;
   place-items: center;
 }

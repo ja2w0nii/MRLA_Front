@@ -3,9 +3,8 @@
   font-family: "Jua", sans-serif;
   text-align: center;
   margin: auto;
-  
 }
-body{
+body {
   overflow: hidden;
 }
 /* 헤더=============================================*/
@@ -72,11 +71,10 @@ h2 {
 /* 네비게이션============================================= */
 .nav_box {
   /* border: 1px solid red; */
-top: 70px;
+  top: 70px;
   position: fixed;
   width: 100%;
   z-index: 100;
-
 }
 
 .navContainer {
@@ -169,14 +167,12 @@ ul {
   padding-left: 0px;
 }
 
-
 nav a {
   text-decoration-line: none;
   color: grey;
 }
 
 section {
-  /* border: 2px solid green; */
   height: 100%;
 }
 
@@ -185,9 +181,9 @@ section {
   font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 200, "opsz" 48;
 }
 
-.body-box{
-  margin-top:20vh;
-  border: 20px solid  #ffffff;
+.body-box {
+  margin-top: 20vh;
+  border: 20px solid #ffffff;
   background-color: #ffffff;
   border-radius: 30px;
   width: 80vw;
@@ -208,10 +204,9 @@ a.active {
   font-family: "Malgun Gothic", dotum, "돋움", sans-serif;
   font-size: 12px;
 }
-.map_warp *h1{
+.map_warp *h1 {
   font-size: 24px;
   font-family: "Jua", sans-serif;
-
 }
 .map_wrap a,
 .map_wrap a:hover,

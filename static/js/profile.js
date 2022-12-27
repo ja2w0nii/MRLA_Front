@@ -163,7 +163,7 @@ async function FollowList(user_id) {
   followings.forEach((following) => {
     const following_list = document.getElementById("following-modal-body");
 
-    const newFollowingBox = document.createElement("div")
+    const newFollowingBox = document.createElement("div");
     newFollowingBox.setAttribute("class", "following-box");
 
     const newImage = document.createElement("img");
@@ -184,7 +184,7 @@ async function FollowList(user_id) {
   followers.forEach((follower) => {
     const follower_list = document.getElementById("follower-modal-body");
 
-    const newFollowerBox = document.createElement("div")
+    const newFollowerBox = document.createElement("div");
     newFollowerBox.setAttribute("class", "follower-box");
 
     const newImage = document.createElement("img");
