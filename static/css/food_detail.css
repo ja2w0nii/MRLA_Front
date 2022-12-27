@@ -396,7 +396,7 @@ img {
   flex-direction: row;
   font-size: 1vw;
 }
-.comment-div  button{
+.comment-div button {
   display: flex;
   flex-direction: row;
   font-size: 1vw;

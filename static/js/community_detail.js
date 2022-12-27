@@ -114,9 +114,7 @@ async function CommunityDetail(community_id) {
       like_button.setAttribute("class", "material-symbols-sharp");
       break;
     } else {
-
-      like_button.setAttribute("class", "heart-btn material-symbols-outlined")
-
+      like_button.setAttribute("class", "heart-btn material-symbols-outlined");
     }
   }
 

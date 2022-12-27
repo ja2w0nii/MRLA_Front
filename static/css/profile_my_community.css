@@ -207,12 +207,11 @@ form {
 }
 
 .community-content {
-    height: 30px;
-    overflow: auto;
-    display: inline-block;
-overflow: hidden;
-text-overflow: ellipsis;
-
+  height: 30px;
+  overflow: auto;
+  display: inline-block;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 /* 모달 */
