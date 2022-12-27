@@ -480,12 +480,9 @@ async function loadDeleteCommunityDetail(community_id) {
     method: "DELETE",
   });
 
-  if (confirm("게시글을 삭제하시겠습니까?") == true){
-    alert("삭제되었습니다.");
-    window.location.replace(`${frontend_base_url}/community.html`);
-  } else {
-    return false;
-  }
+  response_json = await response.json();
+  return response_json;
+
   // if (response.status == 204) {
   //   alert("해당 게시글을 삭제합니다.");
   //   window.location.replace(`${frontend_base_url}/community.html`);

@@ -12,46 +12,46 @@ async function ProfileInfo() {
 
   const profile_img_box = document.getElementById("profile_img_box");
   let newImage = document.createElement("img");
-  newImage.setAttribute("id", login_user.id)
-  newImage.setAttribute("class", "profile_img")
+  newImage.setAttribute("id", login_user.id);
+  newImage.setAttribute("class", "profile_img");
   newImage.src = `${backend_base_url}${login_user.profile_img}`;
   profile_img_box.appendChild(newImage);
 
   const profile_name_box = document.getElementById("profile_name_box");
-  const newNickname = document.createElement("a")
-  newNickname.setAttribute("id", login_user.id)
-  newNickname.setAttribute("class", "nav-link dropdown-toggle")
-  newNickname.setAttribute("href", "#")
-  newNickname.setAttribute("role", "button")
-  newNickname.setAttribute("data-bs-toggle", "dropdown")
-  newNickname.setAttribute("aria-expanded", "false")
-  newNickname.innerText = login_user.nickname
-  profile_name_box.appendChild(newNickname)
+  const newNickname = document.createElement("a");
+  newNickname.setAttribute("id", login_user.id);
+  newNickname.setAttribute("class", "nav-link dropdown-toggle");
+  newNickname.setAttribute("href", "#");
+  newNickname.setAttribute("role", "button");
+  newNickname.setAttribute("data-bs-toggle", "dropdown");
+  newNickname.setAttribute("aria-expanded", "false");
+  newNickname.innerText = login_user.nickname;
+  profile_name_box.appendChild(newNickname);
 
-  const profile_dropdown = document.getElementById("profile_dropdown")
-  const newItem = document.createElement("li")
-  newItem.setAttribute("class", "dropdown-item-box")
-  profile_dropdown.appendChild(newItem)
+  const profile_dropdown = document.getElementById("profile_dropdown");
+  const newItem = document.createElement("li");
+  newItem.setAttribute("class", "dropdown-item-box");
+  profile_dropdown.appendChild(newItem);
 
-  const newItem_a = document.createElement("a")
-  newItem_a.setAttribute("id", login_user.id)
-  newItem_a.setAttribute("class", "dropdown-item")
-  newItem_a.setAttribute("onclick", "getProfilePage(this.id)")
-  newItem_a.innerText = "My 프로필"
-  newItem.appendChild(newItem_a)
+  const newItem_a = document.createElement("a");
+  newItem_a.setAttribute("id", login_user.id);
+  newItem_a.setAttribute("class", "dropdown-item");
+  newItem_a.setAttribute("onclick", "getProfilePage(this.id)");
+  newItem_a.innerText = "My 프로필";
+  newItem.appendChild(newItem_a);
 
-  const newItem2 = document.createElement("li")
-  newItem2.setAttribute("class", "dropdown-item-box")
-  profile_dropdown.appendChild(newItem2)
+  const newItem2 = document.createElement("li");
+  newItem2.setAttribute("class", "dropdown-item-box");
+  profile_dropdown.appendChild(newItem2);
 
-  const newItem_a2 = document.createElement("a")
-  newItem_a2.setAttribute("id", login_user.id)
-  newItem_a2.setAttribute("class", "dropdown-item")
-  newItem_a2.setAttribute("onclick", "handleLogout()")
-  newItem_a2.innerText = "로그아웃"
-  newItem2.appendChild(newItem_a2)
+  const newItem_a2 = document.createElement("a");
+  newItem_a2.setAttribute("id", login_user.id);
+  newItem_a2.setAttribute("class", "dropdown-item");
+  newItem_a2.setAttribute("onclick", "handleLogout()");
+  newItem_a2.innerText = "로그아웃";
+  newItem2.appendChild(newItem_a2);
 }
-ProfileInfo()
+ProfileInfo();
 
 // 게시글 상세보기
 async function CommunityDetail(community_id) {
@@ -66,9 +66,9 @@ async function CommunityDetail(community_id) {
 
   const detail_user = document.getElementById("detail_user");
   const user = document.createElement("p");
-  user.innerText = community.user_nickname
-  user.setAttribute("id", community.user)
-  user.setAttribute("onclick", "getProfilePage(this.id)")
+  user.innerText = community.user_nickname;
+  user.setAttribute("id", community.user);
+  user.setAttribute("onclick", "getProfilePage(this.id)");
   detail_user.appendChild(user);
 
   const detail_location = document.getElementById("detail_location");
@@ -89,9 +89,9 @@ async function CommunityDetail(community_id) {
   content.innerText = community.content;
   detail_content.appendChild(content);
 
-  console.log(community)
+  console.log(community);
 
-  const detail_updatedat = document.getElementById("detail_updatedat")
+  const detail_updatedat = document.getElementById("detail_updatedat");
   const updatedat = document.createElement("p");
   updatedat.innerText = community.updated_at.replace("T", " ").substr(0, 16);
   detail_updatedat.appendChild(updatedat);
@@ -108,19 +108,17 @@ async function CommunityDetail(community_id) {
   }
 
   const like_button = document.getElementById("post-like-button");
-  like_button.setAttribute("id", community.id)
-  like_button.setAttribute("onclick", "DoCommunityLike(this.id)")
+  like_button.setAttribute("id", community.id);
+  like_button.setAttribute("onclick", "DoCommunityLike(this.id)");
 
   for (i in community.likes) {
     if (userinfo.id == community.likes[i]) {
-      like_button.setAttribute("class", "material-symbols-sharp")
+      like_button.setAttribute("class", "material-symbols-sharp");
       break;
     } else {
-      like_button.setAttribute("class", "material-symbols-outlined")
+      like_button.setAttribute("class", "material-symbols-outlined");
     }
   }
-
-
 
   const like_count = document.getElementById("post-like-count");
   like_number = community.likes.length;
@@ -231,20 +229,18 @@ $(document).ready(function () {
 
 // 게시글 수정하기 _ 수정 전 정보 조회하기
 async function UpdateCommunityDetailBefore(community_id) {
-  community = await getCommunityDetail(community_id)
+  community = await getCommunityDetail(community_id);
 
-  const title = document.getElementById("community_title")
-  const content = document.getElementById("community_content")
+  const title = document.getElementById("community_title");
+  const content = document.getElementById("community_content");
   const image = document.getElementById("before_image");
-  const location = document.getElementById("location")
-  title.value = community.title
-  content.value = community.content
-  location.value = community.location
+  const location = document.getElementById("location");
+  title.value = community.title;
+  content.value = community.content;
+  location.value = community.location;
   image.src = `${backend_base_url}${community.image}`;
-
 }
-UpdateCommunityDetailBefore(community_id)
-
+UpdateCommunityDetailBefore(community_id);
 
 // 게시글 수정하기 _ 수정 사항 적용하기
 async function UpdateCommunityDetail() {
@@ -268,7 +264,14 @@ async function UpdateCommunityDetail() {
 
 // 게시글 삭제하기
 async function DeleteCommunityDetail(community_id) {
-  await loadDeleteCommunityDetail(community_id);
+
+  if (confirm("게시글을 삭제하시겠습니까?") == true) {
+    alert("삭제되었습니다.");
+    loadDeleteCommunityDetail(community_id)
+    window.location.replace(`${frontend_base_url}/community.html`);
+  } else {
+    return false;
+  }
 }
 
 // 댓글 목록 조회하기
@@ -276,7 +279,7 @@ async function CommunityComment(community_id) {
   const comments = await getCommunityComment(community_id);
   const userinfo = await getName();
 
-  const comment_list = document.getElementById("comment-inner-box")
+  const comment_list = document.getElementById("comment-inner-box");
 
   comments.forEach((comment) => {
     const newComment_box = document.createElement("div");
