@@ -83,7 +83,6 @@ async function searchPlaces() {
 
   title.innerHTML += `<div class="info_font">${login_user.nickname} 님 근처 [<h1 class="h1"> ${food} </h1>] 맛집</div>`;
 
-
   var keyword = food;
 
   if (!keyword.replace(/^\s+|\s+$/g, "")) {
@@ -100,16 +99,6 @@ async function searchPlaces() {
       location: new kakao.maps.LatLng(lat, lon),
     });
   });
-
-  // 장소검색 객체를 통해 키워드로 장소검색을 요청합니다
-
-  // ps.keywordSearch(keyword, placesSearchCB, {
-  //   useMapBounds: true,
-  //   page: 1,
-  //   radius: 50,
-  //   location: result[0].address.address_name,
-  //   sort: daum.maps.services.SortBy.distance,
-  // });
 }
 
 // 장소검색이 완료됐을 때 호출되는 콜백함수 입니다

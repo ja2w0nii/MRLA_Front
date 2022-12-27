@@ -53,19 +53,12 @@ ProfileInfo();
 async function loadCommunitySearch() {
   communitys = await getCommunitySearch();
 
-  console.log(communitys);
   const search_list = document.getElementById("search");
   communitys.forEach((community) => {
     const newSpan = document.createElement("span");
     newSpan.setAttribute("id", community.id);
     newSpan.setAttribute("class", "search_span");
     newSpan.setAttribute("onclick", "getCommunityDetailPage(this.id)");
-
-    // const newImage = document.createElement("img");
-    // newImage.src = `${backend_base_url + community.image}`;
-    // newImage.setAttribute("id", community.id);
-    // newImage.setAttribute("onclick", "getCommunityDetailPage(this.id)");
-    // newSpan.appendChild(newImage);
 
     const newEmail = document.createElement("p");
     newEmail.innerText = community.user_nickname;
@@ -76,10 +69,6 @@ async function loadCommunitySearch() {
     newTitle.innerText = community.title;
     newTitle.setAttribute("id", community.id);
     newSpan.appendChild(newTitle);
-
-    // const newImg = document.createElement("img");
-    // newImg.setAttribute("src", community.image);
-    // newSpan.appendChild(newImg);
 
     const newContent = document.createElement("p");
     newContent.innerText = community.content;

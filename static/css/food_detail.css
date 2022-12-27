@@ -3,9 +3,8 @@
   font-family: "Jua", sans-serif;
   text-align: center;
   margin: auto;
-  
 }
-body{
+body {
   overflow: hidden;
 }
 /* 헤더=============================================*/
@@ -71,12 +70,10 @@ h2 {
 
 /* 네비게이션============================================= */
 .nav_box {
-  /* border: 1px solid red; */
-top: 70px;
+  top: 70px;
   position: fixed;
   width: 100%;
   z-index: 100;
-
 }
 
 .navContainer {
@@ -169,17 +166,14 @@ ul {
   padding-left: 0px;
 }
 
-
 nav a {
   text-decoration-line: none;
   color: grey;
 }
 
 section {
-  /* border: 2px solid green; */
   height: 100%;
 }
-
 
 /* 위치 */
 .material-symbols-outlined {
@@ -220,7 +214,7 @@ img {
   width: 90vw;
   height: 70vh;
   padding: 2%;
-  margin-top : 180px;
+  margin-top: 180px;
   display: flex;
 }
 
@@ -231,7 +225,7 @@ img {
   background-color: white;
   width: 50vw;
   height: 100%;
-position : relative;
+  position: relative;
 }
 
 .wrap-post-detail viewr {
@@ -239,7 +233,7 @@ position : relative;
   height: auto;
 }
 
-.wrap-content-detail{
+.wrap-content-detail {
   margin: 20px 0px 25px;
 }
 
@@ -273,7 +267,7 @@ position : relative;
 }
 
 /* 댓글 */
-.container-reply-detail{
+.container-reply-detail {
   margin: 0px 10px;
   width: 40vw;
 
@@ -285,7 +279,6 @@ position : relative;
   padding: 5px;
   margin: auto;
   height: 100%;
-
 }
 
 .box-comment-detail {
@@ -301,17 +294,15 @@ position : relative;
   padding: 5px;
   font-size: 1.2rem;
   background-color: white;
-  position : absolute;
-width: 95%;
-height: 7vh;
-margin: auto ;
-  bottom : 10px;
-
+  position: absolute;
+  width: 95%;
+  height: 7vh;
+  margin: auto;
+  bottom: 10px;
 }
 
 .box-reply-user {
   width: 80%;
-
 }
 
 .input-reply-detail {
@@ -333,14 +324,14 @@ margin: auto ;
 }
 
 .wrap-comment-detail {
-  position : relative;
+  position: relative;
   padding: 10px;
   border-radius: 10px;
   background-color: #ffffff;
   width: 40vw;
   height: 100%;
 }
-.box-title-comment-detail{
+.box-title-comment-detail {
   margin-top: 10px;
   margin-bottom: 10px;
 }
@@ -416,11 +407,10 @@ margin: auto ;
 
 .like-box {
   display: flex;
-  /* flex-direction: column; */
   text-align: center;
   margin: 0px;
 }
-.food-like-count{
+.food-like-count {
   margin-bottom: 0px;
 }
 .media-body {
@@ -431,16 +421,14 @@ margin: auto ;
   justify-content: center;
   font-size: 2vw;
 }
-.btn-warning{
+.btn-warning {
   font-size: 1vw;
 }
 
-.find-and-like{
+.find-and-like {
   position: absolute;
-  /* border: solid 1px black; */
   width: 40vw;
   display: flex;
   bottom: 20px;
   height: fit-content;
-
 }

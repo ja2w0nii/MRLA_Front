@@ -17,7 +17,7 @@
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 
     <!-- jquery -->
- 
+
     <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -96,24 +96,21 @@
         </div>
       </div>
     </nav>
-<section class= "body-box">
-  <div id="title" class="title"></div>
-    <div class="map_wrap">
-      <div id="map" style="width: 60vw; height: 60vh;"></div>
-      <div id="menu_wrap" class="bg_white" style="margin: 3px 0px 0px 3px;">
-        <div class="option">
-          <div>
-            <form onsubmit="searchPlaces(); return false;"></form>
+    <section class="body-box">
+      <div id="title" class="title"></div>
+      <div class="map_wrap">
+        <div id="map" style="width: 60vw; height: 60vh"></div>
+        <div id="menu_wrap" class="bg_white" style="margin: 3px 0px 0px 3px">
+          <div class="option">
+            <div>
+              <form onsubmit="searchPlaces(); return false;"></form>
+            </div>
           </div>
+          <ul id="placesList"></ul>
+          <div id="pagination"></div>
         </div>
-        <ul id="placesList"></ul>
-        <div id="pagination"></div>
       </div>
-    </div>
-
-
-
-</section>
+    </section>
     <script type="text/javascript" src="../static/js/api.js"></script>
     <script type="text/javascript" src="../static/js/map_search.js"></script>
   </body>

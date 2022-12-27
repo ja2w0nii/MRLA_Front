@@ -654,13 +654,11 @@ border: none;
   padding: 20px 10px;
 
   width: 900px;
-  /* height: 600px; */
   top: 100px;
   border-radius: 10px;
 }
 
 .post-upload-modal-top {
-  /* border: 2px solid rgb(255, 153, 0); */
   height: 30px;
   width: 100%;
   font-size: 20px;
@@ -683,15 +681,12 @@ border: none;
 }
 
 .post-upload-modal-content {
-  /* border: 2px solid purple; */
-  /* height: 80%; */
   width: 100%;
   display: flex;
 }
 
 .post-upload-modal-content-img {
   border-radius: 20px;
-  /* border: 2px solid purple; */
   height: 100%;
   width: 70%;
   background-color: #a37d002f;
@@ -714,7 +709,6 @@ border: none;
   height: 350px;
   object-fit: cover;
   display: block;
-  /* margin: 20px auto; */
   padding: 10px 10px;
   background-color: #ffffff;
   border-radius: 20px;
@@ -739,7 +733,6 @@ border: none;
 /* 텍스트 입력 하는 구역 */
 .post-upload-modal-content-text {
   border-radius: 20px;
-  /* border: 2px solid purple; */
   height: 100%;
   width: 65%;
   background-color: #a37d002f;
@@ -748,9 +741,7 @@ border: none;
 }
 
 .post-modal-input-text {
-  /* padding: 10px 10px; */
   height: 100%;
-  /* border: 2px solid rgb(241, 13, 241); */
 }
 
 .post-modal-input-text-top {
@@ -805,7 +796,6 @@ border: none;
 .tag-plus {
   text-align: left;
   padding: 10px;
-  /* display: flex; */
   width: 90%;
   height: 45px;
   font-size: 15px;
@@ -835,7 +825,6 @@ border: none;
 }
 
 /* 태그 관련 css============================================================ 2221211 이태은*/
-
 .tag-box ul li {
   display: inline-block;
   margin: 0 5px 5px;

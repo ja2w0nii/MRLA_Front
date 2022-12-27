@@ -20,40 +20,35 @@ header {
   top: 0;
 }
 
-header h2{
+header h2 {
   margin-bottom: 0px;
 }
-
 
 .mascot {
   width: 55px;
   height: 60px;
-
 }
-.space{
+.space {
   display: flex;
   border: none;
-  /* width: 25vw; */
-  padding: 5px ;
-background-color: #ffffff;
-border-top-left-radius: 10px;
-border-bottom-left-radius: 10px;
-border-top-right-radius: 10px;
-border-bottom-right-radius: 10px;
-
+  padding: 5px;
+  background-color: #ffffff;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
-.form-control{
-margin-right: 1vw;
-width: 20vw;
-border: none;
+.form-control {
+  margin-right: 1vw;
+  width: 20vw;
+  border: none;
 }
-.search_btn{
+.search_btn {
   border: none;
   border-left: 1px solid;
   background-color: #ffffff;
   border-top-right-radius: 10px;
-border-bottom-right-radius: 10px;
-
+  border-bottom-right-radius: 10px;
 }
 .header_small_box {
   display: flex;
@@ -98,7 +93,6 @@ border-bottom-right-radius: 10px;
 
 /* 네비게이션============================================= */
 .nav_box {
-  /* border: 1px solid red; */
   top: 70px;
   position: fixed;
   width: 100%;
@@ -212,24 +206,6 @@ section {
   font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 200, "opsz" 48;
 }
 
-/* nav ul li a:hover {
-  font-weight: 500;
-  letter-spacing: 3px;
-  color: #000000;
-  font-weight: 900;
-}
-
-nav ul li a span :hover {
-
-  font-variation-settings:
-  'FILL' 1,
-  'wght' 400,
-  'GRAD' 200,
-  'opsz' 48
-
-}
- */
-
 a.active {
   color: #ff5752;
   font-weight: bolder;
@@ -240,7 +216,6 @@ a.active {
 .recommend_food_img_section {
   background-color: white;
   height: 45vh;
-  /* z-index: -100; */
   position: relative;
 }
 
@@ -251,21 +226,20 @@ a.active {
   width: 100vw;
 }
 
-.clickleft{
+.clickleft {
   position: absolute;
   top: 10vh;
   right: 53vw;
-font-size: 3vw;
-margin-right: 40vw;
+  font-size: 3vw;
+  margin-right: 40vw;
 }
-.clickright{
+.clickright {
   position: absolute;
   top: 10vh;
   right: -37vw;
   font-size: 3vw;
 
   margin-right: 40vw;
-
 }
 
 /* 추천 맛집 라운드 슬라이드==========================================221205 이태은 */
@@ -298,8 +272,8 @@ img {
   position: fixed;
   top: 250px;
   transition: transform 0.6s;
-    transform: translateY(-80px);
-    z-index: 10;
+  transform: translateY(-80px);
+  z-index: 10;
 }
 
 /* 가운데로 오게되는 박스 */
@@ -358,7 +332,6 @@ img {
   top: 250px;
   transition: transform 0.5s;
   transform: translateY(350px);
-  /* z-index: -45; */
 }
 
 .recommend_container4 div {
@@ -449,18 +422,11 @@ img {
   z-index: 10;
   position: relative;
 }
-/* .sns_famous_restaurant_container{
-  background: rgb(65, 252, 252);
-  display: grid ;
-  place-items: center;
-  z-index: 100;
-} */
-.slid-img{
-  object-fit:cover ;
-  /* width: 100%; */
+.slid-img {
+  object-fit: cover;
   height: 14vh;
   border-radius: 0px;
-  object-fit: contain
+  object-fit: contain;
 }
 #sns_slider-container {
   padding: 10px;
@@ -468,7 +434,6 @@ img {
   width: 82vw;
   max-width: 1400px;
   background: #ffcd71;
-  /* box-shadow: 5px 5px 8px grey inset; */
   position: relative;
   overflow: hidden;
   margin: 0 auto;
@@ -512,11 +477,8 @@ img {
   height: 14vh;
   margin: auto 10px;
   background-color: #ffffff;
-  /* box-shadow: 2px 2px 4px 2px rgb(255, 142, 36), -2px -2px 4px 2px rgb(255, 123, 0); */
   display: grid;
   place-items: center;
-
-  
 }
 
 #sns_slider-container #slider .slide span {

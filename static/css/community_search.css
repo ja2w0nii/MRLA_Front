@@ -3,9 +3,8 @@
   font-family: "Jua", sans-serif;
   text-align: center;
   margin: auto;
-  
 }
-body{
+body {
   overflow: hidden;
 }
 /* 헤더=============================================*/
@@ -72,11 +71,10 @@ h2 {
 /* 네비게이션============================================= */
 .nav_box {
   /* border: 1px solid red; */
-top: 70px;
+  top: 70px;
   position: fixed;
   width: 100%;
   z-index: 100;
-
 }
 
 .navContainer {
@@ -168,7 +166,6 @@ ul {
   list-style: none;
   padding-left: 0px;
 }
-
 
 nav a {
   text-decoration-line: none;

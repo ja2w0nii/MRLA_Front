@@ -2,208 +2,208 @@
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css");
 
 * {
-    text-align: center;
-    margin: auto;
+  text-align: center;
+  margin: auto;
 }
 
 body {
-    background-color: whitesmoke;
-    font-family: "Jua", sans-serif;
+  background-color: whitesmoke;
+  font-family: "Jua", sans-serif;
 }
 
 /* 헤더============================================= */
 header {
-    background-color: #fed049;
-    width: 100%;
-    height: 70px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    position: fixed;
-    top: 0;
+  background-color: #fed049;
+  width: 100%;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
 }
 
 h2 {
-    margin: 0 5px 0 0;
+  margin: 0 5px 0 0;
 }
 
 .mascot {
-    width: 55px;
-    height: 60px;
+  width: 55px;
+  height: 60px;
 }
 
 .header_small_box {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin: 30px;
-    cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 30px;
+  cursor: pointer;
 }
 
-header>h2 {
-    margin: 0px 30px;
-    width: 120px;
+header > h2 {
+  margin: 0px 30px;
+  width: 120px;
 }
 
-header>h2:hover {
-    color: #000000;
-    cursor: pointer;
+header > h2:hover {
+  color: #000000;
+  cursor: pointer;
 }
 
 .profile_info_box {
-    display: flex;
-    flex-direction: row;
-    margin: 0px 30px;
+  display: flex;
+  flex-direction: row;
+  margin: 0px 30px;
 }
 
 .dropdown_profile_img {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    margin: 10px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin: 10px;
 }
 
 .dropdown-menu-dark {
-    height: 100px;
+  height: 100px;
 }
 
 .dropdown-item-box {
-    height: 43px;
+  height: 43px;
 }
 
 .dropdown-item {
-    margin: 0px;
-    cursor: pointer;
+  margin: 0px;
+  cursor: pointer;
 }
 
 form {
-    margin-top: 100px;
+  margin-top: 100px;
 }
 
 .main_small {
-    display: flex;
-    flex-direction: row;
+  display: flex;
+  flex-direction: row;
 }
 
 .profile_image {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    border: solid rgb(220, 220, 158);
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: solid rgb(220, 220, 158);
 }
 
 .profile_img {
-    margin-right: 50px;
+  margin-right: 50px;
 }
 
 .main_profile {
-    margin-left: 0px;
+  margin-left: 0px;
 }
 
 .email_profile_update {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 
 .profile_detail_box {
-    display: flex;
-    flex-direction: row;
+  display: flex;
+  flex-direction: row;
 }
 
 .profile_detail {
-    margin: 20px auto;
-    text-align: left;
+  margin: 20px auto;
+  text-align: left;
 }
 
 .btn.profile {
-    margin: 0px 100px;
-    width: 140px;
+  margin: 0px 100px;
+  width: 140px;
 }
 
 .profile_update_button {
-    margin: 0px 20px;
-    height: 50px;
+  margin: 0px 20px;
+  height: 50px;
 }
 
 .do_follow {
-    margin: 30px 30px 30px 5px;
-    display: flex;
-    align-items: center;
+  margin: 30px 30px 30px 5px;
+  display: flex;
+  align-items: center;
 }
 
 .modal-body {
-    height: 300px;
-    overflow: auto;
+  height: 300px;
+  overflow: auto;
 }
 
 .modal-body li {
-    cursor: pointer;
-    list-style: none;
+  cursor: pointer;
+  list-style: none;
 }
 
 .modal-body img {
-    cursor: pointer;
-    width: 35px;
-    height: 35px;
-    border-radius: 50%;
-    margin: 10px;
+  cursor: pointer;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  margin: 10px;
 }
 
 .following-box,
 .follower-box {
-    display: flex;
-    flex-direction: row;
+  display: flex;
+  flex-direction: row;
 }
 
 /* 게시글 */
 .card-list {
-    display: block;
-    margin: 1rem auto;
-    padding: 0;
-    font-size: 0;
-    text-align: center;
-    list-style: none;
-    width: 1500px;
-    height: 500px;
+  display: block;
+  margin: 1rem auto;
+  padding: 0;
+  font-size: 0;
+  text-align: center;
+  list-style: none;
+  width: 1500px;
+  height: 500px;
 }
 
 .card {
-    display: inline-block;
-    width: 90%;
-    max-width: 20rem;
-    margin: 1rem;
-    font-size: 1rem;
-    text-decoration: none;
-    overflow: hidden;
-    box-shadow: 0 0 3rem -1rem rgba(0, 0, 0, 0.5);
-    transition: transform 0.1s ease-in-out, box-shadow 0.1s;
+  display: inline-block;
+  width: 90%;
+  max-width: 20rem;
+  margin: 1rem;
+  font-size: 1rem;
+  text-decoration: none;
+  overflow: hidden;
+  box-shadow: 0 0 3rem -1rem rgba(0, 0, 0, 0.5);
+  transition: transform 0.1s ease-in-out, box-shadow 0.1s;
 }
 
 .card:hover {
-    transform: translateY(-0.5rem) scale(1.0125);
-    box-shadow: 0 0.5em 3rem -1rem rgba(0, 0, 0, 0.5);
+  transform: translateY(-0.5rem) scale(1.0125);
+  box-shadow: 0 0.5em 3rem -1rem rgba(0, 0, 0, 0.5);
 }
 
 .card-description {
-    display: block;
-    padding: 1em 0.5em;
-    color: #515151;
-    text-decoration: none;
+  display: block;
+  padding: 1em 0.5em;
+  color: #515151;
+  text-decoration: none;
 }
 
-.card-description>h2 {
-    margin: 0 0 0.5em;
+.card-description > h2 {
+  margin: 0 0 0.5em;
 }
 
-.card-description>p {
-    margin: 0;
+.card-description > p {
+  margin: 0;
 }
 
-.card-image>img {
-    width: 100%;
-    height: 250px;
+.card-image > img {
+  width: 100%;
+  height: 250px;
 }
 
 .community-content {
@@ -218,14 +218,14 @@ text-overflow: ellipsis;
 /* 모달 */
 /* 팔로잉-팔로워 리스트 */
 .modal-content {
-    border-radius: 20px;
-    width: 350px;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    -moz-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    -o-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
+  border-radius: 20px;
+  width: 350px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
