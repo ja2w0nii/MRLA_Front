@@ -8,6 +8,7 @@ body {
   overflow: hidden;
   min-width: 50vw;
   position: relative;
+  background-color: rgb(255, 251, 236);
 }
 /* 헤더=============================================*/
 header {
@@ -193,13 +194,14 @@ a.active {
 .community_section {
   margin-top: 125px;
   background-color: rgb(255, 251, 236);
-  height: 90vh;
+  height: 87vh;
   z-index: -100;
   position: absolute;
   border-bottom: 0px;
   width: 100vw;
   position: absolute;
   overflow: auto;
+  padding: 30px;
 }
 
 /* 스크롤바 설정*/
@@ -239,8 +241,8 @@ a.active {
 .community-div {
   border: 10px solid #fed049;
   width: 90vw;
-  /* height: 80vh; */
-  overflow: overlay;
+  height: fit-content;
+  /* overflow: overlay; */
 }
 /* 스크롤바 설정*/
 .community-div::-webkit-scrollbar {
@@ -249,14 +251,14 @@ a.active {
 
 /* 스크롤바 막대 설정*/
 .community-div::-webkit-scrollbar-thumb {
-  background-color: #fed4499d;
+  background-color:none;
   /* 스크롤바 둥글게 설정    */
   border-radius: 10px;
   z-index: -100;
 }
 /* 스크롤바 뒷 배경 설정*/
 .community-div::-webkit-scrollbar-track {
-  background-color: rgba(0, 0, 0, 0);
+  background-color:none;
 }
 
 .space {
@@ -680,7 +682,7 @@ ul li.tag-item {
 /* Lazy Load Styles */
 .cards-box {
   width: 90%;
-  height: 60vh;
+  /* height: 60vh; */
 }
 
 .card-image {
