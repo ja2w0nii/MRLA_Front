@@ -527,7 +527,7 @@ footer {
   color: #ffffff;
   font-size: 11px;
   background-color: #5c5c5c;
-  /* z-index: -100; */
+  z-index: 10;
 }
 footer nav {
   margin-top: 5px;
