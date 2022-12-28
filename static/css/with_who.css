@@ -177,7 +177,10 @@ section {
   /* border: 2px solid green; */
   height: 100%;
 }
-
+.material-symbols-outlined{
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 200, "opsz" 48;
+  font-size: 1.2vw;
+}
 .menu {
   position: relative;
 }

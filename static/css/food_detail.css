@@ -6,6 +6,8 @@
 }
 body {
   overflow: hidden;
+  background-color: rgb(255, 251, 236);
+
 }
 /* 헤더=============================================*/
 header {
@@ -178,6 +180,7 @@ section {
 /* 위치 */
 .material-symbols-outlined {
   font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 200, "opsz" 48;
+  font-size: 1.2vw;
 }
 
 a.active {
