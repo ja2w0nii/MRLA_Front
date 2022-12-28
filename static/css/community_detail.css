@@ -364,7 +364,7 @@ a.active {
 
 .detail-small-box-text-content {
   border-radius: 10px;
-  height: 200px;
+  height: 20vh;
   width: 100%;
   background-color: #a37d002f;
   padding-top: 9px;
@@ -480,6 +480,8 @@ a.active {
 
 .material-symbols-outlined {
   border: none;
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 200, "opsz" 48;
+  font-size: 1.2vw;
 }
 .material-symbols-sharp {
   border: none;
