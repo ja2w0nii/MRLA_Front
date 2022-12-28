@@ -30,9 +30,6 @@
 
 
 ## 📚 Project Structure
-### STACKS: <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=Python&logoColor=white"> <img src="https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=Django&logoColor=white"> <img src="https://img.shields.io/badge/Javascript-F7DF1E?style=for-the-badge&logo=Javascript&logoColor=white"> <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=HTML5&logoColor=white"> <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=CSS3&logoColor=white">
-
-</br>
 
 <img width="637" alt="스크린샷 2022-12-28 오후 8 32 25" src="https://user-images.githubusercontent.com/18550082/209807208-de18c115-a730-4597-ad19-74d38c0dd8ff.png">
 
