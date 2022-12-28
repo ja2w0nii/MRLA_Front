@@ -71,7 +71,6 @@ h2 {
 
 /* 네비게이션============================================= */
 .nav_box {
-  /* border: 1px solid red; */
   top: 70px;
   position: fixed;
   width: 100%;
@@ -174,7 +173,6 @@ nav a {
 }
 
 section {
-  /* border: 2px solid green; */
   height: 100%;
 }
 
@@ -254,7 +252,6 @@ section.main_section {
 /* 스크롤바 설정==================================*/
 .service-body span {
   border-bottom: 1px solid black;
-  /* margin: 15px 0px; */
 }
 
 span {
@@ -264,7 +261,6 @@ span {
 }
 
 span p {
-  /* border: 1px solid rgb(0, 0, 0); */
   margin: 7px 5px;
   display: grid;
   align-items: center;
@@ -285,10 +281,8 @@ p.service_title {
   padding: 0 5px;
   cursor: pointer;
   display: inline-block;
-  /* overflow: hidden; */
   text-overflow: ellipsis;
   white-space: nowrap;
-  /* text-align: left; */
 }
 
 p.service_user {

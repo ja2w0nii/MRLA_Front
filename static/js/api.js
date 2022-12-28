@@ -641,8 +641,8 @@ async function FoodSearch() {
   if (search_food[0]) {
     location.href = `${frontend_base_url}/food_detail.html?id=${search_food[0].food_id}`;
   } else {
-    alert("검색한 메뉴가 없습니다.")
-    window.location.reload()
+    alert("검색한 메뉴가 없습니다.");
+    window.location.reload();
   }
 }
 

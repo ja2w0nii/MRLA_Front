@@ -236,7 +236,6 @@ a.active {
 .community_for_metury > h3 {
   color: rgb(211, 160, 101);
   font-size: 20px;
-  /* padding: 10px 0 20px 0; */
 }
 
 .community-div {
@@ -252,14 +251,14 @@ a.active {
 
 /* 스크롤바 막대 설정*/
 .community-div::-webkit-scrollbar-thumb {
-  background-color:none;
+  background-color: none;
   /* 스크롤바 둥글게 설정    */
   border-radius: 10px;
   z-index: -100;
 }
 /* 스크롤바 뒷 배경 설정*/
 .community-div::-webkit-scrollbar-track {
-  background-color:none;
+  background-color: none;
 }
 
 .space {

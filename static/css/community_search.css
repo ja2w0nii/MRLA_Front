@@ -71,7 +71,6 @@ h2 {
 
 /* 네비게이션============================================= */
 .nav_box {
-  /* border: 1px solid red; */
   top: 70px;
   position: fixed;
   width: 100%;
@@ -181,7 +180,8 @@ section {
 /* 위치 */
 .material-symbols-outlined {
   font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 200, "opsz" 48;
-  font-size: 1.2vw;}
+  font-size: 1.2vw;
+}
 
 a.active {
   color: #ff5752;
@@ -205,7 +205,7 @@ a.active {
 
 .community-div {
   border: 5px solid #fed049;
-  background-color:  #fed049;
+  background-color: #fed049;
   border-radius: 10px;
   display: grid;
   align-content: space-between;

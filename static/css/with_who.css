@@ -71,7 +71,6 @@ h2 {
 
 /* 네비게이션============================================= */
 .nav_box {
-  /* border: 1px solid red; */
   top: 70px;
   position: fixed;
   width: 100%;
@@ -177,7 +176,7 @@ section {
   /* border: 2px solid green; */
   height: 100%;
 }
-.material-symbols-outlined{
+.material-symbols-outlined {
   font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 200, "opsz" 48;
   font-size: 1.2vw;
 }

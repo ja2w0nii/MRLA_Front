@@ -231,7 +231,7 @@ span.created_at {
 
 div.p_box {
   padding: 5px;
-  background-color:#ffca84;
+  background-color: #ffca84;
 }
 .title {
   text-align: left;
@@ -309,7 +309,7 @@ div.service_detail {
 div.comment_list {
   border: 1px solid #ffca84;
   width: 95%;
-  background-color:#ffca84;
+  background-color: #ffca84;
 }
 /* 작성한 댓글의 작성자 및 작성시간 표시 바*/
 .comment_list span {
