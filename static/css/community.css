@@ -731,6 +731,7 @@ ul li.tag-item {
   overflow: hidden;
   box-shadow: 0 0 3rem -1rem rgba(0, 0, 0, 0.5);
   transition: transform 0.1s ease-in-out, box-shadow 0.1s;
+cursor: pointer;
 }
 
 /* 각각의 카드에 마우스를 올리면 */
