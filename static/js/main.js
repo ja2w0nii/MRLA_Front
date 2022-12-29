@@ -1,6 +1,5 @@
 if (!token) {
   window.location.replace(`${frontend_base_url}/signin_signup.html`);
-
 }
 
 // url id 값 받아오기
@@ -11,10 +10,10 @@ const category_id = urlParams.get("id");
 $(document).ready(function () {
   var i = [1, 2, 3, 4, 5, 6, 7];
   //   Click Left
-  $("#ClickRight").click(function () {
-    $("#ClickRight").prop("disabled", true);
+  $("#ClickLeft").click(function () {
+    $("#ClickLeft").prop("disabled", true);
     setTimeout(function () {
-      $("#ClickRight").prop("disabled", false);
+      $("#ClickLeft").prop("disabled", false);
     }, 500);
     var getShift = i.shift();
     i.push(getShift);
@@ -41,10 +40,10 @@ $(document).ready(function () {
       .addClass("recommend_container" + i[6]);
   });
   //   Click Right
-  $("#ClickLeft").click(function () {
-    $("#ClickLeft").prop("disabled", true);
+  $("#ClickRight").click(function () {
+    $("#ClickRight").prop("disabled", true);
     setTimeout(function () {
-      $("#ClickLeft").prop("disabled", false);
+      $("#ClickRight").prop("disabled", false);
     }, 400);
     var getPop = i.pop();
     i.unshift(getPop);

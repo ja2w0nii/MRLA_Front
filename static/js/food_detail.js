@@ -76,8 +76,8 @@ window.onload = async function loadFooddetail() {
     newComment_box.innerHTML += `
     <li class="media">
     <div class="media-body" id=${comment.user} onclick="getProfilePage(this.id)" style="flex-direction: column;>
-      <h4 class="mt-0 mb-10">${comment.user_nickname} |</h4> 
-      ${comment.comment}
+      <h4 class="mt-0 mb-10">${comment.user_nickname} :  &nbsp;  &nbsp; </h4> 
+      ${comment.comment} &nbsp; ${comment.updated_at.replace("T", " ").substr(0, 16)}
     </div>  
     `;
 
@@ -132,3 +132,14 @@ async function UpdateFoodComment(comment_id) {
 async function DeleteFoodComment(comment_id) {
   await loadDeleteFoodComment(comment_id);
 }
+
+//댓글 텍스트 수 제한 textarea
+$(".box-reply-user input").keyup(function () {
+  var content = $(this).val();
+  $(".box-reply-user .title-count span").html(content.length);
+  if (content.length > 20) {
+    alert("댓글은 최대 20자까지 입력 가능합니다.");
+    $(this).val(content.substring(0, 15));
+    $(".box-reply-user .title-count span").html(20);
+  }
+});

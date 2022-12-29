@@ -4,7 +4,10 @@
   text-align: center;
   margin: auto;
 }
-
+body {
+  overflow: hidden;
+  background-color: rgb(255, 251, 236);
+}
 /* 헤더=============================================*/
 header {
   background-color: #fed049;
@@ -18,6 +21,13 @@ header {
   top: 0;
 }
 
+h2 {
+  margin: 0 5px 0 0;
+}
+.mascot {
+  width: 55px;
+  height: 60px;
+}
 .header_small_box {
   display: flex;
   flex-direction: row;
@@ -61,13 +71,14 @@ header {
 
 /* 네비게이션============================================= */
 .nav_box {
-top: 70px;
+  top: 70px;
   position: fixed;
   width: 100%;
-
+  z-index: 100;
 }
 
 .navContainer {
+  padding: 5px;
   background-color: white;
   border: 10px solid #fed049;
   align-items: center;
@@ -83,13 +94,12 @@ top: 70px;
 }
 
 .near_restaurant {
-  border: solid 3px grey;
   border-radius: 100px;
   float: left;
   width: 20%;
   box-sizing: border-box;
   text-decoration-line: none;
-  font-size: 20px;
+  font-size: 1.2vw;
   font-weight: 500;
 }
 
@@ -102,13 +112,12 @@ top: 70px;
 }
 
 .who {
-  border: 3px solid grey;
   border-radius: 100px;
   float: left;
   margin-left: 5%;
   width: 20%;
   box-sizing: border-box;
-  font-size: 20px;
+  font-size: 1.2vw;
   font-weight: 500;
 }
 
@@ -120,13 +129,12 @@ top: 70px;
 }
 
 .community {
-  border: 3px solid grey;
   border-radius: 100px;
   float: left;
   margin-left: 5%;
   width: 20%;
   box-sizing: border-box;
-  font-size: 20px;
+  font-size: 1.2vw;
   font-weight: 500;
 }
 
@@ -138,13 +146,12 @@ top: 70px;
 }
 
 .service {
-  border: 3px solid grey;
   border-radius: 100px;
   float: left;
   margin-left: 5%;
   width: 20%;
   box-sizing: border-box;
-  font-size: 20px;
+  font-size: 1.2vw;
   font-weight: 500;
 }
 
@@ -160,25 +167,19 @@ ul {
   padding-left: 0px;
 }
 
-
 nav a {
   text-decoration-line: none;
   color: grey;
 }
 
 section {
-  /* border: 2px solid green; */
   height: 100%;
 }
-
-
-
-
-
 
 /* 위치 */
 .material-symbols-outlined {
   font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 200, "opsz" 48;
+  font-size: 1.2vw;
 }
 
 a.active {
@@ -206,7 +207,7 @@ input {
 
 img {
   max-width: 80%;
-  max-height: 50vh;
+  max-height: 40vh;
 }
 
 .container-post-detail {
@@ -215,7 +216,7 @@ img {
   width: 90vw;
   height: 70vh;
   padding: 2%;
-  margin-top : 180px;
+  margin-top: 180px;
   display: flex;
 }
 
@@ -226,7 +227,7 @@ img {
   background-color: white;
   width: 50vw;
   height: 100%;
-position : relative;
+  position: relative;
 }
 
 .wrap-post-detail viewr {
@@ -234,13 +235,12 @@ position : relative;
   height: auto;
 }
 
-.wrap-content-detail{
+.wrap-content-detail {
   margin: 20px 0px 25px;
 }
 
 /* 타이틀, 좋아요 */
 .box-btn-detail {
-  width: 50%;
   display: flex;
   justify-content: space-between;
   align-content: center;
@@ -269,9 +269,9 @@ position : relative;
 }
 
 /* 댓글 */
-.container-reply-detail{
+.container-reply-detail {
   margin: 0px 10px;
-  width: 40vw;
+  width: 41vw;
 
   border-radius: 10px;
   background-color: #a37d002f;
@@ -281,7 +281,6 @@ position : relative;
   padding: 5px;
   margin: auto;
   height: 100%;
-
 }
 
 .box-comment-detail {
@@ -297,17 +296,15 @@ position : relative;
   padding: 5px;
   font-size: 1.2rem;
   background-color: white;
-  position : absolute;
-width: 95%;
-height: 7vh;
-margin: auto ;
-  bottom : 10px;
-
+  position: absolute;
+  width: 95%;
+  height: 7vh;
+  margin: auto;
+  bottom: 10px;
 }
 
 .box-reply-user {
   width: 80%;
-
 }
 
 .input-reply-detail {
@@ -329,14 +326,14 @@ margin: auto ;
 }
 
 .wrap-comment-detail {
-  position : relative;
+  position: relative;
   padding: 10px;
   border-radius: 10px;
   background-color: #ffffff;
   width: 40vw;
   height: 100%;
 }
-.box-title-comment-detail{
+.box-title-comment-detail {
   margin-top: 10px;
   margin-bottom: 10px;
 }
@@ -399,19 +396,23 @@ margin: auto ;
 .comment-div {
   display: flex;
   flex-direction: row;
+  font-size: 1vw;
 }
-
+.comment-div button {
+  display: flex;
+  flex-direction: row;
+  font-size: 1vw;
+}
 .media {
   margin-left: 5px;
 }
 
 .like-box {
   display: flex;
-  /* flex-direction: column; */
   text-align: center;
   margin: 0px;
 }
-.food-like-count{
+.food-like-count {
   margin-bottom: 0px;
 }
 .media-body {
@@ -419,16 +420,16 @@ margin: auto ;
 }
 
 .find {
-  width: 50%;
   justify-content: center;
-  margin: 10px auto;
+  font-size: 2vw;
+}
+.btn-warning {
+  font-size: 1vw;
 }
 
-
-.find-and-like{
+.find-and-like {
   position: absolute;
-  /* border: solid 1px black; */
-  width: 95%;
+  width: 40vw;
   display: flex;
   bottom: 20px;
   height: fit-content;

@@ -3,11 +3,10 @@
   font-family: "Jua", sans-serif;
   text-align: center;
   margin: auto;
-
 }
-body{
- background-color: rgb(255, 251, 236);
-  height: 80vh;
+body {
+  overflow: hidden;
+  background-color: rgb(255, 251, 236);
 }
 /* 헤더=============================================*/
 header {
@@ -22,6 +21,13 @@ header {
   top: 0;
 }
 
+h2 {
+  margin: 0 5px 0 0;
+}
+.mascot {
+  width: 55px;
+  height: 60px;
+}
 .header_small_box {
   display: flex;
   flex-direction: row;
@@ -65,13 +71,14 @@ header {
 
 /* 네비게이션============================================= */
 .nav_box {
-top: 70px;
+  top: 70px;
   position: fixed;
   width: 100%;
-
+  z-index: 100;
 }
 
 .navContainer {
+  padding: 5px;
   background-color: white;
   border: 10px solid #fed049;
   align-items: center;
@@ -87,13 +94,12 @@ top: 70px;
 }
 
 .near_restaurant {
-  border: solid 3px grey;
   border-radius: 100px;
   float: left;
   width: 20%;
   box-sizing: border-box;
   text-decoration-line: none;
-  font-size: 20px;
+  font-size: 1.2vw;
   font-weight: 500;
 }
 
@@ -106,13 +112,12 @@ top: 70px;
 }
 
 .who {
-  border: 3px solid grey;
   border-radius: 100px;
   float: left;
   margin-left: 5%;
   width: 20%;
   box-sizing: border-box;
-  font-size: 20px;
+  font-size: 1.2vw;
   font-weight: 500;
 }
 
@@ -124,13 +129,12 @@ top: 70px;
 }
 
 .community {
-  border: 3px solid grey;
   border-radius: 100px;
   float: left;
   margin-left: 5%;
   width: 20%;
   box-sizing: border-box;
-  font-size: 20px;
+  font-size: 1.2vw;
   font-weight: 500;
 }
 
@@ -142,13 +146,12 @@ top: 70px;
 }
 
 .service {
-  border: 3px solid grey;
   border-radius: 100px;
   float: left;
   margin-left: 5%;
   width: 20%;
   box-sizing: border-box;
-  font-size: 20px;
+  font-size: 1.2vw;
   font-weight: 500;
 }
 
@@ -164,34 +167,70 @@ ul {
   padding-left: 0px;
 }
 
-
 nav a {
   text-decoration-line: none;
   color: grey;
 }
 
 section {
-  /* border: 2px solid green; */
   height: 100%;
 }
+
 /* 위치 */
 .material-symbols-outlined {
   font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 200, "opsz" 48;
+  font-size: 1.2vw;
 }
 
 /* 바디 */
+section.main_title {
+  margin-top: 160px;
+  height: auto;
+}
+
+h1.title {
+  color: #af7d00;
+  font-size: 32px;
+}
+h5.title {
+  color: #af7d00af;
+}
+
 section.main_section {
   border: 2px solid #ffca84;
   border-top: none;
   background-color: rgb(255, 255, 255);
-  height: 65vh;
-  width: 95%;
   overflow-y: auto;
   box-sizing: content-box;
-  margin-top: 170px;
+  overflow: auto;
+  height: 50vh;
+  width: 95vw;
+
   /* padding: 10px 0px; */
 }
-
+.main_title {
+  margin-top: 150px;
+  padding: 20px;
+}
+.main_title h1 {
+  font-size: 2vw;
+}
+.main_title h5 {
+  font-size: 1.5vw;
+}
+.service-nav {
+  border: 2px solid #ffca84;
+  width: 95vw;
+  display: flex;
+  background-color: #ffca84;
+  padding: 10px 0px;
+  text-align: center;
+  height: 5vh;
+}
+.service-body {
+  border: 2px solid red;
+  height: 55vh;
+}
 
 /* 스크롤바 설정==================================*/
 .main_section::-webkit-scrollbar {
@@ -201,19 +240,18 @@ section.main_section {
 /* 스크롤바 막대 설정*/
 .main_section::-webkit-scrollbar-thumb {
   height: 17%;
-  background-color: #a1a1fc;
+  background-color: #f89940;
   border-radius: 10px;
 }
 
 /* 스크롤바 뒷 배경 설정*/
 .main_section::-webkit-scrollbar-track {
-  background-color: #E6E6FA;
+  background-color: #ffd885;
 }
 
 /* 스크롤바 설정==================================*/
-.main_section span {
+.service-body span {
   border-bottom: 1px solid black;
-  /* margin: 15px 0px; */
 }
 
 span {
@@ -223,13 +261,10 @@ span {
 }
 
 span p {
-  /* border: 1px solid rgb(0, 0, 0); */
   margin: 7px 5px;
   display: grid;
   align-items: center;
-
 }
-
 
 /* 말머리 / 내용 / 작성자 / 작성 시간 */
 .service_nav {
@@ -246,11 +281,8 @@ p.service_title {
   padding: 0 5px;
   cursor: pointer;
   display: inline-block;
-  overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  /* text-align: left; */
-
 }
 
 p.service_user {
@@ -290,7 +322,6 @@ p.service_created_at {
   font-family: "ht_r";
   font-size: 12px;
   display: flex;
-
 }
 
 /* 문의하기 모달창 시작 ===================================   */
@@ -369,12 +400,10 @@ textarea.service_content {
 }
 
 /* 문의하기 모달창 끝 ===================================   */
-
-
 /* 푸터 */
 footer {
   width: 100%;
-  background-color: #3D5656;
+  background-color: #3d5656;
   display: grid;
   place-items: center;
 }

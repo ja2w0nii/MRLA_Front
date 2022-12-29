@@ -4,7 +4,9 @@
   text-align: center;
   margin: auto;
 }
-
+body {
+  overflow: hidden;
+}
 /* 헤더=============================================*/
 header {
   background-color: #fed049;
@@ -18,6 +20,13 @@ header {
   top: 0;
 }
 
+h2 {
+  margin: 0 5px 0 0;
+}
+.mascot {
+  width: 55px;
+  height: 60px;
+}
 .header_small_box {
   display: flex;
   flex-direction: row;
@@ -59,16 +68,16 @@ header {
   cursor: pointer;
 }
 
-
 /* 네비게이션============================================= */
 .nav_box {
-top: 70px;
+  top: 70px;
   position: fixed;
   width: 100%;
   z-index: 100;
 }
 
 .navContainer {
+  padding: 5px;
   background-color: white;
   border: 10px solid #fed049;
   align-items: center;
@@ -84,13 +93,12 @@ top: 70px;
 }
 
 .near_restaurant {
-  border: solid 3px grey;
   border-radius: 100px;
   float: left;
   width: 20%;
   box-sizing: border-box;
   text-decoration-line: none;
-  font-size: 20px;
+  font-size: 1.2vw;
   font-weight: 500;
 }
 
@@ -103,13 +111,12 @@ top: 70px;
 }
 
 .who {
-  border: 3px solid grey;
   border-radius: 100px;
   float: left;
   margin-left: 5%;
   width: 20%;
   box-sizing: border-box;
-  font-size: 20px;
+  font-size: 1.2vw;
   font-weight: 500;
 }
 
@@ -121,13 +128,12 @@ top: 70px;
 }
 
 .community {
-  border: 3px solid grey;
   border-radius: 100px;
   float: left;
   margin-left: 5%;
   width: 20%;
   box-sizing: border-box;
-  font-size: 20px;
+  font-size: 1.2vw;
   font-weight: 500;
 }
 
@@ -139,13 +145,12 @@ top: 70px;
 }
 
 .service {
-  border: 3px solid grey;
   border-radius: 100px;
   float: left;
   margin-left: 5%;
   width: 20%;
   box-sizing: border-box;
-  font-size: 20px;
+  font-size: 1.2vw;
   font-weight: 500;
 }
 
@@ -161,39 +166,20 @@ ul {
   padding-left: 0px;
 }
 
-
 nav a {
   text-decoration-line: none;
   color: grey;
 }
 
 section {
-  /* border: 2px solid green; */
   height: 100%;
 }
 
 /* 위치 */
 .material-symbols-outlined {
   font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 200, "opsz" 48;
+  font-size: 1.2vw;
 }
-
-/* nav ul li a:hover {
-  font-weight: 500;
-  letter-spacing: 3px;
-  color: #000000;
-  font-weight: 900;
-}
-
-nav ul li a span :hover {
-
-  font-variation-settings:
-  'FILL' 1,
-  'wght' 400,
-  'GRAD' 200,
-  'opsz' 48
-
-}
- */
 
 a.active {
   color: #ff5752;
@@ -225,15 +211,14 @@ a.active {
   position: relative;
   margin: auto;
   width: 60vw;
-  height: 70vh;
 }
-.map{
- width: 60vw; 
- height: 60vh; 
- margin-top: 10px;
- border: 5px solid #fed049;
- border-radius: 10px;
- background-color:  #ffebb1;
+.map {
+  width: 60vw;
+  height: 60vh;
+  margin-top: 10px;
+  border: 5px solid #fed049;
+  border-radius: 10px;
+  background-color: #ffebb1;
 }
 
 #menu_wrap {
@@ -438,7 +423,26 @@ footer {
   background-color: rgb(252, 244, 198);
 }
 
-.image_box>img {
+.plus {
+  font-size: 50px;
+}
+
+.target_cafe {
+  width: 90px;
+  height: 100px;
+  background: #ffc000;
+  display: block;
+  border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+  border: none;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  margin: 10px 20px;
+  color: white;
+  background-color: rgb(236, 144, 87);
+}
+
+.image_box > img {
   width: 150px;
   height: 150px;
 }
@@ -446,4 +450,3 @@ footer {
 .title {
   margin-top: 150px;
 }
-

@@ -35,8 +35,29 @@
   </head>
 
   <body>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-4" id="exampleModalLabel">정말 탈퇴하시겠습니까?<br />맞으시면 "<b>회원 탈퇴</b>"를 입력하세요.</h1>
+          </div>
+          <div class="modal-body">
+            <input type="text" class="unregister" id="unregister" />
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-outline-danger" onclick="loadUnregister()">확인</button>
+            <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">취소</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <header>
-      <h2 href="main.html" onclick="location.href='main.html?id=1'">메추리알</h2>
+      <div class="header_small_box">
+        <h2 href="main.html" onclick="location.href='main.html?id=1'">메추리알</h2>
+        <img class="mascot" src="mascot.jpeg" alt="마스코트" onclick="location.href='main.html?id=1'" />
+      </div>
       <div id="profile_info_box" class="profile_info_box">
         <div id="profile_img_box" class="profile_img_box"></div>
         <div id="profile_name_box" class="nav-item dropdown">
@@ -67,27 +88,11 @@
                   <input type="text" class="form-control" id="nickname" required />
                 </div>
               </div>
-              <div class="age-box">
-                <div class="btn btn-secondary age">나이</div>
-                <div class="form mb-3 choose">
-                  <input type="text" class="form-control" id="age" required />
-                </div>
-              </div>
-              <div class="gender-box">
-                <div class="dropdown">
-                  <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">성별</button>
-                  <ul class="dropdown-menu" id="dropdown-menu">
-                    <li><a class="dropdown-item" id="사용 안 함" onclick="ChangeGender(id)">사용 안 함</a></li>
-                    <li><a class="dropdown-item" id="남" onclick="ChangeGender(id)">남</a></li>
-                    <li><a class="dropdown-item" id="여" onclick="ChangeGender(id)">여</a></li>
-                  </ul>
-                </div>
-                <div class="form mb-3 choose">
-                  <input type="text" class="form-control" id="gender" required />
-                </div>
-              </div>
               <button type="button" class="btn btn-outline-secondary profile_update_button" onclick="MyProfileUpdateForm()">
                 <i class="bi bi-gear"></i> 수정 완료
+              </button>
+              <button type="button" class="btn btn-outline-danger unregister" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                <i class="bi bi-exclamation-diamond"></i> 회원 탈퇴
               </button>
             </div>
           </div>

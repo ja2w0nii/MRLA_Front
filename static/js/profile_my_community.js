@@ -2,6 +2,10 @@ if (!token) {
   window.location.replace(`${frontend_base_url}/signin_signup.html`);
 }
 
+// 프로필 보여주기
+const urlParams = new URLSearchParams(window.location.search);
+const user_id = urlParams.get("id");
+
 // 프로필 드롭다운 가져오기
 async function ProfileInfo() {
   login_user = await getName();
@@ -49,10 +53,6 @@ async function ProfileInfo() {
 }
 ProfileInfo();
 
-// 프로필 보여주기
-const urlParams = new URLSearchParams(window.location.search);
-const user_id = urlParams.get("id");
-
 async function Profile(user_id) {
   profile = await getProfile(user_id);
   login_user = await getName();
@@ -84,7 +84,7 @@ async function Profile(user_id) {
   like_food_button.setAttribute("id", user_id);
   like_food_button.innerText = "좋아요 메뉴 ";
   like_food_button.setAttribute("type", "button");
-  like_food_button.setAttribute("class", "btn btn-dark profile");
+  like_food_button.setAttribute("class", "btn btn-outline-dark profile");
   like_food_button.setAttribute("onclick", "getProfilePage(this.id)");
 
   const like_food_icon = document.createElement("i");
@@ -108,7 +108,7 @@ async function Profile(user_id) {
   my_community_button.innerText = "작성한 게시글 ";
   my_community_button.setAttribute("id", user_id);
   my_community_button.setAttribute("type", "button");
-  my_community_button.setAttribute("class", "btn btn-outline-dark profile");
+  my_community_button.setAttribute("class", "btn btn-dark profile");
   my_community_button.setAttribute("onclick", "getProfileMyCommunityPage(this.id)");
 
   const my_community_icon = document.createElement("i");
@@ -204,40 +204,42 @@ async function FollowList(user_id) {
 }
 FollowList(user_id);
 
-// 프로필 유저가 좋아요한 메뉴 리스트 가져오기
-async function LikeFoodList(user_id) {
-  foods = await getLikeFoodList(user_id);
+// 해당 프로필 유저가 좋아요한 커뮤니티 게시글 리스트 가져오기
+async function MyCommunityList(user_id) {
+  communities = await getMyCommunityList(user_id);
 
   const card_list = document.getElementById("card-list");
 
-  foods.forEach((food) => {
+  communities.forEach((community) => {
     const newCard = document.createElement("li");
     newCard.setAttribute("class", "card");
-    newCard.setAttribute("id", food.food_id);
-    newCard.setAttribute("onclick", "FoodDetail(this.id)");
+    newCard.setAttribute("id", community.id);
+    newCard.setAttribute("onclick", "getCommunityDetailPage(this.id)");
 
     const newImg = document.createElement("a");
     newImg.setAttribute("class", "card-image");
-    newImg.src = food.image;
+    newImg.src = `${backend_base_url}${community.image}`;
+    newCard.appendChild(newImg);
 
     const image = document.createElement("img");
-    image.src = food.image;
+    image.src = `${backend_base_url}${community.image}`;
     image.setAttribute("alt", "Psychopomp");
     newImg.appendChild(image);
-    newCard.appendChild(newImg);
 
     const newDescription = document.createElement("a");
     newDescription.setAttribute("class", "card-description");
     newCard.appendChild(newDescription);
 
-    const newMenu = document.createElement("h2");
-    const newCategory = document.createElement("p");
-    newMenu.innerText = food.menu;
-    newCategory.innerText = food.major_category;
-    newDescription.appendChild(newMenu);
-    newDescription.appendChild(newCategory);
+    const newTitle = document.createElement("h2");
+    newTitle.innerText = community.title;
+    newDescription.appendChild(newTitle);
+
+    const newContent = document.createElement("p");
+    newContent.setAttribute("class", "community-content");
+    newContent.innerText = community.content;
+    newDescription.appendChild(newContent);
 
     card_list.appendChild(newCard);
   });
 }
-LikeFoodList(user_id);
+MyCommunityList(user_id);
