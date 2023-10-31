@@ -4,11 +4,13 @@
   text-align: center;
   margin: auto;
 }
+
 body {
   overflow: hidden;
   background-color: rgb(255, 251, 236);
 }
-/* 헤더=============================================*/
+
+/* 헤더 ============================================= */
 header {
   background-color: #fed049;
   width: 100%;
@@ -24,10 +26,12 @@ header {
 h2 {
   margin: 0 5px 0 0;
 }
+
 .mascot {
   width: 55px;
   height: 60px;
 }
+
 .header_small_box {
   display: flex;
   flex-direction: row;
@@ -69,7 +73,7 @@ h2 {
   cursor: pointer;
 }
 
-/* 네비게이션============================================= */
+/* 네비게이션 ============================================= */
 .nav_box {
   top: 70px;
   position: fixed;
@@ -188,6 +192,7 @@ section {
   height: 88vh;
   position: relative;
 }
+
 .service-small-div {
   margin: 20px auto;
   padding: 0px 20px;
@@ -195,23 +200,25 @@ section {
   height: 60vh;
   overflow: auto;
 }
-/* 스크롤바 설정==================================*/
+
+/* 스크롤바 설정 ================================== */
 .service-small-div::-webkit-scrollbar {
   width: 6px;
 }
 
-/* 스크롤바 막대 설정*/
+/* 스크롤바 막대 설정 */
 .service-small-div::-webkit-scrollbar-thumb {
   height: 17%;
   background-color: #ffca84;
   border-radius: 10px;
 }
 
-/* 스크롤바 뒷 배경 설정*/
+/* 스크롤바 뒷 배경 설정 */
 .service-small-div::-webkit-scrollbar-track {
   background-color: #ff880038;
 }
-/* 스크롤바 설정==================================*/
+
+/* 스크롤바 설정 ================================== */
 section.main_section {
   width: 100%;
   height: 100%;
@@ -233,12 +240,14 @@ div.p_box {
   padding: 5px;
   background-color: #ffca84;
 }
+
 .title {
   text-align: left;
   font-size: 20px;
   padding: 10px 10px 0;
   margin-bottom: 0px;
 }
+
 .content {
   text-align: left;
   padding: 10px 20px;
@@ -247,23 +256,24 @@ div.p_box {
   width: 100%;
 }
 
-/* 스크롤바 설정==================================*/
+/* 스크롤바 설정 ================================== */
 .content::-webkit-scrollbar {
   width: 6px;
 }
 
-/* 스크롤바 막대 설정*/
+/* 스크롤바 막대 설정 */
 .content::-webkit-scrollbar-thumb {
   height: 17%;
   background-color: #3d5656;
   border-radius: 10px;
 }
 
-/* 스크롤바 뒷 배경 설정*/
+/* 스크롤바 뒷 배경 설정 */
 .content::-webkit-scrollbar-track {
   background-color: #3d565669;
 }
-/* 스크롤바 설정==================================*/
+
+/* 스크롤바 설정 ================================== */
 p.content {
   margin: 0;
 }
@@ -294,6 +304,7 @@ div.service_detail {
   margin: 30px auto;
   background-color: #ffffff;
 }
+
 .span_box {
   border-radius: 10px;
   height: 20px;
@@ -301,21 +312,21 @@ div.service_detail {
   color: rgb(124, 124, 124);
 }
 
-/* 작성한 댓글이 달리는 div ====================*/
 .comment_list_box {
   width: 100%;
   margin: 30px auto;
 }
+
 div.comment_list {
   border: 1px solid #ffca84;
   width: 95%;
   background-color: #ffca84;
 }
-/* 작성한 댓글의 작성자 및 작성시간 표시 바*/
+
 .comment_list span {
   margin: 0px 10px;
 }
-/* 댓글 작성하는 칸 div========================= */
+
 .comment_box_all {
   width: 100vw;
   background-color: #ffffff;
@@ -324,6 +335,7 @@ div.comment_list {
   position: absolute;
   bottom: 0px;
 }
+
 .comment_box_all p {
   width: 80%;
   padding: 20px 25px 0px;
@@ -331,6 +343,7 @@ div.comment_list {
   width: 90%;
   font-size: 1.5vw;
 }
+
 div.comment_box {
   display: flex;
   align-items: center;
@@ -340,7 +353,6 @@ div.comment_box {
   margin: 0px auto;
 }
 
-/* 댓글 텍스트 작성 칸  */
 textarea {
   padding: 10px;
   resize: none;
@@ -348,7 +360,6 @@ textarea {
   width: 85%;
 }
 
-/* 확인 버튼 */
 .btn-primary {
   padding: 10px;
   border-radius: 5px;
@@ -362,7 +373,6 @@ textarea {
   cursor: pointer;
 }
 
-/* 취소 버튼 */
 .btn-secondary {
   padding: 10px;
   border-radius: 5px;
@@ -375,7 +385,8 @@ textarea {
   background-color: #ca7645;
   cursor: pointer;
 }
-/* 푸터 ========================================*/
+
+/* 바닥글 */
 footer {
   width: 100%;
   height: 100%;

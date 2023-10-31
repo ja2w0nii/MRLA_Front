@@ -4,10 +4,12 @@
   text-align: center;
   margin: auto;
 }
+
 body {
   overflow: hidden;
 }
-/* 헤더=============================================*/
+
+/* 헤더 ============================================= */
 header {
   background-color: #fed049;
   width: 100%;
@@ -23,10 +25,12 @@ header {
 h2 {
   margin: 0 5px 0 0;
 }
+
 .mascot {
   width: 55px;
   height: 60px;
 }
+
 .header_small_box {
   display: flex;
   flex-direction: row;
@@ -68,7 +72,7 @@ h2 {
   cursor: pointer;
 }
 
-/* 네비게이션============================================= */
+/* 네비게이션 ============================================= */
 .nav_box {
   top: 70px;
   position: fixed;
@@ -270,31 +274,37 @@ a.active {
   margin-top: 140px;
 }
 
-/* 게시글 상세 =====================================*/
+/* 게시글 상세 ===================================== */
 .all-container {
   display: flex;
   flex-direction: row;
   width: 95vw;
   margin-top: 170px;
 }
+
 .detail_user {
   width: 40%;
 }
+
 .detail_location {
   width: 60%;
   display: flex;
   flex-direction: row;
 }
+
 .detail_location span {
   margin-right: 5px;
 }
+
 .location {
   margin: 0px;
   text-align: right;
 }
+
 .post-buttons {
   width: fit-content;
 }
+
 .post-modal-input-text-middle {
   display: flex;
 }
@@ -309,18 +319,22 @@ a.active {
 .post-upload-button:hover {
   color: #e74b24;
 }
+
 .post-delete-button {
   border: none;
   cursor: pointer;
   visibility: none;
   background-color: #ffffff;
 }
+
 .post-delete-button:hover {
   color: #e74b24;
 }
+
 .btn-dange {
   background-color: none;
 }
+
 /* 유저 이름 */
 .detail-container {
   background-color: #fed049;
@@ -385,22 +399,25 @@ a.active {
   margin: 10px;
   height: 8vh;
 }
-/* 스크롤바 설정*/
+
+/* 스크롤바 설정 */
 .top-box::-webkit-scrollbar {
   width: 10px;
 }
 
-/* 스크롤바 막대 설정*/
+/* 스크롤바 막대 설정 */
 .top-box::-webkit-scrollbar-thumb {
   background-color: none;
-  /* 스크롤바 둥글게 설정    */
+  /* 스크롤바 둥글게 설정 */
   border-radius: 10px;
   z-index: -100;
 }
-/* 스크롤바 뒷 배경 설정*/
+
+/* 스크롤바 뒷 배경 설정 */
 .top-box::-webkit-scrollbar-track {
   background-color: none;
 }
+
 .detail-user-title {
   width: 70%;
   overflow: scroll;
@@ -409,35 +426,41 @@ a.active {
   margin-top: 5px;
   margin-bottom: 5px;
 }
-/* 스크롤바 설정*/
+
+/* 스크롤바 설정 */
 .detail-user-title::-webkit-scrollbar {
   width: 10px;
 }
 
-/* 스크롤바 막대 설정*/
+/* 스크롤바 막대 설정 */
 .detail-user-title::-webkit-scrollbar-thumb {
   background-color: none;
-  /* 스크롤바 둥글게 설정    */
+  /* 스크롤바 둥글게 설정 */
   border-radius: 10px;
   z-index: -100;
 }
-/* 스크롤바 뒷 배경 설정*/
+
+/* 스크롤바 뒷 배경 설정 */
 .detail-user-title::-webkit-scrollbar-track {
   background-color: none;
 }
+
 .detail_title {
   width: 100%;
   margin: 10px 5px;
 }
+
 .detail-box h5 {
   font-size: 2.3vw;
   text-align: left;
   margin: 0px 0px;
 }
+
 .detail-box p {
   margin: 0px 0px;
   text-align: left;
 }
+
 .middle-box {
   display: flex;
   flex-direction: column;
@@ -448,11 +471,13 @@ a.active {
   flex-direction: row;
   margin: 0px 20px;
 }
+
 .bottom-box {
   margin: 15px;
   width: 100%;
   display: flex;
 }
+
 .detail_updatedat {
   margin: 25px 10px;
   font-size: 1;
@@ -470,9 +495,11 @@ a.active {
   width: 30%;
   float: right;
 }
+
 .heart-btn {
   background-color: rgba(255, 255, 255, 0);
 }
+
 .post-like-button {
   background-color: #fed049;
   border: none;
@@ -483,6 +510,7 @@ a.active {
   font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 200, "opsz" 48;
   font-size: 1.2vw;
 }
+
 .material-symbols-sharp {
   border: none;
   fill: 1;
@@ -504,6 +532,7 @@ a.active {
   height: 80vh;
   padding: 10px 10px;
 }
+
 .comment-box {
   display: flex;
   flex-direction: column;
@@ -537,19 +566,21 @@ a.active {
   font-size: 1.2vw;
   background-color: #ffffff;
 }
-/* 스크롤바 설정*/
+
+/* 스크롤바 설정 */
 .comment-inner-box::-webkit-scrollbar {
   width: 10px;
 }
 
-/* 스크롤바 막대 설정*/
+/* 스크롤바 막대 설정 */
 .comment-inner-box::-webkit-scrollbar-thumb {
   background-color: #fed4499d;
-  /* 스크롤바 둥글게 설정    */
+  /* 스크롤바 둥글게 설정 */
   border-radius: 10px;
   z-index: -100;
 }
-/* 스크롤바 뒷 배경 설정*/
+
+/* 스크롤바 뒷 배경 설정 */
 .comment-inner-inner-box::-webkit-scrollbar-track {
   background-color: rgba(0, 0, 0, 0);
 }
@@ -569,6 +600,7 @@ a.active {
 .updatedat_list {
   list-style: none;
 }
+
 .user_list {
   list-style: none;
   cursor: pointer;
@@ -577,14 +609,17 @@ a.active {
   display: flex;
   align-items: center;
 }
+
 .comment_list {
   vertical-align: center;
   width: 100vw;
 }
+
 .updatedat_list {
   width: 100%;
   font-size: 0.9vw;
 }
+
 .create_button {
   margin: 0px 1px;
 }
@@ -595,6 +630,7 @@ a.active {
   flex-direction: row;
   margin-top: 20px;
 }
+
 .comment-input-inner-box {
   width: 30vw;
 }
@@ -605,6 +641,7 @@ a.active {
   height: 55px;
   font-size: 20px;
 }
+
 /* 댓글수정 */
 .update_comment_button {
   margin: 5px 1px;
@@ -612,14 +649,17 @@ a.active {
   background-color: orange;
   border: none;
 }
+
 .update_comment_button:hover {
   background-color: rgb(153, 99, 0);
 }
+
 .delete_comment_button {
   margin: 5px 0px;
   font-size: 0.5vw;
 }
-/* 게시글 수정 (모달) */
+
+/* 게시글 수정 모달 */
 .post-upload-button-div {
   border: 5px solid #fed049;
   margin: 0px auto;
@@ -666,7 +706,7 @@ a.active {
   text-decoration: none;
 }
 
-/*모달창 닫는 버튼*/
+/* 모달 닫기 버튼 */
 .post-upload-modal-close:hover,
 .post-upload-modal-close:focus {
   color: rgb(255, 187, 0);
@@ -719,7 +759,7 @@ a.active {
   border-radius: 10px;
 }
 
-.img-upload-btn > input[type="file"] {
+.img-upload-btn>input[type="file"] {
   display: none;
   margin: 10px;
 }
@@ -818,7 +858,7 @@ a.active {
   /*스크롤바 뒷 배경 색상*/
 }
 
-/* 태그 관련 css============================================================ 2221211 이태은*/
+/* 태그 관련 ======================================================== 2221211 이태은 */
 .tag-box ul li {
   display: inline-block;
   margin: 0 5px 5px;
@@ -860,9 +900,9 @@ ul li.tag-item {
   cursor: pointer;
   margin-left: 8px;
 }
+/* ============= 태그 관련 끝 */
 
-/* =============태그 관련 끝 */
-/* 텍스트 수 제한 textarea */
+/* 글자수 제한 */
 .text_box {
   position: relative;
   display: inline-block;
@@ -886,19 +926,21 @@ ul li.tag-item {
   font-family: "Jua", sans-serif;
   padding: 20px;
 }
-/* 스크롤바 설정*/
+
+/* 스크롤바 설정 */
 .detail_content_box::-webkit-scrollbar {
   width: 10px;
 }
 
-/* 스크롤바 막대 설정*/
+/* 스크롤바 막대 설정 */
 .detail_content_box::-webkit-scrollbar-thumb {
   background-color: #fed4499d;
-  /* 스크롤바 둥글게 설정    */
+  /* 스크롤바 둥글게 설정 */
   border-radius: 10px;
   z-index: -100;
 }
-/* 스크롤바 뒷 배경 설정*/
+
+/* 스크롤바 뒷 배경 설정 */
 .detail_content_box::-webkit-scrollbar-track {
   background-color: rgba(0, 0, 0, 0);
 }

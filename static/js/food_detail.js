@@ -133,7 +133,7 @@ async function DeleteFoodComment(comment_id) {
   await loadDeleteFoodComment(comment_id);
 }
 
-//댓글 텍스트 수 제한 textarea
+// 댓글 글자수 제한
 $(".box-reply-user input").keyup(function () {
   var content = $(this).val();
   $(".box-reply-user .title-count span").html(content.length);

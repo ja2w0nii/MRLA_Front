@@ -6,10 +6,10 @@ if (!token) {
 const urlParams = new URLSearchParams(window.location.search);
 const category_id = urlParams.get("id");
 
-// 음식 추천 슬라이더 ========================================================================
+// 음식 추천 슬라이더
 $(document).ready(function () {
   var i = [1, 2, 3, 4, 5, 6, 7];
-  //   Click Left
+  // Click Left
   $("#ClickLeft").click(function () {
     $("#ClickLeft").prop("disabled", true);
     setTimeout(function () {
@@ -39,7 +39,7 @@ $(document).ready(function () {
       .removeClass($("#recommend_box7").attr("class"))
       .addClass("recommend_container" + i[6]);
   });
-  //   Click Right
+  // Click Right
   $("#ClickRight").click(function () {
     $("#ClickRight").prop("disabled", true);
     setTimeout(function () {
@@ -143,7 +143,7 @@ async function FoodList(category_id) {
 }
 FoodList(category_id);
 
-// 유명 맛집 슬라이더 ================================================================================
+// 유명 맛집 슬라이더
 var container = document.getElementById("sns_famous_restaurant_container");
 var slider = document.getElementById("slider");
 var slides = document.getElementsByClassName("slide").length;

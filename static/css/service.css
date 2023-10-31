@@ -4,11 +4,13 @@
   text-align: center;
   margin: auto;
 }
+
 body {
   overflow: hidden;
   background-color: rgb(255, 251, 236);
 }
-/* 헤더=============================================*/
+
+/* 헤더 ============================================= */
 header {
   background-color: #fed049;
   width: 100%;
@@ -24,10 +26,12 @@ header {
 h2 {
   margin: 0 5px 0 0;
 }
+
 .mascot {
   width: 55px;
   height: 60px;
 }
+
 .header_small_box {
   display: flex;
   flex-direction: row;
@@ -69,7 +73,7 @@ h2 {
   cursor: pointer;
 }
 
-/* 네비게이션============================================= */
+/* 네비게이션 ============================================= */
 .nav_box {
   top: 70px;
   position: fixed;
@@ -192,6 +196,7 @@ h1.title {
   color: #af7d00;
   font-size: 32px;
 }
+
 h5.title {
   color: #af7d00af;
 }
@@ -205,19 +210,22 @@ section.main_section {
   overflow: auto;
   height: 50vh;
   width: 95vw;
-
   /* padding: 10px 0px; */
 }
+
 .main_title {
   margin-top: 150px;
   padding: 20px;
 }
+
 .main_title h1 {
   font-size: 2vw;
 }
+
 .main_title h5 {
   font-size: 1.5vw;
 }
+
 .service-nav {
   border: 2px solid #ffca84;
   width: 95vw;
@@ -227,29 +235,30 @@ section.main_section {
   text-align: center;
   height: 5vh;
 }
+
 .service-body {
   border: 2px solid red;
   height: 55vh;
 }
 
-/* 스크롤바 설정==================================*/
+/* 스크롤바 설정 ================================== */
 .main_section::-webkit-scrollbar {
   width: 6px;
 }
 
-/* 스크롤바 막대 설정*/
+/* 스크롤바 막대 설정 */
 .main_section::-webkit-scrollbar-thumb {
   height: 17%;
   background-color: #f89940;
   border-radius: 10px;
 }
 
-/* 스크롤바 뒷 배경 설정*/
+/* 스크롤바 뒷 배경 설정 */
 .main_section::-webkit-scrollbar-track {
   background-color: #ffd885;
 }
 
-/* 스크롤바 설정==================================*/
+/* 스크롤바 설정 ================================== */
 .service-body span {
   border-bottom: 1px solid black;
 }
@@ -266,7 +275,6 @@ span p {
   align-items: center;
 }
 
-/* 말머리 / 내용 / 작성자 / 작성 시간 */
 .service_nav {
   background-color: #ffca84;
   padding: 10px 0;
@@ -293,7 +301,6 @@ p.service_created_at {
   width: 300px;
 }
 
-/* 텍스트박스 */
 .text_box {
   position: relative;
   display: inline-block;
@@ -324,8 +331,7 @@ p.service_created_at {
   display: flex;
 }
 
-/* 문의하기 모달창 시작 ===================================   */
-/* 모달창 흰색 div */
+/* 문의하기 모달 =================================== */
 div.modal-content {
   border-radius: 20px;
   width: 850px;
@@ -339,19 +345,19 @@ div.modal-content {
   transform: translate(-50%, -50%);
 }
 
-/* 모달 창 안내문*/
+/* 모달 안내문 */
 h1 {
   color: red;
 }
 
-/* 입력 창 전체 */
+/* 입력 전체 */
 div.modal-body {
   display: flex;
   flex-direction: column;
   width: 80%;
 }
 
-/* 제목 작성칸 */
+/* 제목 작성 */
 input.service_title {
   text-align: left;
   border: 1px solid rgb(88, 88, 88);
@@ -359,17 +365,16 @@ input.service_title {
   border-radius: 10px;
 }
 
-/* 내용 작성 칸 */
+/* 내용 작성 */
 textarea.service_content {
   text-align: left;
 }
 
-/* 모달 푸터 ==============*/
+/* 모달 바닥글 */
 .modal-footer {
   margin: 15px auto;
 }
 
-/* 확인 버튼 */
 .btn-primary {
   padding: 10px;
   margin: 20px;
@@ -385,7 +390,6 @@ textarea.service_content {
   cursor: pointer;
 }
 
-/* 취소 버튼 */
 .btn-secondary {
   padding: 10px;
   border-radius: 5px;
@@ -398,9 +402,9 @@ textarea.service_content {
   background-color: #313a34;
   cursor: pointer;
 }
+/* 문의하기 모달 끝 =================================== */
 
-/* 문의하기 모달창 끝 ===================================   */
-/* 푸터 */
+/* 바닥글 */
 footer {
   width: 100%;
   background-color: #3d5656;

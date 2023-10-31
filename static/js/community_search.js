@@ -49,7 +49,7 @@ async function ProfileInfo() {
 }
 ProfileInfo();
 
-// 검색 페이지 보여주기 //
+// 검색 페이지 보여주기
 async function loadCommunitySearch() {
   communitys = await getCommunitySearch();
 

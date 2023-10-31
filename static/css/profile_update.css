@@ -11,7 +11,7 @@ body {
   font-family: "Jua", sans-serif;
 }
 
-/* 모달 --------------------------------------------------*/
+/* 모달 -------------------------------------------------- */
 div.modal-content {
   border-radius: 20px;
   width: 500px;
@@ -48,7 +48,7 @@ input.unregister {
   border-radius: 10px;
 }
 
-/* 헤더============================================= */
+/* 헤더 ============================================= */
 header {
   background-color: #fed049;
   width: 100%;
@@ -64,10 +64,12 @@ header {
 h2 {
   margin: 0 5px 0 0;
 }
+
 .mascot {
   width: 55px;
   height: 60px;
 }
+
 .header_small_box {
   display: flex;
   flex-direction: row;
@@ -76,12 +78,12 @@ h2 {
   cursor: pointer;
 }
 
-header > h2 {
+header>h2 {
   margin: 0px 30px;
   width: 120px;
 }
 
-header > h2:hover {
+header>h2:hover {
   color: #000000;
   cursor: pointer;
 }
@@ -160,12 +162,11 @@ form {
   border-radius: 10px;
 }
 
-.img-upload-btn > input[type="file"] {
+.img-upload-btn>input[type="file"] {
   display: none;
   margin: 10px;
 }
 
-/* ====================================================== */
 .main_profile {
   margin-left: 0px;
 }

@@ -4,11 +4,13 @@
   text-align: center;
   margin: auto;
 }
+
 body {
   overflow: hidden;
   min-width: 50vw;
 }
-/* 헤더=============================================*/
+
+/* 헤더 ============================================= */
 header {
   background-color: #fed049;
   width: 100%;
@@ -24,10 +26,12 @@ header {
 h2 {
   margin: 0 5px 0 0;
 }
+
 .mascot {
   width: 55px;
   height: 60px;
 }
+
 .header_small_box {
   display: flex;
   flex-direction: row;
@@ -69,7 +73,7 @@ h2 {
   cursor: pointer;
 }
 
-/* 네비게이션============================================= */
+/* 네비게이션 ============================================= */
 .nav_box {
   top: 70px;
   position: fixed;
@@ -176,15 +180,16 @@ section {
   /* border: 2px solid green; */
   height: 100%;
 }
+
 .material-symbols-outlined {
   font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 200, "opsz" 48;
   font-size: 1.2vw;
 }
+
 .menu {
   position: relative;
 }
 
-/* 말풍선 적절한 top 과 margin-left 로 위치조정 */
 .arrow_box {
   display: none;
   position: absolute;
@@ -214,11 +219,11 @@ section {
   content: " ";
 }
 
-button:hover + p.arrow_box {
+button:hover+p.arrow_box {
   display: block;
 }
 
-/* 내용 섹션 윗칸 ============================================= 221205 이태은 */
+/* 내용 섹션 상단 ============================================= 221205 이태은 */
 .target_box {
   height: 80vh;
   margin: 140px 0 0 0;
@@ -261,19 +266,20 @@ button:hover + p.arrow_box {
   border: solid 5px #fed049;
   overflow: overlay;
 }
+
 .target_foods::-webkit-scrollbar {
-  width: 10px; /* 스크롤바의 너비 */
+  width: 10px;
 }
 
 .target_foods::-webkit-scrollbar-thumb {
-  height: 30%; /* 스크롤바의 길이 */
-  background: #8a5300; /* 스크롤바의 색상 */
+  height: 30%;
+  background: #8a5300;
 
   border-radius: 10px;
 }
 
 .target_foods::-webkit-scrollbar-track {
-  background: rgba(33, 122, 244, 0.1); /*스크롤바 뒷 배경 색상*/
+  background: rgba(33, 122, 244, 0.1);
 }
 
 div.odd {
@@ -313,7 +319,7 @@ img {
   cursor: pointer;
 }
 
-/* 바닥글 윗칸 ============================================= 221205 이태은 */
+/* 바닥글 상단 ============================================= 221205 이태은 */
 footer {
   height: 100%;
   background-color: gray;

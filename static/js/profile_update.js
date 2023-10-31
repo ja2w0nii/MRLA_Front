@@ -88,14 +88,13 @@ async function MyProfileUpdateForm() {
   updateMyProfile(formdata);
 }
 
-// 게시물 작성 모달창에서의 이미지 미리보기 스크립트 221208 이태은
+// 게시글 작성 모달 - 이미지 미리보기
 const fileDOM = document.querySelector("#profile_img_file");
 const previews = document.querySelectorAll(".image-box");
 
 fileDOM.addEventListener("change", () => {
   const reader = new FileReader();
   reader.onload = ({ target }) => {
-    // 이미지 미리보기 출력
     previews[0].src = target.result;
   };
   reader.readAsDataURL(fileDOM.files[0]);

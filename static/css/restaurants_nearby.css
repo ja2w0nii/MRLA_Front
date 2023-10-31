@@ -4,10 +4,12 @@
   text-align: center;
   margin: auto;
 }
+
 body {
   overflow: hidden;
 }
-/* 헤더=============================================*/
+
+/* 헤더 ============================================= */
 header {
   background-color: #fed049;
   width: 100%;
@@ -23,10 +25,12 @@ header {
 h2 {
   margin: 0 5px 0 0;
 }
+
 .mascot {
   width: 55px;
   height: 60px;
 }
+
 .header_small_box {
   display: flex;
   flex-direction: row;
@@ -68,7 +72,7 @@ h2 {
   cursor: pointer;
 }
 
-/* 네비게이션============================================= */
+/* 네비게이션 ============================================= */
 .nav_box {
   top: 70px;
   position: fixed;
@@ -212,6 +216,7 @@ a.active {
   margin: auto;
   width: 60vw;
 }
+
 .map {
   width: 60vw;
   height: 60vh;
@@ -387,7 +392,7 @@ a.active {
   color: #777;
 }
 
-/* 푸터 */
+/* 바닥글 */
 footer {
   width: 100%;
   background-color: gray;
@@ -442,7 +447,7 @@ footer {
   background-color: rgb(236, 144, 87);
 }
 
-.image_box > img {
+.image_box>img {
   width: 150px;
   height: 150px;
 }

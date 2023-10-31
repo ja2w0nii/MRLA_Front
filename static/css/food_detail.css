@@ -4,11 +4,13 @@
   text-align: center;
   margin: auto;
 }
+
 body {
   overflow: hidden;
   background-color: rgb(255, 251, 236);
 }
-/* 헤더=============================================*/
+
+/* 헤더 ============================================= */
 header {
   background-color: #fed049;
   width: 100%;
@@ -24,10 +26,12 @@ header {
 h2 {
   margin: 0 5px 0 0;
 }
+
 .mascot {
   width: 55px;
   height: 60px;
 }
+
 .header_small_box {
   display: flex;
   flex-direction: row;
@@ -69,7 +73,7 @@ h2 {
   cursor: pointer;
 }
 
-/* 네비게이션============================================= */
+/* 네비게이션 ============================================= */
 .nav_box {
   top: 70px;
   position: fixed;
@@ -188,7 +192,7 @@ a.active {
   font-weight: 900;
 }
 
-/* 내용 섹션 윗칸 */
+/* 내용 섹션 상단 */
 .community_section {
   background-color: rgb(255, 251, 236);
   height: 80vh;
@@ -246,7 +250,7 @@ img {
   align-content: center;
 }
 
-.like-box > button {
+.like-box>button {
   margin: 0px 10px;
   padding: 5px 20px;
   border-radius: 30px;
@@ -277,6 +281,7 @@ img {
   background-color: #a37d002f;
   height: 100%;
 }
+
 .wrap-reply-detail {
   padding: 5px;
   margin: auto;
@@ -333,10 +338,12 @@ img {
   width: 40vw;
   height: 100%;
 }
+
 .box-title-comment-detail {
   margin-top: 10px;
   margin-bottom: 10px;
 }
+
 .text-title-comment-detail {
   margin: 10px;
   font-size: 1.4rem;
@@ -376,7 +383,7 @@ img {
   margin: 8px 0;
 }
 
-.box-btn-comment-content > button {
+.box-btn-comment-content>button {
   margin-right: 5px;
   padding: 5px 7px;
 }
@@ -398,11 +405,13 @@ img {
   flex-direction: row;
   font-size: 1vw;
 }
+
 .comment-div button {
   display: flex;
   flex-direction: row;
   font-size: 1vw;
 }
+
 .media {
   margin-left: 5px;
 }
@@ -412,9 +421,11 @@ img {
   text-align: center;
   margin: 0px;
 }
+
 .food-like-count {
   margin-bottom: 0px;
 }
+
 .media-body {
   cursor: pointer;
 }
@@ -423,6 +434,7 @@ img {
   justify-content: center;
   font-size: 2vw;
 }
+
 .btn-warning {
   font-size: 1vw;
 }

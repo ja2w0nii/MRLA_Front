@@ -4,10 +4,12 @@
   text-align: center;
   margin: auto;
 }
+
 body {
   overflow: hidden;
 }
-/* 헤더=============================================*/
+
+/* 헤더 ============================================= */
 header {
   background-color: #fed049;
   width: 100%;
@@ -23,10 +25,12 @@ header {
 h2 {
   margin: 0 5px 0 0;
 }
+
 .mascot {
   width: 55px;
   height: 60px;
 }
+
 .header_small_box {
   display: flex;
   flex-direction: row;
@@ -34,6 +38,7 @@ h2 {
   margin: 30px;
   cursor: pointer;
 }
+
 .space {
   display: flex;
   border: none;
@@ -44,11 +49,13 @@ h2 {
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
 }
+
 .form-control {
   margin-right: 1vw;
   width: 20vw;
   border: none;
 }
+
 .search_btn {
   border: none;
   border-left: 1px solid;
@@ -56,6 +63,7 @@ h2 {
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
 }
+
 .header_small_box {
   display: flex;
   flex-direction: row;
@@ -97,7 +105,7 @@ h2 {
   cursor: pointer;
 }
 
-/* 네비게이션============================================= */
+/* 네비게이션 ============================================= */
 .nav_box {
   top: 70px;
   position: fixed;
@@ -216,7 +224,7 @@ a.active {
   font-weight: 900;
 }
 
-/* 내용 섹션 윗칸 ============================================= 221205 이태은 */
+/* 내용 섹션 상단 ============================================= 221205 이태은 */
 .recommend_food_img_section {
   background-color: white;
   height: 45vh;
@@ -237,6 +245,7 @@ a.active {
   font-size: 3vw;
   margin-right: 40vw;
 }
+
 .clickright {
   position: absolute;
   top: 10vh;
@@ -246,7 +255,7 @@ a.active {
   margin-right: 40vw;
 }
 
-/* 추천 맛집 라운드 슬라이드==========================================221205 이태은 */
+/* 추천 맛집 라운드 슬라이드 ==========================================221205 이태은 */
 .slide_title {
   font-size: 2vw;
   color: #ff5752;
@@ -280,7 +289,7 @@ img {
   z-index: 10;
 }
 
-/* 가운데로 오게되는 박스 */
+/* 중앙 박스 */
 .recommend_container1 div {
   width: 200px;
   height: 200px;
@@ -292,7 +301,7 @@ img {
   font-size: 30px;
 }
 
-/*BOX2 가운데 박스 기준 왼쪽에 오게되는 박스*/
+/* BOX2(중앙 기준 좌측) */
 .recommend_container2 {
   position: fixed;
   top: 250px;
@@ -311,7 +320,7 @@ img {
   color: rgb(63, 62, 62);
 }
 
-/*BOX3*/
+/* BOX3 */
 .recommend_container3 {
   position: fixed;
   top: 170px;
@@ -330,7 +339,7 @@ img {
   color: rgb(124, 123, 123);
 }
 
-/*BOX4*/
+/* BOX4 */
 .recommend_container4 {
   position: fixed;
   top: 250px;
@@ -349,7 +358,7 @@ img {
   color: rgb(186, 184, 184);
 }
 
-/*BOX5*/
+/* BOX5 */
 .recommend_container5 {
   position: fixed;
   top: 250px;
@@ -368,7 +377,7 @@ img {
   color: rgb(186, 184, 184);
 }
 
-/*BOX6*/
+/* BOX6 */
 .recommend_container6 {
   position: fixed;
   top: 250px;
@@ -388,7 +397,7 @@ img {
   color: rgb(124, 123, 123);
 }
 
-/*BOX7*/
+/* BOX7 */
 .recommend_container7 {
   position: fixed;
   top: 250px;
@@ -407,12 +416,12 @@ img {
   color: rgb(63, 62, 62);
 }
 
-/* 내용 섹션 아래칸 ============================================= 221205 이태은 */
+/* 내용 섹션 하단 ============================================= 221205 이태은 */
 .sns_famous_restaurant_section {
   height: 30vh;
 }
 
-/* 유명 맛집 스크롤 css ================================ 221205 이태은*/
+/* 유명 맛집 스크롤 ================================ 221205 이태은*/
 #sns_famous_restaurant_container {
   position: absolute;
   bottom: 90px;
@@ -424,12 +433,14 @@ img {
   place-items: center;
   z-index: 10;
 }
+
 .slid-img {
   object-fit: cover;
   height: 14vh;
   border-radius: 0px;
   object-fit: contain;
 }
+
 #sns_slider-container {
   padding: 10px;
   width: 82vw;
@@ -511,7 +522,7 @@ img {
   }
 }
 
-/* 바닥글 윗칸 ============================================= 221205 이태은 */
+/* 바닥글 상단 ============================================= 221205 이태은 */
 footer {
   width: 100%;
   height: 90px;
@@ -524,9 +535,11 @@ footer {
   background-color: #5c5c5c;
   z-index: 10;
 }
+
 footer nav {
   margin-top: 5px;
 }
+
 footer a {
   display: inline-block;
   margin: 0 20px 10px 20px;

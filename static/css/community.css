@@ -4,13 +4,15 @@
   text-align: center;
   margin: auto;
 }
+
 body {
   overflow: hidden;
   min-width: 50vw;
   position: relative;
   background-color: rgb(255, 251, 236);
 }
-/* 헤더=============================================*/
+
+/* 헤더 ============================================= */
 header {
   background-color: #fed049;
   width: 100%;
@@ -26,10 +28,12 @@ header {
 h2 {
   margin: 0 5px 0 0;
 }
+
 .mascot {
   width: 55px;
   height: 60px;
 }
+
 .header_small_box {
   display: flex;
   flex-direction: row;
@@ -191,7 +195,7 @@ a.active {
   font-weight: 900;
 }
 
-/* 내용 섹션 윗칸 ============================================= 221205 이태은 */
+/* 내용 섹션 상단 ============================================= 221205 이태은 */
 .community_section {
   margin-top: 125px;
   background-color: rgb(255, 251, 236);
@@ -205,19 +209,20 @@ a.active {
   padding: 30px;
 }
 
-/* 스크롤바 설정*/
+/* 스크롤바 설정 */
 .community_section::-webkit-scrollbar {
   width: 10px;
 }
 
-/* 스크롤바 막대 설정*/
+/* 스크롤바 막대 설정 */
 .community_section::-webkit-scrollbar-thumb {
   background-color: #fed4499d;
-  /* 스크롤바 둥글게 설정    */
+  /* 스크롤바 둥글게 설정 */
   border-radius: 10px;
   z-index: -100;
 }
-/* 스크롤바 뒷 배경 설정*/
+
+/* 스크롤바 뒷 배경 설정 */
 .community_section::-webkit-scrollbar-track {
   background-color: rgba(0, 0, 0, 0);
 }
@@ -228,12 +233,12 @@ a.active {
   color: rgb(107, 57, 0);
 }
 
-.community_for_metury > p {
+.community_for_metury>p {
   padding-top: 30px;
   margin: 0;
 }
 
-.community_for_metury > h3 {
+.community_for_metury>h3 {
   color: rgb(211, 160, 101);
   font-size: 20px;
 }
@@ -244,19 +249,21 @@ a.active {
   height: fit-content;
   /* overflow: overlay; */
 }
-/* 스크롤바 설정*/
+
+/* 스크롤바 설정 */
 .community-div::-webkit-scrollbar {
   width: 10px;
 }
 
-/* 스크롤바 막대 설정*/
+/* 스크롤바 막대 설정 */
 .community-div::-webkit-scrollbar-thumb {
   background-color: none;
-  /* 스크롤바 둥글게 설정    */
+  /* 스크롤바 둥글게 설정 */
   border-radius: 10px;
   z-index: -100;
 }
-/* 스크롤바 뒷 배경 설정*/
+
+/* 스크롤바 뒷 배경 설정 */
 .community-div::-webkit-scrollbar-track {
   background-color: none;
 }
@@ -273,7 +280,7 @@ a.active {
   margin: 5px 10px;
 }
 
-/* 버튼============================================================== 221225이태은*/
+/* 버튼 ============================================================== 221225이태은 */
 .post-upload-button-div {
   display: flex;
   border-bottom: 3px solid #fed049;
@@ -284,7 +291,7 @@ a.active {
   margin-bottom: 10px;
 }
 
-/* 검색 버튼 시작=========== */
+/* 검색 버튼 =========== */
 .search_btn {
   font-size: 1vw;
   margin: 10px;
@@ -297,14 +304,15 @@ a.active {
   margin-top: 0px;
   margin-bottom: 0px;
 }
+
 .search_btn:hover {
   border: #e74b24;
   background-color: #831a00;
   color: #ffffff;
 }
-/* 검색 버튼 끝=========== */
+/* 검색 버튼 끝 =========== */
 
-/* 게시물 업로드 버튼 시작====== */
+/* 게시물 업로드 버튼 ====== */
 .post-upload-button {
   font-size: 1vw;
   margin: 10px;
@@ -317,15 +325,15 @@ a.active {
   margin-top: 0px;
   margin-bottom: 0px;
 }
+
 .post-upload-button:hover {
   border: #e74b24;
   background-color: #831a00;
   color: #ffffff;
 }
-/* 게시물 업로드 버튼 끝====== */
+/* 게시물 업로드 버튼 끝 ====== */
 
-/* 커뮤니티 작성용 모달창===================================================== */
-/* 모달창 */
+/* 커뮤니티 게시글 작성 모달 ===================================================== */
 /* 배경 */
 .post-upload-modal-container {
   z-index: 1000;
@@ -339,7 +347,7 @@ a.active {
   background-color: rgba(0, 0, 0, 0.7);
 }
 
-/* 게시물 업로드 모달창 */
+/* 게시글 업로드 모달 */
 .post-upload-modal-box {
   background-color: #fefefe;
   margin: 150px auto;
@@ -365,7 +373,7 @@ a.active {
   text-decoration: none;
 }
 
-/*모달창 닫는 버튼*/
+/* 모달 닫기 버튼 */
 .post-upload-modal-close:hover,
 .post-upload-modal-close:focus {
   color: rgb(255, 187, 0);
@@ -373,14 +381,12 @@ a.active {
   cursor: pointer;
 }
 
-/* 입력할수있는  부분 div ==========*/
 .post-upload-modal-content {
   height: 50vh;
   width: 60vw;
   display: flex;
 }
 
-/* 왼쪽 div */
 .post-upload-modal-content-img {
   border-radius: 20px;
   padding: 20px;
@@ -427,12 +433,11 @@ a.active {
   font-size: 1vw;
 }
 
-.img-upload-btn > input[type="file"] {
+.img-upload-btn>input[type="file"] {
   display: none;
   margin: 10px;
 }
 
-/* 텍스트 입력 하는 구역 */
 .post-upload-modal-content-text {
   border-radius: 20px;
   height: 50vh;
@@ -450,6 +455,7 @@ a.active {
   height: 15%;
   margin-bottom: 20px;
 }
+
 .post-modal-input-text-top .count {
   position: absolute;
   right: 10px;
@@ -458,12 +464,14 @@ a.active {
   font-family: "ht_r";
   font-size: 15px;
 }
+
 .post-modal-input-text-middle {
   width: 100%;
   height: 15%;
   margin-bottom: 20px;
 }
-/*내용 텍스트 수 제한 textarea */
+
+/* 내용 글자수 제한 */
 .text_box {
   border: none;
   position: relative;
@@ -501,7 +509,7 @@ a.active {
   display: flex;
 }
 
-/* 커뮤니티 업로드 버튼 */
+/* 커뮤니티 게시글 업로드 버튼 */
 .community-detail-btn {
   width: 150px;
   border: 1px solid #ddd;
@@ -588,10 +596,10 @@ a.active {
 
 .tag-plus::-webkit-scrollbar-track {
   background: rgba(33, 122, 244, 0.1);
-  /*스크롤바 뒷 배경 색상*/
+  /* 스크롤바 뒷 배경 색상 */
 }
 
-/* 태그 관련 css============================================================ 2221211 이태은*/
+/* 태그 관련 css ============================================================ 2221211 이태은 */
 .tag-box ul li {
   display: inline-block;
   margin: 0 5px 5px;
@@ -678,7 +686,7 @@ ul li.tag-item {
   visibility: hidden;
 }
 
-/* 카드=============================================================== */
+/* 카드 =============================================================== */
 /* Lazy Load Styles */
 .cards-box {
   width: 90%;
@@ -695,7 +703,7 @@ ul li.tag-item {
   /* blur the lowres image */
 }
 
-.card-image > img {
+.card-image>img {
   display: block;
   width: 100%;
   height: 0;
@@ -731,7 +739,7 @@ ul li.tag-item {
   overflow: hidden;
   box-shadow: 0 0 3rem -1rem rgba(0, 0, 0, 0.5);
   transition: transform 0.1s ease-in-out, box-shadow 0.1s;
-cursor: pointer;
+  cursor: pointer;
 }
 
 /* 각각의 카드에 마우스를 올리면 */
@@ -749,12 +757,12 @@ cursor: pointer;
 }
 
 /* 각각의 카드의 제목 */
-.card-description > h2 {
+.card-description>h2 {
   margin: 0 0 0.5em;
 }
 
 /* 각각의 카드의 내용 글 */
-.card-description > p {
+.card-description>p {
   margin: 0;
 }
 
@@ -771,7 +779,7 @@ cursor: pointer;
   text-overflow: ellipsis;
 }
 
-/* 바닥글 윗칸 ============================================= 221205 이태은 */
+/* 바닥글 상단 ============================================= 221205 이태은 */
 footer {
   height: 25px;
   background-color: gray;

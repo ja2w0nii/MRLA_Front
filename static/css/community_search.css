@@ -4,11 +4,13 @@
   text-align: center;
   margin: auto;
 }
+
 body {
   overflow: hidden;
   background-color: rgb(255, 251, 236);
 }
-/* 헤더=============================================*/
+
+/* 헤더 ============================================= */
 header {
   background-color: #fed049;
   width: 100%;
@@ -24,10 +26,12 @@ header {
 h2 {
   margin: 0 5px 0 0;
 }
+
 .mascot {
   width: 55px;
   height: 60px;
 }
+
 .header_small_box {
   display: flex;
   flex-direction: row;
@@ -69,7 +73,7 @@ h2 {
   cursor: pointer;
 }
 
-/* 네비게이션============================================= */
+/* 네비게이션 ============================================= */
 .nav_box {
   top: 70px;
   position: fixed;
@@ -189,7 +193,7 @@ a.active {
   font-weight: 900;
 }
 
-/* 내용 섹션 윗칸 */
+/* 내용 섹션 상단 */
 .community_section {
   background-color: rgb(255, 251, 236);
   width: 100%;
@@ -215,19 +219,21 @@ a.active {
   margin-top: 140px;
   overflow: auto;
 }
-/* 스크롤바 설정*/
+
+/* 스크롤바 설정 */
 .community-div::-webkit-scrollbar {
   width: 0.1px;
 }
 
-/* 스크롤바 막대 설정*/
+/* 스크롤바 막대 설정 */
 .community-div::-webkit-scrollbar-thumb {
   background-color: none;
-  /* 스크롤바 둥글게 설정    */
+  /* 스크롤바 둥글게 설정 */
   border-radius: 10px;
   z-index: -100;
 }
-/* 스크롤바 뒷 배경 설정*/
+
+/* 스크롤바 뒷 배경 설정 */
 .community-div::-webkit-scrollbar-track {
   background-color: rgba(0, 0, 0, 0);
 }
@@ -253,22 +259,24 @@ div.search_field {
   overflow: auto;
 }
 
-/* 스크롤바 설정*/
+/* 스크롤바 설정 */
 .search_span::-webkit-scrollbar {
   width: 0.1px;
 }
 
-/* 스크롤바 막대 설정*/
+/* 스크롤바 막대 설정 */
 .search_span::-webkit-scrollbar-thumb {
   background-color: none;
-  /* 스크롤바 둥글게 설정    */
+  /* 스크롤바 둥글게 설정 */
   border-radius: 10px;
   z-index: -100;
 }
-/* 스크롤바 뒷 배경 설정*/
+
+/* 스크롤바 뒷 배경 설정 */
 .search_span::-webkit-scrollbar-track {
   background-color: rgba(0, 0, 0, 0);
 }
+
 img {
   cursor: pointer;
   width: 224px;
@@ -280,7 +288,7 @@ span {
   justify-content: center;
 }
 
-/* 바닥글 윗칸 */
+/* 바닥글 상단 */
 footer {
   background-color: gray;
   width: 100%;
